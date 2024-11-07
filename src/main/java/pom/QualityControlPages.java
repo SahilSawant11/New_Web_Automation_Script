@@ -1,5 +1,7 @@
 package pom;
 
+import static org.testng.Assert.assertTrue;
+
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -196,6 +198,17 @@ public class QualityControlPages {
 		wait.until(ExpectedConditions.visibilityOf(totaloutstanding_export_btn));
 		totaloutstanding_export_btn.click();
 	}
-
+	
+	
+	public boolean isGridDisplayed(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait.until(ExpectedConditions.visibilityOf(totaloutstanding_export_btn));
+		totaloutstanding_export_btn.click();
+		if (totaloutstanding_export_btn.isDisplayed()) {
+			return true;
+		}
+		return false;
+	}
+	
 	
 }

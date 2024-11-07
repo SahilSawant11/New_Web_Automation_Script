@@ -39,12 +39,25 @@ public class OfflinePaymentPage {
 		@FindBy(xpath = "//span[@id='ContentPlaceHolder1_lblPaymentStatus']") private WebElement transaction_id;
 		@FindBy(xpath = "//a[@id='ContentPlaceHolder1_lblDownloadReceiptbtn']") private WebElement receipts;
 		
+		@FindBy(xpath = "//span[@id='loggedUserFullName']") private WebElement loggedUserFullName;
 		
 		
 		
 		public OfflinePaymentPage(WebDriver driver)
 		{
 			PageFactory.initElements(driver, this);
+		}
+		
+		public boolean waitforlogin(WebDriver driver) {
+			 
+				try {
+					WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+					wait.until(ExpectedConditions.visibilityOf(loggedUserFullName));
+					
+					return true;
+				} catch (Exception e) {
+					return false;
+				}
 		}
 		
 		public void Text_council_name(WebDriver driver) throws InterruptedException

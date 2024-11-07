@@ -2,25 +2,45 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
+<test name="Login">
+	<classes>
+		<class name="New_property_Wadhghat.Login"/>
+	</classes>
+</test>
+
+<test name="All Payments">
+	<classes>
+		<class name="Payments.alltypepayments"/>
+	</classes>
+</test>
+
+
+
+<!-- 
  <test name="CreateNewProperty">
   <classes>
     <class name="New_property_Wadhghat.CMS_Test"/>
     </classes>
   </test>
+ -->
+ <test name="MinorChanges">
+	<classes>
+    	<class name="New_property_Wadhghat.MinorChanges"/>
+    </classes>
+</test>
 
-  <test name="CollectionReport">
+
+<test name="CollectionReport">
   <classes>
     <class name="Reports.CollectionReports"/>
+  </classes>
+</test>
+
+<test name="ReportEngine">
+	<classes>
+    	<class name="Reports.ReportEngine"/>
     </classes>
-  </test> <!-- Test -->
-  
-    <test name="ReportEngine">
-  <classes>
-    <class name="Reports.ReportEngine"/>
-    </classes>
-  </test> <!-- Test -->
-  
-  
-  
+</test> 
+
 </suite> <!-- Suite -->
  

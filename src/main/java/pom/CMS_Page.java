@@ -1,6 +1,8 @@
 package pom;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -49,11 +51,17 @@ public class CMS_Page {
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_PanelUpdateProgress']") private WebElement pageloading;
 	
+	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_gridAppealTaxInfo_lblTotal_0']") private WebElement ekunKar;
+	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_gridAppealTaxInfo_lblTotal_0']") private WebElement samanyaKar;
+	
+	
 	
 	public CMS_Page(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
+	
+	private static Map<String, String> storedTaxValues = new HashMap<String, String>();
 	
 	public void pageloading(WebDriver driver) throws InterruptedException
 	{
@@ -303,6 +311,23 @@ public class CMS_Page {
 		System.out.println(s2);
 		
 		driver.get(s2);
+	}
+	
+	public static String getStoredTaxValue(String key) {
+        return storedTaxValues.get(key);
+
+	}
+	
+	public void EkunKarStoredValue(String str)
+	{
+		String EkunKar = ekunKar.getAttribute("value");
+		storedTaxValues.put("Ekun Kar", EkunKar);
+	}
+	
+	public void SamanyaKarStoredValue(String str)
+	{
+		String SamanyaKar = samanyaKar.getAttribute("value");
+		storedTaxValues.put("Samanya Kar", SamanyaKar);
 	}
 	
 }

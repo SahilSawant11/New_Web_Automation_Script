@@ -23,7 +23,9 @@ public class DDChequeclearPage {
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVData_chkRow_0']") private WebElement Selectbox_cheque;
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnCleared']") private WebElement ClearChequeBtn;
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnNotCleared']") private WebElement FailChequeBtn;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnYes']") private WebElement Yes_popup;
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnYesNot']") private WebElement Yes_popup_for_notCleared;
 	@FindBy(xpath = "/html/body/div[3]/p") private WebElement PopUpAfterChequeClear;
 	
 	public DDChequeclearPage(WebDriver driver)
@@ -126,6 +128,17 @@ try {
 		
 	}
 	
+	public void ChequefailBtn(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(FailChequeBtn));
+		
+		FailChequeBtn.click();
+		Thread.sleep(500);
+		
+		
+	}
+	
 	public void Yes_popUp(WebDriver driver) throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
@@ -135,6 +148,14 @@ try {
 		Thread.sleep(2000);
 	}
 	
+	public void Yes_popUp_NotCleared(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(Yes_popup_for_notCleared));
+		
+		Yes_popup_for_notCleared.click();
+		Thread.sleep(2000);
+	}
 	
 	public void WaitTillGetClear( WebDriver driver) throws InterruptedException
 	{

@@ -1,10 +1,13 @@
 package New_property_Wadhghat;
 
+import static org.testng.Assert.assertNotEquals;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
@@ -25,43 +28,44 @@ import utility.TakeScreenshoot;
 public class MinorChanges extends BaseDriver {
 
 	StopWatch stopWatch;
-	WebDriver driver;
+	private WebDriver driver = CMS_browser.getDriver();
+	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 
-	@BeforeTest
-	public void beforetest() throws IOException
-	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-		driver = CMS_browser.openBrowser(url);
-		stopWatch = new StopWatch();
-	}
-	
-	@Test(priority = 1)
-	public void loginPage() throws InterruptedException
-	{
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Enter_user_name(userid, driver);
-		loginpage.Enter_password(password);
-		loginpage.Click_login_btn(driver);
-		
-		try
-		{
-			loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
-			loginpage.Click_login_btn(driver);
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
-	
+//	@BeforeTest
+//	public void beforetest() throws IOException
+//	{
+//		Delete_Files Delete_files = new Delete_Files(driver);
+//		System.out.println(System.getProperty("user.dir"));
+//		Delete_files.Delete_files("\\PdfReports\\");
+//		extent = new ExtentReports();
+//		spark = new ExtentSparkReporter("ExtentReport.html");
+//		extent.attachReporter(spark);
+//		BaseDriver.GetData();
+//		driver = CMS_browser.openBrowser(url);
+//		stopWatch = new StopWatch();
+//	}
+//	
+//	@Test(priority = 1)
+//	public void loginPage() throws InterruptedException
+//	{
+//		LoginPage loginpage = new LoginPage(driver);
+//		loginpage.Enter_user_name(userid, driver);
+//		loginpage.Enter_password(password);
+//		loginpage.Click_login_btn(driver);
+//		
+//		try
+//		{
+//			loginpage.click_logout(driver);
+//			loginpage.Enter_user_name(userid, driver);
+//			loginpage.Enter_password(password);
+//			loginpage.Click_login_btn(driver);
+//		}
+//		catch(Exception e)
+//		{
+//			
+//		}
+//	}
+
 	@Test(priority = 2)
 	public void performMinorChangeAndVerify() throws Exception {
 	    test = extent.createTest("Perform Minor Change and Verify");
@@ -76,8 +80,8 @@ public class MinorChanges extends BaseDriver {
 	    
 	    OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
 	    offlinepaymentpage.Click_property_no_radio_btn(driver);
-	    offlinepaymentpage.Select_node_no(driver, node1);
-	    offlinepaymentpage.Select_sector_no(driver, sector1);
+	    offlinepaymentpage.Select_node_no(driver, node);
+	    offlinepaymentpage.Select_sector_no(driver, sector);
 	    offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
 	    
 	    stopWatch.reset();
@@ -131,8 +135,8 @@ public class MinorChanges extends BaseDriver {
 	    offlinepaymentpage.counterPayment(driver, url);
 	    offlinepaymentpage.Click_property_no_radio_btn(driver);
 	    
-	    offlinepaymentpage.Select_node_no(driver, node1);
-	    offlinepaymentpage.Select_sector_no(driver, sector1);
+	    offlinepaymentpage.Select_node_no(driver, node);
+	    offlinepaymentpage.Select_sector_no(driver, sector);
 	    offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
 	    offlinepaymentpage.Click_search_property();    
 	    Thread.sleep(10000);
@@ -144,31 +148,23 @@ public class MinorChanges extends BaseDriver {
 	    test.info("Stored Mobile Number in check: " + storedMobileNo);
 	    test.info("Stored Society Name in check: " + storedSocietyNameEng);
 	    test.info("Stored Dukan Nav in check: " + storedDhukanNav);
-	 
 
-	    if (!spanMobileNo.equals(storedMobileNo)) {
-	        throw new AssertionError("The stored mobile number does not match the displayed number! "
-	                + "Stored: " + storedMobileNo + ", Displayed: " + spanMobileNo);
-	    } else {
-	        // Log that the values match
-	        test.info("The stored mobile number matches the displayed number: " + storedMobileNo);
-	    }
+	    Assert.assertNotEquals(spanMobileNo, storedMobileNo, 
+	            "The stored mobile number should not match the displayed number! "
+	            + "Stored: " + storedMobileNo + ", Displayed: " + spanMobileNo);
+	    test.pass("The stored mobile number does not match the displayed number as expected.");
+
+	    Assert.assertNotEquals(spanSocietyNav, storedSocietyNameEng, 
+	            "The stored Society Name should not match the displayed name! "
+	            + "Stored: " + storedSocietyNameEng + ", Displayed: " + spanSocietyNav);
+
+	    test.pass("The stored Society Name does not match the displayed name as expected.");
+
+	    Assert.assertNotEquals(spanDukanNav, storedDhukanNav, 
+	            "The stored Dhukan nav should not match the displayed nav! "
+	            + "Stored: " + storedDhukanNav + ", Displayed: " + spanDukanNav);
 	    
-	    if (!spanSocietyNav.equals(storedSocietyNameEng)) {
-	        throw new AssertionError("The stored Society Name does not match the displayed name! "
-	                + "Stored: " + storedSocietyNameEng + ", Displayed: " + spanSocietyNav);
-	    } else {
-	        // Log that the values match
-	        test.info("The stored Society Name matches the displayed name: " + storedSocietyNameEng);
-	    }
-	    
-	    if (!spanDukanNav.equals(storedDhukanNav)) {
-	        throw new AssertionError("The stored dhukan nav does not match the displayed nav! "
-	                + "Stored: " + storedDhukanNav + ", Displayed: " + spanDukanNav);
-	    } else {
-	        // Log that the values match
-	        test.info("The stored Dhukan nav matches the displayed nav: " + storedDhukanNav);
-	    } 
+	    test.pass("The stored Dhukan nav does not match the displayed nav as expected.");
 	    String minorchangesImage2 = TakeScreenshoot.GetScreenshotFullBase64(driver);
 	    test.pass("Counter after minor changes", MediaEntityBuilder.createScreenCaptureFromBase64String(minorchangesImage2).build());
 	}

@@ -14,6 +14,8 @@ public class ApprovalPage {
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtWadhghatRemark']") private WebElement remarks;
 	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_ApproveALL']") private WebElement ApprovalAll_btn;
 	@FindBy(xpath = "//div[@id='ContentPlaceHolder1_PanelUpdateProgress']") private WebElement loading_page;
+	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_lblNewTotalTaxch']") private WebElement ekunKarApproval1;
+	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_lblNewPropertyTaxch']") private WebElement samanyaKarApproval1;
 	
 	public ApprovalPage(WebDriver driver)
 	{
@@ -58,12 +60,16 @@ public class ApprovalPage {
 	}
 	
 	
+	public String getEkunKarApproval1() {
+		
+        return ekunKarApproval1.getText(); 
+    }
 	
-	
-	
-	
-	
-	
+	public String getSamanyaKarApproval1() {
+		
+        return samanyaKarApproval1.getText(); 
+    }
+
 	
 	
 	

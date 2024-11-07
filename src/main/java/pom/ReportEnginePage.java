@@ -16,7 +16,7 @@ public class ReportEnginePage {
 	@FindBy(xpath = "//select[@id='ContentPlaceHolder1_ddlpropwise2']") private WebElement select_sector;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_rbtPropertyWise']") private WebElement select_propertyno_wise_checkbox;
 	@FindBy(xpath = "//select[@id='ContentPlaceHolder1_ddlReportPropwise']") private WebElement select_report_name;
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVWard_chkSingle_49']") private WebElement select_propertyno_50_checkbox;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVWard_chkSingle_5']") private WebElement select_propertyno_6_checkbox;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_gvpartionno_chkAll']") private WebElement select_partitionno_all_checkbox;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnExportpropwise']") private WebElement export_btn;
 	
@@ -58,8 +58,8 @@ public class ReportEnginePage {
 	public void Select_propertyno_50_checkbox(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
-		wait.until(ExpectedConditions.visibilityOf(select_propertyno_50_checkbox));
-		select_propertyno_50_checkbox.click();
+		wait.until(ExpectedConditions.visibilityOf(select_propertyno_6_checkbox));
+		select_propertyno_6_checkbox.click();
 	}
 	
 	public void Select_partitionno_all_checkbox(WebDriver driver)

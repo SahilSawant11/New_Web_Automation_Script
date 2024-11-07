@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.JavascriptExecutor;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
@@ -25,6 +26,7 @@ import pom.CMS_Page;
 import pom.Council_approval;
 //import pom.CounterPaymentPage;
 import pom.LoginPage;
+import pom.MinorChangesPage;
 //import pom.OfflinePaymentPage;
 import pom.OldTaxesPage;
 import pom.OnlineDataEntryPage;
@@ -39,51 +41,52 @@ public class CMS_Test extends BaseDriver{
 	JavascriptExecutor js;
 	StopWatch stopWatch;
 
-
-	@BeforeTest
-	public void beforetest() throws IOException
-	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");
-		
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-//		WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.getDriver();
-		stopWatch = new StopWatch();
-	}
+//
+//	@BeforeTest
+//	public void beforetest() throws IOException
+//	{
+//		Delete_Files Delete_files = new Delete_Files(driver);
+//		System.out.println(System.getProperty("user.dir"));
+//		Delete_files.Delete_files("\\PdfReports\\");
+//		
+//		extent = new ExtentReports();
+//		spark = new ExtentSparkReporter("ExtentReport.html");
+//		extent.attachReporter(spark);
+//		BaseDriver.GetData();
+////		WebDriverManager.chromedriver().setup();
+//		driver = CMS_browser.getDriver();
+//		stopWatch = new StopWatch();
+//	}
+//	
+//	
+//	@Test(priority = 1)
+//	public void loginPage() throws InterruptedException
+//	{
+//		driver.get(url);
+//		test = extent.createTest("loginPage");
+//		LoginPage loginpage = new LoginPage(driver);
+//		loginpage.Enter_user_name(userid, driver);
+//		
+//		loginpage.Enter_password(password);
+//		Thread.sleep(10000);
+//		Scanner scanner = new Scanner(System.in);
+//     System.out.print("Can We start Automation: ");
+//		
+//		try
+//		{
+//			loginpage.click_logout(driver);
+//			loginpage.Enter_user_name(userid, driver);
+//			loginpage.Enter_password(password);
+//			loginpage.Click_login_btn(driver);	
+//		}
+//		catch(Exception e)
+//		{
+//			
+//		}
+//	}
+//	
 	
-	
-	@Test(priority = 1)
-	public void loginPage() throws InterruptedException
-	{
-		driver.get(url);
-		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Enter_user_name(userid, driver);
-		
-		loginpage.Enter_password(password);
-		Scanner scanner = new Scanner(System.in);
-     System.out.print("Can We start Automation: ");
-		
-		try
-		{
-			loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
-			loginpage.Click_login_btn(driver);	
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
-	
-	
-	@Test(priority = 2, dependsOnMethods = "loginPage")
+	@Test(priority = 2)
 	public void cmsPageWadhghat() throws InterruptedException
 	{
 		test = extent.createTest("cmsPageWadhghat");
@@ -360,7 +363,7 @@ public class CMS_Test extends BaseDriver{
 		addtaxespage.Button_save_btn(driver);
 		OnlineDataEntryPage onlinedataentry = new OnlineDataEntryPage(driver);
 		onlinedataentry.Button_DataSaved(driver);
-		
+		//// put code for asertion from here
 		addtaxespage.Button_print_approval_btn(driver);
 		addtaxespage.getWindowHandleName(driver);
 		addtaxespage.Scroll_sthalpahani_ahaval(driver);
@@ -377,6 +380,7 @@ public class CMS_Test extends BaseDriver{
 		test = extent.createTest("WadhghatApproval");
 		ApprovalPage approvalpage = new ApprovalPage(driver);
 		approvalpage.Approval_link(url, driver);
+		
 		js= (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0, 0);");
 		
@@ -390,6 +394,23 @@ public class CMS_Test extends BaseDriver{
 		js.executeScript("window.scrollBy(0, 600);");
 		String approvalimage3=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("Tax info on approval screen",MediaEntityBuilder.createScreenCaptureFromBase64String(approvalimage3).build());
+		
+		String storedEkunKar = CMS_Page.getStoredTaxValue("Ekun Kar");
+		String storedSamanyaKar = CMS_Page.getStoredTaxValue("Samanya Kar");
+		String spanEkunKarApproval1 = approvalpage.getEkunKarApproval1(); 
+	    String spanSamanyaKarApproval1 = approvalpage.getSamanyaKarApproval1();
+	    
+	    Assert.assertEquals(spanEkunKarApproval1, storedEkunKar, 
+	            "The stored Ekun Kar does not match the displayed Ekun Kar! "
+	            + "Stored: " + storedEkunKar + ", Displayed: " + spanEkunKarApproval1);
+
+	    test.pass("The stored Ekun Kar matches the displayed Ekun Kar as expected: " + storedEkunKar);
+	    
+	    Assert.assertEquals(spanSamanyaKarApproval1, storedSamanyaKar, 
+	            "The stored Ekun Kar does not match the displayed Ekun Kar! "
+	            + "Stored: " + storedSamanyaKar + ", Displayed: " + spanSamanyaKarApproval1);
+
+	    test.pass("The stored Ekun Kar matches the displayed Ekun Kar as expected: " + storedSamanyaKar);
 		
 		approvalpage.Enter_remarks(approvalRemark,driver);
 		/////
@@ -437,6 +458,24 @@ String popup3=TakeScreenshoot.GetScreenshotFullBase64(driver);
 test.pass("Old Property Information",MediaEntityBuilder.createScreenCaptureFromBase64String(popup3).build());
 	
 counncil_approval.clicknext(driver);
+String storedEkunKar = CMS_Page.getStoredTaxValue("Ekun Kar");
+String storedSamanyaKar = CMS_Page.getStoredTaxValue("Samanya Kar");
+String spanEkunKarApproval2 = counncil_approval.getEkunKarApproval2(); 
+String spanSamanyaKarApproval2 = counncil_approval.getSamanyaKarApproval2();
+
+Assert.assertEquals(spanEkunKarApproval2, storedEkunKar, 
+        "The stored Ekun Kar does not match the displayed Ekun Kar! "
+        + "Stored: " + storedEkunKar + ", Displayed: " + spanEkunKarApproval2);
+
+test.pass("The stored Ekun Kar matches the displayed Ekun Kar as expected: " + storedEkunKar);
+
+Assert.assertEquals(spanSamanyaKarApproval2, storedSamanyaKar, 
+        "The stored Ekun Kar does not match the displayed Ekun Kar! "
+        + "Stored: " + storedSamanyaKar + ", Displayed: " + spanSamanyaKarApproval2);
+
+test.pass("The stored Ekun Kar matches the displayed Ekun Kar as expected: " + storedSamanyaKar);
+
+
 String popup4=TakeScreenshoot.GetScreenshotFullBase64(driver);
 test.pass("Pending Tax Details || Current Tax Details || Appeal Tax Details",MediaEntityBuilder.createScreenCaptureFromBase64String(popup4).build());
 	

@@ -20,6 +20,11 @@ public class Council_approval {
 	@FindBy(xpath = "//*[@id='txtApprovalRemark']") private WebElement Approvalremark;
 	@FindBy(xpath = "//*[@id='btnMdlApprove']") private WebElement Approval_BTN;
 	
+	
+	@FindBy(xpath = "//input[@id='txtNewTaxTotal']") private WebElement ekunKarApproval2;
+	@FindBy(xpath = "//input[@id='txtNewPropertyTax']") private WebElement samanyaKarApproval2;
+	
+	
 	public Council_approval(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -102,7 +107,15 @@ public class Council_approval {
 		Thread.sleep(1000);
 	}
 	
+public String getEkunKarApproval2() {
+		
+        return ekunKarApproval2.getText(); 
+    }
 	
+	public String getSamanyaKarApproval2() {
+		
+        return samanyaKarApproval2.getText(); 
+    }
 	
 }
 

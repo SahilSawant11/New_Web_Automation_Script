@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,11 +21,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentReporter;
 import com.aventstack.extentreports.util.Assert;
 
 public class CounterPaymentPage {
 
 	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_lnkAdvcPay']") private WebElement advance_pay_btn;
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_ChkChequeBounce']") private WebElement penalty_radio_btn ;
 	
 	@FindBy(xpath = "//*[@id=\"ContentPlaceHolder1_GVPropTax\"]/tbody/tr") private List<WebElement> rows_Count;
 	@FindBy(xpath = "//*[@id=\"ContentPlaceHolder1_GVPropTax\"]/tbody/tr[2]/td") private List<WebElement> pendingList;
@@ -119,13 +123,46 @@ public class CounterPaymentPage {
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_engtxtmsg']") private WebElement NoDueMessage;
 	
+// Upic
 	
-	
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_lblUPICID']") private WebElement upicId;
+
 	
 	public CounterPaymentPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
+	
+	public boolean isUpicIdPresent() {
+        try {
+            return upicId.isDisplayed(); // Checks if the element is displayed
+        } catch (NoSuchElementException e) {
+            return false; // Element is not found
+        }
+    }
+	
+	public String getUpicId() {
+        return upicId.getText();
+    }
+	
+	public void compareUpicIds(ExtentTest test) {
+	    if (!isUpicIdPresent()) {
+	        test.fail("Property details are not shown after Payment");
+	        return; 
+	    }
+
+	    String valueBeforeClick = getUpicId();
+
+	    String valueAfterClick = getUpicId(); 
+	    
+	    	    if (valueBeforeClick.equals(valueAfterClick)) {
+	        test.pass("The UPIC ID values are the same: " + valueBeforeClick);
+	    } else {
+	        test.info("The UPIC ID values are different. Before: " + valueBeforeClick + ", After: " + valueAfterClick);
+	    }
+	}
+
+	
 	
 	public void Click_advance_pay_btn(WebDriver driver)
 	{
@@ -138,6 +175,14 @@ public class CounterPaymentPage {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(7000));
 		wait.until(ExpectedConditions.visibilityOf(advance_pay_btn));
+		
+		
+	}
+	
+	public void Check_is_penalty_Visible(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(7000));
+		wait.until(ExpectedConditions.visibilityOf(penalty_radio_btn));
 		
 		
 	}
@@ -275,12 +320,18 @@ public class CounterPaymentPage {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(8));
 			wait2.until(ExpectedConditions.visibilityOf(currentfullpayment));
 			currentfullpayment.click();
-		}
-		
-		
-		
-		
+		}		
 	}
+	
+	public boolean IsFinalCheckboxPresent(WebDriver driver) {
+        try {
+            
+            return select_fullcheck_box.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
 	
 	public void Select_APartcheckbox(WebDriver driver)
 	{

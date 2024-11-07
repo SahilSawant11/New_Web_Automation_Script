@@ -1,11 +1,16 @@
 package Reports;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -85,6 +90,10 @@ import utility.TakeScreenshoot;
 	        Thread.sleep(5000);
 	        qcpage.Enter_amount(driver);
 	        qcpage.Show_button(driver);
+	        //add assert for grid 
+	        
+	        Assert.assertEquals((qcpage.isGridDisplayed(driver)), true);
+	        
 	        Thread.sleep(10000);    
 	        stopWatch.start();
 	        qcpage.Export_button(driver); 
