@@ -1,51 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="All Payments(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
     <classes>
-      <class name="Payments.alltypepayments">
+      <class name="Payments.PCMC_alltypepayments">
         <methods>
-          <include name="aftermethod"/>
-          <include name="chequePayment"/>
-          <include name="chequePaymentforClear"/>
-          <include name="CashPayment"/>
-          <include name="cheque_clear"/>
-          <include name="cheque_fail"/>
+          <include name="beforetest"/>
           <include name="aftertest"/>
-          <include name="Card"/>
-        </methods>
-      </class> <!-- Payments.alltypepayments -->
-    </classes>
-  </test> <!-- All Payments(failed) -->
-  <test name="MinorChanges(failed)">
-    <classes>
-      <class name="New_property_Wadhghat.MinorChanges">
-        <methods>
+          <include name="AdvancePayment"/>
           <include name="aftermethod"/>
-          <include name="performMinorChangeAndVerify"/>
         </methods>
-      </class> <!-- New_property_Wadhghat.MinorChanges -->
+      </class> <!-- Payments.PCMC_alltypepayments -->
     </classes>
-  </test> <!-- MinorChanges(failed) -->
-  <test name="CollectionReport(failed)">
-    <classes>
-      <class name="Reports.CollectionReports">
-        <methods>
-          <include name="collectiontest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Reports.CollectionReports -->
-    </classes>
-  </test> <!-- CollectionReport(failed) -->
-  <test name="ReportEngine(failed)">
-    <classes>
-      <class name="Reports.ReportEngine">
-        <methods>
-          <include name="tearDown"/>
-          <include name="Notice_report"/>
-          <include name="Karakarni_report"/>
-        </methods>
-      </class> <!-- Reports.ReportEngine -->
-    </classes>
-  </test> <!-- ReportEngine(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

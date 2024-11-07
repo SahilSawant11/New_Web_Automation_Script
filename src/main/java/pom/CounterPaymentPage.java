@@ -102,6 +102,7 @@ public class CounterPaymentPage {
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVDownloads']/tbody/tr[2]/td[1]/input") private WebElement downloadReceipt_btn;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnAdvcPayProceed']") private WebElement ProceedAdvancePayment;
 	
+	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_Image1']") private WebElement loader;
 	
 	//counter reports
@@ -126,6 +127,13 @@ public class CounterPaymentPage {
 // Upic
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_lblUPICID']") private WebElement upicId;
+	
+	
+	// PCMC BTN
+	
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_PayProceedbtn']") private WebElement PCMCCardPayment;
+	@FindBy(xpath = "//button[@class='confirm' and text()='Yes']")  private WebElement PCMCYesTransBtn;
+
 
 	
 	public CounterPaymentPage(WebDriver driver)
@@ -633,9 +641,6 @@ public class CounterPaymentPage {
 		}
 	}
 	
-	
-	
-	
 	 public static boolean renameDownloadedFile(String oldFilename, String newFilename) throws Exception {
 	        // Define the directory path
 	        String directoryPath = System.getProperty("user.dir") + File.separator + "PdfReports";
@@ -729,8 +734,6 @@ public class CounterPaymentPage {
 	        
 	 }
 	 
-	 
-	
 	public void Select_payment_mode(String str)
 	{
 		Select paymentmode = new Select(payment_mode);
@@ -846,12 +849,7 @@ public class CounterPaymentPage {
 		}
 		
 	}
-	
-	
-	
-	
-	
-	
+		
 	
 	public boolean Check_isPropertyHasNoDue(WebDriver driver) throws InterruptedException
 	{
@@ -867,10 +865,6 @@ public class CounterPaymentPage {
 		
 		
 	}
-	
-	
-	
-	
 	
 	
 	public void PopUpAfterDownloadNotice(WebDriver driver) throws InterruptedException
@@ -910,16 +904,7 @@ public class CounterPaymentPage {
 	        }
 		
 		
-	}
-	
-	
-
-	
-	
-	
-	
-	
-	 
+	} 
 	 
 	
 	public void Click_receipts_btn(WebDriver driver) throws InterruptedException
@@ -938,9 +923,6 @@ public class CounterPaymentPage {
 		Thread.sleep(1000);
 		pcmc_receipts_btn.click();
 	}
-	
-	
-	
 	
 	public void Download_pdf_file(WebDriver driver) throws InterruptedException
 	{
@@ -985,6 +967,22 @@ public class CounterPaymentPage {
 		wait.until(ExpectedConditions.visibilityOf(ProceedAdvancePayment));
 		ProceedAdvancePayment.click();
 		Thread.sleep(2000);
+	}
+	
+	public void PCMC_Click_ProceedCardPay(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
+		wait.until(ExpectedConditions.visibilityOf(PCMCCardPayment));
+		PCMCCardPayment.click();
+		Thread.sleep(2000);
+	}
+	
+	public void PCMC_Yes_Transaction_btn(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
+		wait.until(ExpectedConditions.visibilityOf(PCMCYesTransBtn));
+		Thread.sleep(1000);
+		PCMCYesTransBtn.click();
 	}
 	
 	public void Select_bankname(WebDriver driver,String str)
