@@ -149,18 +149,18 @@ public class MinorChanges extends BaseDriver {
 	    test.info("Stored Society Name in check: " + storedSocietyNameEng);
 	    test.info("Stored Dukan Nav in check: " + storedDhukanNav);
 
-	    Assert.assertNotEquals(spanMobileNo, storedMobileNo, 
-	            "The stored mobile number should not match the displayed number! "
-	            + "Stored: " + storedMobileNo + ", Displayed: " + spanMobileNo);
-	    test.pass("The stored mobile number does not match the displayed number as expected.");
+	    
+	    
+	    Assert.assertEquals(spanMobileNo, storedMobileNo);
+	    
 
-	    Assert.assertNotEquals(spanSocietyNav, storedSocietyNameEng, 
-	            "The stored Society Name should not match the displayed name! "
+	    Assert.assertEquals(spanSocietyNav, storedSocietyNameEng, 
+	            "The stored Society match the displayed name! "
 	            + "Stored: " + storedSocietyNameEng + ", Displayed: " + spanSocietyNav);
 
 	    test.pass("The stored Society Name does not match the displayed name as expected.");
 
-	    Assert.assertNotEquals(spanDukanNav, storedDhukanNav, 
+	    Assert.assertEquals(spanDukanNav, storedDhukanNav, 
 	            "The stored Dhukan nav should not match the displayed nav! "
 	            + "Stored: " + storedDhukanNav + ", Displayed: " + spanDukanNav);
 	    

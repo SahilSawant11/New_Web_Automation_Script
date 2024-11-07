@@ -12,6 +12,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import freemarker.core.ReturnInstruction.Return;
+
 public class AddTaxesPage {
 
 	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_lblShowPropertyNo']") private WebElement property_no_lable;
@@ -35,6 +37,11 @@ public class AddTaxesPage {
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_MP1FileUpload']") private WebElement choose_file;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_MP1Upload']") private WebElement upload_btn;
 	@FindBy(xpath = "//div[@id='ContentPlaceHolder1_PanelUpdateProgress']") private WebElement loading_page;
+	
+	
+	//----taxex
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_gridAppealTaxInfo_lblTotal_0']") private WebElement TaxtotalOn_Dataentry;
+	
 	
 	
 	public AddTaxesPage(WebDriver driver)
@@ -228,6 +235,18 @@ public class AddTaxesPage {
 	    	System.out.println("Page loaded properly.");
 	    }
 	}
+	
+	public String GetValuesElement_taxtotal(WebDriver driver) throws InterruptedException
+	{		
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(TaxtotalOn_Dataentry));
+		Thread.sleep(500);
+		String Outputtext1 =TaxtotalOn_Dataentry.getText();
+		
+		return Outputtext1;
+	}
+	
 	
 	public void getWindowHandleName(WebDriver driver) throws InterruptedException
 	{
