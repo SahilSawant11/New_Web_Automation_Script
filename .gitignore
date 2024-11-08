@@ -1,1 +1,21 @@
-/target/
+# Ignore test output directory
+test-output/
+
+# Ignore images in result/img
+result/img/*.jpg
+result/img/*.png
+result/img/*.jpeg
+
+# Ignore specific files
+InputData/CMS\ Data.xlsx
+ExtentReport.html
+
+# Ignore all HTML and XML files in test-output directory
+test-output/**/*.html
+test-output/**/*.xml
+
+# Ignore other common IDE files (optional)
+.idea/
+.vscode/
+*.log
+ 
