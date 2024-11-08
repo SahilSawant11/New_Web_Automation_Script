@@ -17,16 +17,17 @@ public class DDChequeclearPage {
 	@FindBy(xpath="//*[@id='ContentPlaceHolder1_txtSearchByChecqurNo']") private WebElement Filter_chequeno;
 	
 	@FindBy(xpath="//*[@id='ContentPlaceHolder1_ddlZoneNo']") private WebElement Filter_zone;
-	@FindBy(xpath="//*[@id='ContentPlaceHolder1_dllWardNo']") private WebElement Filter_Sec;
+	@FindBy(xpath="//select[@id='ContentPlaceHolder1_dllWardNo']") private WebElement Filter_Sec;
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnSearchData']") private WebElement Btn_serach;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVData_chkRow_0']") private WebElement Selectbox_cheque;
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnCleared']") private WebElement ClearChequeBtn;
-	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnNotCleared']") private WebElement FailChequeBtn;
+	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_btnNotCleared']") private WebElement FailChequeBtn;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnYes']") private WebElement Yes_popup;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnYesNot']") private WebElement Yes_popup_for_notCleared;
 	@FindBy(xpath = "/html/body/div[3]/p") private WebElement PopUpAfterChequeClear;
+	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder1$ChequeCleartxt']") private WebElement bank_date;
 	
 	public DDChequeclearPage(WebDriver driver)
 	{
@@ -46,6 +47,13 @@ public class DDChequeclearPage {
 		System.out.println(s2);
 		
 		driver.get(s2);
+	}
+	
+	public void Enter_Bank_transaction_date(WebDriver driver, String str)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
+		wait.until(ExpectedConditions.visibilityOf(bank_date));
+		bank_date.sendKeys(str);
 	}
 
 	public void pageloading(WebDriver driver) throws InterruptedException
@@ -82,22 +90,19 @@ Select billbook = new Select(Filter_zone);
 		
 		
 	}
-	
-	
-	public void SelectSec_filter(String str, WebDriver driver) throws InterruptedException
+	public void SelectSec_filter(String str, WebDriver driver) 
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(Filter_Sec));		
-		wait.until(ExpectedConditions.elementToBeClickable(Filter_Sec));	
-Select billbook = new Select(Filter_Sec);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(120000));
+		wait.until(ExpectedConditions.visibilityOf(Filter_Sec));
+	//	Select sector = new Select(Filter_Sec);
+		Filter_Sec.sendKeys(str);
 		
-try {
-			billbook.selectByVisibleText(str);
-		} catch (Exception e) {
-			Thread.sleep(5000);
-			billbook.selectByVisibleText(str);
-
-		}
+		
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(120000));
+//		wait.until(ExpectedConditions.visibilityOf(sector_options));
+//		Select sector = new Select(sector_no);
+//		sector.selectByVisibleText(str);
+		
 	}
 	
 	public void Click_serachBTN( WebDriver driver)

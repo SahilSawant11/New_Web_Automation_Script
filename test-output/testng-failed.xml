@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="CreateNewProperty(failed)">
@@ -22,9 +23,15 @@
     </classes>
   </test> <!-- CreateNewProperty(failed) -->
   <test thread-count="5" name="All Payments(failed)">
+=======
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
+>>>>>>> pcmcenhacement
     <classes>
-      <class name="Payments.alltypepayments">
+      <class name="Payments.PCMC_alltypepayments">
         <methods>
+<<<<<<< HEAD
           <include name="aftermethod"/>
           <include name="cheque_clear"/>
           <include name="aftertest"/>
@@ -33,3 +40,14 @@
     </classes>
   </test> <!-- All Payments(failed) -->
 </suite> <!-- Failed suite [Suite] -->
+=======
+          <include name="beforetest"/>
+          <include name="aftertest"/>
+          <include name="AdvancePayment"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- Payments.PCMC_alltypepayments -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> pcmcenhacement
