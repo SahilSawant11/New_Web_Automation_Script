@@ -62,7 +62,17 @@ public class ApprovalPage {
 	
 	public String getEkunKarApproval1() {
 		
-        return ekunKarApproval1.getText(); 
+		
+		String abc=ekunKarApproval1.getText();
+		return abc;
+	
+		
+
+		
+       
+        
+       
+        
     }
 	
 	public String getSamanyaKarApproval1() {

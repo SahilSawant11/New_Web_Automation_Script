@@ -8,6 +8,13 @@
 	</classes>
 </test>
 
+ <test name="CreateNewProperty">
+  <classes>
+    <class name="New_property_Wadhghat.CMS_Test"/>
+    </classes>
+  </test>
+ 
+
 <test name="All Payments">
 	<classes>
 		<class name="Payments.alltypepayments"/>
@@ -16,13 +23,7 @@
 
 
 
-<!-- 
- <test name="CreateNewProperty">
-  <classes>
-    <class name="New_property_Wadhghat.CMS_Test"/>
-    </classes>
-  </test>
- -->
+
  <test name="MinorChanges">
 	<classes>
     	<class name="New_property_Wadhghat.MinorChanges"/>

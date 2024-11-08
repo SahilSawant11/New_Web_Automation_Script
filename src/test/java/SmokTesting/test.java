@@ -10,12 +10,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class test {
 
-	 private WebDriver driver = testbrowser.getDriver();
+	
 
 	    @Test
 	    public void testOne() {
-	        driver.get("https://example.com");
-	        // Your Selenium code for test one
+	      
+	    	String myString = "123";
+	    	int myInt = Integer.parseInt(myString);
+	    	
+	    	System.out.println(myInt);
+	    	
 	    }
 
 	    @AfterClass

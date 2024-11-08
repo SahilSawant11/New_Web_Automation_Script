@@ -212,7 +212,7 @@ public class alltypepayments extends BaseDriver{
 		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
 		/////
 		
-		test.log(Status.INFO, "Property for Advance Payment : "+node7+"-"+sector7+"-"+PropertyNo7);
+		test.log(Status.INFO, "Property for Advance Payment : "+node1+"-"+sector1+"-"+PropertyNo1);
 		stopWatch.start();
 		offlinepaymentpage.Click_search_property();
 			

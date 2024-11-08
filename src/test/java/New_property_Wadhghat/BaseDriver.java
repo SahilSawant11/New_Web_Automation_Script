@@ -46,25 +46,7 @@ public class BaseDriver {
 	static public String sector4;
 	static public String PropertyNo4;
 	
-	static public String node5;				// for baramati cheque fail scenario
-	static public String sector5;			// properties from node5 onwards are of BARAMATI
-	static public String PropertyNo5;
 	
-	static public String node6;				
-	static public String sector6;			// properties from node5 onwards are of BARAMATI
-	static public String PropertyNo6;		//BARAMATI
-	
-	static public String node7;				
-	static public String sector7;			// properties from node5 onwards are of BARAMATI
-	static public String PropertyNo7;		//BARAMATI
-	
-	static public String node8;				
-	static public String sector8;			// properties from node5 onwards are of BARAMATI
-	static public String PropertyNo8;		//BARAMATI
-	
-	static public String node9;				
-	static public String sector9;			// properties from node5 onwards are of BARAMATI
-	static public String PropertyNo9;		//BARAMATI
 	
 	static public String akshep_no;
 	public TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
@@ -275,65 +257,7 @@ public class BaseDriver {
 		c.setCellType(CellType.STRING);
 		PropertyNo4 = c.getStringCellValue();
 		
-		c = s.getRow(15).getCell(0);
-		c.setCellType(CellType.STRING);
-		node5 = c.getStringCellValue();
 		
-		c = s.getRow(15).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector5 = c.getStringCellValue();
-		
-		c = s.getRow(15).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo5 = c.getStringCellValue();
-		
-		c = s.getRow(16).getCell(0);
-		c.setCellType(CellType.STRING);
-		node6 = c.getStringCellValue();
-		
-		c = s.getRow(16).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector6 = c.getStringCellValue();
-		
-		c = s.getRow(16).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo6 = c.getStringCellValue();
-		
-		c = s.getRow(17).getCell(0);
-		c.setCellType(CellType.STRING);
-		node7 = c.getStringCellValue();
-		
-		c = s.getRow(17).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector7 = c.getStringCellValue();
-		
-		c = s.getRow(17).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo7 = c.getStringCellValue();
-		
-		c = s.getRow(18).getCell(0);
-		c.setCellType(CellType.STRING);
-		node8 = c.getStringCellValue();
-		
-		c = s.getRow(18).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector8 = c.getStringCellValue();
-		
-		c = s.getRow(18).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo8 = c.getStringCellValue();
-		
-		c = s.getRow(19).getCell(0);
-		c.setCellType(CellType.STRING);
-		node9 = c.getStringCellValue();
-		
-		c = s.getRow(19).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector9 = c.getStringCellValue();
-		
-		c = s.getRow(19).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo9 = c.getStringCellValue();
 		
 		
 		c = s.getRow(1).getCell(5);

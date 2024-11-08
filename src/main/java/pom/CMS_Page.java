@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -63,6 +64,7 @@ public class CMS_Page {
 	
 	private static Map<String, String> storedTaxValues = new HashMap<String, String>();
 	
+	
 	public void pageloading(WebDriver driver) throws InterruptedException
 	{
 		Thread.sleep(1000);
@@ -104,6 +106,10 @@ public class CMS_Page {
 		Thread.sleep(500);
 		property_no.sendKeys(str);
 	}
+	
+	
+	
+	
 	
 	public void Button_new_property_btn() throws InterruptedException
 	{
