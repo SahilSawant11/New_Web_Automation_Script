@@ -98,7 +98,7 @@ public class CounterPaymentPage {
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_txtAdvcAmount']") private WebElement Advanceamount;
 	
 	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_lblPaymentStatus']") private WebElement transaction_id;
-//	@FindBy(xpath = "//*[@id=\"ContentPlaceHolder1_GVDownloads\"]/tbody/tr[1]/th[1]") private WebElement downloadReceipt;
+	@FindBy(xpath = "//*[@id=\"ContentPlaceHolder1_GVDownloads\"]/tbody/tr[1]/th[1]") private WebElement downloadReceipt;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVDownloads']/tbody/tr[2]/td[1]/input") private WebElement downloadReceipt_btn;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnAdvcPayProceed']") private WebElement ProceedAdvancePayment;
 	
@@ -945,11 +945,11 @@ public class CounterPaymentPage {
 		return FinalPayAmount;
 	}
 	
-//	public void label_downloadReceipt(WebDriver driver)
-//	{
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
-//		wait.until(ExpectedConditions.visibilityOf(downloadReceipt));
-//	}
+	public void label_downloadReceipt(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
+		wait.until(ExpectedConditions.visibilityOf(downloadReceipt));
+	}
 	
 	public void downloadReceipt(WebDriver driver) throws InterruptedException
 	{
