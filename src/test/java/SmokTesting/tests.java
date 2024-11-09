@@ -13,7 +13,7 @@ public class tests {
 
 	    @Test
 	    public void testTwo() {
-	        driver.get("https://example.com/anotherPage");
+	        driver.get("http://testpcmc.tabsurveypcmc.org/");
 	      
 	    }
 

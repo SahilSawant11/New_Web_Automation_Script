@@ -1,61 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="7" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-09T10:02:47Z" name="Default suite" finished-at="2024-11-09T10:07:20Z" duration-ms="273002">
+  <suite started-at="2024-11-09T13:54:07Z" name="Default suite" finished-at="2024-11-09T13:55:39Z" duration-ms="91781">
     <groups>
     </groups>
-    <test started-at="2024-11-09T10:02:47Z" name="Default test" finished-at="2024-11-09T10:07:20Z" duration-ms="273002">
-      <class name="PCMC_All_Tests.PCMC_alltypepayments">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@2eea88a1]" started-at="2024-11-09T15:32:47Z" name="beforetest" finished-at="2024-11-09T15:32:58Z" duration-ms="10850" status="PASS">
+    <test started-at="2024-11-09T13:54:07Z" name="Default test" finished-at="2024-11-09T13:55:39Z" duration-ms="91781">
+      <class name="PCMC_All_Tests.PCMC_AdminDashboardReports">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:24:07Z" name="beforetest" finished-at="2024-11-09T19:24:14Z" duration-ms="6607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="loginPage()[pri:1, instance:PCMC_All_Tests.PCMC_alltypepayments@2eea88a1]" started-at="2024-11-09T15:32:58Z" name="loginPage" finished-at="2024-11-09T15:33:26Z" duration-ms="27945" status="PASS">
+        <test-method signature="loginPage()[pri:1, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:24:14Z" name="loginPage" finished-at="2024-11-09T19:24:37Z" duration-ms="23077" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPage -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@2eea88a1]" started-at="2024-11-09T15:33:26Z" name="aftermethod" finished-at="2024-11-09T15:33:27Z" duration-ms="823" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:24:37Z" name="aftermethod" finished-at="2024-11-09T19:24:38Z" duration-ms="884" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginPage status=SUCCESS method=PCMC_alltypepayments.loginPage()[pri:1, instance:PCMC_All_Tests.PCMC_alltypepayments@2eea88a1] output={null}]]]>
+                <![CDATA[[TestResult name=loginPage status=SUCCESS method=PCMC_AdminDashboardReports.loginPage()[pri:1, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_alltypepayments.loginPage() throws java.lang.InterruptedException]]>
+                <![CDATA[public void PCMC_All_Tests.PCMC_AdminDashboardReports.loginPage() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="Card()[pri:7, instance:PCMC_All_Tests.PCMC_alltypepayments@2eea88a1]" started-at="2024-11-09T15:33:27Z" name="Card" finished-at="2024-11-09T15:37:20Z" duration-ms="233021" status="PASS">
+        <test-method signature="Paymentmodewise_Report()[pri:2, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:24:38Z" name="Paymentmodewise_Report" finished-at="2024-11-09T19:24:58Z" duration-ms="20471" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Card -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@2eea88a1]" started-at="2024-11-09T15:37:20Z" name="aftermethod" finished-at="2024-11-09T15:37:20Z" duration-ms="298" status="PASS">
+        </test-method> <!-- Paymentmodewise_Report -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:24:58Z" name="aftermethod" finished-at="2024-11-09T19:24:59Z" duration-ms="228" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Card status=SUCCESS method=PCMC_alltypepayments.Card()[pri:7, instance:PCMC_All_Tests.PCMC_alltypepayments@2eea88a1] output={null}]]]>
+                <![CDATA[[TestResult name=Paymentmodewise_Report status=SUCCESS method=PCMC_AdminDashboardReports.Paymentmodewise_Report()[pri:2, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_alltypepayments.Card() throws java.lang.Exception]]>
+                <![CDATA[public void PCMC_All_Tests.PCMC_AdminDashboardReports.Paymentmodewise_Report() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@2eea88a1]" started-at="2024-11-09T15:37:20Z" name="aftertest" finished-at="2024-11-09T15:37:20Z" duration-ms="33" status="PASS">
+        <test-method signature="Usewise_Report()[pri:3, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:24:59Z" name="Usewise_Report" finished-at="2024-11-09T19:25:19Z" duration-ms="20108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Usewise_Report -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:25:19Z" name="aftermethod" finished-at="2024-11-09T19:25:19Z" duration-ms="190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Usewise_Report status=SUCCESS method=PCMC_AdminDashboardReports.Usewise_Report()[pri:3, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void PCMC_All_Tests.PCMC_AdminDashboardReports.Usewise_Report() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="Zonewise_Report()[pri:3, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:25:19Z" name="Zonewise_Report" finished-at="2024-11-09T19:25:39Z" duration-ms="19977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Zonewise_Report -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:25:39Z" name="aftermethod" finished-at="2024-11-09T19:25:39Z" duration-ms="180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Zonewise_Report status=SUCCESS method=PCMC_AdminDashboardReports.Zonewise_Report()[pri:3, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void PCMC_All_Tests.PCMC_AdminDashboardReports.Zonewise_Report() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@68878f6d]" started-at="2024-11-09T19:25:39Z" name="aftertest" finished-at="2024-11-09T19:25:39Z" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->
-      </class> <!-- PCMC_All_Tests.PCMC_alltypepayments -->
+      </class> <!-- PCMC_All_Tests.PCMC_AdminDashboardReports -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

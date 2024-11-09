@@ -3,7 +3,9 @@ package SmokTesting;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class testbrowser {
+import New_property_Wadhghat.BaseDriver;
+
+public class testbrowser  {
 
 	  private static WebDriver driver;
 
@@ -15,10 +17,10 @@ public class testbrowser {
 	        return driver;
 	    }
 
-	    public static void quitDriver() {
-	        if (driver != null) {
-	            driver.quit();
-	            driver = null;
-	        }
-	    }
+//	    public static void quitDriver() {
+//	        if (driver != null) {
+//	            driver.quit();
+//	            driver = null;
+//	        }
+//	    }
 }
