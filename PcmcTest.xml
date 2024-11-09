@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<test name="Login">
+	<classes>
+		<class name="New_property_Wadhghat.Login"/>
+	</classes>
+</test>
+
+ <test name="All Type Payments">
+  <classes>
+    <class name="PCMC_All_Tests.PCMC_alltypepayments"/>
+    </classes>
+  </test>
+ 
+
+<test name="Pcmc Reports">
+	<classes>
+		<class name="PCMC_All_Tests.PCMC_ReportTest"/>
+	</classes>
+</test>
+</suite> <!-- Suite -->
+ 

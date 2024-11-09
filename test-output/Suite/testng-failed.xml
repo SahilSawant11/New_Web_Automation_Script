@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="CreateNewProperty(failed)">
+  <test name="All Type Payments(failed)">
     <classes>
-      <class name="New_property_Wadhghat.CMS_Test">
-        <methods>
-          <include name="AddTaxes_and_UploadFiles"/>
-          <include name="cmsRegisterPageWadhghat"/>
-          <include name="aftermethod"/>
-          <include name="Dataentry_floor_info"/>
-          <include name="beforetest"/>
-          <include name="WadhghatApproval"/>
-          <include name="cmsPageWadhghat"/>
-          <include name="Dataentry_owner_info"/>
-          <include name="OldTaxex_info"/>
-          <include name="searchComplaintWadhghat"/>
-          <include name="councilapproval"/>
-          <include name="cmsComplaintRegisterWadhghat"/>
-        </methods>
-      </class> <!-- New_property_Wadhghat.CMS_Test -->
-    </classes>
-  </test> <!-- CreateNewProperty(failed) -->
-  <test thread-count="5" name="All Payments(failed)">
-    <classes>
-      <class name="Payments.alltypepayments">
+      <class name="PCMC_All_Tests.PCMC_alltypepayments">
         <methods>
           <include name="aftermethod"/>
-          <include name="cheque_clear"/>
+          <include name="cheque_fail"/>
           <include name="aftertest"/>
+          <include name="AdvancePayment"/>
         </methods>
-      </class> <!-- Payments.alltypepayments -->
+      </class> <!-- PCMC_All_Tests.PCMC_alltypepayments -->
     </classes>
-  </test> <!-- All Payments(failed) -->
+  </test> <!-- All Type Payments(failed) -->
+  <test name="Pcmc Reports(failed)">
+    <classes>
+      <class name="PCMC_All_Tests.PCMC_ReportTest">
+        <methods>
+          <include name="headwise_report_for_cash"/>
+          <include name="aftertest"/>
+          <include name="bharna_report_for_all_modes"/>
+          <include name="challan_report_for_cheque"/>
+          <include name="challan_report_for_cash"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- PCMC_All_Tests.PCMC_ReportTest -->
+    </classes>
+  </test> <!-- Pcmc Reports(failed) -->
 </suite> <!-- Failed suite [Suite] -->

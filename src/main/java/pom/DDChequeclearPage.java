@@ -95,7 +95,9 @@ Select billbook = new Select(Filter_zone);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(120000));
 		wait.until(ExpectedConditions.visibilityOf(Filter_Sec));
 	//	Select sector = new Select(Filter_Sec);
-		Filter_Sec.sendKeys(str);
+	//	Filter_Sec.sendKeys(str);
+		Select sector = new Select(Filter_Sec);
+		sector.selectByValue(str);
 		
 		
 //		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(120000));
@@ -126,7 +128,9 @@ Select billbook = new Select(Filter_zone);
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
 		wait.until(ExpectedConditions.visibilityOf(ClearChequeBtn));
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", FailChequeBtn);
+	    Thread.sleep(5000);
 		ClearChequeBtn.click();
 		Thread.sleep(500);
 		
@@ -137,7 +141,9 @@ Select billbook = new Select(Filter_zone);
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
 		wait.until(ExpectedConditions.visibilityOf(FailChequeBtn));
-		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", FailChequeBtn);
+	    Thread.sleep(5000);
 		FailChequeBtn.click();
 		Thread.sleep(500);
 		

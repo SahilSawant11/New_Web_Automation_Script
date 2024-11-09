@@ -23,12 +23,7 @@ public class OfflinePaymentPage {
 		@FindBy(xpath = "//a[text()='Dashboard']") private WebElement dashboard;
 		
 		@FindBy(xpath = "//input[@id='ContentPlaceHolder1_rbtPropertyUniqueNo']") private WebElement upic_code_checkbox;
-		@FindBy(xpath = "//input[@id='ContentPlaceHolder1_rbtPropertyWise']") private WebElement property_no_radio_btn;
-		
-		
-		
-		
-		
+		@FindBy(xpath = "//input[@id='ContentPlaceHolder1_rbtPropertyWise']") private WebElement property_no_radio_btn;	
 		
 		@FindBy(xpath = "//select[@name='ctl00$ContentPlaceHolder1$ddlNodeNo']") private WebElement node_no;
 		@FindBy(xpath = "//select[@name='ctl00$ContentPlaceHolder1$ddlSectorNo']") private WebElement sector_no;
@@ -40,8 +35,6 @@ public class OfflinePaymentPage {
 		@FindBy(xpath = "//a[@id='ContentPlaceHolder1_lblDownloadReceiptbtn']") private WebElement receipts;
 		
 		@FindBy(xpath = "//span[@id='loggedUserFullName']") private WebElement loggedUserFullName;
-		
-		
 		
 		public OfflinePaymentPage(WebDriver driver)
 		{
@@ -179,8 +172,7 @@ public class OfflinePaymentPage {
 			Thread.sleep(1000);
 			search_property.click();
 		}
-		
-		
+			
 		public void check_transaction_id(WebDriver driver)
 		{
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));

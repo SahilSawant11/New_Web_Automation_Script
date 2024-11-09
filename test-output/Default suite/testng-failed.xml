@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Payments.PCMC_alltypepayments">
+      <class name="PCMC_All_Tests.PCMC_alltypepayments">
         <methods>
+          <include name="aftermethod"/>
+          <include name="Card"/>
           <include name="beforetest"/>
           <include name="aftertest"/>
-          <include name="AdvancePayment"/>
-          <include name="aftermethod"/>
         </methods>
-      </class> <!-- Payments.PCMC_alltypepayments -->
+      </class> <!-- PCMC_All_Tests.PCMC_alltypepayments -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

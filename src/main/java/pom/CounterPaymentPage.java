@@ -89,7 +89,7 @@ public class CounterPaymentPage {
 	
 	@FindBy(xpath = "//span[text()='Transaction ID Generated Succesfully']") private WebElement transction_id_msg;
 	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_lblDownloadReceiptbtn']") private WebElement receipts_btn;
-	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnGetReceipt']") private WebElement pcmc_receipts_btn;
+	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_btnGetReceipt']") private WebElement pcmc_receipts_btn;
 	
 	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_lblDownloads']") private WebElement download_receipt_list;
 	@FindBy(xpath = "(//tr//td//input[@type='image'])[1]") private WebElement downloadfile1;
@@ -98,7 +98,7 @@ public class CounterPaymentPage {
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_txtAdvcAmount']") private WebElement Advanceamount;
 	
 	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_lblPaymentStatus']") private WebElement transaction_id;
-	@FindBy(xpath = "//*[@id=\"ContentPlaceHolder1_GVDownloads\"]/tbody/tr[1]/th[1]") private WebElement downloadReceipt;
+//	@FindBy(xpath = "//*[@id=\"ContentPlaceHolder1_GVDownloads\"]/tbody/tr[1]/th[1]") private WebElement downloadReceipt;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVDownloads']/tbody/tr[2]/td[1]/input") private WebElement downloadReceipt_btn;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnAdvcPayProceed']") private WebElement ProceedAdvancePayment;
 	
@@ -822,7 +822,10 @@ public class CounterPaymentPage {
 		PCMC_pay_now.click();
 	}
 	
-
+	public void scrollToBottom(WebDriver driver) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+	}
 	
 	public void confirm_payment(WebDriver driver) throws InterruptedException
 	{
@@ -921,6 +924,9 @@ public class CounterPaymentPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
 		wait.until(ExpectedConditions.visibilityOf(transction_id_msg));
 		Thread.sleep(1000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", pcmc_receipts_btn);
+	    Thread.sleep(5000);
 		pcmc_receipts_btn.click();
 	}
 	
@@ -939,11 +945,11 @@ public class CounterPaymentPage {
 		return FinalPayAmount;
 	}
 	
-	public void label_downloadReceipt(WebDriver driver)
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
-		wait.until(ExpectedConditions.visibilityOf(downloadReceipt));
-	}
+//	public void label_downloadReceipt(WebDriver driver)
+//	{
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
+//		wait.until(ExpectedConditions.visibilityOf(downloadReceipt));
+//	}
 	
 	public void downloadReceipt(WebDriver driver) throws InterruptedException
 	{

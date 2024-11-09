@@ -48,6 +48,7 @@ public class BaseDriver {
 	
 	
 	
+	
 	static public String akshep_no;
 	public TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	static public int financeYear;
@@ -174,6 +175,7 @@ public class BaseDriver {
 	static public String change_MobileNo2 = "1111111111";
 	static public String change_email2 = "xyz@gmail.com";
 	static public String change_remark2 = "automation_test";
+	static public String specificDate = "01-10-2024";
 
 	
 	@SuppressWarnings("resource")
