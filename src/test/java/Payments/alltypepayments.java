@@ -41,50 +41,50 @@ public class alltypepayments extends BaseDriver{
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	
 	
-//	@BeforeTest
-//	public void beforetest() throws IOException
-//	{
-//		Delete_Files Delete_files = new Delete_Files(driver);
-//		System.out.println(System.getProperty("user.dir"));
-//		Delete_files.Delete_files("\\PdfReports\\");
-//		
-//		extent = new ExtentReports();
-//		spark = new ExtentSparkReporter("ExtentReport.html");
-//		extent.attachReporter(spark);
-//		BaseDriver.GetData();
-////		WebDriverManager.chromedriver().setup();
-//		driver = CMS_browser.getDriver();
-//		stopWatch = new StopWatch();
-//	}
-//	
-//	
-//	@Test(priority = 1)
-//	public void loginPage() throws InterruptedException
-//	{
-//		driver.get(url);
-//		test = extent.createTest("loginPage");
-//		LoginPage loginpage = new LoginPage(driver);
-//		loginpage.Enter_user_name(userid, driver);
-//		
-//		loginpage.Enter_password(password);
-//		Thread.sleep(10000);
-//		Scanner scanner = new Scanner(System.in);
-//     System.out.print("Can We start Automation: ");
-//		
-//		try
-//		{
-//			loginpage.click_logout(driver);
-//			loginpage.Enter_user_name(userid, driver);
-//			loginpage.Enter_password(password);
-//			loginpage.Click_login_btn(driver);	
-//		}
-//		catch(Exception e)
-//		{
-//			
-//		}
-//	}
+	@BeforeTest
+	public void beforetest() throws IOException
+	{
+		Delete_Files Delete_files = new Delete_Files(driver);
+		System.out.println(System.getProperty("user.dir"));
+		Delete_files.Delete_files("\\PdfReports\\");
+		
+		extent = new ExtentReports();
+		spark = new ExtentSparkReporter("ExtentReport.html");
+		extent.attachReporter(spark);
+		BaseDriver.GetData();
+//		WebDriverManager.chromedriver().setup();
+		driver = CMS_browser.getDriver();
+		stopWatch = new StopWatch();
+	}
 	
 	
+	@Test(priority = 1)
+	public void loginPage() throws InterruptedException
+	{
+		driver.get(url);
+		test = extent.createTest("loginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Enter_user_name(userid, driver);
+		
+		loginpage.Enter_password(password);
+		Thread.sleep(10000);
+		Scanner scanner = new Scanner(System.in);
+     System.out.print("Can We start Automation: ");
+		
+		try
+		{
+			loginpage.click_logout(driver);
+			loginpage.Enter_user_name(userid, driver);
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);	
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+	
+/*	
 	@Test(priority = 2 )
 	public void CashPayment() throws Exception
 	{	
@@ -191,7 +191,7 @@ public class alltypepayments extends BaseDriver{
 
 	}
 //	enabled = false
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3)
 	public void AdvancePayment() throws Exception
 	{
 		
@@ -246,9 +246,8 @@ public class alltypepayments extends BaseDriver{
 		///
         
 	}
-	
-	
-	@Test(priority = 4)  //,dependsOnMethods = "loginPage"
+*/	
+	@Test(priority = 4, enabled=false)  //,dependsOnMethods = "loginPage"
 	public void chequePayment() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -344,7 +343,7 @@ public class alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 5,dependsOnMethods = "chequePayment")
+	@Test(priority = 5,dependsOnMethods = "chequePayment",enabled=false)
 	public void cheque_fail() throws Exception
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -357,7 +356,7 @@ public class alltypepayments extends BaseDriver{
 		DDchequeapproval.pageloading(driver);
 		DDchequeapproval.Enter_ChequeNo("11223344", driver);
 		DDchequeapproval.SelectNode_filter(node2, driver);
-		
+		Thread.sleep(5000);
 		
 		DDchequeapproval.SelectSec_filter(sector2, driver);
 		
@@ -409,7 +408,7 @@ public class alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 6)  //,dependsOnMethods = "loginPage"
+	@Test(priority = 6,enabled=false)  //,dependsOnMethods = "loginPage"
 	public void chequePaymentforClear() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -518,8 +517,7 @@ public class alltypepayments extends BaseDriver{
 		DDchequeapproval.pageloading(driver);
 		DDchequeapproval.Enter_ChequeNo("11223344", driver);
 		DDchequeapproval.SelectNode_filter(node3, driver);
-		
-		
+		Thread.sleep(5000);
 		DDchequeapproval.SelectSec_filter(sector3, driver);
 		
 		DDchequeapproval.Click_serachBTN (driver);
@@ -570,8 +568,7 @@ public class alltypepayments extends BaseDriver{
 		
 
 	}
-
-	
+/*
 	@Test(priority = 8)
 	public void Card() throws Exception
 	{
@@ -598,12 +595,12 @@ public class alltypepayments extends BaseDriver{
 		counterpayment = new CounterPaymentPage(driver);
 		
 		counterpayment.Select_Finalcheckbox(driver);
-	/*	if (counterpayment.IsFinalCheckboxPresent(driver)) {
-		    counterpayment.Select_Finalcheckbox(driver);
-		} else {
-		    counterpayment.Select_APartcheckbox(driver);
-		}
-	*/
+//		if (counterpayment.IsFinalCheckboxPresent(driver)) {
+//		    counterpayment.Select_Finalcheckbox(driver);
+//		} else {
+//		    counterpayment.Select_APartcheckbox(driver);
+//		}
+//	
 		Thread.sleep(5000);
 		
 	
@@ -699,9 +696,7 @@ public class alltypepayments extends BaseDriver{
 			test.log(Status.FAIL, "Counter is not cleared ");
 		}
 	}
-	
-	
-	
+*/		
 	@AfterMethod
 	public void aftermethod(ITestResult result,java.lang.reflect.Method m)
 	{
@@ -736,8 +731,6 @@ public class alltypepayments extends BaseDriver{
 		extent.flush();
 		
 	}
-	
-
 	
 	@AfterTest
 	public void aftertest()

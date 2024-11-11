@@ -27,43 +27,44 @@ public class ReportEngine extends BaseDriver {
 	StopWatch stopWatch;
 	 private WebDriver driver = CMS_browser.getDriver();
 	
-//	@BeforeTest
-//	public void beforetest() throws IOException
-//	{
-//		Delete_Files Delete_files = new Delete_Files(driver);
-//		System.out.println(System.getProperty("user.dir"));
-//		Delete_files.Delete_files("\\PdfReports\\");
-//		
-//		extent = new ExtentReports();
-//		spark = new ExtentSparkReporter("ExtentReport.html");
-//		extent.attachReporter(spark);
-//		BaseDriver.GetData();
-//		driver = CMS_browser.openBrowser(url);
-//	}
-//	
-//	@Test(priority = 1)
-//	public void loginPage() throws InterruptedException
-//	{
-//		test = extent.createTest("loginPage");
-//		LoginPage loginpage = new LoginPage(driver);
-//		loginpage.Enter_user_name(userid, driver);
-//		
-//		loginpage.Enter_password(password);
-//		Thread.sleep(10000);
-//		loginpage.Click_login_btn(driver);
-//			try
-//		{
-//			loginpage.click_logout(driver);
-//			loginpage.Enter_user_name(userid, driver);
-//			loginpage.Enter_password(password);
-//			loginpage.Click_login_btn(driver);	
-//		}
-//		catch(Exception e)
-//		{
-//			
-//		}
-//	}
+/*	 
+	@BeforeTest
+	public void beforetest() throws IOException
+	{
+		Delete_Files Delete_files = new Delete_Files(driver);
+		System.out.println(System.getProperty("user.dir"));
+		Delete_files.Delete_files("\\PdfReports\\");
+		
+		extent = new ExtentReports();
+		spark = new ExtentSparkReporter("ExtentReport.html");
+		extent.attachReporter(spark);
+		BaseDriver.GetData();
+		driver = CMS_browser.openBrowser(url);
+	}
 	
+	@Test(priority = 1)
+	public void loginPage() throws InterruptedException
+	{
+		test = extent.createTest("loginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Enter_user_name(userid, driver);
+		
+		loginpage.Enter_password(password);
+		Thread.sleep(10000);
+		loginpage.Click_login_btn(driver);
+			try
+		{
+			loginpage.click_logout(driver);
+			loginpage.Enter_user_name(userid, driver);
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);	
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+*/	
 	@Test(priority = 2)
 	public void Notice_report () throws Exception
 	{
@@ -92,6 +93,7 @@ public class ReportEngine extends BaseDriver {
 		 test.info("Time duration of exporting Notice Report: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		 stopWatch.stop();   
 	}
+	
 @Test(priority = 3)
 	
 	public void Karakarni_report () throws Exception

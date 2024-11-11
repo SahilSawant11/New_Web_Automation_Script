@@ -3,6 +3,9 @@ package pom;
 
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -643,7 +646,7 @@ public class CounterPaymentPage {
 	
 	 public static boolean renameDownloadedFile(String oldFilename, String newFilename) throws Exception {
 	        // Define the directory path
-	        String directoryPath = System.getProperty("user.dir") + File.separator + "PdfReports";
+	        String directoryPath = System.getProperty("user.dir") + File.separator + "temp";
 
 	        // Create File objects for the directory and files
 	        File directory = new File(directoryPath);
@@ -733,6 +736,36 @@ public class CounterPaymentPage {
 	        }
 	        
 	 }
+
+	 public static boolean moveRenamedFileToReportFolder(String newFilename) {
+	        // Define the source folder (temp folder) and destination folder (pdfreportfolder)
+	        String sourceFolder = System.getProperty("user.dir") + File.separator + "temp";
+	        String targetFolder = System.getProperty("user.dir") + File.separator + "pdfreportfolder";
+
+	        File sourceFile = new File(sourceFolder, newFilename);
+	        File destinationFile = new File(targetFolder, newFilename);
+
+	        try {
+	      
+	            File targetDir = new File(targetFolder);
+	            if (!targetDir.exists()) {
+	                targetDir.mkdir();
+	            }
+
+	          
+	            if (sourceFile.exists()) {
+	                Files.move(sourceFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+	                System.out.println("File moved successfully to: " + destinationFile.getAbsolutePath());
+	                return true;
+	            } else {
+	                System.out.println("Source file does not exist: " + sourceFile.getAbsolutePath());
+	                return false;
+	            }
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	            return false;
+	        }
+	    }
 	 
 	public void Select_payment_mode(String str)
 	{

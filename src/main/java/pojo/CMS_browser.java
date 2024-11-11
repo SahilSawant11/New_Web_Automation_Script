@@ -46,7 +46,7 @@ public class CMS_browser {
 	    		chromePrefs.put("plugins.always_open_pdf_externally", true);
 	    		
 	    		 chromePrefs.put("download.default_directory",
-	    				 System.getProperty("user.dir") + File.separator + "PdfReports");
+	    				 System.getProperty("user.dir") + File.separator + "temp");
 	    		 
 	    		 ChromeOptions options = new ChromeOptions();
 	    			options.setExperimentalOption("prefs", chromePrefs);

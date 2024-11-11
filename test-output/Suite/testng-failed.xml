@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="All Type Payments(failed)">
+  <test name="All Payments(failed)">
     <classes>
-      <class name="PCMC_All_Tests.PCMC_alltypepayments">
+      <class name="Payments.alltypepayments">
         <methods>
           <include name="aftermethod"/>
+          <include name="chequePayment"/>
+          <include name="chequePaymentforClear"/>
+          <include name="cheque_clear"/>
           <include name="cheque_fail"/>
           <include name="aftertest"/>
-          <include name="AdvancePayment"/>
         </methods>
-      </class> <!-- PCMC_All_Tests.PCMC_alltypepayments -->
+      </class> <!-- Payments.alltypepayments -->
     </classes>
-  </test> <!-- All Type Payments(failed) -->
-  <test name="Pcmc Reports(failed)">
+  </test> <!-- All Payments(failed) -->
+  <test name="MinorChanges(failed)">
     <classes>
-      <class name="PCMC_All_Tests.PCMC_ReportTest">
+      <class name="New_property_Wadhghat.MinorChanges">
         <methods>
-          <include name="headwise_report_for_cash"/>
-          <include name="aftertest"/>
-          <include name="bharna_report_for_all_modes"/>
-          <include name="challan_report_for_cheque"/>
-          <include name="challan_report_for_cash"/>
           <include name="aftermethod"/>
+          <include name="performMinorChangeAndVerify"/>
         </methods>
-      </class> <!-- PCMC_All_Tests.PCMC_ReportTest -->
+      </class> <!-- New_property_Wadhghat.MinorChanges -->
     </classes>
-  </test> <!-- Pcmc Reports(failed) -->
+  </test> <!-- MinorChanges(failed) -->
 </suite> <!-- Failed suite [Suite] -->

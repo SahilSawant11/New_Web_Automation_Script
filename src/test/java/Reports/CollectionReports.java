@@ -26,43 +26,45 @@ public class CollectionReports extends BaseDriver {
 	StopWatch stopWatch;
 	private WebDriver driver = CMS_browser.getDriver();
 	
-//	@BeforeTest
-//	public void beforetest() throws IOException
-//	{
-//		Delete_Files Delete_files = new Delete_Files(driver);
-//		System.out.println(System.getProperty("user.dir"));
-//		Delete_files.Delete_files("\\PdfReports\\");	
-//		extent = new ExtentReports();
-//		spark = new ExtentSparkReporter("ExtentReport.html");
-//		extent.attachReporter(spark);
-//		BaseDriver.GetData();
-//		driver = CMS_browser.getDriver();
-//		stopWatch = new StopWatch();
-//	}
-//	
-//	@Test(priority = 1)
-//	public void loginPage() throws InterruptedException
-//	{
-//		driver.get(url);
-//		test = extent.createTest("loginPage");
-//		LoginPage loginpage = new LoginPage(driver);
-//		loginpage.Enter_user_name(userid, driver);	
-//		loginpage.Enter_password(password);
-//		Scanner scanner = new Scanner(System.in);
-//        System.out.print("Can We start Automation: ");
-//		
-//		try
-//		{
-//			loginpage.click_logout(driver);
-//			loginpage.Enter_user_name(userid, driver);
-//			loginpage.Enter_password(password);
-//			loginpage.Click_login_btn(driver);	
-//		}
-//		catch(Exception e)
-//		{
-//			
-//		}
-//	}
+/*	
+	@BeforeTest
+	public void beforetest() throws IOException
+	{
+		Delete_Files Delete_files = new Delete_Files(driver);
+		System.out.println(System.getProperty("user.dir"));
+		Delete_files.Delete_files("\\PdfReports\\");	
+		extent = new ExtentReports();
+		spark = new ExtentSparkReporter("ExtentReport.html");
+		extent.attachReporter(spark);
+		BaseDriver.GetData();
+		driver = CMS_browser.getDriver();
+		stopWatch = new StopWatch();
+	}
+	
+	@Test(priority = 1)
+	public void loginPage() throws InterruptedException
+	{
+		driver.get(url);
+		test = extent.createTest("loginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Enter_user_name(userid, driver);	
+		loginpage.Enter_password(password);
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Can We start Automation: ");
+		
+		try
+		{
+			loginpage.click_logout(driver);
+			loginpage.Enter_user_name(userid, driver);
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);	
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+*/	
 	@Test(priority = 2)
 	public void collectiontest() throws InterruptedException {
 		test = extent.createTest("Collection Report");
@@ -109,6 +111,5 @@ public class CollectionReports extends BaseDriver {
  //      }
         extent.flush();
     }
-
 	
 }

@@ -2,6 +2,7 @@ package Reports;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.time.StopWatch;
@@ -30,6 +31,7 @@ public class DownloadReports extends BaseDriver {
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	StopWatch stopWatch;
 	
+
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
@@ -41,21 +43,24 @@ public class DownloadReports extends BaseDriver {
 		spark = new ExtentSparkReporter("ExtentReport.html");
 		extent.attachReporter(spark);
 		BaseDriver.GetData();
-		//WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.openBrowser(url);
+//		WebDriverManager.chromedriver().setup();
+		driver = CMS_browser.getDriver();
 		stopWatch = new StopWatch();
 	}
-	
 	
 	
 	@Test(priority = 1)
 	public void loginPage() throws InterruptedException
 	{
+		driver.get(url);
 		test = extent.createTest("loginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.Enter_user_name(userid, driver);
+		
 		loginpage.Enter_password(password);
-		loginpage.Click_login_btn(driver);
+		Thread.sleep(10000);
+		Scanner scanner = new Scanner(System.in);
+     System.out.print("Can We start Automation: ");
 		
 		try
 		{
@@ -70,17 +75,12 @@ public class DownloadReports extends BaseDriver {
 		}
 	}
 	
-	
-	@Test(priority = 2,dependsOnMethods = "loginPage")
+	@Test(priority = 2)
 	public void DownloadCounterReports() throws Exception
 	{
 		test = extent.createTest("Counter Reports");
 		CounterPaymentPage counterpayment = null;
 		stopWatch = new StopWatch();
-		
-		
-		
-		
 	
 		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
 		offlinepaymentpage.offlinePaymentPage(url, driver);
@@ -130,13 +130,14 @@ public class DownloadReports extends BaseDriver {
         counterpayment.PopUpAfterDownloadNotice(driver);
         
         if (isvaluationdownloaded==true) {
+        	counterpayment.moveRenamedFileToReportFolder(EduTax);
         	test.pass("valuationsheet  downloaded successfully for "+node1+"-"+sector1+"-"+PropertyNo1);
 		}else {
 			test.fail("valuationsheet  not downloaded  for "+node1+"-"+sector1+"-"+PropertyNo1);
 		}
 }
 	
-	@Test(priority = 3,dependsOnMethods = "loginPage")
+	@Test(priority = 3)
 	public void AssismentNakkal() throws Exception
 	{
 		CounterPaymentPage counterpayment = null;
@@ -163,6 +164,7 @@ public class DownloadReports extends BaseDriver {
 		
 
         if (isNakkaldownloaded==true) {
+        	counterpayment.moveRenamedFileToReportFolder(EduTax);
         	test.pass("Nakkal downloaded successfully for "+node1+"-"+sector1+"-"+PropertyNo1);
 		}else {
 			test.fail("Nakkal not downloaded  for "+node1+"-"+sector1+"-"+PropertyNo1);
@@ -171,9 +173,7 @@ public class DownloadReports extends BaseDriver {
 		
 }
 	
-	
-	
-	@Test(priority = 4,dependsOnMethods = "loginPage")
+	@Test(priority = 4)
 	public void NoDueCertificate() throws Exception
 	{
 		CounterPaymentPage counterpayment = null;
@@ -200,6 +200,7 @@ public class DownloadReports extends BaseDriver {
 		
 
         if (isNoDuedownloaded==true) {
+        	counterpayment.moveRenamedFileToReportFolder(EduTax);
         	test.pass("No Due Certificate downloaded successfully for "+node1+"-"+sector1+"-"+PropertyNo1);
 		}else {
 			test.fail("No Due Certificate not downloaded  for "+node1+"-"+sector1+"-"+PropertyNo1);
@@ -209,6 +210,7 @@ public class DownloadReports extends BaseDriver {
 		
 		
 }
+	
 	@AfterMethod
 	public void aftermethod(ITestResult result,java.lang.reflect.Method m)
 	{
@@ -244,19 +246,13 @@ public class DownloadReports extends BaseDriver {
 		
 	}
 	
-
-	
 	@AfterTest
 	public void aftertest()
 	{
 		extent.flush();
 	}
-
-
 	
 	////////////////////////////////////////methods used in a test code
-	
-	
 	
 	public void MakePropertyNoDue(String node,String sector,String property) throws Exception {
 		
@@ -381,7 +377,5 @@ else {
 		
 		
 	}
-	
-	
-	
+		
 }

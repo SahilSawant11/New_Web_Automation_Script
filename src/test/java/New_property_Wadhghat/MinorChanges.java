@@ -23,49 +23,47 @@ import pom.OfflinePaymentPage;
 import utility.Delete_Files;
 import utility.TakeScreenshoot;
 
-
-
 public class MinorChanges extends BaseDriver {
 
 	StopWatch stopWatch;
 	private WebDriver driver = CMS_browser.getDriver();
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
-
-//	@BeforeTest
-//	public void beforetest() throws IOException
-//	{
-//		Delete_Files Delete_files = new Delete_Files(driver);
-//		System.out.println(System.getProperty("user.dir"));
-//		Delete_files.Delete_files("\\PdfReports\\");
-//		extent = new ExtentReports();
-//		spark = new ExtentSparkReporter("ExtentReport.html");
-//		extent.attachReporter(spark);
-//		BaseDriver.GetData();
-//		driver = CMS_browser.openBrowser(url);
-//		stopWatch = new StopWatch();
-//	}
-//	
-//	@Test(priority = 1)
-//	public void loginPage() throws InterruptedException
-//	{
-//		LoginPage loginpage = new LoginPage(driver);
-//		loginpage.Enter_user_name(userid, driver);
-//		loginpage.Enter_password(password);
-//		loginpage.Click_login_btn(driver);
-//		
-//		try
-//		{
-//			loginpage.click_logout(driver);
-//			loginpage.Enter_user_name(userid, driver);
-//			loginpage.Enter_password(password);
-//			loginpage.Click_login_btn(driver);
-//		}
-//		catch(Exception e)
-//		{
-//			
-//		}
-//	}
-
+/*
+	@BeforeTest
+	public void beforetest() throws IOException
+	{
+		Delete_Files Delete_files = new Delete_Files(driver);
+		System.out.println(System.getProperty("user.dir"));
+		Delete_files.Delete_files("\\PdfReports\\");
+		extent = new ExtentReports();
+		spark = new ExtentSparkReporter("ExtentReport.html");
+		extent.attachReporter(spark);
+		BaseDriver.GetData();
+		driver = CMS_browser.openBrowser(url);
+		stopWatch = new StopWatch();
+	}
+	
+	@Test(priority = 1)
+	public void loginPage() throws InterruptedException
+	{
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Enter_user_name(userid, driver);
+		loginpage.Enter_password(password);
+		loginpage.Click_login_btn(driver);
+		
+		try
+		{
+			loginpage.click_logout(driver);
+			loginpage.Enter_user_name(userid, driver);
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+*/
 	@Test(priority = 2)
 	public void performMinorChangeAndVerify() throws Exception {
 	    test = extent.createTest("Perform Minor Change and Verify");
@@ -169,7 +167,6 @@ public class MinorChanges extends BaseDriver {
 	    test.pass("Counter after minor changes", MediaEntityBuilder.createScreenCaptureFromBase64String(minorchangesImage2).build());
 	}
 
-	
 	@AfterMethod
 	public void aftermethod(ITestResult result,java.lang.reflect.Method m)
 	{
@@ -205,7 +202,5 @@ public class MinorChanges extends BaseDriver {
 			e.printStackTrace();
 		}
 		extent.flush();}
-	
-	
 	
 }

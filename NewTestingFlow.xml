@@ -21,7 +21,11 @@
 	</classes>
 </test>
 
-
+<test name="Counter Reports">
+	<classes>
+		<class name="Reports.DownloadReports"/>
+	</classes>
+</test>
 
 
  <test name="MinorChanges">

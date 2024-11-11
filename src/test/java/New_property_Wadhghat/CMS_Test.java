@@ -37,8 +37,6 @@ import utility.FileHistory;
 //import utility.ScrollPage;
 import utility.TakeScreenshoot;
 
-
-
 public class CMS_Test extends BaseDriver{
 	JavascriptExecutor js;
 	StopWatch stopWatch;
@@ -46,8 +44,6 @@ public class CMS_Test extends BaseDriver{
 	//taxex check
 	String Taxtotal_fromDataentry;
 	
-
-
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
@@ -56,33 +52,31 @@ public class CMS_Test extends BaseDriver{
 		
 	}
 	
-//	
-//	@Test(priority = 1)
-//	public void loginPage() throws InterruptedException
-//	{
-//		driver.get(url);
-//		test = extent.createTest("loginPage");
-//		LoginPage loginpage = new LoginPage(driver);
-//		loginpage.Enter_user_name(userid, driver);
-//		
-//		loginpage.Enter_password(password);
-//		Thread.sleep(10000);
-//		Scanner scanner = new Scanner(System.in);
-//     System.out.print("Can We start Automation: ");
-//		
-//		try
-//		{
-//			loginpage.click_logout(driver);
-//			loginpage.Enter_user_name(userid, driver);
-//			loginpage.Enter_password(password);
-//			loginpage.Click_login_btn(driver);	
-//		}
-//		catch(Exception e)
-//		{
-//			
-//		}
-//	}
-//	
+	@Test(priority = 1, enabled=false)
+	public void loginPage() throws InterruptedException
+	{
+		driver.get(url);
+		test = extent.createTest("loginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Enter_user_name(userid, driver);
+		
+		loginpage.Enter_password(password);
+		Thread.sleep(10000);
+		Scanner scanner = new Scanner(System.in);
+     System.out.print("Can We start Automation: ");
+		
+		try
+		{
+			loginpage.click_logout(driver);
+			loginpage.Enter_user_name(userid, driver);
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);	
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
 	
 	@Test(priority = 2)
 	public void cmsPageWadhghat() throws InterruptedException
@@ -185,7 +179,6 @@ public class CMS_Test extends BaseDriver{
 		OnlineDataEntryPage onlinedataentry = new OnlineDataEntryPage(driver);
 		onlinedataentry.Enter_vadhghat_shera(driver);
 	}
-	
 	
 	@Test(priority = 6, dependsOnMethods = "searchComplaintWadhghat")
 	public void Dataentry_owner_info() throws InterruptedException
