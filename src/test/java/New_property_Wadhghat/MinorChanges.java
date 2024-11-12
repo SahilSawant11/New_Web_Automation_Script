@@ -80,7 +80,7 @@ public class MinorChanges extends BaseDriver {
 	    offlinepaymentpage.Click_property_no_radio_btn(driver);
 	    offlinepaymentpage.Select_node_no(driver, node);
 	    offlinepaymentpage.Select_sector_no(driver, sector);
-	    offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+	    offlinepaymentpage.Enter_property_no(driver, PropertyNo);
 	    
 	    stopWatch.reset();
 	    stopWatch.start();

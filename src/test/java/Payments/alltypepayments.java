@@ -40,7 +40,7 @@ public class alltypepayments extends BaseDriver{
 	private WebDriver driver = CMS_browser.getDriver();
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	
-	
+/*	
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
@@ -84,7 +84,7 @@ public class alltypepayments extends BaseDriver{
 		}
 	}
 	
-/*	
+*/	
 	@Test(priority = 2 )
 	public void CashPayment() throws Exception
 	{	
@@ -246,8 +246,8 @@ public class alltypepayments extends BaseDriver{
 		///
         
 	}
-*/	
-	@Test(priority = 4, enabled=false)  //,dependsOnMethods = "loginPage"
+	
+	@Test(priority = 4 )  //,dependsOnMethods = "loginPage"
 	public void chequePayment() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -343,7 +343,7 @@ public class alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 5,dependsOnMethods = "chequePayment",enabled=false)
+	@Test(priority = 5,dependsOnMethods = "chequePayment")
 	public void cheque_fail() throws Exception
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -408,7 +408,7 @@ public class alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 6,enabled=false)  //,dependsOnMethods = "loginPage"
+	@Test(priority = 6)  //,dependsOnMethods = "loginPage"
 	public void chequePaymentforClear() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");

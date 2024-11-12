@@ -31,7 +31,7 @@ public class DownloadReports extends BaseDriver {
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	StopWatch stopWatch;
 	
-
+/*
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
@@ -74,7 +74,7 @@ public class DownloadReports extends BaseDriver {
 			
 		}
 	}
-	
+	*/
 	@Test(priority = 2)
 	public void DownloadCounterReports() throws Exception
 	{
