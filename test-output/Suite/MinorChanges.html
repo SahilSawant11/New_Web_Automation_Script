@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 11 18:17:23 IST 2024</td>
+<td>Started on:</td><td>Tue Nov 12 11:53:58 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16129 ms)</td>
+<tr><td>Total time:</td><td>22 seconds (22745 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='New_property_Wadhghat.MinorChanges.performMinorChangeAndVerify()'><b>performMinorChangeAndVerify</b><br>Test class: New_property_Wadhghat.MinorChanges</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;ContentPlaceHolder1_btnGetProperty&quot; class=&quot;btn btn-success&quot; href=&quot;javascript:__doPostBack(&apos;ctl00$ContentPlaceHolder1$btnGetProperty&apos;,&apos;&apos;)&quot;&gt;...&lt;/a&gt; is not clickable at point (664, 333). Other element would receive the click: &lt;div class=&quot;sweet-alert showSweetAlert visible&quot; data-custom-class=&quot;&quot; data-has-cancel-button=&quot;false&quot; data-has-confirm-button=&quot;true&quot; data-allow-outside-click=&quot;false&quot; data-has-done-function=&quot;false&quot; data-animation=&quot;pop&quot; data-timer=&quot;null&quot; style=&quot;display: block; margin-top: -170px;&quot;&gt;...&lt;/div&gt;
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;ContentPlaceHolder1_txtOldPropN&apos;]&quot;}
   (Session info: chrome=130.0.6723.117)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ce6df4ca7af862e731b5107dae04c305, clickElement {id=f.332CF66A9273991D4CF51464DF6D7874.d.2127C2CDD0CC15F3A8908AAA90B0BAD3.e.13467}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49527}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49527/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ce6df4ca7af862e731b5107dae04c305)] -&gt; xpath: //a[@id=&apos;ContentPlaceHolder1_btnGetProperty&apos;]]
-Session ID: ce6df4ca7af862e731b5107dae04c305
+Command: [b2ae1eeecfb6fa99807fe76eade3f4f7, findElement {value=//input[@id=&apos;ContentPlaceHolder1_txtOldPropN&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63427}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63427/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b2ae1eeecfb6fa99807fe76eade3f4f7
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -92,22 +92,25 @@ Session ID: ce6df4ca7af862e731b5107dae04c305
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-	at pom.OfflinePaymentPage.Click_search_property(OfflinePaymentPage.java:173)
-	at New_property_Wadhghat.MinorChanges.performMinorChangeAndVerify(MinorChanges.java:87)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1247910055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1247910055'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;ContentPlaceHolder1_btnGetProperty&quot; class=&quot;btn btn-success&quot; href=&quot;javascript:__doPostBack(&apos;ctl00$ContentPlaceHolder1$btnGetProperty&apos;,&apos;&apos;)&quot;&gt;...&lt;/a&gt; is not clickable at point (664, 333). Other element would receive the click: &lt;div class=&quot;sweet-alert showSweetAlert visible&quot; data-custom-class=&quot;&quot; data-has-cancel-button=&quot;false&quot; data-has-confirm-button=&quot;true&quot; data-allow-outside-click=&quot;false&quot; data-has-done-function=&quot;false&quot; data-animation=&quot;pop&quot; data-timer=&quot;null&quot; style=&quot;display: block; margin-top: -170px;&quot;&gt;...&lt;/div&gt;
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.clear(Unknown Source)
+	at pom.MinorChangesPage.Enter_oldPropertyNo(MinorChangesPage.java:89)
+	at New_property_Wadhghat.MinorChanges.performMinorChangeAndVerify(MinorChanges.java:92)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1969503994", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1969503994'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;ContentPlaceHolder1_txtOldPropN&apos;]&quot;}
   (Session info: chrome=130.0.6723.117)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ce6df4ca7af862e731b5107dae04c305, clickElement {id=f.332CF66A9273991D4CF51464DF6D7874.d.2127C2CDD0CC15F3A8908AAA90B0BAD3.e.13467}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49527}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49527/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (ce6df4ca7af862e731b5107dae04c305)] -&gt; xpath: //a[@id=&apos;ContentPlaceHolder1_btnGetProperty&apos;]]
-Session ID: ce6df4ca7af862e731b5107dae04c305
+Command: [b2ae1eeecfb6fa99807fe76eade3f4f7, findElement {value=//input[@id=&apos;ContentPlaceHolder1_txtOldPropN&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63427}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63427/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b2ae1eeecfb6fa99807fe76eade3f4f7
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -118,14 +121,15 @@ Session ID: ce6df4ca7af862e731b5107dae04c305
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-	at pom.OfflinePaymentPage.Click_search_property(OfflinePaymentPage.java:173)
-	at New_property_Wadhghat.MinorChanges.performMinorChangeAndVerify(MinorChanges.java:87)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.clear(Unknown Source)
+	at pom.MinorChangesPage.Enter_oldPropertyNo(MinorChangesPage.java:89)
+	at New_property_Wadhghat.MinorChanges.performMinorChangeAndVerify(MinorChanges.java:92)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
@@ -150,8 +154,8 @@ Session ID: ce6df4ca7af862e731b5107dae04c305
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>15</td>
-<td>New_property_Wadhghat.MinorChanges@7fcbe147</td></tr>
+<td>22</td>
+<td>New_property_Wadhghat.MinorChanges@44c79f32</td></tr>
 </table><p>
 </body>
 </html>
