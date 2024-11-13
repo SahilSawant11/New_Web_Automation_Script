@@ -225,10 +225,15 @@ public class BaseDriver {
 	     sector2 = test2.substring(2); // Get "12"   
 	     PropertyNo2=testdb.getName2();
 	     
-	     node3=testdb.getId3();
+	     String test3=testdb.getId3();
+	     node3 = test3.substring(0, 2);  // Get "KH"
+	     sector3 = test3.substring(2); // Get "12"   
 	     PropertyNo3=testdb.getName3();
 	     
-	     node4=testdb.getId4();
+	     
+	     String test4=testdb.getId4();
+	     node4 = test4.substring(0, 2);  // Get "KH"
+	     sector4 = test4.substring(2); // Get "12"   
 	     PropertyNo4=testdb.getName4();
 	     
 		c = s.getRow(1).getCell(5);

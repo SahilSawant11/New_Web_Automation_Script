@@ -96,6 +96,7 @@ public class CollectionReports extends BaseDriver {
 		boolean result = false;
 		try {
 			 result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CollectionReport.pdf", 30);
+			 if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
 	        System.out.println("PDF file Downloading Status: " + result); 
 		} catch (Exception e) {	
 			e.printStackTrace();
