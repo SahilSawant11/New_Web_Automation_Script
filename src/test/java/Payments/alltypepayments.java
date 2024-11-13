@@ -40,75 +40,7 @@ public class alltypepayments extends BaseDriver{
 	private WebDriver driver = CMS_browser.getDriver();
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	
-<<<<<<< HEAD
-	
-//	@BeforeTest
-//	public void beforetest() throws IOException
-//	{
-//		Delete_Files Delete_files = new Delete_Files(driver);
-//		System.out.println(System.getProperty("user.dir"));
-//		Delete_files.Delete_files("\\PdfReports\\");
-//		
-//		extent = new ExtentReports();
-//		spark = new ExtentSparkReporter("ExtentReport.html");
-//		extent.attachReporter(spark);
-//		BaseDriver.GetData();
-////		WebDriverManager.chromedriver().setup();
-//		driver = CMS_browser.getDriver();
-//		stopWatch = new StopWatch();
-//	}
-=======
-/*	
-	@BeforeTest
-	public void beforetest() throws IOException
-	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");
-		
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-//		WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.getDriver();
-		stopWatch = new StopWatch();
-	}
->>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
-	
-	
-//	@Test(priority = 1)
-//	public void loginPage() throws InterruptedException
-//	{
-//		driver.get(url);
-//		test = extent.createTest("loginPage");
-//		LoginPage loginpage = new LoginPage(driver);
-//		loginpage.Enter_user_name(userid, driver);
-//		
-//		loginpage.Enter_password(password);
-//		Thread.sleep(10000);
-//		Scanner scanner = new Scanner(System.in);
-//     System.out.print("Can We start Automation: ");
-//		
-//		try
-//		{
-//			loginpage.click_logout(driver);
-//			loginpage.Enter_user_name(userid, driver);
-//			loginpage.Enter_password(password);
-//			loginpage.Click_login_btn(driver);	
-//		}
-//		catch(Exception e)
-//		{
-//			
-//		}
-//	}
-	
-	
-<<<<<<< HEAD
-=======
-*/	
->>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
-	@Test(priority = 2 )
+@Test(priority = 2 )
 	public void CashPayment() throws Exception
 	{	
 		test = extent.createTest("cash Payment");
@@ -192,8 +124,6 @@ public class alltypepayments extends BaseDriver{
 		Thread.sleep(2000);
 		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
-
-		if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
        
        
 		System.out.println("PDF file Downloading Status: " + result);  
@@ -274,19 +204,13 @@ public class alltypepayments extends BaseDriver{
 		Thread.sleep(2000);
 		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Advancepay.pdf", 30);
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
-  
-		if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
-
-		System.out.println("PDF file Downloading Status: " + result); 
+System.out.println("PDF file Downloading Status: " + result); 
 		///
         
 	}
 	
-<<<<<<< HEAD
-	@Test(priority = 4)  //,dependsOnMethods = "loginPage"
-=======
+
 	@Test(priority = 4 )  //,dependsOnMethods = "loginPage"
->>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
 	public void chequePayment() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -447,11 +371,9 @@ public class alltypepayments extends BaseDriver{
 
 	}
 	
-<<<<<<< HEAD
-	@Test(priority = 6)  //,dependsOnMethods = "chequePaymentforClear"
-=======
+
 	@Test(priority = 6)  //,dependsOnMethods = "loginPage"
->>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
+
 	public void chequePaymentforClear() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -538,8 +460,6 @@ public class alltypepayments extends BaseDriver{
 		
 		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Chequepay2.pdf", 30);
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
-
-		if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
 
 		System.out.println("PDF file Downloading Status: " + result); 
 		

@@ -217,13 +217,12 @@ public class BaseDriver {
 	     
 	     String test1=testdb.getId1();
 	     node1 = test1.substring(0, 2);  // Get "KH"
-	     sector1 = test1.substring(2); // Get "12"
-	     System.out.println(node1);
-	     System.out.println(sector1);
-	     
+	     sector1 = test1.substring(2); // Get "12"   
 	     PropertyNo1=testdb.getName1();
 	     
-	     node2=testdb.getId2();
+	     String test2=testdb.getId1();
+	     node2 = test2.substring(0, 2);  // Get "KH"
+	     sector2 = test2.substring(2); // Get "12"   
 	     PropertyNo2=testdb.getName2();
 	     
 	     node3=testdb.getId3();
