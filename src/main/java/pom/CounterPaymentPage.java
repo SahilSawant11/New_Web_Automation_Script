@@ -680,9 +680,9 @@ public class CounterPaymentPage {
 	 
 
 	 public static boolean moveRenamedFileToReportFolder(String newFilename) {
-	        // Define the source folder (temp folder) and destination folder (pdfreportfolder)
+	        // Define the source folder (temp folder) and destination folder (pdfreports)
 	        String sourceFolder = System.getProperty("user.dir") + File.separator + "temp";
-	        String targetFolder = System.getProperty("user.dir") + File.separator + "pdfreportfolder";
+	        String targetFolder = System.getProperty("user.dir") + File.separator + "pdfreports";
 
 	        File sourceFile = new File(sourceFolder, newFilename);
 	        File destinationFile = new File(targetFolder, newFilename);
@@ -698,8 +698,17 @@ public class CounterPaymentPage {
 	            if (sourceFile.exists()) {
 	                Files.move(sourceFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 	                System.out.println("File moved successfully to: " + destinationFile.getAbsolutePath());
+	                boolean deleted = sourceFile.delete();
+	                ///////////
+	                //to delete the files after renaming and moving
+	                if (deleted) {
+	                	System.out.println("Deleted from temp after renaming");
+	                } else {
+	                	System.out.println("Failed to delete");
+	                }
+	                //////////
 	                return true;
-	            } else {
+	            } else { 
 	                System.out.println("Source file does not exist: " + sourceFile.getAbsolutePath());
 	                return false;
 	            }

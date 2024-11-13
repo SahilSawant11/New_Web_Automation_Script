@@ -40,6 +40,7 @@ public class alltypepayments extends BaseDriver{
 	private WebDriver driver = CMS_browser.getDriver();
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	
+<<<<<<< HEAD
 	
 //	@BeforeTest
 //	public void beforetest() throws IOException
@@ -56,6 +57,24 @@ public class alltypepayments extends BaseDriver{
 //		driver = CMS_browser.getDriver();
 //		stopWatch = new StopWatch();
 //	}
+=======
+/*	
+	@BeforeTest
+	public void beforetest() throws IOException
+	{
+		Delete_Files Delete_files = new Delete_Files(driver);
+		System.out.println(System.getProperty("user.dir"));
+		Delete_files.Delete_files("\\PdfReports\\");
+		
+		extent = new ExtentReports();
+		spark = new ExtentSparkReporter("ExtentReport.html");
+		extent.attachReporter(spark);
+		BaseDriver.GetData();
+//		WebDriverManager.chromedriver().setup();
+		driver = CMS_browser.getDriver();
+		stopWatch = new StopWatch();
+	}
+>>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
 	
 	
 //	@Test(priority = 1)
@@ -85,6 +104,10 @@ public class alltypepayments extends BaseDriver{
 //	}
 	
 	
+<<<<<<< HEAD
+=======
+*/	
+>>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
 	@Test(priority = 2 )
 	public void CashPayment() throws Exception
 	{	
@@ -259,7 +282,11 @@ public class alltypepayments extends BaseDriver{
         
 	}
 	
+<<<<<<< HEAD
 	@Test(priority = 4)  //,dependsOnMethods = "loginPage"
+=======
+	@Test(priority = 4 )  //,dependsOnMethods = "loginPage"
+>>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
 	public void chequePayment() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -420,7 +447,11 @@ public class alltypepayments extends BaseDriver{
 
 	}
 	
+<<<<<<< HEAD
 	@Test(priority = 6)  //,dependsOnMethods = "chequePaymentforClear"
+=======
+	@Test(priority = 6)  //,dependsOnMethods = "loginPage"
+>>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
 	public void chequePaymentforClear() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");

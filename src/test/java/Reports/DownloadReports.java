@@ -30,10 +30,14 @@ import utility.TakeScreenshoot;
 
 public class DownloadReports extends BaseDriver {
 	
+<<<<<<< HEAD
 	StopWatch stopWatch;
 	private WebDriver driver = CMS_browser.getDriver();
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 
+=======
+/*
+>>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
@@ -41,6 +45,7 @@ public class DownloadReports extends BaseDriver {
 	}
 	
 	
+<<<<<<< HEAD
 //	@Test(priority = 1)
 //	public void loginPage() throws InterruptedException
 //	{
@@ -67,6 +72,34 @@ public class DownloadReports extends BaseDriver {
 //		}
 //	}
 	
+=======
+	@Test(priority = 1)
+	public void loginPage() throws InterruptedException
+	{
+		driver.get(url);
+		test = extent.createTest("loginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Enter_user_name(userid, driver);
+		
+		loginpage.Enter_password(password);
+		Thread.sleep(10000);
+		Scanner scanner = new Scanner(System.in);
+     System.out.print("Can We start Automation: ");
+		
+		try
+		{
+			loginpage.click_logout(driver);
+			loginpage.Enter_user_name(userid, driver);
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);	
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
+	*/
+>>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
 	@Test(priority = 2)
 	public void DownloadCounterReports() throws Exception
 	{

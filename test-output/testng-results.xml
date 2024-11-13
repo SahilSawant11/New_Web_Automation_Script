@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="1" total="26" passed="20" failed="3" skipped="2">
   <reporter-output>
   </reporter-output>
@@ -663,4 +664,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
       </class> <!-- Reports.ReportEngine -->
     </test> <!-- ReportEngine -->
   </suite> <!-- Suite -->
+=======
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-12T09:24:27Z" name="Default suite" finished-at="2024-11-12T09:25:45Z" duration-ms="78425">
+    <groups>
+    </groups>
+    <test started-at="2024-11-12T09:24:27Z" name="Default test" finished-at="2024-11-12T09:25:45Z" duration-ms="78425">
+      <class name="SmokTesting.CheckPages">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:SmokTesting.CheckPages@74287ea3]" started-at="2024-11-12T14:54:27Z" name="beforetest" finished-at="2024-11-12T14:54:33Z" duration-ms="6643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforetest -->
+        <test-method signature="loginPage()[pri:1, instance:SmokTesting.CheckPages@74287ea3]" started-at="2024-11-12T14:54:33Z" name="loginPage" finished-at="2024-11-12T14:54:48Z" duration-ms="14476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method signature="startTest()[pri:2, instance:SmokTesting.CheckPages@74287ea3]" started-at="2024-11-12T14:54:48Z" name="startTest" finished-at="2024-11-12T14:55:44Z" duration-ms="56646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SmokTesting.CheckPages@74287ea3]" started-at="2024-11-12T14:55:44Z" name="tearDown" finished-at="2024-11-12T14:55:45Z" duration-ms="620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SmokTesting.CheckPages -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
 </testng-results>
