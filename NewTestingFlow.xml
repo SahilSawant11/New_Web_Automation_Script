@@ -8,6 +8,7 @@
 	</classes>
 </test>
 
+
  <test name="CreateNewProperty">
   <classes>
     <class name="New_property_Wadhghat.CMS_Test"/>

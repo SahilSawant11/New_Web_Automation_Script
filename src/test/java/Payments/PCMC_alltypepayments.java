@@ -147,7 +147,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "CashPayment.pdf");
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Cash.pdf", 30);
         System.out.println("PDF file Downloading Status: " + result);  
         
 		offlinepaymentpage.counterPayment(driver, url);
@@ -228,7 +228,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 		stopWatch.stop();
 		/////
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "AdvanceCash.pdf");
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "AdvanceCash.pdf", 30);
         System.out.println("PDF file Downloading Status: " + result); 
 		
 		
@@ -309,7 +309,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "ChequePayment.pdf");
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Chequepay.pdf", 30);
         System.out.println("PDF file Downloading Status: " + result); 
 		
 
@@ -540,7 +540,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "CardPayment.pdf");
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CardPay.pdf", 30);
         System.out.println("PDF file Downloading Status: " + result); 
 		
 		offlinepaymentpage.counterPayment(driver, url);

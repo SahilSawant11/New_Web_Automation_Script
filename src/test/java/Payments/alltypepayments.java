@@ -41,50 +41,50 @@ public class alltypepayments extends BaseDriver{
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	
 	
-	@BeforeTest
-	public void beforetest() throws IOException
-	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");
-		
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-//		WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.getDriver();
-		stopWatch = new StopWatch();
-	}
+//	@BeforeTest
+//	public void beforetest() throws IOException
+//	{
+//		Delete_Files Delete_files = new Delete_Files(driver);
+//		System.out.println(System.getProperty("user.dir"));
+//		Delete_files.Delete_files("\\PdfReports\\");
+//		
+//		extent = new ExtentReports();
+//		spark = new ExtentSparkReporter("ExtentReport.html");
+//		extent.attachReporter(spark);
+//		BaseDriver.GetData();
+////		WebDriverManager.chromedriver().setup();
+//		driver = CMS_browser.getDriver();
+//		stopWatch = new StopWatch();
+//	}
 	
 	
-	@Test(priority = 1)
-	public void loginPage() throws InterruptedException
-	{
-		driver.get(url);
-		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Enter_user_name(userid, driver);
-		
-		loginpage.Enter_password(password);
-		Thread.sleep(10000);
-		Scanner scanner = new Scanner(System.in);
-     System.out.print("Can We start Automation: ");
-		
-		try
-		{
-			loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
-			loginpage.Click_login_btn(driver);	
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
+//	@Test(priority = 1)
+//	public void loginPage() throws InterruptedException
+//	{
+//		driver.get(url);
+//		test = extent.createTest("loginPage");
+//		LoginPage loginpage = new LoginPage(driver);
+//		loginpage.Enter_user_name(userid, driver);
+//		
+//		loginpage.Enter_password(password);
+//		Thread.sleep(10000);
+//		Scanner scanner = new Scanner(System.in);
+//     System.out.print("Can We start Automation: ");
+//		
+//		try
+//		{
+//			loginpage.click_logout(driver);
+//			loginpage.Enter_user_name(userid, driver);
+//			loginpage.Enter_password(password);
+//			loginpage.Click_login_btn(driver);	
+//		}
+//		catch(Exception e)
+//		{
+//			
+//		}
+//	}
 	
-/*	
+	
 	@Test(priority = 2 )
 	public void CashPayment() throws Exception
 	{	
@@ -109,25 +109,28 @@ public class alltypepayments extends BaseDriver{
 		offlinepaymentpage.Click_search_property();
 			
 		counterpayment = new CounterPaymentPage(driver);
+		
 		counterpayment.Select_Finalcheckbox(driver);
+		
 		
 		Thread.sleep(5000);
 		
-		if (node3=="PMC") {
-			
-			try {
-				counterpayment.Select_APartcheckbox(driver);
-				try {
-					counterpayment.confirm_payment(driver);
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-			} catch (Exception e1) {
-				
-			}
-			
-			
-		}
+		  try {
+		        counterpayment.Select_APartcheckbox(driver);
+		        
+		        try {
+		            counterpayment.confirm_payment(driver);
+		        } catch (Exception e) {
+		           
+		        }
+		        
+		    } catch (Exception e1) {
+		       
+		    }
+		
+	
+		  
+		
 		
 		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
@@ -164,8 +167,13 @@ public class alltypepayments extends BaseDriver{
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "CashPayment.pdf");
-        System.out.println("PDF file Downloading Status: " + result);  
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+
+		if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+       
+       
+		System.out.println("PDF file Downloading Status: " + result);  
         
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
@@ -241,13 +249,17 @@ public class alltypepayments extends BaseDriver{
 		stopWatch.stop();
 		/////
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "AdvanceCash.pdf");
-        System.out.println("PDF file Downloading Status: " + result); 
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Advancepay.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+  
+		if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+
+		System.out.println("PDF file Downloading Status: " + result); 
 		///
         
 	}
-*/	
-	@Test(priority = 4, enabled=false)  //,dependsOnMethods = "loginPage"
+	
+	@Test(priority = 4)  //,dependsOnMethods = "loginPage"
 	public void chequePayment() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -270,25 +282,21 @@ public class alltypepayments extends BaseDriver{
 		offlinepaymentpage.Click_search_property();
 			
 		counterpayment = new CounterPaymentPage(driver);
-	//	counterpayment.Select_APartcheckbox(driver);
 		counterpayment.Select_Finalcheckbox(driver);
 		Thread.sleep(5000);
 		
-		if (node3=="PMC") {			
-			
-			try {
-				counterpayment.Select_APartcheckbox(driver);
-				try {
-					counterpayment.confirm_payment(driver);
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-			} catch (Exception e1) {
-				
-			}
-			
-			
-		}
+		 try {
+		        counterpayment.Select_APartcheckbox(driver);
+		        
+		        try {
+		            counterpayment.confirm_payment(driver);
+		        } catch (Exception e) {
+		           
+		        }
+		        
+		    } catch (Exception e1) {
+		       
+		    }
 		
 	
 		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
@@ -324,9 +332,9 @@ public class alltypepayments extends BaseDriver{
 		counterpayment.confirm_payment(driver);
 		counterpayment.Check_transaction_id(driver);
 		
-	//	counterpayment.Click_receipts_btn(driver);
-	//	counterpayment.label_downloadReceipt(driver);
-	//	counterpayment.downloadReceipt(driver);
+		counterpayment.Click_receipts_btn(driver);
+		counterpayment.label_downloadReceipt(driver);
+		counterpayment.downloadReceipt(driver);
 		
 		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		counterpayment.compareUpicIds(test);
@@ -337,13 +345,17 @@ public class alltypepayments extends BaseDriver{
 		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "ChequePayment.pdf");
-        System.out.println("PDF file Downloading Status: " + result); 
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Chequepay.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+  
+		if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+
+		System.out.println("PDF file Downloading Status: " + result); 
 		
 
 	}
 	
-	@Test(priority = 5,dependsOnMethods = "chequePayment",enabled=false)
+	@Test(priority = 5,dependsOnMethods = "chequePayment")
 	public void cheque_fail() throws Exception
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -408,7 +420,7 @@ public class alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 6,enabled=false)  //,dependsOnMethods = "loginPage"
+	@Test(priority = 6)  //,dependsOnMethods = "chequePaymentforClear"
 	public void chequePaymentforClear() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -431,26 +443,21 @@ public class alltypepayments extends BaseDriver{
 		offlinepaymentpage.Click_search_property();
 			
 		counterpayment = new CounterPaymentPage(driver);
-	//	counterpayment.Select_APartcheckbox(driver);
 		counterpayment.Select_Finalcheckbox(driver);
 		Thread.sleep(5000);
 		
-		if (node3=="PMC") {			
-			
-			try {
-				counterpayment.Select_APartcheckbox(driver);
-				try {
-					counterpayment.confirm_payment(driver);
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-			} catch (Exception e1) {
-				
-			}
-			
-			
-		}
-		
+		 try {
+		        counterpayment.Select_APartcheckbox(driver);
+		        
+		        try {
+		            counterpayment.confirm_payment(driver);
+		        } catch (Exception e) {
+		           
+		        }
+		        
+		    } catch (Exception e1) {
+		       
+		    }
 	
 		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
 		counterpayment.Enter_mobile_no(driver, "1111111111");
@@ -485,9 +492,9 @@ public class alltypepayments extends BaseDriver{
 		counterpayment.confirm_payment(driver);
 		counterpayment.Check_transaction_id(driver);
 		
-	//	counterpayment.Click_receipts_btn(driver);
-	//	counterpayment.label_downloadReceipt(driver);
-	//	counterpayment.downloadReceipt(driver);
+		counterpayment.Click_receipts_btn(driver);
+		counterpayment.label_downloadReceipt(driver);
+		counterpayment.downloadReceipt(driver);
 		
 		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		counterpayment.compareUpicIds(test);
@@ -498,13 +505,17 @@ public class alltypepayments extends BaseDriver{
 		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "ChequePayment.pdf");
-        System.out.println("PDF file Downloading Status: " + result); 
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Chequepay2.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+
+		if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+
+		System.out.println("PDF file Downloading Status: " + result); 
 		
 
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 7,dependsOnMethods = "chequePaymentforClear")
 	public void cheque_clear() throws Exception
 	{
 		
@@ -568,7 +579,7 @@ public class alltypepayments extends BaseDriver{
 		
 
 	}
-/*
+
 	@Test(priority = 8)
 	public void Card() throws Exception
 	{
@@ -595,32 +606,21 @@ public class alltypepayments extends BaseDriver{
 		counterpayment = new CounterPaymentPage(driver);
 		
 		counterpayment.Select_Finalcheckbox(driver);
-//		if (counterpayment.IsFinalCheckboxPresent(driver)) {
-//		    counterpayment.Select_Finalcheckbox(driver);
-//		} else {
-//		    counterpayment.Select_APartcheckbox(driver);
-//		}
-//	
 		Thread.sleep(5000);
 		
 	
-		
-		if (node3=="PMC") {
-			
-			try {
-				counterpayment.Select_APartcheckbox(driver);
-				try {
-					counterpayment.confirm_payment(driver);
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-			} catch (Exception e1) {
-				
-			}
-			
-			
-		}
-		
+		 try {
+		        counterpayment.Select_APartcheckbox(driver);
+		        
+		        try {
+		            counterpayment.confirm_payment(driver);
+		        } catch (Exception e) {
+		           
+		        }
+		        
+		    } catch (Exception e1) {
+		       
+		    }
 		
 		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
@@ -671,8 +671,9 @@ public class alltypepayments extends BaseDriver{
 		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
-		boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "CardPayment.pdf");
-        System.out.println("PDF file Downloading Status: " + result); 
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Card.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+		System.out.println("PDF file Downloading Status: " + result); 
 		
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
@@ -696,7 +697,7 @@ public class alltypepayments extends BaseDriver{
 			test.log(Status.FAIL, "Counter is not cleared ");
 		}
 	}
-*/		
+		
 	@AfterMethod
 	public void aftermethod(ITestResult result,java.lang.reflect.Method m)
 	{

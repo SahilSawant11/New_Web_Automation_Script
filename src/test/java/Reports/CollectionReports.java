@@ -95,7 +95,8 @@ public class CollectionReports extends BaseDriver {
 		collectionpage.Click_generate_btn(driver);
 		boolean result = false;
 		try {
-			result = counterpayment.renameDownloadedFile("PDFFILE.pdf", "ChequePayment.pdf");
+			 result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CollectionReport.pdf", 30);
+	        System.out.println("PDF file Downloading Status: " + result); 
 		} catch (Exception e) {	
 			e.printStackTrace();
 		}

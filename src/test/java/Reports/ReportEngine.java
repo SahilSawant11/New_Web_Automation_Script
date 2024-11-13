@@ -88,8 +88,8 @@ public class ReportEngine extends BaseDriver {
 		 stopWatch.start();
 		 reportenginepage.Export_btn(driver);
 		 Thread.sleep(2000);
-		 boolean result =  counterpayment.renameDownloadedFile("PDFFILE.pdf", "Notice_Reports.pdf");
-		 System.out.println("PDF file Downloading Status: " + result);
+		 boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "NoticeReport.pdf", 30);
+	        System.out.println("PDF file Downloading Status: " + result); 
 		 test.info("Time duration of exporting Notice Report: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		 stopWatch.stop();   
 	}
@@ -119,8 +119,8 @@ public class ReportEngine extends BaseDriver {
 		 stopWatch.start();
 		 reportenginepage.Export_btn(driver);
 		 Thread.sleep(2000);
-		 boolean result =  counterpayment.renameDownloadedFile("PDFFILE.pdf", "Karakarni_Reports.pdf");
-		 System.out.println("PDF file Downloading Status: " + result);
+		 boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "kaakarni.pdf", 30);
+	        System.out.println("PDF file Downloading Status: " + result); 
 		 test.info("Time duration of exporting Karakarni Report: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		 stopWatch.stop(); 
 	}

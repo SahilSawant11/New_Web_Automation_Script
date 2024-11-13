@@ -13,6 +13,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import SmokTesting.Testdb;
 import utility.TakeScreenshoot;
 
 public class BaseDriver {
@@ -30,6 +31,9 @@ public class BaseDriver {
 	static public String sector;
 	static public String PropertyNo;
 	
+	
+	 
+	
 	static public String node1;
 	static public String sector1;
 	static public String PropertyNo1;
@@ -45,9 +49,6 @@ public class BaseDriver {
 	static public String node4;
 	static public String sector4;
 	static public String PropertyNo4;
-	
-	
-	
 	
 	static public String akshep_no;
 	public TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
@@ -209,67 +210,37 @@ public class BaseDriver {
 		c.setCellType(CellType.STRING);
 		sector = c.getStringCellValue();
 		
-//		testing properties for payment 
-		c = s.getRow(9).getCell(0);
-		c.setCellType(CellType.STRING);
-		node1 = c.getStringCellValue();
+
 		
-		c = s.getRow(9).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector1 = c.getStringCellValue();
-		
-		c = s.getRow(9).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo1 = c.getStringCellValue();
-		
-		c = s.getRow(10).getCell(0);
-		c.setCellType(CellType.STRING);
-		node2 = c.getStringCellValue();
-		
-		c = s.getRow(10).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector2 = c.getStringCellValue();
-		
-		c = s.getRow(10).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo2 = c.getStringCellValue();
-		
-		c = s.getRow(11).getCell(0);
-		c.setCellType(CellType.STRING);
-		node3 = c.getStringCellValue();
-		
-		c = s.getRow(11).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector3 = c.getStringCellValue();
-		
-		c = s.getRow(11).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo3 = c.getStringCellValue();
-		
-		
-		c = s.getRow(12).getCell(0);
-		c.setCellType(CellType.STRING);
-		node4 = c.getStringCellValue();
-		
-		c = s.getRow(12).getCell(1);
-		c.setCellType(CellType.STRING);
-		sector4 = c.getStringCellValue();
-		
-		c = s.getRow(12).getCell(2);
-		c.setCellType(CellType.STRING);
-		PropertyNo4 = c.getStringCellValue();
-		
-		
-		
-		
+		Testdb testdb = new Testdb();
+	     testdb.fetchData();  // Fetch data from the database and populate variables
+	     
+	     String test1=testdb.getId1();
+	     node1 = test1.substring(0, 2);  // Get "KH"
+	     sector1 = test1.substring(2); // Get "12"
+	     System.out.println(node1);
+	     System.out.println(sector1);
+	     
+	     PropertyNo1=testdb.getName1();
+	     
+	     node2=testdb.getId2();
+	     PropertyNo2=testdb.getName2();
+	     
+	     node3=testdb.getId3();
+	     PropertyNo3=testdb.getName3();
+	     
+	     node4=testdb.getId4();
+	     PropertyNo4=testdb.getName4();
+	     
 		c = s.getRow(1).getCell(5);
 		c.setCellType(CellType.NUMERIC);
 		financeYear = (int) c.getNumericCellValue();	
 	}
 	
 	
-	public void getDiscountData()
+	public void getproperty()
 	{
 		
+	     
 	}
 }

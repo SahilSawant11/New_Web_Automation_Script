@@ -1,5 +1,7 @@
 package New_property_Wadhghat;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -13,6 +15,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -26,6 +29,7 @@ import pom.AddTaxesPage;
 import pom.ApprovalPage;
 import pom.CMS_Page;
 import pom.Council_approval;
+import pom.CounterPaymentPage;
 //import pom.CounterPaymentPage;
 import pom.LoginPage;
 import pom.MinorChangesPage;
@@ -365,6 +369,11 @@ public class CMS_Test extends BaseDriver{
 		
 		
 		addtaxespage.Button_print_approval_btn(driver);
+		CounterPaymentPage counterpayment = null;
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Notesheet.pdf", 30);
+        System.out.println("PDF file Downloading Status: " + result); 
+        assertTrue(result, "Notesheet Generated");
+        
 		addtaxespage.getWindowHandleName(driver);
 		addtaxespage.Scroll_sthalpahani_ahaval(driver);
 		addtaxespage.document_upload_wadhaghat_kagadpatra10();

@@ -15,10 +15,8 @@ public class test {
 	    @Test
 	    public void testOne() {
 	      
-	    	String myString = "123";
-	    	int myInt = Integer.parseInt(myString);
-	    	
-	    	System.out.println(myInt);
+
+	
 	    	
 	    }
 

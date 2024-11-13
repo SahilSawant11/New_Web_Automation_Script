@@ -644,98 +644,40 @@ public class CounterPaymentPage {
 		}
 	}
 	
-	 public static boolean renameDownloadedFile(String oldFilename, String newFilename) throws Exception {
-	        // Define the directory path
-	        String directoryPath = System.getProperty("user.dir") + File.separator + "temp";
-
-	        // Create File objects for the directory and files
-	        File directory = new File(directoryPath);
-	        File oldFile = new File(directory, oldFilename);
-	        File newFile = new File(directory, newFilename);
-
-	        // Check if the directory exists and is actually a directory
-	        if (directory.exists() && directory.isDirectory()) {
-	          
-	        	
-	        	// Check if the old file exists
-	        	try {
-	        		Thread.sleep(2000);
-					if (oldFile.exists() && oldFile.isFile()) {
-						 // Attempt to rename the file
-					    return oldFile.renameTo(newFile);
-					}
-				} catch (Exception e) {
-					try {
-						Thread.sleep(2000);
-						if (oldFile.exists() && oldFile.isFile()) {
-							 // Attempt to rename the file
-						    return oldFile.renameTo(newFile);
-						}
-					} catch (InterruptedException e1) {
-						try {
-							Thread.sleep(2000);
-							if (oldFile.exists() && oldFile.isFile()) {
-								 // Attempt to rename the file
-							    return oldFile.renameTo(newFile);
-							}
-						} catch (InterruptedException e2) {
-							try {
-								Thread.sleep(2000);
-								if (oldFile.exists() && oldFile.isFile()) {
-									 // Attempt to rename the file
-								    return oldFile.renameTo(newFile);
-								}
-							} catch (InterruptedException e3) {
-								try {
-									Thread.sleep(2000);
-									if (oldFile.exists() && oldFile.isFile()) {
-										 // Attempt to rename the file
-									    return oldFile.renameTo(newFile);
-									}
-								} catch (InterruptedException e4) {
-									try {
-										Thread.sleep(2000);
-										if (oldFile.exists() && oldFile.isFile()) {
-											 // Attempt to rename the file
-										    return oldFile.renameTo(newFile);
-										}
-									} catch (InterruptedException e5) {
-										Thread.sleep(2000);
-										try {
-											if (oldFile.exists() && oldFile.isFile()) {
-												 // Attempt to rename the file
-											    return oldFile.renameTo(newFile);
-											}
-										} catch (Exception e6) {
-											try {
-												Thread.sleep(10000);
-												if (oldFile.exists() && oldFile.isFile()) {
-													 // Attempt to rename the file
-												    return oldFile.renameTo(newFile);
-												}
-											} catch (InterruptedException e7) {
-												 return false;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-	           
-	           
-	            
-	           
+	 
+	 public static boolean isFileDownloaded(String fileName, String newFileName, int timeoutInSeconds) {
+		 String downloadDir = System.getProperty("user.dir") + File.separator + "temp";
+	        File file = new File(downloadDir, fileName);
+	        int attempts = 0;
+	        
+	        // Check if file exists and keep checking until timeout
+	        while (attempts < timeoutInSeconds) {
+	            if (file.exists()) {
+	            	
+	            	File renamedFile = new File(downloadDir, newFileName);
+	                if (file.renameTo(renamedFile)) {
+	                    System.out.println("File renamed to: " + newFileName);
+	                    
+	                    return true;
+	                } else {
+	                    System.out.println("Failed to rename file.");
+	                }
+	                return true;
+	            }
+	            try {
+	                Thread.sleep(1000); // Wait for 1 second before the next attempt
+	            } catch (InterruptedException e) {
+	                e.printStackTrace();
+	            }
+	            attempts++;
+	        }
 	        return false;
-	        }
-	        
-	        else {
-	            System.out.println("Directory does not exist: " + directoryPath);
-	            return false;
-	        }
-	        
-	 }
+	    }
+	 
+	 
+	 
+	 
+	 
 
 	 public static boolean moveRenamedFileToReportFolder(String newFilename) {
 	        // Define the source folder (temp folder) and destination folder (pdfreportfolder)
@@ -862,7 +804,7 @@ public class CounterPaymentPage {
 	
 	public void confirm_payment(WebDriver driver) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(30000));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(50000));
 		wait.until(ExpectedConditions.visibilityOf(confirm_yes));
 		Thread.sleep(2000);
 		confirm_yes.click();

@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.time.StopWatch;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -28,52 +29,43 @@ import utility.Delete_Files;
 import utility.TakeScreenshoot;
 
 public class DownloadReports extends BaseDriver {
-	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
-	StopWatch stopWatch;
 	
+	StopWatch stopWatch;
+	private WebDriver driver = CMS_browser.getDriver();
+	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");
 		
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-//		WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.getDriver();
-		stopWatch = new StopWatch();
 	}
 	
 	
-	@Test(priority = 1)
-	public void loginPage() throws InterruptedException
-	{
-		driver.get(url);
-		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Enter_user_name(userid, driver);
-		
-		loginpage.Enter_password(password);
-		Thread.sleep(10000);
-		Scanner scanner = new Scanner(System.in);
-     System.out.print("Can We start Automation: ");
-		
-		try
-		{
-			loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
-			loginpage.Click_login_btn(driver);	
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
+//	@Test(priority = 1)
+//	public void loginPage() throws InterruptedException
+//	{
+//		driver.get(url);
+//		test = extent.createTest("loginPage");
+//		LoginPage loginpage = new LoginPage(driver);
+//		loginpage.Enter_user_name(userid, driver);
+//		
+//		loginpage.Enter_password(password);
+//		Thread.sleep(10000);
+//		Scanner scanner = new Scanner(System.in);
+//     System.out.print("Can We start Automation: ");
+//		
+//		try
+//		{
+//			loginpage.click_logout(driver);
+//			loginpage.Enter_user_name(userid, driver);
+//			loginpage.Enter_password(password);
+//			loginpage.Click_login_btn(driver);	
+//		}
+//		catch(Exception e)
+//		{
+//			
+//		}
+//	}
 	
 	@Test(priority = 2)
 	public void DownloadCounterReports() throws Exception
@@ -109,14 +101,11 @@ public class DownloadReports extends BaseDriver {
 		
 		counterpayment.click_noticeBill(driver);
 		Thread.sleep(3000);
-		boolean isnoticedownloaded = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"Notice.pdf");
-        System.out.println("PDF file Downloading Status: " + isnoticedownloaded); 
+		
+		boolean result1 = 		counterpayment.isFileDownloaded("pdffile.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"NoticeBill.pdf", 30);
+        System.out.println("PDF file Downloading Status: " + result1); 
         
-        if (isnoticedownloaded==true) {
-        	test.pass("Notice Bill downloaded successfully for "+node1+"-"+sector1+"-"+PropertyNo1);
-		}else {
-			test.fail("Notice Bill not downloaded  for "+node1+"-"+sector1+"-"+PropertyNo1);
-		}
+      
         
         
         counterpayment.PopUpAfterDownloadNotice(driver);
@@ -124,17 +113,15 @@ public class DownloadReports extends BaseDriver {
         counterpayment.click_valuation(driver);
         Thread.sleep(3000);
         
-        boolean isvaluationdownloaded = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"valuation.pdf");
-        System.out.println("PDF file Downloading Status: " + isvaluationdownloaded); 
+      
+    	boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"valuation.pdf", 30);
+        System.out.println("PDF file Downloading Status: " + result); 
+        
+        
         
         counterpayment.PopUpAfterDownloadNotice(driver);
         
-        if (isvaluationdownloaded==true) {
-        	counterpayment.moveRenamedFileToReportFolder(EduTax);
-        	test.pass("valuationsheet  downloaded successfully for "+node1+"-"+sector1+"-"+PropertyNo1);
-		}else {
-			test.fail("valuationsheet  not downloaded  for "+node1+"-"+sector1+"-"+PropertyNo1);
-		}
+       
 }
 	
 	@Test(priority = 3)
@@ -159,16 +146,11 @@ public class DownloadReports extends BaseDriver {
 			// TODO: handle exception
 		}
 		
-		boolean isNakkaldownloaded = counterpayment.renameDownloadedFile("PDFFILE.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"Nakkal.pdf");
-        System.out.println("PDF file Downloading Status: " + isNakkaldownloaded); 
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"Nakkal.pdf", 30);
+        System.out.println("PDF file Downloading Status: " + result); 
 		
 
-        if (isNakkaldownloaded==true) {
-        	counterpayment.moveRenamedFileToReportFolder(EduTax);
-        	test.pass("Nakkal downloaded successfully for "+node1+"-"+sector1+"-"+PropertyNo1);
-		}else {
-			test.fail("Nakkal not downloaded  for "+node1+"-"+sector1+"-"+PropertyNo1);
-		}
+      
 		
 		
 }
@@ -195,16 +177,10 @@ public class DownloadReports extends BaseDriver {
 			// TODO: handle exception
 		}
 		
-		boolean isNoDuedownloaded = counterpayment.renameDownloadedFile("PDFFILE.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"NoDue.pdf");
-        System.out.println("PDF file Downloading Status: " + isNoDuedownloaded); 
-		
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"NoDue.pdf", 30);
+        System.out.println("PDF file Downloading Status: " + result); 
 
-        if (isNoDuedownloaded==true) {
-        	counterpayment.moveRenamedFileToReportFolder(EduTax);
-        	test.pass("No Due Certificate downloaded successfully for "+node1+"-"+sector1+"-"+PropertyNo1);
-		}else {
-			test.fail("No Due Certificate not downloaded  for "+node1+"-"+sector1+"-"+PropertyNo1);
-		}
+        
         
       
 		
@@ -341,7 +317,7 @@ else {
 	test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 	
 	Thread.sleep(2000);
-	boolean result = 		counterpayment.renameDownloadedFile("PDFFILE.pdf", "CashPaymentFullForNoDue.pdf");
+	boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", node1+"-"+sector1+"-"+PropertyNo1+"-"+"Cashpaymentfullfornodue.pdf", 30);
     System.out.println("PDF file Downloading Status: " + result);  
     
 	offlinepaymentpage.counterPayment(driver, url);

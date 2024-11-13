@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="All Payments(failed)">
+  <test thread-count="5" name="All Payments(failed)">
     <classes>
       <class name="Payments.alltypepayments">
         <methods>
+          <include name="Card"/>
           <include name="aftermethod"/>
-          <include name="chequePayment"/>
           <include name="chequePaymentforClear"/>
           <include name="cheque_clear"/>
+          <include name="chequePayment"/>
           <include name="cheque_fail"/>
           <include name="aftertest"/>
         </methods>
       </class> <!-- Payments.alltypepayments -->
     </classes>
   </test> <!-- All Payments(failed) -->
-  <test name="MinorChanges(failed)">
-    <classes>
-      <class name="New_property_Wadhghat.MinorChanges">
-        <methods>
-          <include name="aftermethod"/>
-          <include name="performMinorChangeAndVerify"/>
-        </methods>
-      </class> <!-- New_property_Wadhghat.MinorChanges -->
-    </classes>
-  </test> <!-- MinorChanges(failed) -->
 </suite> <!-- Failed suite [Suite] -->
