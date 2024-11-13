@@ -8,10 +8,10 @@
 	</classes>
 </test>
 
-<test name="All Payments">
-	<classes>
-		<class name="Payments.alltypepayments"/>
-	</classes>
+<test name="CollectionReport">
+  <classes>
+    <class name="Reports.CollectionReports"/>
+  </classes>
 </test>
 
 </suite> <!-- Suite -->

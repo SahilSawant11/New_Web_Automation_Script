@@ -3,27 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="All Payments(failed)">
     <classes>
-<<<<<<< HEAD
       <class name="Payments.alltypepayments">
         <methods>
           <include name="Card"/>
           <include name="aftermethod"/>
           <include name="chequePaymentforClear"/>
           <include name="cheque_clear"/>
-          <include name="chequePayment"/>
-          <include name="cheque_fail"/>
           <include name="aftertest"/>
         </methods>
       </class> <!-- Payments.alltypepayments -->
-=======
-      <class name="SmokTesting.CheckPages">
-        <methods>
-          <include name="tearDown"/>
-          <include name="startTest"/>
-          <include name="beforetest"/>
-        </methods>
-      </class> <!-- SmokTesting.CheckPages -->
->>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
     </classes>
   </test> <!-- All Payments(failed) -->
 </suite> <!-- Failed suite [Suite] -->

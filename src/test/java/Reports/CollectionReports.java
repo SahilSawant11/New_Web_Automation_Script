@@ -109,7 +109,7 @@ public class CollectionReports extends BaseDriver {
 	@AfterTest
     public void tearDown() {
  //       if (driver != null) {
- //           driver.quit();
+ //           driver.quit();test
  //      }
         extent.flush();
     }
