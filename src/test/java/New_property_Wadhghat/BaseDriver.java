@@ -47,7 +47,7 @@ public class BaseDriver {
 	static public String PropertyNo4;
 	
 	
-	
+	static public String PropertyX =  "500002-1";
 	
 	static public String akshep_no;
 	public TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);

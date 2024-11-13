@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="SmokTesting.CheckPages">
+      <class name="Reports.OnlineCounterReports">
         <methods>
-          <include name="tearDown"/>
-          <include name="startTest"/>
           <include name="beforetest"/>
+          <include name="tearDown"/>
+          <include name="TaxCompareTest"/>
         </methods>
-      </class> <!-- SmokTesting.CheckPages -->
+      </class> <!-- Reports.OnlineCounterReports -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

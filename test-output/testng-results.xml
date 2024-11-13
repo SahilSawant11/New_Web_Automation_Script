@@ -1,29 +1,348 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="12" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-12T09:24:27Z" name="Default suite" finished-at="2024-11-12T09:25:45Z" duration-ms="78425">
+  <suite started-at="2024-11-13T11:26:51Z" name="Suite" finished-at="2024-11-13T11:36:44Z" duration-ms="592639">
     <groups>
     </groups>
-    <test started-at="2024-11-12T09:24:27Z" name="Default test" finished-at="2024-11-12T09:25:45Z" duration-ms="78425">
-      <class name="SmokTesting.CheckPages">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:SmokTesting.CheckPages@74287ea3]" started-at="2024-11-12T14:54:27Z" name="beforetest" finished-at="2024-11-12T14:54:33Z" duration-ms="6643" status="PASS">
+    <test started-at="2024-11-13T11:26:51Z" name="Login" finished-at="2024-11-13T11:27:04Z" duration-ms="13128">
+      <class name="New_property_Wadhghat.Login">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.Login@3214ee6]" started-at="2024-11-13T16:56:51Z" name="beforetest" finished-at="2024-11-13T16:56:54Z" duration-ms="2466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="loginPage()[pri:1, instance:SmokTesting.CheckPages@74287ea3]" started-at="2024-11-12T14:54:33Z" name="loginPage" finished-at="2024-11-12T14:54:48Z" duration-ms="14476" status="PASS">
+        <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@3214ee6]" started-at="2024-11-13T16:56:54Z" name="loginPage" finished-at="2024-11-13T16:57:04Z" duration-ms="10624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPage -->
-        <test-method signature="startTest()[pri:2, instance:SmokTesting.CheckPages@74287ea3]" started-at="2024-11-12T14:54:48Z" name="startTest" finished-at="2024-11-12T14:55:44Z" duration-ms="56646" status="PASS">
+      </class> <!-- New_property_Wadhghat.Login -->
+    </test> <!-- Login -->
+    <test started-at="2024-11-13T11:27:05Z" name="CreateNewProperty" finished-at="2024-11-13T11:35:51Z" duration-ms="526429">
+      <class name="New_property_Wadhghat.CMS_Test">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:57:05Z" name="beforetest" finished-at="2024-11-13T16:57:05Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:SmokTesting.CheckPages@74287ea3]" started-at="2024-11-12T14:55:44Z" name="tearDown" finished-at="2024-11-12T14:55:45Z" duration-ms="620" status="PASS">
+        </test-method> <!-- beforetest -->
+        <test-method signature="cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:57:05Z" name="cmsPageWadhghat" finished-at="2024-11-13T16:57:20Z" duration-ms="15527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cmsPageWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:57:20Z" name="aftermethod" finished-at="2024-11-13T16:57:21Z" duration-ms="825" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cmsPageWadhghat status=SUCCESS method=CMS_Test.cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsPageWadhghat() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:57:21Z" name="cmsRegisterPageWadhghat" finished-at="2024-11-13T16:57:37Z" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsPageWadhghat" duration-ms="16607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cmsRegisterPageWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:57:37Z" name="aftermethod" finished-at="2024-11-13T16:57:38Z" duration-ms="215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cmsRegisterPageWadhghat status=SUCCESS method=CMS_Test.cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsRegisterPageWadhghat() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:57:38Z" name="cmsComplaintRegisterWadhghat" finished-at="2024-11-13T16:57:56Z" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsRegisterPageWadhghat" duration-ms="18503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cmsComplaintRegisterWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:57:56Z" name="aftermethod" finished-at="2024-11-13T16:57:56Z" duration-ms="203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cmsComplaintRegisterWadhghat status=SUCCESS method=CMS_Test.cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsComplaintRegisterWadhghat() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:57:56Z" name="searchComplaintWadhghat" finished-at="2024-11-13T16:58:38Z" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsComplaintRegisterWadhghat" duration-ms="41810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchComplaintWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:58:38Z" name="aftermethod" finished-at="2024-11-13T16:58:38Z" duration-ms="175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchComplaintWadhghat status=SUCCESS method=CMS_Test.searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.searchComplaintWadhghat() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:58:38Z" name="Dataentry_owner_info" finished-at="2024-11-13T16:59:12Z" depends-on-methods="New_property_Wadhghat.CMS_Test.searchComplaintWadhghat" duration-ms="33448" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dataentry_owner_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:59:12Z" name="aftermethod" finished-at="2024-11-13T16:59:12Z" duration-ms="181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Dataentry_owner_info status=SUCCESS method=CMS_Test.Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.Dataentry_owner_info() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T16:59:12Z" name="Dataentry_floor_info" finished-at="2024-11-13T17:00:01Z" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_owner_info" duration-ms="49200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dataentry_floor_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:00:01Z" name="aftermethod" finished-at="2024-11-13T17:00:01Z" duration-ms="262" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Dataentry_floor_info status=SUCCESS method=CMS_Test.Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.Dataentry_floor_info() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:00:01Z" name="OldTaxex_info" finished-at="2024-11-13T17:01:22Z" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_floor_info" duration-ms="80123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OldTaxex_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:01:22Z" name="aftermethod" finished-at="2024-11-13T17:01:29Z" duration-ms="7033" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=OldTaxex_info status=SUCCESS method=CMS_Test.OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.OldTaxex_info() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:01:29Z" name="AddTaxes_and_UploadFiles" finished-at="2024-11-13T17:03:34Z" depends-on-methods="New_property_Wadhghat.CMS_Test.OldTaxex_info" duration-ms="125552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddTaxes_and_UploadFiles -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:03:34Z" name="aftermethod" finished-at="2024-11-13T17:03:34Z" duration-ms="239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddTaxes_and_UploadFiles status=SUCCESS method=CMS_Test.AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:03:34Z" name="WadhghatApproval" finished-at="2024-11-13T17:03:49Z" depends-on-methods="New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles" duration-ms="14487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WadhghatApproval -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:03:49Z" name="aftermethod" finished-at="2024-11-13T17:03:49Z" duration-ms="240" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=WadhghatApproval status=SUCCESS method=CMS_Test.WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.WadhghatApproval() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:03:49Z" name="councilapproval" finished-at="2024-11-13T17:05:14Z" depends-on-methods="New_property_Wadhghat.CMS_Test.WadhghatApproval" duration-ms="85146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- councilapproval -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:05:14Z" name="aftermethod" finished-at="2024-11-13T17:05:15Z" duration-ms="266" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=councilapproval status=SUCCESS method=CMS_Test.councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[private void New_property_Wadhghat.CMS_Test.councilapproval() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="SearchOnCounter()[pri:12, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:05:15Z" name="SearchOnCounter" finished-at="2024-11-13T17:05:51Z" duration-ms="36085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchOnCounter -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:05:51Z" name="aftermethod" finished-at="2024-11-13T17:05:51Z" duration-ms="208" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SearchOnCounter status=SUCCESS method=CMS_Test.SearchOnCounter()[pri:12, instance:New_property_Wadhghat.CMS_Test@6d366c9b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[private void New_property_Wadhghat.CMS_Test.SearchOnCounter() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:New_property_Wadhghat.CMS_Test@6d366c9b]" started-at="2024-11-13T17:05:51Z" name="tearDown" finished-at="2024-11-13T17:05:51Z" duration-ms="61" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- SmokTesting.CheckPages -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- New_property_Wadhghat.CMS_Test -->
+    </test> <!-- CreateNewProperty -->
+    <test started-at="2024-11-13T11:35:51Z" name="Online Counter Checking" finished-at="2024-11-13T11:36:44Z" duration-ms="52996">
+      <class name="Reports.OnlineCounterReports">
+        <test-method signature="TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@61526469]" started-at="2024-11-13T17:05:51Z" name="TaxCompareTest" finished-at="2024-11-13T17:06:44Z" duration-ms="52635" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax_btnpartialpaynow_3']"}
+  (Session info: chrome=130.0.6723.117)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ccebbfcd1ec1a69db70b322ce450c009, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax_btnpartialpaynow_3']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58611}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58611/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ccebbfcd1ec1a69db70b322ce450c009]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax_btnpartialpaynow_3']"}
+  (Session info: chrome=130.0.6723.117)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ccebbfcd1ec1a69db70b322ce450c009, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax_btnpartialpaynow_3']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58611}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58611/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ccebbfcd1ec1a69db70b322ce450c009
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at pom.OnlinePaymentPage.Click_pay_now(OnlinePaymentPage.java:143)
+	at Reports.OnlineCounterReports.TaxCompareTest(OnlineCounterReports.java:118)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TaxCompareTest -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:Reports.OnlineCounterReports@61526469]" started-at="2024-11-13T17:06:44Z" name="aftermethod" finished-at="2024-11-13T17:06:44Z" duration-ms="230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TaxCompareTest status=FAILURE method=OnlineCounterReports.TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@61526469] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Reports.OnlineCounterReports.TaxCompareTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.OnlineCounterReports@61526469]" started-at="2024-11-13T17:06:44Z" name="tearDown" finished-at="2024-11-13T17:06:44Z" duration-ms="106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Reports.OnlineCounterReports -->
+    </test> <!-- Online Counter Checking -->
+  </suite> <!-- Suite -->
 </testng-results>

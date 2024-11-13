@@ -1,68 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="CreateNewProperty(failed)">
+  <test name="Online Counter Checking(failed)">
     <classes>
-      <class name="New_property_Wadhghat.CMS_Test">
-        <methods>
-          <include name="WadhghatApproval"/>
-          <include name="AddTaxes_and_UploadFiles"/>
-          <include name="aftermethod"/>
-          <include name="cmsRegisterPageWadhghat"/>
-          <include name="Dataentry_owner_info"/>
-          <include name="OldTaxex_info"/>
-          <include name="Dataentry_floor_info"/>
-          <include name="beforetest"/>
-          <include name="councilapproval"/>
-          <include name="cmsComplaintRegisterWadhghat"/>
-          <include name="searchComplaintWadhghat"/>
-          <include name="cmsPageWadhghat"/>
-        </methods>
-      </class> <!-- New_property_Wadhghat.CMS_Test -->
-    </classes>
-  </test> <!-- CreateNewProperty(failed) -->
-  <test name="All Payments(failed)">
-    <classes>
-      <class name="Payments.alltypepayments">
+      <class name="Reports.OnlineCounterReports">
         <methods>
           <include name="aftermethod"/>
-          <include name="AdvancePayment"/>
-          <include name="cheque_clear"/>
-          <include name="aftertest"/>
-        </methods>
-      </class> <!-- Payments.alltypepayments -->
-    </classes>
-  </test> <!-- All Payments(failed) -->
-  <test name="Counter Reports(failed)">
-    <classes>
-      <class name="Reports.DownloadReports">
-        <methods>
-          <include name="aftertest"/>
-          <include name="AssismentNakkal"/>
-          <include name="NoDueCertificate"/>
-          <include name="aftermethod"/>
-        </methods>
-      </class> <!-- Reports.DownloadReports -->
-    </classes>
-  </test> <!-- Counter Reports(failed) -->
-  <test name="MinorChanges(failed)">
-    <classes>
-      <class name="New_property_Wadhghat.MinorChanges">
-        <methods>
-          <include name="aftermethod"/>
-          <include name="performMinorChangeAndVerify"/>
-        </methods>
-      </class> <!-- New_property_Wadhghat.MinorChanges -->
-    </classes>
-  </test> <!-- MinorChanges(failed) -->
-  <test name="CollectionReport(failed)">
-    <classes>
-      <class name="Reports.CollectionReports">
-        <methods>
-          <include name="collectiontest"/>
           <include name="tearDown"/>
+          <include name="TaxCompareTest"/>
         </methods>
-      </class> <!-- Reports.CollectionReports -->
+      </class> <!-- Reports.OnlineCounterReports -->
     </classes>
-  </test> <!-- CollectionReport(failed) -->
+  </test> <!-- Online Counter Checking(failed) -->
 </suite> <!-- Failed suite [Suite] -->
