@@ -5,6 +5,8 @@ import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -33,7 +35,7 @@ import utility.TakeScreenshoot;
 		StopWatch stopWatch;
 		WebDriver driver;
 		
-		
+		/*
 		@BeforeTest
 		public void beforetest() throws IOException
 		{
@@ -46,8 +48,8 @@ import utility.TakeScreenshoot;
 			BaseDriver.GetData();
 			driver = CMS_browser.openBrowser(url);
 		}
-		
-		@Test(priority = 1)
+		*/
+		@Test(priority = 1,enabled=false)
 		public void loginPage() throws InterruptedException
 		{
 			test = extent.createTest("loginPage");
@@ -78,13 +80,13 @@ import utility.TakeScreenshoot;
 	        StopWatch stopWatch = new StopWatch();
 	        qcpage.Quality_Control_Page_link(url,driver);
 	        qcpage.Select_defaulter_reports(driver);
-	        qcpage.Select_zone(driver);
+	        qcpage.Select_zone_KH(driver);
 	        Thread.sleep(5000);
 	        qcpage.Select_ward(driver);
 	        Thread.sleep(5000);
 	        qcpage.Select_from_proprty(driver);
 	        Thread.sleep(5000);
-	        qcpage.Select_to_proprty(driver);
+	        qcpage.Select_to_proprty_KH(driver);
 	        Thread.sleep(5000);
 	        qcpage.Select_with_interest(driver);
 	        Thread.sleep(5000);
@@ -118,13 +120,13 @@ import utility.TakeScreenshoot;
 	        Thread.sleep(10000);
 	        qcpage.Select_total_outstanding(driver);
 	        Thread.sleep(10000);
-	        qcpage.Select_zone_totaloutstanding(driver);
+	        qcpage.Select_zone_totaloutstanding_KH(driver);
 	        Thread.sleep(10000);
 	        qcpage.Select_ward_totaloutstanding(driver);
 	        Thread.sleep(5000);
 	        qcpage.Select_from_proprty_totaloutstanding(driver);
 	        Thread.sleep(5000);
-	        qcpage.Select_to_proprty_totaloutstanding(driver);
+	        qcpage.Select_to_proprty_totaloutstanding_KH(driver);
 	        Thread.sleep(5000);
 	        stopWatch.start();
 	        qcpage.Totaloutstanding_export_button(driver);
@@ -141,7 +143,59 @@ import utility.TakeScreenshoot;
 			 stopWatch.stop();
 			Thread.sleep(5000);
 		}
-			
+		
+		@Test(priority = 4)
+	    public void Wadhghat_report_test() throws Exception {
+	        test = extent.createTest("Wadhghat Report Test");
+	        QualityControlPages qcpage = new QualityControlPages(driver);
+	        StopWatch stopWatch = new StopWatch();
+	        qcpage.Quality_Control_Page_link(url,driver);
+	        Thread.sleep(5000);    
+	        qcpage.Select_wadhghat_ferfar_reports(driver);
+	        Thread.sleep(5000);
+	        qcpage.Click_wadhghat(driver);
+	        Thread.sleep(5000);
+	        qcpage.Select_financial_year_2024_25_wf(driver);
+	        Thread.sleep(5000);
+	        qcpage.Enter_from_date_wf(driver, "1");
+	        LocalDate today = LocalDate.now();
+			 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		        String formattedDate = today.format(formatter);
+	        qcpage.Enter_to_date_wf(driver, formattedDate);
+	        stopWatch.start();
+	        qcpage.Click_export_btn_wf(driver); 
+			Thread.sleep(15000);
+			test.info("Time duration of exporting Wadhghat Report: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+			test.pass("Wadhghat Report Generated ✔");
+			 stopWatch.stop();
+		}
+		
+		@Test(priority = 5)
+	    public void ferfar_report_test() throws Exception {
+	        test = extent.createTest("Ferfar Report Test");
+	        QualityControlPages qcpage = new QualityControlPages(driver);
+	        StopWatch stopWatch = new StopWatch();
+	        qcpage.Quality_Control_Page_link(url,driver);
+	        Thread.sleep(5000);    
+	        qcpage.Select_wadhghat_ferfar_reports(driver);
+	        Thread.sleep(5000);
+	        qcpage.Click_ferfar(driver);
+	        Thread.sleep(5000);
+	        qcpage.Select_financial_year_2024_25_wf(driver);
+	        Thread.sleep(5000);
+	        qcpage.Enter_from_date_wf(driver, "1");
+	        LocalDate today = LocalDate.now();
+			 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		        String formattedDate = today.format(formatter);
+	        qcpage.Enter_to_date_wf(driver, formattedDate);
+	        stopWatch.start();
+	        qcpage.Click_export_btn_fer(driver); 
+			Thread.sleep(15000);
+			test.info("Time duration of exporting Ferfar Report: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+			test.pass("Ferfar Report Generated ✔");
+			 stopWatch.stop();
+		}
+		
 		@AfterTest
 	    public void tearDown() {
 	      //  if (driver != null) {

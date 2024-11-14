@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CollectionReportsPage {
 	
+	@FindBy(xpath = "//select[@id='ContentPlaceHolder1_ddlDuration']") private WebElement duration;
 	@FindBy(xpath = "//select[@id='ContentPlaceHolder1_ddlReportType']") private WebElement template;
 	@FindBy(xpath = "//select[@name='ctl00$ContentPlaceHolder1$DDLZoneSectionNo']") private WebElement zone;
 	@FindBy(xpath = "//select[@id='ContentPlaceHolder1_ddlFinanceYear']") private WebElement finance_year;
@@ -24,6 +25,14 @@ public class CollectionReportsPage {
 	@FindBy( id="ContentPlaceHolder1_GVWard_chkAll") private WebElement ward_checkAll;
 	@FindBy(name = "ctl00$ContentPlaceHolder1$txtFromDate") private WebElement from_date_box;
 	@FindBy(id ="ContentPlaceHolder1_btnCollRpt" ) private WebElement generate_button;
+	
+	public void Select_monthly_report(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait.until(ExpectedConditions.visibilityOf(duration));
+		Select option = new Select(duration);
+		option.selectByValue("1");
+	}
 	
 	public CollectionReportsPage (WebDriver driver)
 	{
@@ -87,7 +96,7 @@ public class CollectionReportsPage {
 	public void status_cleared(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
-		wait.until(ExpectedConditions.visibilityOf(zone));
+		wait.until(ExpectedConditions.visibilityOf(status));
 		Select node = new Select(status);
 		node.selectByValue("1");
 	}
@@ -95,7 +104,7 @@ public class CollectionReportsPage {
 	public void status_inprocess(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
-		wait.until(ExpectedConditions.visibilityOf(zone));
+		wait.until(ExpectedConditions.visibilityOf(status));
 		Select node = new Select(status);
 		node.selectByValue("2");
 	}
@@ -103,7 +112,7 @@ public class CollectionReportsPage {
 	public void status_notCleared(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
-		wait.until(ExpectedConditions.visibilityOf(zone));
+		wait.until(ExpectedConditions.visibilityOf(status));
 		Select node = new Select(status);
 		node.selectByValue("3");
 	}
@@ -143,6 +152,4 @@ public class CollectionReportsPage {
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
 	    js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 	}
-
-
 }
