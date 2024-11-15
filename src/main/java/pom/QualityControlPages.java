@@ -31,6 +31,8 @@ public class QualityControlPages {
 	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder1$btnShow']") private WebElement show_btn;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnExport']") private WebElement export_btn;
 	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder1$btnTotalOutstanding']") private WebElement totaloutstanding_export_btn;
+	@FindBy(xpath = "//*[@id=\'ContentPlaceHolder1_GRVAllDetails\']/tbody/tr[1]/th[1]") private WebElement gridelem;
+	@FindBy(xpath = "//*[@id=\'ContentPlaceHolder1_Image1\']") private WebElement loader;
 	
 	/////////////////////////wadhghat fer ////////////////////////////////////////////////////////////////////
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_Wadhghat']") private WebElement select_wadhghat;
@@ -136,12 +138,12 @@ public class QualityControlPages {
 		node.selectByValue("BMC");
 	}
 	
-	public void Select_zone_KH(WebDriver driver)
+	public void Select_zone(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_zone_che_nav));
 		Select node = new Select(select_zone_che_nav);
-		node.selectByValue("KH");
+		node.selectByIndex(1);
 	}
 	
 	public void Select_zone_totaloutstanding_BMC(WebDriver driver)
@@ -152,12 +154,12 @@ public class QualityControlPages {
 		node.selectByValue("BMC");
 	}
 	
-	public void Select_zone_totaloutstanding_KH(WebDriver driver)
+	public void Select_zone_totaloutstanding(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_zone_che_nav_totaloutstnd));
 		Select node = new Select(select_zone_che_nav_totaloutstnd);
-		node.selectByValue("KH");
+		node.selectByIndex(1);
 	}
 	
 	public void Select_ward(WebDriver driver)
@@ -213,7 +215,7 @@ public class QualityControlPages {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_to_property));
 		Select node = new Select(select_to_property);
-		node.selectByValue("1-11");
+		node.selectByValue("1-1");
 	}
 	
 	public void Select_to_proprty_totaloutstanding_KH(WebDriver driver)
@@ -221,7 +223,7 @@ public class QualityControlPages {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_to_property_totaloutstnd));
 		Select node = new Select(select_to_property_totaloutstnd);
-		node.selectByValue("1-11");
+		node.selectByValue("500003");
 	}
 	
 	public void Select_to_current(WebDriver driver)
@@ -302,9 +304,11 @@ public class QualityControlPages {
 	
 	public boolean isGridDisplayed(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
-		wait.until(ExpectedConditions.visibilityOf(totaloutstanding_export_btn));
-		totaloutstanding_export_btn.click();
-		if (totaloutstanding_export_btn.isDisplayed()) {
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(60));	    
+	    wait2.until(ExpectedConditions.invisibilityOf(loader));
+		wait.until(ExpectedConditions.visibilityOf(gridelem));
+
+		if (gridelem.isDisplayed()) {
 			return true;
 		}
 		return false;

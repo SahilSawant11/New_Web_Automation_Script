@@ -3,6 +3,7 @@ package pom;
 import java.lang.classfile.instruction.TableSwitchInstruction;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OnlineGrievancePage {
-	@FindBy(xpath = "//span[@id='spnInProcessGrievance']") private WebElement inprocess_tab;
+	@FindBy(xpath = "//p[@id=\'spnTodaysNewComplaint\']") private WebElement inprocess_tab;
+	@FindBy(xpath = "//*[@id='loading']/div/div/img") private WebElement loader;
 	@FindBy(xpath = "//*[@id='btnAccept']") private WebElement select_btn;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtWadhghatRemark']") private WebElement remark_box;
 	
@@ -25,13 +27,13 @@ public class OnlineGrievancePage {
         
 	}
 	
-	public void Select_property(WebDriver driver)
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.elementToBeClickable(select_btn));
-        select_btn.click();
-        
+	public void Select_property(WebDriver driver) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));	    
+	    wait.until(ExpectedConditions.invisibilityOf(loader));
+	    wait.until(ExpectedConditions.elementToBeClickable(select_btn));
+	    select_btn.click();
 	}
+
 	
 	public void Enter_remark(WebDriver driver, String str)
 	{

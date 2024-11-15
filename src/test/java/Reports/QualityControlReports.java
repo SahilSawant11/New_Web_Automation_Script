@@ -35,7 +35,7 @@ import utility.TakeScreenshoot;
 		StopWatch stopWatch;
 		WebDriver driver;
 		
-		/*
+		
 		@BeforeTest
 		public void beforetest() throws IOException
 		{
@@ -48,8 +48,8 @@ import utility.TakeScreenshoot;
 			BaseDriver.GetData();
 			driver = CMS_browser.openBrowser(url);
 		}
-		*/
-		@Test(priority = 1,enabled=false)
+		
+		@Test(priority = 1)
 		public void loginPage() throws InterruptedException
 		{
 			test = extent.createTest("loginPage");
@@ -80,7 +80,7 @@ import utility.TakeScreenshoot;
 	        StopWatch stopWatch = new StopWatch();
 	        qcpage.Quality_Control_Page_link(url,driver);
 	        qcpage.Select_defaulter_reports(driver);
-	        qcpage.Select_zone_KH(driver);
+	        qcpage.Select_zone(driver);
 	        Thread.sleep(5000);
 	        qcpage.Select_ward(driver);
 	        Thread.sleep(5000);
@@ -120,7 +120,7 @@ import utility.TakeScreenshoot;
 	        Thread.sleep(10000);
 	        qcpage.Select_total_outstanding(driver);
 	        Thread.sleep(10000);
-	        qcpage.Select_zone_totaloutstanding_KH(driver);
+	        qcpage.Select_zone_totaloutstanding(driver);
 	        Thread.sleep(10000);
 	        qcpage.Select_ward_totaloutstanding(driver);
 	        Thread.sleep(5000);
@@ -130,7 +130,7 @@ import utility.TakeScreenshoot;
 	        Thread.sleep(5000);
 	        stopWatch.start();
 	        qcpage.Totaloutstanding_export_button(driver);
-	        Thread.sleep(120000);
+	        Thread.sleep(60000);
 	        String totaloutstandingGenerated = null;
 			try {
 				totaloutstandingGenerated = TakeScreenshoot.GetScreenshotFullBase64(driver);
