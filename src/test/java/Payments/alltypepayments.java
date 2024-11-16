@@ -66,11 +66,10 @@ public class alltypepayments extends BaseDriver{
 		counterpayment = new CounterPaymentPage(driver);
 		
 		counterpayment.Select_Finalcheckbox(driver);
+		Thread.sleep(5000);
 		
 		
-		Thread.sleep(2000);
-		
-		String abc="BMC";;
+		String abc="BMC";
 		 if (!abc.equals(node1)) {
 			 try {
 			        counterpayment.Select_APartcheckbox(driver);
@@ -242,6 +241,7 @@ System.out.println("PDF file Downloading Status: " + result);
 		offlinepaymentpage.Click_search_property();
 			
 		counterpayment = new CounterPaymentPage(driver);
+		
 		counterpayment.Select_Finalcheckbox(driver);
 		Thread.sleep(5000);
 		

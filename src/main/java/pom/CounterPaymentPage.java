@@ -130,6 +130,7 @@ public class CounterPaymentPage {
 // Upic
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_lblUPICID']") private WebElement upicId;
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[2]/td[3]") private WebElement Rowname;
 	
 	
 	// PCMC BTN
@@ -349,8 +350,18 @@ public class CounterPaymentPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
 		
+		String rowname=Rowname.getText();
+		String Arow="(A) 1/10/2016 To 2020-21";
+		
+		if (rowname.equals(Arow)) {
 			wait.until(ExpectedConditions.visibilityOf(select_Apartcheck_box));
 			select_Apartcheck_box.click();
+		} else {
+
+		}
+		
+		
+			
 			
 		
 		

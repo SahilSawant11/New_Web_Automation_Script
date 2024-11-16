@@ -27,42 +27,7 @@ public class AccountantReport extends BaseDriver{
 	StopWatch stopWatch;
 	WebDriver driver;
 	
-	@BeforeTest
-	public void beforetest() throws IOException
-	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");	
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-		driver = CMS_browser.openBrowser(url);
-		stopWatch = new StopWatch();
-	}
 	
-	@Test(priority = 1)
-	public void loginPage() throws InterruptedException
-	{
-		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Enter_user_name(userid, driver);	
-		loginpage.Enter_password(password);
-		Thread.sleep(10000);
-		loginpage.Click_login_btn(driver);
-		
-		try
-		{
-			loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
-			loginpage.Click_login_btn(driver);	
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
 	
 	@Test(priority = 2)
 	public void collectiontest() throws InterruptedException {

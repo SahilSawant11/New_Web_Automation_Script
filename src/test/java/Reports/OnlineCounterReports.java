@@ -92,6 +92,10 @@ public class OnlineCounterReports extends BaseDriver{
 	    test.log(Status.INFO, "Property on Online Payment Screen ", MediaEntityBuilder.createScreenCaptureFromBase64String(pagename).build() );
 		onlinepage.Agree_and_proceed();
 		onlinepage.Click_Notice_Bill();
+		CounterPaymentPage counterpayment = null;
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Noticebillfromonline.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+    
         onlinepage.Scroll_to_grid(driver);
         onlinepage.Click_select_pay_all_checkbox();
         String ops = TakeScreenshoot.GetScreenshotFullBase64(driver);
