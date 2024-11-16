@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="All Payments(failed)">
@@ -18,4 +19,19 @@
       </class> <!-- Payments.alltypepayments -->
     </classes>
   </test> <!-- All Payments(failed) -->
+=======
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test name="Online Counter Checking(failed)">
+    <classes>
+      <class name="Reports.OnlineCounterReports">
+        <methods>
+          <include name="aftermethod"/>
+          <include name="tearDown"/>
+          <include name="TaxCompareTest"/>
+        </methods>
+      </class> <!-- Reports.OnlineCounterReports -->
+    </classes>
+  </test> <!-- Online Counter Checking(failed) -->
+>>>>>>> origin/nov15
 </suite> <!-- Failed suite [Suite] -->

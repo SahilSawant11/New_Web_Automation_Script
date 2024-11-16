@@ -1,5 +1,6 @@
 package pom;
 
+import java.sql.Driver;
 import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -35,6 +36,10 @@ public class OfflinePaymentPage {
 		@FindBy(xpath = "//a[@id='ContentPlaceHolder1_lblDownloadReceiptbtn']") private WebElement receipts;
 		
 		@FindBy(xpath = "//span[@id='loggedUserFullName']") private WebElement loggedUserFullName;
+		@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[21]") private WebElement  nivval_ekun_kar;
+		@FindBy(xpath = "//*[@id='ContentPlaceHolder1_lblShowOwnerName']") private WebElement  kardharak_nav;
+		
+		
 		
 		public OfflinePaymentPage(WebDriver driver)
 		{
@@ -199,5 +204,51 @@ public class OfflinePaymentPage {
 			
 			driver.get(s2);
 		}
+
+		public static String offlineTotalTax;
+		public static String offlineKarDharak;
+
+		public void getOfflineScreenDetails() throws InterruptedException{
+			
+			String nivval_ekun_kar_offline = nivval_ekun_kar.getText();
+			String kar_dharak_nav = kardharak_nav.getText();
+			System.out.println("Offline Counter Tax: " + nivval_ekun_kar_offline);
+			System.out.println("Offline Owner Name: " + kar_dharak_nav);
+			offlineTotalTax = nivval_ekun_kar_offline;
+			offlineKarDharak = kar_dharak_nav;
+		}
+		
+		public void Scroll_to_grid(WebDriver driver) throws InterruptedException{
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0, 600)"); 
+
+
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 }

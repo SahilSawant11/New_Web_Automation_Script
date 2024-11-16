@@ -9,10 +9,12 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -33,6 +35,7 @@ import pom.CounterPaymentPage;
 //import pom.CounterPaymentPage;
 import pom.LoginPage;
 import pom.MinorChangesPage;
+import pom.OfflinePaymentPage;
 //import pom.OfflinePaymentPage;
 import pom.OldTaxesPage;
 import pom.OnlineDataEntryPage;
@@ -44,19 +47,20 @@ import utility.TakeScreenshoot;
 public class CMS_Test extends BaseDriver{
 	JavascriptExecutor js;
 	StopWatch stopWatch;
+	private WebDriver driver = CMS_browser.getDriver();
 	
 	//taxex check
 	String Taxtotal_fromDataentry;
-	
+
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-
+	
 		stopWatch = new StopWatch();
 		
 	}
-	
-	@Test(priority = 1, enabled=false)
+/*	
+	@Test(priority = 1)
 	public void loginPage() throws InterruptedException
 	{
 		driver.get(url);
@@ -81,7 +85,7 @@ public class CMS_Test extends BaseDriver{
 			
 		}
 	}
-	
+	*/
 	@Test(priority = 2)
 	public void cmsPageWadhghat() throws InterruptedException
 	{
@@ -510,8 +514,8 @@ counncil_approval.clickOnapproval(driver);
 //		String PropertyOnCounter=TakeScreenshoot.GetScreenshotFullBase64(driver);
 //		test.pass("New created Property ",MediaEntityBuilder.createScreenCaptureFromBase64String(PropertyOnCounter).build());
 	}
-	
-/*	@Test(priority = 12, dependsOnMethods = "councilapproval")
+
+	@Test(priority = 12)
 	private void SearchOnCounter() throws Exception 
 	{
 		test = extent.createTest("Counter Screen");
@@ -529,12 +533,16 @@ counncil_approval.clickOnapproval(driver);
 		offlinepaymentpage.Click_search_property();
 		
 		counterpayment = new CounterPaymentPage(driver);
-		counterpayment.Select_Finalcheckbox(driver);
-		
+	//	counterpayment.Select_Finalcheckbox(driver);
+		offlinepaymentpage.Scroll_to_grid(driver);
+		Thread.sleep(5000);
+		offlinepaymentpage.getOfflineScreenDetails();
+		String offlineTax = OfflinePaymentPage.offlineTotalTax;
+		String offlineOwnerName = OfflinePaymentPage.offlineKarDharak;
 		String PropertyOnCounter=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("New created Property ",MediaEntityBuilder.createScreenCaptureFromBase64String(PropertyOnCounter).build());
 	}
-*/	
+	
 
 	@AfterMethod
 	public void aftermethod(ITestResult result,java.lang.reflect.Method m)
@@ -569,5 +577,10 @@ counncil_approval.clickOnapproval(driver);
 		extent.flush();
 
 	}
-	
+	@AfterTest
+    public void tearDown() {
+     
+        extent.flush();
+
+    }
 }

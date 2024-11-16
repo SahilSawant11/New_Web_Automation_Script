@@ -14,7 +14,12 @@
     </classes>
   </test>
  
-
+ <test name="Online Counter Checking">
+  <classes>
+    <class name="Reports.OnlineCounterReports"/>
+    </classes>
+  </test>
+ 
 <test name="All Payments">
 	<classes>
 		<class name="Payments.alltypepayments"/>

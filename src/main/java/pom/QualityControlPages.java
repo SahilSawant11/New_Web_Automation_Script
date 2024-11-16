@@ -4,6 +4,7 @@ import static org.testng.Assert.assertTrue;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,18 @@ public class QualityControlPages {
 	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder1$btnShow']") private WebElement show_btn;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnExport']") private WebElement export_btn;
 	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder1$btnTotalOutstanding']") private WebElement totaloutstanding_export_btn;
+	@FindBy(xpath = "//*[@id=\'ContentPlaceHolder1_GRVAllDetails\']/tbody/tr[1]/th[1]") private WebElement gridelem;
+	@FindBy(xpath = "//*[@id=\'ContentPlaceHolder1_Image1\']") private WebElement loader;
+	
+	/////////////////////////wadhghat fer ////////////////////////////////////////////////////////////////////
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_Wadhghat']") private WebElement select_wadhghat;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_FerFar']") private WebElement select_ferfar;
+	@FindBy(xpath = "//select[@id='ContentPlaceHolder1_ddlFinYearForReport']") private WebElement select_finance_year_wf;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtFrmDate1']") private WebElement select_from_date_wf;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtToDate1']") private WebElement select_to_date_wf;
+	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder1$btnexportpdf']") private WebElement export_btn_wf;
+	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder1$btnexportfer']") private WebElement export_btn_fer;
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public QualityControlPages (WebDriver driver)
 	{
@@ -44,12 +57,69 @@ public class QualityControlPages {
 		node.selectByValue("1");
 	}
 	
-	public void Select_totaloutstanding_reports(WebDriver driver)
+	public void Select_wadhghat_ferfar_reports(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_reports));
 		Select node = new Select(select_reports);
-		node.selectByValue("4");
+		node.selectByValue("6");
+	}
+	
+	public void Select_financial_year_2024_25_wf(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait.until(ExpectedConditions.visibilityOf(select_finance_year_wf));
+		Select node = new Select(select_finance_year_wf);
+		node.selectByValue("2024-2025");
+	}
+	
+	public void Enter_from_date_wf(WebDriver driver, String date)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		select_from_date_wf.click();
+		String xpath = String.format("//div[@id='ContentPlaceHolder1_CalendarExtender2_days']//div[text()='%s']", date);
+        WebElement dateElement = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+        dateElement.click();
+        
+	}   
+	
+	public void Enter_to_date_wf(WebDriver driver, String str)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
+		wait.until(ExpectedConditions.visibilityOf(select_to_date_wf));
+		select_to_date_wf.sendKeys(str);
+	}
+	
+	public void Click_export_btn_wf(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(export_btn_wf));
+        export_btn_wf.click();
+        
+	}
+	
+	public void Click_export_btn_fer(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(export_btn_fer));
+        export_btn_fer.click();
+        
+	}
+	
+	public void Click_wadhghat(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(select_wadhghat));
+        select_wadhghat.click();
+        
+	}
+	
+	public void Click_ferfar(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(select_ferfar));
+        select_ferfar.click();
+        
 	}
 	
 	public void Select_total_outstanding(WebDriver driver)
@@ -60,11 +130,27 @@ public class QualityControlPages {
 		node.selectByValue("4");
 	}
 	
+	public void Select_zone_BMC(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait.until(ExpectedConditions.visibilityOf(select_zone_che_nav));
+		Select node = new Select(select_zone_che_nav);
+		node.selectByValue("BMC");
+	}
+	
 	public void Select_zone(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_zone_che_nav));
 		Select node = new Select(select_zone_che_nav);
+		node.selectByIndex(1);
+	}
+	
+	public void Select_zone_totaloutstanding_BMC(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait.until(ExpectedConditions.visibilityOf(select_zone_che_nav_totaloutstnd));
+		Select node = new Select(select_zone_che_nav_totaloutstnd);
 		node.selectByValue("BMC");
 	}
 	
@@ -73,7 +159,7 @@ public class QualityControlPages {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_zone_che_nav_totaloutstnd));
 		Select node = new Select(select_zone_che_nav_totaloutstnd);
-		node.selectByValue("BMC");
+		node.selectByIndex(1);
 	}
 	
 	public void Select_ward(WebDriver driver)
@@ -108,7 +194,7 @@ public class QualityControlPages {
 		node.selectByValue("1");
 	}
 	
-	public void Select_to_proprty(WebDriver driver)
+	public void Select_to_proprty_BMC(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_to_property));
@@ -116,12 +202,28 @@ public class QualityControlPages {
 		node.selectByValue("51");
 	}
 	
-	public void Select_to_proprty_totaloutstanding(WebDriver driver)
+	public void Select_to_proprty_totaloutstanding_BMC(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(select_to_property_totaloutstnd));
 		Select node = new Select(select_to_property_totaloutstnd);
 		node.selectByValue("51");
+	}
+	
+	public void Select_to_proprty_KH(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait.until(ExpectedConditions.visibilityOf(select_to_property));
+		Select node = new Select(select_to_property);
+		node.selectByValue("1-1");
+	}
+	
+	public void Select_to_proprty_totaloutstanding_KH(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait.until(ExpectedConditions.visibilityOf(select_to_property_totaloutstnd));
+		Select node = new Select(select_to_property_totaloutstnd);
+		node.selectByValue("500003");
 	}
 	
 	public void Select_to_current(WebDriver driver)
@@ -202,9 +304,11 @@ public class QualityControlPages {
 	
 	public boolean isGridDisplayed(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
-		wait.until(ExpectedConditions.visibilityOf(totaloutstanding_export_btn));
-		totaloutstanding_export_btn.click();
-		if (totaloutstanding_export_btn.isDisplayed()) {
+		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(60));	    
+	    wait2.until(ExpectedConditions.invisibilityOf(loader));
+		wait.until(ExpectedConditions.visibilityOf(gridelem));
+
+		if (gridelem.isDisplayed()) {
 			return true;
 		}
 		return false;
