@@ -7,8 +7,12 @@
         <methods>
           <include name="Card"/>
           <include name="aftermethod"/>
+          <include name="CashPayment"/>
+          <include name="AdvancePayment"/>
           <include name="chequePaymentforClear"/>
           <include name="cheque_clear"/>
+          <include name="chequePayment"/>
+          <include name="cheque_fail"/>
           <include name="aftertest"/>
         </methods>
       </class> <!-- Payments.alltypepayments -->

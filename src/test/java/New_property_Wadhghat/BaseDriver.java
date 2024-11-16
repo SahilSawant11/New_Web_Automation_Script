@@ -182,63 +182,74 @@ public class BaseDriver {
 	@SuppressWarnings("resource")
 	public static void GetData() throws IOException
 	{
-		XSSFWorkbook workbook;
-		XSSFSheet s;
-		XSSFCell c;
 		
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\InputData\\CMS Data.xlsx");
-		workbook = new XSSFWorkbook(file);
-		s = workbook.getSheet("Sheet1");
 		
-		c = s.getRow(1).getCell(0);
-		c.setCellType(CellType.STRING);
-		userid = c.getStringCellValue();
 		
-		c = s.getRow(1).getCell(1);
-		c.setCellType(CellType.STRING);
-		password = c.getStringCellValue();
 		
-		c = s.getRow(1).getCell(2);
-		c.setCellType(CellType.STRING);
-		url = c.getStringCellValue();
-		
-		c = s.getRow(1).getCell(3);
-		c.setCellType(CellType.STRING);
-		node = c.getStringCellValue();
-		
-		c = s.getRow(1).getCell(4);
-		c.setCellType(CellType.STRING);
-		sector = c.getStringCellValue();
 		
 
 		
 		Testdb testdb = new Testdb();
 	     testdb.fetchData();  // Fetch data from the database and populate variables
+	     node = testdb.GetWard();
+	     sector="6";
+	 	userid = testdb.Getusername();
+	 	password = testdb.Getpassword();
+	     url=testdb.Geturl();
+	     String abc="BMC";
+	     String check=testdb.getId1();
+	     String abc2=check.substring(0, 2);
+		 if (!abc.contains(abc2)) {
+			
+			 String test1=testdb.getId1();
+		     node1 = test1.substring(0, 2);  // Get "KH"
+		     sector1 = test1.substring(2); // Get "12"   
+		     PropertyNo1=testdb.getName1();
+		     
+		     String test2=testdb.getId1();
+		     node2 = test2.substring(0, 2);  // Get "KH"
+		     sector2 = test2.substring(2); // Get "12"   
+		     PropertyNo2=testdb.getName2();
+		     
+		     String test3=testdb.getId3();
+		     node3 = test3.substring(0, 2);  // Get "KH"
+		     sector3 = test3.substring(2); // Get "12"   
+		     PropertyNo3=testdb.getName3();
+		     
+		     
+		     String test4=testdb.getId4();
+		     node4 = test4.substring(0, 2);  // Get "KH"
+		     sector4 = test4.substring(2); // Get "12"   
+		     PropertyNo4=testdb.getName4();
+				
+	        } else {
+	        	 String test1=testdb.getId1();
+	    	     node1 = test1.substring(0, 3);  // Get "BMC"
+	    	     sector1 = test1.substring(3); // Get "12"   
+	    	     PropertyNo1=testdb.getName1();
+	    	     
+	    	     String test2=testdb.getId1();
+	    	     node2 = test2.substring(0, 3);  // Get "KH"
+	    	     sector2 = test2.substring(3); // Get "12"   
+	    	     PropertyNo2=testdb.getName2();
+	    	     
+	    	     String test3=testdb.getId3();
+	    	     node3 = test3.substring(0, 3);  // Get "KH"
+	    	     sector3 = test3.substring(3); // Get "12"   
+	    	     PropertyNo3=testdb.getName3();
+	    	     
+	    	     
+	    	     String test4=testdb.getId4();
+	    	     node4 = test4.substring(0, 3);  // Get "KH"
+	    	     sector4 = test4.substring(3); // Get "12"   
+	    	     PropertyNo4=testdb.getName4();
+	        }
 	     
-	     String test1=testdb.getId1();
-	     node1 = test1.substring(0, 2);  // Get "KH"
-	     sector1 = test1.substring(2); // Get "12"   
-	     PropertyNo1=testdb.getName1();
-	     
-	     String test2=testdb.getId1();
-	     node2 = test2.substring(0, 2);  // Get "KH"
-	     sector2 = test2.substring(2); // Get "12"   
-	     PropertyNo2=testdb.getName2();
-	     
-	     String test3=testdb.getId3();
-	     node3 = test3.substring(0, 2);  // Get "KH"
-	     sector3 = test3.substring(2); // Get "12"   
-	     PropertyNo3=testdb.getName3();
 	     
 	     
-	     String test4=testdb.getId4();
-	     node4 = test4.substring(0, 2);  // Get "KH"
-	     sector4 = test4.substring(2); // Get "12"   
-	     PropertyNo4=testdb.getName4();
+	    
 	     
-		c = s.getRow(1).getCell(5);
-		c.setCellType(CellType.NUMERIC);
-		financeYear = (int) c.getNumericCellValue();	
+		financeYear =2024;	
 	}
 	
 	

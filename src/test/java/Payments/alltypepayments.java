@@ -53,7 +53,7 @@ public class alltypepayments extends BaseDriver{
 		offlinepaymentpage = new OfflinePaymentPage(driver);
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
-			
+		
 		offlinepaymentpage.Select_node_no(driver, node1);
 		offlinepaymentpage.Select_sector_no(driver, sector1);
 		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
@@ -68,20 +68,29 @@ public class alltypepayments extends BaseDriver{
 		counterpayment.Select_Finalcheckbox(driver);
 		
 		
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
-		  try {
-		        counterpayment.Select_APartcheckbox(driver);
-		        
-		        try {
-		            counterpayment.confirm_payment(driver);
-		        } catch (Exception e) {
-		           
-		        }
-		        
-		    } catch (Exception e1) {
-		       
-		    }
+		String abc="BMC";;
+		 if (!abc.equals(node1)) {
+			 try {
+			        counterpayment.Select_APartcheckbox(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
+		
+		
+		  
 		
 	
 		  
@@ -152,7 +161,7 @@ public class alltypepayments extends BaseDriver{
 
 	}
 //	enabled = false
-	@Test(priority = 3)
+	@Test(priority = 3,dependsOnMethods = "CashPayment")
 	public void AdvancePayment() throws Exception
 	{
 		
@@ -236,19 +245,25 @@ System.out.println("PDF file Downloading Status: " + result);
 		counterpayment.Select_Finalcheckbox(driver);
 		Thread.sleep(5000);
 		
-		 try {
-		        counterpayment.Select_APartcheckbox(driver);
-		        
-		        try {
-		            counterpayment.confirm_payment(driver);
-		        } catch (Exception e) {
-		           
-		        }
-		        
-		    } catch (Exception e1) {
-		       
-		    }
 		
+		String abc="BMC";;
+		 if (!abc.equals(node1)) {
+			 try {
+			        counterpayment.Select_APartcheckbox(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
 	
 		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
 		counterpayment.Enter_mobile_no(driver, "1111111111");
@@ -399,18 +414,24 @@ System.out.println("PDF file Downloading Status: " + result);
 		counterpayment.Select_Finalcheckbox(driver);
 		Thread.sleep(5000);
 		
-		 try {
-		        counterpayment.Select_APartcheckbox(driver);
-		        
-		        try {
-		            counterpayment.confirm_payment(driver);
-		        } catch (Exception e) {
-		           
-		        }
-		        
-		    } catch (Exception e1) {
-		       
-		    }
+		String abc="BMC";;
+		 if (!abc.equals(node1)) {
+			 try {
+			        counterpayment.Select_APartcheckbox(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
 	
 		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
 		counterpayment.Enter_mobile_no(driver, "1111111111");
@@ -560,18 +581,24 @@ System.out.println("PDF file Downloading Status: " + result);
 		Thread.sleep(5000);
 		
 	
-		 try {
-		        counterpayment.Select_APartcheckbox(driver);
-		        
-		        try {
-		            counterpayment.confirm_payment(driver);
-		        } catch (Exception e) {
-		           
-		        }
-		        
-		    } catch (Exception e1) {
-		       
-		    }
+		String abc="BMC";;
+		 if (!abc.equals(node1)) {
+			 try {
+			        counterpayment.Select_APartcheckbox(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
 		
 		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());

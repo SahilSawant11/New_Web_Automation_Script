@@ -1,5 +1,7 @@
 package SmokTesting;
 
+import javax.swing.JOptionPane;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +15,8 @@ public class tests {
 
 	    @Test
 	    public void testTwo() {
-	        driver.get("http://testpcmc.tabsurveypcmc.org/");
+	    
+	    	
 	      
 	    }
 

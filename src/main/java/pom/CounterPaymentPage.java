@@ -349,15 +349,10 @@ public class CounterPaymentPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
 		
-		
-		try {
 			wait.until(ExpectedConditions.visibilityOf(select_Apartcheck_box));
 			select_Apartcheck_box.click();
 			
-		} catch (Exception e) {
-			
-			
-		}
+		
 		
 		
 		
