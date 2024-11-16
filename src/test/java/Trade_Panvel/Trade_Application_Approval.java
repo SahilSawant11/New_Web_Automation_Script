@@ -12,7 +12,9 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import New_property_Wadhghat.BaseDriver;
 import pojo.CMS_browser;
-import pom.LoginPage;
+import pom_TradeLicense.ApplicationApprovalPage;
+import pom_TradeLicense.DataEntryPage_TradeLicense;
+import pom_TradeLicense.LoginPage_TradeLicense;
 import utility.TakeScreenshoot;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -41,18 +43,17 @@ public class Trade_Application_Approval extends BaseDriver {
 	public void loginPage() throws InterruptedException
 	{
 		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
+		LoginPage_TradeLicense loginpage = new LoginPage_TradeLicense(driver);
 		loginpage.Enter_user_name(userid, driver);
 		loginpage.Enter_password(password);
-		Scanner scanner = new Scanner(System.in);
-        System.out.print("Can We start Automation: ");
-        String name = scanner.nextLine();
+		loginpage.Click_login_btn(driver);
 		
 		try
 		{
-			loginpage.click_logout(driver);
+		//	loginpage.click_logout(driver);
 			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);	
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);
 		}
 		catch(Exception e)
 		{
@@ -61,10 +62,33 @@ public class Trade_Application_Approval extends BaseDriver {
 	}
 	
 	@Test(priority = 2)
-	public void dataEntry() throws InterruptedException
+	public void dataEntry() throws Exception
 	{
 		test = extent.createTest("Data Entry");
-		
+		DataEntryPage_TradeLicense dataentrypage = new DataEntryPage_TradeLicense(driver);
+		dataentrypage.DataEntry_Page_link(url, driver);
+		dataentrypage.select_node_no(driver);
+		dataentrypage.select_sector_no( driver);
+		dataentrypage.enter_property_no(driver);
+		Thread.sleep(5000);
+		dataentrypage.scroll_to_bottom(driver);
+		dataentrypage.search_property(driver);
+		Thread.sleep(5000);
+		dataentrypage.scrollbypix(driver);
+		dataentrypage.clickDeleteOwner1(driver);
+		dataentrypage.clickDeleteOwner2(driver);
+		dataentrypage.Enter_Englishname(occupier_name);
+		dataentrypage.Enter_Marathiname(ferfar_kardharak);
+		dataentrypage.Enter_mail(change_email);
+		dataentrypage.Enter_phone(mobile);
+		dataentrypage.Enter_Adhaar(adhaar);
+		dataentrypage.Enter_Pan(pan);
+		dataentrypage.Enter_City(city);
+		dataentrypage.Enter_Pincode(pin);
+		dataentrypage.Enter_Wing(wing);
+		dataentrypage.Enter_Plot(plot_no);
+		dataentrypage.Enter_Flat(flatno);
+		dataentrypage.Enter_address(address);
 		
 		
 	}
