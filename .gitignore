@@ -88,3 +88,6 @@ ExtentReport.html
 ExtentReport.html
 result/img/AddTaxes_and_UploadFiles.jpg
 /result
+result/img/AddTaxes_and_UploadFiles.jpg
+*.html
+/result/img
