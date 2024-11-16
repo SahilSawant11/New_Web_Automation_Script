@@ -29,43 +29,7 @@ public class CollectionReports extends BaseDriver {
 	StopWatch stopWatch;
 	private WebDriver driver = CMS_browser.getDriver();
 	
-	@BeforeTest
-	public void beforetest() throws IOException
-	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");	
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-		driver = CMS_browser.getDriver();
-		stopWatch = new StopWatch();
-	}
-	
-	@Test(priority = 1)
-	public void loginPage() throws InterruptedException
-	{
-		driver.get(url);
-		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Enter_user_name(userid, driver);	
-		loginpage.Enter_password(password);
-		Scanner scanner = new Scanner(System.in);
-        System.out.print("Can We start Automation: ");
-		
-		try
-		{
-			loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
-			loginpage.Click_login_btn(driver);	
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
+
 
 	@Test(priority = 2)
 	public void chequeBounceCollectionReport() throws InterruptedException {
@@ -97,7 +61,9 @@ public class CollectionReports extends BaseDriver {
 		collectionpage.Click_generate_btn(driver);
 		boolean result = false;
 		try {
-			result = counterpayment.renameDownloadedFile("PDFFILE.pdf", "BounceChequePayment.pdf");
+			 result = 		counterpayment.isFileDownloaded("pdffile.pdf", "BounceChequePayment.pdf", 30);
+		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+			
 		} catch (Exception e) {	
 			e.printStackTrace();
 		}
@@ -136,7 +102,8 @@ public class CollectionReports extends BaseDriver {
 		collectionpage.Click_generate_btn(driver);
 		boolean result = false;
 		try {
-			result = counterpayment.renameDownloadedFile("PDFFILE.pdf", "ClearChequePayment.pdf");
+			 result = 		counterpayment.isFileDownloaded("pdffile.pdf", "ClearChequePayment.pdf", 30);
+		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
 		} catch (Exception e) {	
 			e.printStackTrace();
 		}
@@ -175,7 +142,8 @@ public class CollectionReports extends BaseDriver {
 		collectionpage.Click_generate_btn(driver);
 		boolean result = false;
 		try {
-			result = counterpayment.renameDownloadedFile("PDFFILE.pdf", "InProcessChequePayment.pdf");
+			result = 		counterpayment.isFileDownloaded("pdffile.pdf", "inprocessChequePayment.pdf", 30);
+		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
 		} catch (Exception e) {	
 			e.printStackTrace();
 		}
@@ -209,7 +177,9 @@ public class CollectionReports extends BaseDriver {
 		collectionpage.Click_generate_btn(driver);
 		boolean result = false;
 		try {
-			result = counterpayment.renameDownloadedFile("PDFFILE.pdf", "DailyCollectionReport.pdf");
+			result = 		counterpayment.isFileDownloaded("pdffile.pdf", "DailyCollectionReport.pdf", 30);
+		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+			
 		} catch (Exception e) {	
 			e.printStackTrace();
 		}
@@ -243,7 +213,8 @@ public class CollectionReports extends BaseDriver {
 		collectionpage.Click_generate_btn(driver);
 		boolean result = false;
 		try {
-			result = counterpayment.renameDownloadedFile("PDFFILE.pdf", "MonthlyCollectionReport.pdf");
+			result = 		counterpayment.isFileDownloaded("pdffile.pdf", "MonthlyCollectionReport.pdf", 30);
+		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
 		} catch (Exception e) {	
 			e.printStackTrace();
 		}
