@@ -107,11 +107,11 @@ public class AddTaxesPage {
 //		}
 //		Thread.sleep(500);
 //		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(no_OCdate_popup));
-		Thread.sleep(2000);
-		no_OCdate_popup.click();
-		
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+//		wait.until(ExpectedConditions.visibilityOf(no_OCdate_popup));
+//		Thread.sleep(2000);
+//		no_OCdate_popup.click();
+//		
 		
 		
 	}

@@ -24,6 +24,9 @@ public class Council_approval {
 	@FindBy(xpath = "//input[@id='txtNewTaxTotal']") private WebElement ekunKarApproval2;
 	@FindBy(xpath = "//input[@id='txtNewPropertyTax']") private WebElement samanyaKarApproval2;
 	
+	@FindBy(xpath = "//*[@id=\'main-content\']/section/section[2]/div/div/div[4]/div/div/div[2]/center/span") private WebElement filter;
+	@FindBy(xpath ="//input[@id='txtFilterComplaintID']") private WebElement greivanceID;
+	@FindBy(xpath ="//button[@id='btnFind']") private WebElement find;
 	
 	public Council_approval(WebDriver driver)
 	{
@@ -116,6 +119,38 @@ public String getEkunKarApproval2() {
 		
         return samanyaKarApproval2.getText(); 
     }
+	
+	public void click_filter(WebDriver driver) throws InterruptedException
+	{
+		Thread.sleep(2000);
+	
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(filter));
+		Thread.sleep(500);
+		filter.click();
+		Thread.sleep(1000);
+	}
+	
+	public void Enter_grievance_id(WebDriver driver,String str) throws InterruptedException
+	{
+		Thread.sleep(10000);
+		System.out.println(Quick_search);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(greivanceID));
+		Thread.sleep(500);
+		greivanceID.sendKeys(str);
+	}
+	
+	public void click_find(WebDriver driver) throws InterruptedException
+	{
+		Thread.sleep(2000);
+	
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(find));
+		Thread.sleep(500);
+		find.click();
+		Thread.sleep(1000);
+	}
 	
 }
 

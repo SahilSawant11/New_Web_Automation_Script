@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,12 +49,13 @@ public class CMS_Page {
 	@FindBy(xpath = "//*[@id=\"ContentPlaceHolder1_GVObjDtl\"]/tbody/tr[2]/td[1]/input") private WebElement grivance_select_btn;
 	
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnMakeCorrection']") private WebElement make_correction_btn;
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnForApproval']") private WebElement verify_correction_btn;
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnForApproval']") private WebElement verify_correction_btn;
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_PanelUpdateProgress']") private WebElement pageloading;
 	
 	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_gridAppealTaxInfo_lblTotal_0']") private WebElement ekunKar;
 	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_gridAppealTaxInfo_lblTotal_0']") private WebElement samanyaKar;
+	
 	
 	
 	
@@ -105,6 +107,16 @@ public class CMS_Page {
 		wait.until(ExpectedConditions.visibilityOf(property_no));
 		Thread.sleep(500);
 		property_no.sendKeys(str);
+		Thread.sleep(2000);
+		
+		
+		
+		  if (str.contains("-")) {
+			  property_no.sendKeys(Keys.ARROW_DOWN);
+				property_no.sendKeys(Keys.ENTER);
+	        } else {
+	          
+	        }
 	}
 	
 	
@@ -335,5 +347,7 @@ public class CMS_Page {
 		String SamanyaKar = samanyaKar.getAttribute("value");
 		storedTaxValues.put("Samanya Kar", SamanyaKar);
 	}
+	
+	
 	
 }

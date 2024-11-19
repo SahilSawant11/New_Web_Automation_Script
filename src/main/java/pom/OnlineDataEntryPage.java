@@ -229,7 +229,14 @@ public class OnlineDataEntryPage {
 	
 	@FindBy(xpath = "//div[@id='ContentPlaceHolder1_PanelUpdateProgress']") private WebElement loading_page;
 	
-	
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_BtnDataEntryBuildingInfo']") private WebElement building_info_btn;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtOccupancyDate']") private WebElement occupancy_date;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtconstructionyear']") private WebElement counstruction_year;
+	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_BtnBuildingInfoSave']") private WebElement save_building_info_btn;
+	@FindBy(xpath = "//button[text()='OK']") private WebElement building_info_ok_btn;
+
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_BtnBuildinginfoADDtAXES']") private WebElement add_taxes_and_upload_files;
 	
 	public OnlineDataEntryPage(WebDriver driver)
 	{
@@ -1425,6 +1432,50 @@ public class OnlineDataEntryPage {
 	}
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public void Button_building_info_btn(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(building_info_btn));
+		
+		building_info_btn.click();
+	}
+	
+	public void Save_building_info_btn(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(save_building_info_btn));
+		
+		save_building_info_btn.click();  
+	}
+	
+	public void Add_taxes_and_upload(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(add_taxes_and_upload_files));
+		
+		add_taxes_and_upload_files.click();  
+	}
+	
+	public void Enter_occupancy_date(String str)
+	{
+		occupancy_date.clear();
+		occupancy_date.sendKeys(str);
+	}
+	
+	public void Enter_construction_year(String str)
+	{
+		counstruction_year.clear();
+		counstruction_year.sendKeys(str);
+	}
+	
+	public void Button_building_info_ok_btn(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.visibilityOf(building_info_ok_btn));
+		
+		building_info_ok_btn.click();
+	}
 }
 
 
