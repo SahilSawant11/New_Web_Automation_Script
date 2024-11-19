@@ -24,11 +24,12 @@ import pom.Council_approval;
 import pom.CounterPaymentPage;
 import pom.LoginPage;
 import pom.OfflinePaymentPage;
+import pom.OldTaxesPage;
 import pom.OnlineDataEntryPage;
 import utility.FileHistory;
 import utility.TakeScreenshoot;
 
-public class changeAreaCorrection extends BaseDriver {
+public class Change_Old_Information_Correction extends BaseDriver{
 
 	JavascriptExecutor js;
 	StopWatch stopWatch;
@@ -37,15 +38,10 @@ public class changeAreaCorrection extends BaseDriver {
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-		driver = CMS_browser.openBrowser(url);
 		stopWatch = new StopWatch();
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 1,enabled=false)
 	public void loginPage() throws InterruptedException
 	{
 		driver.get(url);
@@ -74,7 +70,7 @@ public class changeAreaCorrection extends BaseDriver {
 	@Test(priority = 2)
 	private void SearchOnCounter1() throws Exception 
 	{
-		test = extent.createTest("Counter Screen before OC");
+		test = extent.createTest("Counter after changing Old Information");
 		CounterPaymentPage counterpayment = null;
 
 		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
@@ -83,9 +79,9 @@ public class changeAreaCorrection extends BaseDriver {
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, NODE);
-		offlinepaymentpage.Select_sector_no(driver, SECTOR);
-		offlinepaymentpage.Enter_property_no(driver, PROPERTYNOobliq);
+		offlinepaymentpage.Select_node_no(driver, node);
+		offlinepaymentpage.Select_sector_no(driver, sector);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo);
 		offlinepaymentpage.Click_search_property();
 		Thread.sleep(5000);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
@@ -109,17 +105,17 @@ public class changeAreaCorrection extends BaseDriver {
 		cmspage.Button_register_Grievance(driver);
 		/////		
 		/////
-		cmspage.select_node_no(NODE, driver);
+		cmspage.select_node_no(node, driver);
 		test.info("Time duration of opening Registration page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
 		/////
 		
-		cmspage.select_sector_no(SECTOR, driver);
+		cmspage.select_sector_no(sector, driver);
 		
 		/////
 		stopWatch.reset();
 		stopWatch.start();
-		cmspage.Enter_property_no(PROPERTYNOobliq, driver);
+		cmspage.Enter_property_no(PropertyNo, driver);
 	//	PropertyNo = cmspage.Fetch_get_building_no(driver);
 		test.info("Time duration of opening New Property PopUp window page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
@@ -133,8 +129,8 @@ public class changeAreaCorrection extends BaseDriver {
 		test.info("Time duration of generating New Property number: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
 		
-		test.info("Property "+ node+""+sector+" - "+PROPERTYNOobliq);
-		FileHistory.FileData(url,node, sector, PROPERTYNOobliq);
+		test.info("Property "+ node+""+sector+" - "+PropertyNo);
+		FileHistory.FileData(url,node, sector, PropertyNo);
 
 		cmspage.Button_akshep_nondava_btn(driver);
 		cmspage.select_aakshep_prakar(cms_aakshep_prakar_wadhghat, driver);
@@ -184,56 +180,68 @@ public class changeAreaCorrection extends BaseDriver {
 		onlinedataentry.Enter_vadhghat_shera(driver);
 	}
 	
-	@Test(priority = 5, dependsOnMethods = "searchComplaintWadhghat")
-	public void Change_area() throws Exception
+	@Test(priority = 8)
+	public void OldTaxex_info() throws Exception
 	{
-		test = extent.createTest("Dataentry_floor_info");
+		/////
+		stopWatch.reset();
+		stopWatch.start();
+		test = extent.createTest("OldTaxex_info");
+		OldTaxesPage oldtaxespage = new OldTaxesPage(driver);
 		OnlineDataEntryPage onlinedataentry = new OnlineDataEntryPage(driver);
-		onlinedataentry.Click_remove_floor_check_box(driver);
+		onlinedataentry.Button_add_taxes_and_upload_document_btn(driver);
+		oldtaxespage.Enter_oldWardNo(oldWardNo, driver);
+		test.info("Time duration of Redirecting to oldTaxesPage: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		stopWatch.stop();
+		/////
 		
-		onlinedataentry.Select_floor(floor);
-		onlinedataentry.Enter_construnction_year(construnction_year_new);
+		oldtaxespage.Enter_oldPropertyNo(oldPropertyNo);
+		oldtaxespage.Enter_oldPartitionNo(oldPartitionNo);
+		oldtaxespage.Enter_oldCityServey(oldCityServey);
+		oldtaxespage.Enter_oldRV(oldRV);
+		oldtaxespage.Enter_oldPropertyTax(oldPropertyTax);
+		oldtaxespage.Enter_oldTaxTotal(oldTaxTotal);
 		
-	
-		try {
-			onlinedataentry.Select_construction_type(construction_type);
-		} catch (Exception e) {
-			onlinedataentry.Select_construction_type(construction_typeForbaramati);
-		}
+		oldtaxespage.Enter_oldYear(String.valueOf(financeYear-1));
+		oldtaxespage.Enter_propTax(propTax);
+		oldtaxespage.Enter_EduTax(EduTax);
+		oldtaxespage.Enter_spEduTax(spEduTax);
+		oldtaxespage.Enter_EmpTax(EmpTax);
+		oldtaxespage.Enter_treeCess(treeCess);
+		oldtaxespage.Enter_fireCess(fireCess);
+		oldtaxespage.Enter_lightCess(lightCess);
+		oldtaxespage.Enter_drainCess(drainCess);
+		oldtaxespage.Enter_roadCess(roadCess);
+		oldtaxespage.Enter_sanitation(sanitation);
+		oldtaxespage.Enter_waterCess(waterCess);
+		oldtaxespage.Enter_waterBenifit(waterBenifit);
+		oldtaxespage.Enter_waterBill(waterBill);
+		oldtaxespage.Enter_Mbuilding(Mbuilding);
+		oldtaxespage.Enter_sewage(sewage);
+		oldtaxespage.Enter_Tax1(Tax1);
+		oldtaxespage.Enter_Tax2(Tax2);
+		oldtaxespage.Enter_Tax3(Tax3);
+		oldtaxespage.Enter_interest(interest);
+		oldtaxespage.Enter_remark(oldRemark);
 		
-		
-		try {
-			onlinedataentry.Select_type_of_use(type_of_use);
-		} catch (Exception e) {
-			onlinedataentry.Select_type_of_use("R-निवासी");
-		}
-		
-		onlinedataentry.Enter_karpatr_chatai_area_sqft_floor(karpatr_chatai_area_sqft_floor_new);
-		
-		onlinedataentry.Select_nondani(nondani);
-		onlinedataentry.Enter_no_of_room(Enter_no_of_room);
-		onlinedataentry.Select_renter_available(renter_available);
-		onlinedataentry.Enter_renter_name_marathi(renter_name_marathi);
-		onlinedataentry.Enter_renter_name_eng(renter_name_eng);
-		onlinedataentry.Enter_calculated_rent(calculated_rent);
-		onlinedataentry.Select_agreement(agreement);
-		
-		onlinedataentry.Click_add_floor_info();
-		String floorinfoImage=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.pass("Entered Floor info",MediaEntityBuilder.createScreenCaptureFromBase64String(floorinfoImage).build());
-		onlinedataentry.Enter_r_toilet("2");
-		onlinedataentry.Enter_c_toilet("2");
+		oldtaxespage.Button_addOldTaxes_btn(driver);
+		String oldinfoImage=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Entered Old info",MediaEntityBuilder.createScreenCaptureFromBase64String(oldinfoImage).build());
 		
 		/////
 		stopWatch.reset();
 		stopWatch.start();
-		onlinedataentry.Button_save_btn(driver);
+		oldtaxespage.Button_saveOldTaxes_btn(driver);
+		
+		
 		onlinedataentry.Button_DataSaved(driver);
-		onlinedataentry.Button_add_taxes_and_upload_document_btn(driver);
-		test.info("Time duration of Saving Wadhghat Data: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		
+		oldtaxespage.Button_addTaxes_btn(driver);
+		test.info("Time duration of Saving oldTaxes: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
+		/////
 	}
-	
+		
 	@Test(priority = 6)
 	public void AddTaxes_and_UploadFiles() throws InterruptedException
 	{
@@ -388,7 +396,7 @@ counncil_approval.clickOnapproval(driver);
 	@Test(priority = 9)
 	private void SearchOnCounter2() throws Exception 
 	{
-		test = extent.createTest("Counter Screen");
+		test = extent.createTest("Counter after changing Old information");
 		CounterPaymentPage counterpayment = null;
 
 		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
@@ -397,9 +405,9 @@ counncil_approval.clickOnapproval(driver);
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, NODE);
-		offlinepaymentpage.Select_sector_no(driver, SECTOR);
-		offlinepaymentpage.Enter_property_no(driver, PROPERTYNOobliq);
+		offlinepaymentpage.Select_node_no(driver, node);
+		offlinepaymentpage.Select_sector_no(driver, sector);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo);
 		offlinepaymentpage.Click_search_property();
 		Thread.sleep(5000);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");

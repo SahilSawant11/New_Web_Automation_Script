@@ -135,6 +135,7 @@ public class AddTaxesPage {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(print_approval_btn));
+		wait.until(ExpectedConditions.elementToBeClickable(print_approval_btn));
 		Thread.sleep(500);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", print_approval_btn);
 		Thread.sleep(500);

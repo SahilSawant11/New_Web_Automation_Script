@@ -36,6 +36,14 @@ public class OfflinePaymentPage {
 		
 		@FindBy(xpath = "//span[@id='loggedUserFullName']") private WebElement loggedUserFullName;
 		
+		///////////////////////////////////////////////////////////////////////////////////////////////////
+		@FindBy(xpath = "//*[@id=\'ContentPlaceHolder1_GVPropTax\']/tbody/tr[2]/td[4]") private WebElement arow;
+		@FindBy(xpath = "//*[@id=\'ContentPlaceHolder1_GVPropTax\']/tbody/tr[3]/td[4]") private WebElement brow;
+		@FindBy(xpath = "//*[@id=\'ContentPlaceHolder1_GVPropTax\']/tbody/tr[4]/td[4]") private WebElement crow;
+		
+		private double aDivC, bDivC, aPlusBDivC;
+		
+		
 		public OfflinePaymentPage(WebDriver driver)
 		{
 			PageFactory.initElements(driver, this);
@@ -200,4 +208,30 @@ public class OfflinePaymentPage {
 			driver.get(s2);
 		}
 		
+		
+		public void checkTaxesRate(WebDriver driver) throws InterruptedException { 
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(120000));
+
+	        wait.until(ExpectedConditions.visibilityOf(arow));
+	        wait.until(ExpectedConditions.visibilityOf(brow));
+	        wait.until(ExpectedConditions.visibilityOf(crow));
+
+	        String aText = arow.getText();
+	        String bText = brow.getText();
+	        String cText = crow.getText();
+
+	        double a = Double.parseDouble(aText.trim());
+	        double b = Double.parseDouble(bText.trim());
+	        double c = Double.parseDouble(cText.trim());
+
+	        aDivC = a / c; 
+	        bDivC = b / c; 
+	        aPlusBDivC = (a + b) / c;  
+	    }
+	         
+		public double getADivC() {return aDivC; }
+
+	    public double getBDivC() {return bDivC; }
+
+	    public double getAPlusBDivC() {return aPlusBDivC; }
 }

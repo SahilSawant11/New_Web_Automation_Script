@@ -28,7 +28,7 @@ import pom.OnlineDataEntryPage;
 import utility.FileHistory;
 import utility.TakeScreenshoot;
 
-public class changeTypeOfUseCorrection extends BaseDriver{
+public class Change_Type_Of_Use_Correction extends BaseDriver{
 	
 	JavascriptExecutor js;
 	StopWatch stopWatch;
@@ -37,15 +37,10 @@ public class changeTypeOfUseCorrection extends BaseDriver{
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-		driver = CMS_browser.openBrowser(url);
 		stopWatch = new StopWatch();
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 1,enabled=false)
 	public void loginPage() throws InterruptedException
 	{
 		driver.get(url);
@@ -74,7 +69,7 @@ public class changeTypeOfUseCorrection extends BaseDriver{
 	@Test(priority = 2)
 	private void SearchOnCounter1() throws Exception 
 	{
-		test = extent.createTest("Counter Screen before OC");
+		test = extent.createTest("Counter before changing Type of Use");
 		CounterPaymentPage counterpayment = null;
 
 		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
@@ -83,9 +78,9 @@ public class changeTypeOfUseCorrection extends BaseDriver{
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, NODE);
-		offlinepaymentpage.Select_sector_no(driver, SECTOR);
-		offlinepaymentpage.Enter_property_no(driver, PROPERTYNOobliq);
+		offlinepaymentpage.Select_node_no(driver, node);
+		offlinepaymentpage.Select_sector_no(driver, sector);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo);
 		offlinepaymentpage.Click_search_property();
 		Thread.sleep(5000);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
@@ -109,17 +104,17 @@ public class changeTypeOfUseCorrection extends BaseDriver{
 		cmspage.Button_register_Grievance(driver);
 		/////		
 		/////
-		cmspage.select_node_no(NODE, driver);
+		cmspage.select_node_no(node, driver);
 		test.info("Time duration of opening Registration page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
 		/////
 		
-		cmspage.select_sector_no(SECTOR, driver);
+		cmspage.select_sector_no(sector, driver);
 		
 		/////
 		stopWatch.reset();
 		stopWatch.start();
-		cmspage.Enter_property_no(PROPERTYNOobliq, driver);
+		cmspage.Enter_property_no(PropertyNo, driver);
 	//	PropertyNo = cmspage.Fetch_get_building_no(driver);
 		test.info("Time duration of opening New Property PopUp window page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
@@ -133,8 +128,8 @@ public class changeTypeOfUseCorrection extends BaseDriver{
 		test.info("Time duration of generating New Property number: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
 		
-		test.info("Property "+ node+""+sector+" - "+PROPERTYNOobliq);
-		FileHistory.FileData(url,node, sector, PROPERTYNOobliq);
+		test.info("Property "+ node+""+sector+" - "+PropertyNo);
+		FileHistory.FileData(url,node, sector, PropertyNo);
 
 		cmspage.Button_akshep_nondava_btn(driver);
 		cmspage.select_aakshep_prakar(cms_aakshep_prakar_wadhghat, driver);
@@ -388,7 +383,7 @@ counncil_approval.clickOnapproval(driver);
 	@Test(priority = 9)
 	private void SearchOnCounter2() throws Exception 
 	{
-		test = extent.createTest("Counter Screen");
+		test = extent.createTest("Counter before changing Type of Use");
 		CounterPaymentPage counterpayment = null;
 
 		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
@@ -397,9 +392,9 @@ counncil_approval.clickOnapproval(driver);
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, NODE);
-		offlinepaymentpage.Select_sector_no(driver, SECTOR);
-		offlinepaymentpage.Enter_property_no(driver, PROPERTYNOobliq);
+		offlinepaymentpage.Select_node_no(driver, node);
+		offlinepaymentpage.Select_sector_no(driver, sector);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo);
 		offlinepaymentpage.Click_search_property();
 		Thread.sleep(5000);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
@@ -443,6 +438,5 @@ counncil_approval.clickOnapproval(driver);
 		extent.flush();
 
 	}
-
 
 }

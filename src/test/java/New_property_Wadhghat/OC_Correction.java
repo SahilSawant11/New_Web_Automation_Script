@@ -1,5 +1,6 @@
 package New_property_Wadhghat;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
@@ -31,7 +32,7 @@ import pom.OnlineDataEntryPage;
 import utility.FileHistory;
 import utility.TakeScreenshoot;
 
-public class Corrections extends BaseDriver{
+public class OC_Correction extends BaseDriver{
 	JavascriptExecutor js;
 	StopWatch stopWatch;
 	String Taxtotal_fromDataentry;
@@ -39,15 +40,10 @@ public class Corrections extends BaseDriver{
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-		driver = CMS_browser.openBrowser(url);
 		stopWatch = new StopWatch();
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 1,enabled=false)
 	public void loginPage() throws InterruptedException
 	{
 		driver.get(url);
@@ -72,34 +68,8 @@ public class Corrections extends BaseDriver{
 			
 		}
 	}
-	
+		
 	@Test(priority = 2)
-	private void SearchOnCounter1() throws Exception 
-	{
-		test = extent.createTest("Counter Screen before OC");
-		CounterPaymentPage counterpayment = null;
-
-		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
-		offlinepaymentpage.offlinePaymentPage(url, driver);
-		offlinepaymentpage = new OfflinePaymentPage(driver);
-		offlinepaymentpage.counterPayment(driver, url);
-		offlinepaymentpage.Click_property_no_radio_btn(driver);
-			
-		offlinepaymentpage.Select_node_no(driver, NODE);
-		offlinepaymentpage.Select_sector_no(driver, SECTOR);
-		offlinepaymentpage.Enter_property_no(driver, PROPERTYNOobliq);
-		offlinepaymentpage.Click_search_property();
-		Thread.sleep(5000);
-		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 250);");
-		
-		counterpayment = new CounterPaymentPage(driver);
-	//	counterpayment.Select_Finalcheckbox(driver);
-		
-		String PropertyOnCounter=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.pass("New created Property ",MediaEntityBuilder.createScreenCaptureFromBase64String(PropertyOnCounter).build());
-	}
-	
-	@Test(priority = 3)
 	public void ocComplaintRegister() throws InterruptedException, IOException
 	{
 		test = extent.createTest("OC Complaint Register");
@@ -111,17 +81,17 @@ public class Corrections extends BaseDriver{
 		cmspage.Button_register_Grievance(driver);
 		/////		
 		/////
-		cmspage.select_node_no(NODE, driver);
+		cmspage.select_node_no(node, driver);
 		test.info("Time duration of opening Registration page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
 		/////
 		
-		cmspage.select_sector_no(SECTOR, driver);
+		cmspage.select_sector_no(PropertyNo, driver);
 		
 		/////
 		stopWatch.reset();
 		stopWatch.start();
-		cmspage.Enter_property_no(PROPERTYNO, driver);
+		cmspage.Enter_property_no(PropertyNo, driver);
 	//	PropertyNo = cmspage.Fetch_get_building_no(driver);
 		test.info("Time duration of opening New Property PopUp window page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
@@ -157,7 +127,7 @@ public class Corrections extends BaseDriver{
 		/////
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void searchComplaintWadhghat() throws InterruptedException
 	{
 		test = extent.createTest("searchComplaintWadhghat");
@@ -186,7 +156,7 @@ public class Corrections extends BaseDriver{
 		onlinedataentry.Enter_vadhghat_shera(driver);
 	}
 	
-	@Test(priority = 5, dependsOnMethods = "searchComplaintWadhghat")
+	@Test(priority = 4, dependsOnMethods = "searchComplaintWadhghat")
 	public void OC_date_entry() throws InterruptedException
 	{
 		test = extent.createTest("OC_date_entry");
@@ -201,14 +171,14 @@ public class Corrections extends BaseDriver{
 		onlinedataentry.Enter_occupancy_date("21/04/2017");
 		onlinedataentry.Enter_construction_year("2017");
 		onlinedataentry.Save_building_info_btn(driver);
-		Thread.sleep(300000);
+//		Thread.sleep(300000);
 		onlinedataentry.Button_building_info_ok_btn(driver);
 		Thread.sleep(5000);
 		onlinedataentry.Add_taxes_and_upload(driver);
 		Thread.sleep(5000);
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void AddTaxes_and_UploadFiles() throws InterruptedException
 	{
 		/////
@@ -241,7 +211,7 @@ public class Corrections extends BaseDriver{
 		addtaxespage.Button_send_to_approval_btn(driver);
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 6)
 	public void WadhghatApproval() throws Exception
 	{
 		test = extent.createTest("WadhghatApproval");
@@ -296,7 +266,7 @@ public class Corrections extends BaseDriver{
 		/////
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 7)
 	private void councilapproval() throws Exception 
 	{
 		Thread.sleep(10000);
@@ -360,10 +330,10 @@ counncil_approval.clickOnapproval(driver);
 
 	}
 	
-	@Test(priority = 9)
-	private void SearchOnCounter2() throws Exception 
+	@Test(priority = 8)
+	private void checkTaxesOnCounter() throws Exception 
 	{
-		test = extent.createTest("Counter Screen");
+		test = extent.createTest("Check Taxes Rates after OC");
 		CounterPaymentPage counterpayment = null;
 
 		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
@@ -372,15 +342,23 @@ counncil_approval.clickOnapproval(driver);
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, NODE);
-		offlinepaymentpage.Select_sector_no(driver, SECTOR);
-		offlinepaymentpage.Enter_property_no(driver, PROPERTYNOobliq);
+		offlinepaymentpage.Select_node_no(driver, node);
+		offlinepaymentpage.Select_sector_no(driver, sector);
+		offlinepaymentpage.Enter_property_no(driver,PropertyNo);
 		offlinepaymentpage.Click_search_property();
 		Thread.sleep(5000);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 250);");
 		
 		counterpayment = new CounterPaymentPage(driver);
-		
+		offlinepaymentpage.checkTaxesRate(driver);
+		test.info("a / c = " + offlinepaymentpage.getADivC());
+	    test.info("b / c = " + offlinepaymentpage.getBDivC());
+	    test.info("(a + b) / c = " + offlinepaymentpage.getAPlusBDivC());
+	    double actualValue = offlinepaymentpage.getAPlusBDivC(); 
+	    double expectedValue = 7.0;
+	    double delta = 0.001; 
+	    assertEquals(actualValue, expectedValue, delta, "The calculated tax rate is not equal to 7.0");
+	    test.info("Assert Pass : Calculated (a + b) / c = " + actualValue);
 		String PropertyOnCounter=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("New created Property ",MediaEntityBuilder.createScreenCaptureFromBase64String(PropertyOnCounter).build());
 	}
