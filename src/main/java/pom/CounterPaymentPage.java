@@ -41,10 +41,12 @@ public class CounterPaymentPage {
 	@FindBy(xpath = "//input[@name='ctl00$ContentPlaceHolder1$GVPropTax$ctl02$chkGrid']") private WebElement select_check_box;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVPropTax_chkGrid_3']") private WebElement select_fullcheck_box;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVPropTax_chkGrid_0']") private WebElement select_Apartcheck_box;
-	                
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVPropTax_chkGrid_1']") private WebElement select_Bpartcheck_box;     
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVPropTax_chkGrid_2']") private WebElement select_Cpartcheck_box; 
 	
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVPropTax_chkGrid_0']") private WebElement pendingfullpayment;
-	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVPropTax_chkGrid_2']") private WebElement currentfullpayment;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVPropTax_chkGrid_0']") private WebElement row1;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVPropTax_chkGrid_1']") private WebElement row2;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVPropTax_chkGrid_2']") private WebElement row3;
 	
 	@FindBy(xpath = "(//input[@class='edttxbtn edit-button'])[1]") private WebElement pay_optionPendingFull;
 	@FindBy(xpath = "(//input[@class='edttxbtn edit-button'])[3]") private WebElement pay_optionFull;
@@ -330,8 +332,8 @@ public class CounterPaymentPage {
 		} catch (Exception e) {
 			
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(8));
-			wait2.until(ExpectedConditions.visibilityOf(currentfullpayment));
-			currentfullpayment.click();
+			wait2.until(ExpectedConditions.visibilityOf(row3));
+			row3.click();
 		}		
 	}
 	
@@ -370,11 +372,56 @@ public class CounterPaymentPage {
 		
 	}
 	
+	public void Select_BPartcheckbox(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		
+			wait.until(ExpectedConditions.visibilityOf(select_Bpartcheck_box));
+			select_Bpartcheck_box.click();		
+	}
+	
+	public void Select_CPartcheckbox(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		
+			wait.until(ExpectedConditions.visibilityOf(select_Cpartcheck_box));
+			select_Cpartcheck_box.click();				
+	}
+	
+	public void row1(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		
+			wait.until(ExpectedConditions.visibilityOf(row1));
+			row1.click();				
+	}
+	
+	public void row2(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		
+			wait.until(ExpectedConditions.visibilityOf(row2));
+			row2.click();				
+	}
+	
+	public void row3(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		
+			wait.until(ExpectedConditions.visibilityOf(row3));
+			row3.click();				
+	}
+	
 	
 	public void Select_fullpayment(WebDriver driver) throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
-		wait.until(ExpectedConditions.visibilityOf(pendingfullpayment));
+		wait.until(ExpectedConditions.visibilityOf(row1));
 		
 		Thread.sleep(1000);
 		JavascriptExecutor j = (JavascriptExecutor)driver;
@@ -386,7 +433,7 @@ public class CounterPaymentPage {
 	    
 	    try
 	    {
-	    	currentfullpayment.click();
+	    	row3.click();
 			
 			Thread.sleep(1000);
 			while(loading_page.getAttribute("aria-hidden").equals("false"))
@@ -398,7 +445,7 @@ public class CounterPaymentPage {
 	    }
 	    catch(Exception e)
 	    {
-	    	pendingfullpayment.click();
+	    	row1.click();
 			
 			Thread.sleep(1000);
 			while(loading_page.getAttribute("aria-hidden").equals("false"))
@@ -535,7 +582,7 @@ public class CounterPaymentPage {
 	
 	public void Enter_email_id(WebDriver driver, String str)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(60000));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
 		wait.until(ExpectedConditions.visibilityOf(email_id));
 		email_id.clear();
 		email_id.sendKeys(str);
@@ -544,6 +591,8 @@ public class CounterPaymentPage {
 	
 	public void Enter_mobile_no(WebDriver driver, String str) throws InterruptedException
 	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.visibilityOf(mobile_no));
 		mobile_no.clear();
 		mobile_no.sendKeys(str);
 		
