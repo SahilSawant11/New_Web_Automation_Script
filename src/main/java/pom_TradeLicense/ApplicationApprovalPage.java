@@ -12,10 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ApplicationApprovalPage {
 	
-//	@FindBy(xpath = "//select[@id=\'ddlNode']") private WebElement node;
-//	@FindBy(xpath = "//select[@id=\'ddlSector']") private WebElement sector;
-//	@FindBy (xpath= "//input[@id=\'txtPropertyPartitionNo']") private WebElement propertyno;
-	
+	@FindBy(xpath = "//*[@id=\'tblGrievances_filter\']/label/input") private WebElement searchbox;
+
 	public ApplicationApprovalPage (WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -37,30 +35,16 @@ public class ApplicationApprovalPage {
 		driver.get(s2);
 	}
 	
-//	public void select_node_no( WebDriver driver)
-//	{
-//		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-//		wait3.until(ExpectedConditions.visibilityOf(node));
-//		
-//		Select s = new Select(node);
-//		s.selectByValue("2");
-//	}
-//	
-//	public void select_sector_no( WebDriver driver)
-//	{
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-//		wait.until(ExpectedConditions.visibilityOf(sector));
-//		
-//		Select s = new Select(sector);
-//		s.selectByValue("KH10");
-//	}
-//	
-//	public void enter_property_no( WebDriver driver)
-//	{
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-//		wait.until(ExpectedConditions.visibilityOf(propertyno));
-//		propertyno.sendKeys("7-2");
-//	}
-//	
+	public void Search_application (WebDriver driver,String str) throws InterruptedException
+	{
+		Thread.sleep(10000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(searchbox));
+		Thread.sleep(500);
+		searchbox.sendKeys(str);
+	}
+	
+	
+	
 	
 }

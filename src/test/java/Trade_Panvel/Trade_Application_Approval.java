@@ -49,8 +49,8 @@ public class Trade_Application_Approval extends BaseDriver {
 		try
 		{
 		//	loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
+			loginpage.Enter_user_name("abhilash.m", driver);
+			loginpage.Enter_password("shritejm@123");
 			loginpage.Click_login_btn(driver);
 		}
 		catch(Exception e)
@@ -74,9 +74,11 @@ public class Trade_Application_Approval extends BaseDriver {
 		dataentrypage.search_property(driver);
 		Thread.sleep(5000);
 		dataentrypage.scroll_to_top(driver);
+		application_no = dataentrypage.fetch_application_no(driver);
+		System.out.println("Fetched Application Number: " + application_no);
 		dataentrypage.scrollbypixdown(driver);
-		dataentrypage.clickDeleteOwner(driver, 90400, 90500);
-		dataentrypage.clickDeleteOwner2(driver, 90400, 90500);
+		dataentrypage.clickDeleteOwners(driver, 90400, 90500);
+	//	dataentrypage.clickDeleteOwner2(driver, 90400, 90500);
 		
 		dataentrypage.scrollbypixup(driver);
 		dataentrypage.Enter_Englishname(occupier_name);
@@ -134,21 +136,19 @@ public class Trade_Application_Approval extends BaseDriver {
 		Thread.sleep(5000);
 		driver.switchTo().window(firstWindowHandle);
 		Thread.sleep(5000);
-		dataentrypage.Click_print_btn(driver);
+	//	dataentrypage.Click_print_btn(driver);
 		driver.switchTo().window(firstWindowHandle);
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void applicationapproval() throws Exception
 	{
 		test = extent.createTest("Application Approval");
 		ApplicationApprovalPage approvalpage = new ApplicationApprovalPage(driver);
 
 		approvalpage.Application_Approval_Page_link(url, driver);
-//		approvalpage.select_node_no(driver);
-//		approvalpage.select_sector_no( driver);
-//		approvalpage.enter_property_no(driver);   ///pending
-		Thread.sleep(5000);
+		approvalpage.Search_application(driver, application_no);
+
 	
 	}
 	

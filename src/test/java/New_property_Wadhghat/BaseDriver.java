@@ -53,7 +53,7 @@ public class BaseDriver {
 	static public String akshep_no;
 	public TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	static public int financeYear;
-	
+	static public String application_no;
 	
 	static public String NODE ="KH";
 	static public String SECTOR ="5";

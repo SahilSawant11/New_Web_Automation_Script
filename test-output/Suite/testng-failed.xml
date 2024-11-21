@@ -1,21 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="All Payments(failed)">
+  <test name="CMS(failed)">
     <classes>
-      <class name="Payments.alltypepayments">
+      <class name="New_property_Wadhghat.CMS_Test">
         <methods>
-          <include name="Card"/>
+          <include name="WadhghatApproval"/>
+          <include name="AddTaxes_and_UploadFiles"/>
           <include name="aftermethod"/>
-          <include name="CashPayment"/>
-          <include name="AdvancePayment"/>
-          <include name="chequePaymentforClear"/>
-          <include name="cheque_clear"/>
-          <include name="chequePayment"/>
-          <include name="cheque_fail"/>
-          <include name="aftertest"/>
+          <include name="cmsRegisterPageWadhghat"/>
+          <include name="Dataentry_owner_info"/>
+          <include name="OldTaxex_info"/>
+          <include name="Dataentry_floor_info"/>
+          <include name="beforetest"/>
+          <include name="councilapproval"/>
+          <include name="cmsComplaintRegisterWadhghat"/>
+          <include name="searchComplaintWadhghat"/>
+          <include name="cmsPageWadhghat"/>
         </methods>
-      </class> <!-- Payments.alltypepayments -->
+      </class> <!-- New_property_Wadhghat.CMS_Test -->
     </classes>
-  </test> <!-- All Payments(failed) -->
+  </test> <!-- CMS(failed) -->
+  <test name="OC(failed)">
+    <classes>
+      <class name="New_property_Wadhghat.Change_Area_Correction">
+        <methods>
+          <include name="beforetest"/>
+          <include name="WadhghatApproval"/>
+          <include name="aftermethod"/>
+          <include name="councilapproval"/>
+          <include name="wadhghatComplaintRegister"/>
+          <include name="SearchOnCounter2"/>
+          <include name="searchComplaintWadhghat"/>
+          <include name="Change_area"/>
+          <include name="AddTaxes_and_UploadFiles"/>
+        </methods>
+      </class> <!-- New_property_Wadhghat.Change_Area_Correction -->
+    </classes>
+  </test> <!-- OC(failed) -->
+  <test name="Area Correction(failed)">
+    <classes>
+      <class name="New_property_Wadhghat.Change_Type_Of_Use_Correction">
+        <methods>
+          <include name="wadhghatComplaintRegister"/>
+          <include name="WadhghatApproval"/>
+          <include name="AddTaxes_and_UploadFiles"/>
+          <include name="aftermethod"/>
+          <include name="Change_typeofuse"/>
+          <include name="beforetest"/>
+          <include name="SearchOnCounter2"/>
+          <include name="SearchOnCounter1"/>
+          <include name="searchComplaintWadhghat"/>
+          <include name="councilapproval"/>
+        </methods>
+      </class> <!-- New_property_Wadhghat.Change_Type_Of_Use_Correction -->
+    </classes>
+  </test> <!-- Area Correction(failed) -->
+  <test name="Type of use Correction(failed)">
+    <classes>
+      <class name="New_property_Wadhghat.Change_Old_Information_Correction">
+        <methods>
+          <include name="beforetest"/>
+          <include name="SearchOnCounter2"/>
+          <include name="OldTaxex_info"/>
+          <include name="councilapproval"/>
+          <include name="searchComplaintWadhghat"/>
+          <include name="SearchOnCounter1"/>
+          <include name="WadhghatApproval"/>
+          <include name="wadhghatComplaintRegister"/>
+          <include name="AddTaxes_and_UploadFiles"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- New_property_Wadhghat.Change_Old_Information_Correction -->
+    </classes>
+  </test> <!-- Type of use Correction(failed) -->
 </suite> <!-- Failed suite [Suite] -->
