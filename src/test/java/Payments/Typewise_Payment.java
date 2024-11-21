@@ -69,10 +69,9 @@ public class Typewise_Payment extends BaseDriver{
 			
 		}
 	}
-	
-	
+		
 	@Test(priority = 2 )
-	public void CashPayment() throws Exception
+	public void A_Part_CashPayment() throws Exception
 	{	
 		test = extent.createTest("cash Payment");
 		CounterPaymentPage counterpayment = null;
@@ -96,14 +95,12 @@ public class Typewise_Payment extends BaseDriver{
 			
 		counterpayment = new CounterPaymentPage(driver);
 		
-		counterpayment.Select_Finalcheckbox(driver);
-		
 		Thread.sleep(2000);
 		
 		String abc="BMC";;
 		 if (!abc.equals(node1)) {
 			 try {
-			        counterpayment.Select_APartcheckbox(driver);
+			        counterpayment.row1(driver);
 			        
 			        try {
 			            counterpayment.confirm_payment(driver);
@@ -129,9 +126,6 @@ public class Typewise_Payment extends BaseDriver{
 		
 		String paymentdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(paymentdetails).build());
-		
-//		counterpayment.Click_ProceedAdvancePay(driver);
-		/////
 		stopWatch.reset();
 		stopWatch.start();
 		Thread.sleep(2000);
@@ -162,6 +156,525 @@ public class Typewise_Payment extends BaseDriver{
 		offlinepaymentpage.Select_node_no(driver, node1);
 		offlinepaymentpage.Select_sector_no(driver, sector1);
 		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+		/////
+		
+		offlinepaymentpage.Click_search_property();
+		String CounterafterChequeClear=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Counter After cash payment",MediaEntityBuilder.createScreenCaptureFromBase64String(CounterafterChequeClear).build());
+		
+		try {
+			counterpayment = new CounterPaymentPage(driver);
+			counterpayment.Check_isadvance_pay_btnVisible(driver);
+			test.log(Status.PASS, "Counter is cleared ");
+			
+		} catch (Exception e) {
+			test.log(Status.FAIL, "Counter is not cleared ");
+		}	
+
+	}
+	
+	@Test(priority = 3, dependsOnMethods = "A_Part_CashPayment" )
+	public void B_Part_CashPayment() throws Exception
+	{	
+		test = extent.createTest("cash Payment");
+		CounterPaymentPage counterpayment = null;
+		stopWatch = new StopWatch();
+	
+		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.offlinePaymentPage(url, driver);
+		
+		offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+		
+		offlinepaymentpage.Select_node_no(driver, node1);
+		offlinepaymentpage.Select_sector_no(driver, sector1);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+		/////
+		
+		test.log(Status.INFO, "Property for Cash Payment : "+node1+"-"+sector1+"-"+PropertyNo1);
+		stopWatch.start();
+		offlinepaymentpage.Click_search_property();
+			
+		counterpayment = new CounterPaymentPage(driver);
+		
+		Thread.sleep(2000);
+		
+		String abc="BMC";;
+		 if (!abc.equals(node1)) {
+			 try {
+			        counterpayment.row1(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
+	
+		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
+	
+		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
+		counterpayment.Enter_mobile_no(driver, "1111111111");
+		counterpayment.Select_bill_book_no("TEST2425");
+		counterpayment.Select_payment_mode("Cash");
+		
+		String paymentdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(paymentdetails).build());
+		stopWatch.reset();
+		stopWatch.start();
+		Thread.sleep(2000);
+		counterpayment.Click_pay_now(driver);
+		counterpayment.confirm_payment(driver);
+		counterpayment.Check_transaction_id(driver);
+		counterpayment.Click_receipts_btn(driver);
+		counterpayment.label_downloadReceipt(driver);
+		counterpayment.downloadReceipt(driver);
+		
+		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		counterpayment.compareUpicIds(test);
+		stopWatch.stop();
+		/////
+		
+		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
+		
+		Thread.sleep(2000);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+       
+		System.out.println("PDF file Downloading Status: " + result);  
+        
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+			
+		offlinepaymentpage.Select_node_no(driver, node1);
+		offlinepaymentpage.Select_sector_no(driver, sector1);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+		/////
+		
+		offlinepaymentpage.Click_search_property();
+		String CounterafterChequeClear=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Counter After cash payment",MediaEntityBuilder.createScreenCaptureFromBase64String(CounterafterChequeClear).build());
+		
+		try {
+			counterpayment = new CounterPaymentPage(driver);
+			counterpayment.Check_isadvance_pay_btnVisible(driver);
+			test.log(Status.PASS, "Counter is cleared ");
+			
+		} catch (Exception e) {
+			test.log(Status.FAIL, "Counter is not cleared ");
+		}	
+
+	}
+	
+	@Test(priority = 4, dependsOnMethods = "B_Part_CashPayment")
+	public void C_Part_CashPayment() throws Exception
+	{	
+		test = extent.createTest("cash Payment");
+		CounterPaymentPage counterpayment = null;
+		stopWatch = new StopWatch();
+	
+		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.offlinePaymentPage(url, driver);
+		
+		offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+		
+		offlinepaymentpage.Select_node_no(driver, node1);
+		offlinepaymentpage.Select_sector_no(driver, sector1);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+		/////
+		
+		test.log(Status.INFO, "Property for Cash Payment : "+node1+"-"+sector1+"-"+PropertyNo1);
+		stopWatch.start();
+		offlinepaymentpage.Click_search_property();
+			
+		counterpayment = new CounterPaymentPage(driver);
+		
+		Thread.sleep(2000);
+		
+		String abc="BMC";;
+		 if (!abc.equals(node1)) {
+			 try {
+			        counterpayment.row1(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
+	
+		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
+	
+		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
+		counterpayment.Enter_mobile_no(driver, "1111111111");
+		counterpayment.Select_bill_book_no("TEST2425");
+		counterpayment.Select_payment_mode("Cash");
+		
+		String paymentdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(paymentdetails).build());
+		stopWatch.reset();
+		stopWatch.start();
+		Thread.sleep(2000);
+		counterpayment.Click_pay_now(driver);
+		counterpayment.confirm_payment(driver);
+		counterpayment.Check_transaction_id(driver);
+		counterpayment.Click_receipts_btn(driver);
+		counterpayment.label_downloadReceipt(driver);
+		counterpayment.downloadReceipt(driver);
+		
+		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		counterpayment.compareUpicIds(test);
+		stopWatch.stop();
+		/////
+		
+		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
+		
+		Thread.sleep(2000);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+       
+		System.out.println("PDF file Downloading Status: " + result);  
+        
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+			
+		offlinepaymentpage.Select_node_no(driver, node1);
+		offlinepaymentpage.Select_sector_no(driver, sector1);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+		/////
+		
+		offlinepaymentpage.Click_search_property();
+		String CounterafterChequeClear=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Counter After cash payment",MediaEntityBuilder.createScreenCaptureFromBase64String(CounterafterChequeClear).build());
+		
+		try {
+			counterpayment = new CounterPaymentPage(driver);
+			counterpayment.Check_isadvance_pay_btnVisible(driver);
+			test.log(Status.PASS, "Counter is cleared ");
+			
+		} catch (Exception e) {
+			test.log(Status.FAIL, "Counter is not cleared ");
+		}	
+
+	}
+	
+	@Test(priority = 5)
+	public void AB_Part_CashPayment() throws Exception
+	{	
+		test = extent.createTest("cash Payment");
+		CounterPaymentPage counterpayment = null;
+		stopWatch = new StopWatch();
+	
+		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.offlinePaymentPage(url, driver);
+		
+		offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+		
+		offlinepaymentpage.Select_node_no(driver, node2);
+		offlinepaymentpage.Select_sector_no(driver, sector2);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo2);
+		/////
+		
+		test.log(Status.INFO, "Property for Cash Payment : "+node2+"-"+sector2+"-"+PropertyNo2);
+		stopWatch.start();
+		offlinepaymentpage.Click_search_property();
+			
+		counterpayment = new CounterPaymentPage(driver);
+		
+		Thread.sleep(2000);
+		
+		String abc="BMC";;
+		 if (!abc.equals(node2)) {
+			 try {
+			        counterpayment.row1(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			            counterpayment.row2(driver);
+			            Thread.sleep(10000);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
+	
+		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
+	
+		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
+		counterpayment.Enter_mobile_no(driver, "1111111111");
+		counterpayment.Select_bill_book_no("TEST2425");
+		counterpayment.Select_payment_mode("Cash");
+		
+		String paymentdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(paymentdetails).build());
+		stopWatch.reset();
+		stopWatch.start();
+		Thread.sleep(2000);
+		counterpayment.Click_pay_now(driver);
+		counterpayment.confirm_payment(driver);
+		counterpayment.Check_transaction_id(driver);
+		counterpayment.Click_receipts_btn(driver);
+		counterpayment.label_downloadReceipt(driver);
+		counterpayment.downloadReceipt(driver);
+		
+		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		counterpayment.compareUpicIds(test);
+		stopWatch.stop();
+		/////
+		
+		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
+		
+		Thread.sleep(2000);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+       
+		System.out.println("PDF file Downloading Status: " + result);  
+        
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+			
+		offlinepaymentpage.Select_node_no(driver, node2);
+		offlinepaymentpage.Select_sector_no(driver, sector2);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo2);
+		/////
+		
+		offlinepaymentpage.Click_search_property();
+		String CounterafterChequeClear=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Counter After cash payment",MediaEntityBuilder.createScreenCaptureFromBase64String(CounterafterChequeClear).build());
+		
+		try {
+			counterpayment = new CounterPaymentPage(driver);
+			counterpayment.Check_isadvance_pay_btnVisible(driver);
+			test.log(Status.PASS, "Counter is cleared ");
+			
+		} catch (Exception e) {
+			test.log(Status.FAIL, "Counter is not cleared ");
+		}	
+
+	}
+	
+	@Test(priority = 6 )
+	public void BC_Part_CashPayment() throws Exception
+	{	
+		test = extent.createTest("cash Payment");
+		CounterPaymentPage counterpayment = null;
+		stopWatch = new StopWatch();
+	
+		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.offlinePaymentPage(url, driver);
+		
+		offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+		
+		offlinepaymentpage.Select_node_no(driver, node3);
+		offlinepaymentpage.Select_sector_no(driver, sector3);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo3);
+		/////
+		
+		test.log(Status.INFO, "Property for Cash Payment : "+node3+"-"+sector3+"-"+PropertyNo3);
+		stopWatch.start();
+		offlinepaymentpage.Click_search_property();
+			
+		counterpayment = new CounterPaymentPage(driver);
+		
+		Thread.sleep(2000);
+		
+		String abc="BMC";;
+		 if (!abc.equals(node1)) {
+			 try {
+			        counterpayment.row2(driver);
+			        counterpayment.row3(driver);
+			        try {
+			            counterpayment.confirm_payment(driver);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
+	
+		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
+	
+		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
+		counterpayment.Enter_mobile_no(driver, "1111111111");
+		counterpayment.Select_bill_book_no("TEST2425");
+		counterpayment.Select_payment_mode("Cash");
+		
+		String paymentdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(paymentdetails).build());
+		stopWatch.reset();
+		stopWatch.start();
+		Thread.sleep(2000);
+		counterpayment.Click_pay_now(driver);
+		counterpayment.confirm_payment(driver);
+		counterpayment.Check_transaction_id(driver);
+		counterpayment.Click_receipts_btn(driver);
+		counterpayment.label_downloadReceipt(driver);
+		counterpayment.downloadReceipt(driver);
+		
+		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		counterpayment.compareUpicIds(test);
+		stopWatch.stop();
+		/////
+		
+		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
+		
+		Thread.sleep(2000);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+       
+		System.out.println("PDF file Downloading Status: " + result);  
+        
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+			
+		offlinepaymentpage.Select_node_no(driver, node3);
+		offlinepaymentpage.Select_sector_no(driver, sector3);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo3);
+		/////
+		
+		offlinepaymentpage.Click_search_property();
+		String CounterafterChequeClear=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Counter After cash payment",MediaEntityBuilder.createScreenCaptureFromBase64String(CounterafterChequeClear).build());
+		
+		try {
+			counterpayment = new CounterPaymentPage(driver);
+			counterpayment.Check_isadvance_pay_btnVisible(driver);
+			test.log(Status.PASS, "Counter is cleared ");
+			
+		} catch (Exception e) {
+			test.log(Status.FAIL, "Counter is not cleared ");
+		}	
+
+	}
+	
+	@Test(priority = 7 )
+	public void AC_Part_CashPayment() throws Exception
+	{	
+		test = extent.createTest("cash Payment");
+		CounterPaymentPage counterpayment = null;
+		stopWatch = new StopWatch();
+	
+		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.offlinePaymentPage(url, driver);
+		
+		offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+		
+		offlinepaymentpage.Select_node_no(driver, node4);
+		offlinepaymentpage.Select_sector_no(driver, sector4);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo4);
+		/////
+		
+		test.log(Status.INFO, "Property for Cash Payment : "+node4+"-"+sector4+"-"+PropertyNo4);
+		stopWatch.start();
+		offlinepaymentpage.Click_search_property();
+			
+		counterpayment = new CounterPaymentPage(driver);
+		
+		Thread.sleep(2000);
+		
+		String abc="BMC";;
+		 if (!abc.equals(node1)) {
+			 try {
+			        counterpayment.row1(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			            counterpayment.row3(driver);
+			            Thread.sleep(10000);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
+	
+		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
+	
+		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
+		counterpayment.Enter_mobile_no(driver, "1111111111");
+		counterpayment.Select_bill_book_no("TEST2425");
+		counterpayment.Select_payment_mode("Cash");
+		
+		String paymentdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(paymentdetails).build());
+		stopWatch.reset();
+		stopWatch.start();
+		Thread.sleep(2000);
+		counterpayment.Click_pay_now(driver);
+		counterpayment.confirm_payment(driver);
+		counterpayment.Check_transaction_id(driver);
+		counterpayment.Click_receipts_btn(driver);
+		counterpayment.label_downloadReceipt(driver);
+		counterpayment.downloadReceipt(driver);
+		
+		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		counterpayment.compareUpicIds(test);
+		stopWatch.stop();
+		/////
+		
+		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
+		
+		Thread.sleep(2000);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+       
+		System.out.println("PDF file Downloading Status: " + result);  
+        
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+			
+		offlinepaymentpage.Select_node_no(driver, node4);
+		offlinepaymentpage.Select_sector_no(driver, sector4);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo4);
 		/////
 		
 		offlinepaymentpage.Click_search_property();
