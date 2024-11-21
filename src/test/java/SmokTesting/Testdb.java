@@ -56,7 +56,7 @@ public class Testdb {
         panel.add(textField2);
         
      // Add second JTextField for input username
-        JTextField textField3 = new JTextField("User@12345");
+        JTextField textField3 = new JTextField("123");
         panel.add(new JLabel("Password:"));
         panel.add(textField3);
 

@@ -86,7 +86,7 @@ public class OC_Correction extends BaseDriver{
 		stopWatch.stop();
 		/////
 		
-		cmspage.select_sector_no(PropertyNo, driver);
+		cmspage.select_sector_no(sector, driver);
 		
 		/////
 		stopWatch.reset();
