@@ -109,7 +109,7 @@ public class OC_Correction extends BaseDriver{
 		FileHistory.FileData(url,node, sector, PropertyNo);
 
 		cmspage.Button_akshep_nondava_btn(driver);
-		cmspage.select_aakshep_prakar(cms_aakshep_prakar_OC, driver);
+		cmspage.select_aakshep_prakar("OC Correction", driver);
 		cmspage.Enter_date(date);
 		cmspage.Enter_mobile(mobile);
 		cmspage.Enter_remark(cms_remark);

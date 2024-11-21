@@ -3,19 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Payments.alltypepayments">
+      <class name="New_property_Wadhghat.Login">
         <methods>
-          <include name="Card"/>
-          <include name="aftermethod"/>
-          <include name="CashPayment"/>
-          <include name="AdvancePayment"/>
-          <include name="chequePaymentforClear"/>
-          <include name="cheque_clear"/>
-          <include name="chequePayment"/>
-          <include name="cheque_fail"/>
-          <include name="aftertest"/>
+          <include name="loginPage"/>
+          <include name="beforetest"/>
         </methods>
-      </class> <!-- Payments.alltypepayments -->
+      </class> <!-- New_property_Wadhghat.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1433,7 +1433,7 @@ public class OnlineDataEntryPage {
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public void Button_building_info_btn(WebDriver driver)
+	public void Button_building_info_btn(WebDriver driver) throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
 		wait.until(ExpectedConditions.visibilityOf(building_info_btn));
