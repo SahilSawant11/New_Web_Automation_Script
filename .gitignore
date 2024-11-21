@@ -91,3 +91,5 @@ result/img/AddTaxes_and_UploadFiles.jpg
 result/img/AddTaxes_and_UploadFiles.jpg
 *.html
 /result/img
+*.html
+/test-output

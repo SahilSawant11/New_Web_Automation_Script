@@ -3,8 +3,6 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <class name="Payments.alltypepayments">
         <methods>
           <include name="Card"/>
@@ -18,22 +16,6 @@
           <include name="aftertest"/>
         </methods>
       </class> <!-- Payments.alltypepayments -->
-=======
-      <class name="SmokTesting.CheckPages">
-=======
-      <class name="Reports.OnlineCounterReports">
->>>>>>> origin/nov15
-        <methods>
-          <include name="beforetest"/>
-          <include name="tearDown"/>
-          <include name="TaxCompareTest"/>
-        </methods>
-<<<<<<< HEAD
-      </class> <!-- SmokTesting.CheckPages -->
->>>>>>> 0faebc15d0b38994a29fcbaeaeede3ac55941cc6
-=======
-      </class> <!-- Reports.OnlineCounterReports -->
->>>>>>> origin/nov15
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

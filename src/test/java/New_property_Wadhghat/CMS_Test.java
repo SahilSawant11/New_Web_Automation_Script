@@ -99,7 +99,7 @@ public class CMS_Test extends BaseDriver{
 		/////
 	}
 	
-	@Test(priority = 3, dependsOnMethods = "cmsPageWadhghat")
+	@Test(priority = 3)
 	public void cmsRegisterPageWadhghat() throws Exception
 	{
 		test = extent.createTest("cmsRegisterPageWadhghat");
