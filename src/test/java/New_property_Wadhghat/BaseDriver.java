@@ -54,7 +54,15 @@ public class BaseDriver {
 	public TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	static public int financeYear;
 	
+	
+	static public String NODE ="KH";
+	static public String SECTOR ="5";
+	static public String PROPERTYNO="1";
+	static public String PROPERTYNOobliq="1-75";
+	
 	static public String cms_aakshep_prakar ="नविन/वाढीव नोंद";
+	static public String cms_aakshep_prakar_OC ="OC Correction";
+	static public String cms_aakshep_prakar_wadhghat ="वाढघट";
 	static public String date = "20/04/2023";
 	static public String mobile = "1111111111";
 	static public String cms_remark = "test";
@@ -81,12 +89,23 @@ public class BaseDriver {
 	static public String bhogvatdar = "भोगवटदार";
 	static public String occupier_name = "Occupier";
 	
+	static public String adhaar = "123456789123";
+	static public String pan= "123456789";
+	static public String city= "Panvel";
+	static public String pin= "400001";
+	static public String wing= "X";
+	static public String flatno= "21";
+	static public String societyname="SOCIETY CHA NAAAV";
+	
 	static public String floor = "तळमजला";
 	static public String construnction_year = "2000";
+	static public String construnction_year_new = "2024";
 	static public String construction_type = "सिमेंट कॉक्रिट संरचना";
 	static public String construction_typeForbaramati = "A1-सिमेंट कॉक्रिट संरचना-उच्च दर्जाचे";
 	static public String type_of_use = "निवासी";
+	static public String type_of_use_new = "दुकान";
 	static public String karpatr_chatai_area_sqft_floor = "400";
+	static public String karpatr_chatai_area_sqft_floor_new = "800";
 	static public String nondani = "Yes";
 	static public String Enter_no_of_room = "4";
 	static public String renter_available = "Yes";
@@ -182,12 +201,6 @@ public class BaseDriver {
 	@SuppressWarnings("resource")
 	public static void GetData() throws IOException
 	{
-		
-		
-		
-		
-		
-
 		
 		Testdb testdb = new Testdb();
 	     testdb.fetchData();  // Fetch data from the database and populate variables

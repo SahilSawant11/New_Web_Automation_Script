@@ -107,11 +107,11 @@ public class AddTaxesPage {
 //		}
 //		Thread.sleep(500);
 //		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(no_OCdate_popup));
-		Thread.sleep(2000);
-		no_OCdate_popup.click();
-		
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+//		wait.until(ExpectedConditions.visibilityOf(no_OCdate_popup));
+//		Thread.sleep(2000);
+//		no_OCdate_popup.click();
+//		
 		
 		
 	}
@@ -135,6 +135,7 @@ public class AddTaxesPage {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(print_approval_btn));
+		wait.until(ExpectedConditions.elementToBeClickable(print_approval_btn));
 		Thread.sleep(500);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", print_approval_btn);
 		Thread.sleep(500);

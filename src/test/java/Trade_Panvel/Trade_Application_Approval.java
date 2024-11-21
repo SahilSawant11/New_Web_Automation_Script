@@ -1,8 +1,6 @@
 package Trade_Panvel;
 
 import java.io.IOException;
-import java.util.Scanner;
-
 import org.apache.commons.lang3.time.StopWatch;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,7 +10,9 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import New_property_Wadhghat.BaseDriver;
 import pojo.CMS_browser;
-import pom.LoginPage;
+import pom_TradeLicense.ApplicationApprovalPage;
+import pom_TradeLicense.DataEntryPage_TradeLicense;
+import pom_TradeLicense.LoginPage_TradeLicense;
 import utility.TakeScreenshoot;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -33,7 +33,7 @@ public class Trade_Application_Approval extends BaseDriver {
 		spark = new ExtentSparkReporter("ExtentReport.html");
 		extent.attachReporter(spark);
 		BaseDriver.GetData();
-		driver = CMS_browser.openBrowser(url);
+		driver = CMS_browser.openBrowser("https://test.tradepanvelmc.org/Login");
 		stopWatch = new StopWatch();	
 	}
 	
@@ -41,18 +41,17 @@ public class Trade_Application_Approval extends BaseDriver {
 	public void loginPage() throws InterruptedException
 	{
 		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
+		LoginPage_TradeLicense loginpage = new LoginPage_TradeLicense(driver);
 		loginpage.Enter_user_name(userid, driver);
 		loginpage.Enter_password(password);
-		Scanner scanner = new Scanner(System.in);
-        System.out.print("Can We start Automation: ");
-        String name = scanner.nextLine();
+		loginpage.Click_login_btn(driver);
 		
 		try
 		{
-			loginpage.click_logout(driver);
+		//	loginpage.click_logout(driver);
 			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);	
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);
 		}
 		catch(Exception e)
 		{
@@ -61,12 +60,96 @@ public class Trade_Application_Approval extends BaseDriver {
 	}
 	
 	@Test(priority = 2)
-	public void dataEntry() throws InterruptedException
+	public void dataEntry() throws Exception
 	{
 		test = extent.createTest("Data Entry");
+		DataEntryPage_TradeLicense dataentrypage = new DataEntryPage_TradeLicense(driver);
+
+		dataentrypage.DataEntry_Page_link(url, driver);
+		dataentrypage.select_node_no(driver);
+		dataentrypage.select_sector_no( driver);
+		dataentrypage.enter_property_no(driver);
+		Thread.sleep(5000);
+		dataentrypage.scroll_to_bottom(driver);
+		dataentrypage.search_property(driver);
+		Thread.sleep(5000);
+		dataentrypage.scroll_to_top(driver);
+		dataentrypage.scrollbypixdown(driver);
+		dataentrypage.clickDeleteOwner(driver, 90400, 90500);
+		dataentrypage.clickDeleteOwner2(driver, 90400, 90500);
+		
+		dataentrypage.scrollbypixup(driver);
+		dataentrypage.Enter_Englishname(occupier_name);
+		dataentrypage.Enter_Marathiname(ferfar_kardharak);
+		dataentrypage.Enter_mail(change_email);
+		dataentrypage.Enter_phone(mobile);
+		dataentrypage.Enter_Adhaar(adhaar);
+		dataentrypage.Enter_Pan(pan);
+		dataentrypage.select_district(driver);
+		dataentrypage.Enter_City(city);
+		dataentrypage.Enter_Pincode(pin);
+		dataentrypage.Enter_Wing(wing);
+		dataentrypage.Enter_Plot(plot_no);
+		dataentrypage.Enter_Flat(flatno);
+		dataentrypage.Enter_SocietyName(societyname);
 		
 		
+		dataentrypage.Enter_address(address);
+		dataentrypage.Click_add_more(driver);
 		
+		dataentrypage.scrollbypixdown(driver);
+		
+		dataentrypage.Enter_socName(societyname);
+		dataentrypage.select_business_type(driver);		
+		dataentrypage.select_license_type(driver);
+		dataentrypage.select_property_type(driver);
+		dataentrypage.select_license_period(driver);
+		dataentrypage.select_premise_type(driver);
+		dataentrypage.select_nature_of_trade(driver);
+		dataentrypage.Enter_TotalAre("50");
+		dataentrypage.select_business_of_style(driver);
+		dataentrypage.select_status(driver);
+		dataentrypage.Enter_CommenceDate("04052017");
+		dataentrypage.select_oc(driver);
+		dataentrypage.Enter_OCdate("04052017");
+		dataentrypage.Enter_gst(change_MobileNo);
+		dataentrypage.Enter_mail_business(change_email);
+		dataentrypage.Enter_landline(mobile);
+		dataentrypage.Enter_mobile(mobile);
+		dataentrypage.Enter_adhaar(adhaar);
+		dataentrypage.Enter_pan(pan);
+		dataentrypage.Enter_wing(wing);
+		dataentrypage.Enter_shopno(shop_flat_no);
+		dataentrypage.Enter_socName(societyname);
+		dataentrypage.Enter_address_bussiness(address);
+		dataentrypage.Enter_plot(plot_no);
+		
+
+		dataentrypage.scroll_to_bottom(driver);
+
+		dataentrypage.Button_choose_file(System.getProperty("user.dir") + "\\AddTaxes file\\PDFFILE.pdf",driver);
+		dataentrypage.Click_agree_btn(driver);
+		String firstWindowHandle = driver.getWindowHandle();
+		dataentrypage.Click_submit_btn(driver);
+		Thread.sleep(5000);
+		driver.switchTo().window(firstWindowHandle);
+		Thread.sleep(5000);
+		dataentrypage.Click_print_btn(driver);
+		driver.switchTo().window(firstWindowHandle);
+	}
+
+	@Test(priority = 2)
+	public void applicationapproval() throws Exception
+	{
+		test = extent.createTest("Application Approval");
+		ApplicationApprovalPage approvalpage = new ApplicationApprovalPage(driver);
+
+		approvalpage.Application_Approval_Page_link(url, driver);
+//		approvalpage.select_node_no(driver);
+//		approvalpage.select_sector_no( driver);
+//		approvalpage.enter_property_no(driver);   ///pending
+		Thread.sleep(5000);
+	
 	}
 	
 	@AfterMethod

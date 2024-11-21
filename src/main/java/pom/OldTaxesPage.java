@@ -49,6 +49,7 @@ public class OldTaxesPage {
 	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_BtnTaxPendingUploadDocument']") private WebElement addTaxes_btn;
 	
 	@FindBy(xpath = "//div[@id='ContentPlaceHolder1_PanelUpdateProgress']") private WebElement loading_page;
+
 	
 	
 	public OldTaxesPage(WebDriver driver)
