@@ -21,7 +21,7 @@ public class testclass {
         panel.setLayout(new GridLayout(5, 5)); // 3 rows, 2 columns
         
         // Add JComboBox for selection list
-        String[] options = {"TEST PAYMENT", "TEST ALL"};
+        String[] options = {"TEST PAYMENT", "TEST ALL", "TEST CORRECTIONS"};
         JComboBox<String> comboBox = new JComboBox<>(options);
         panel.add(new JLabel("Select :"));
         panel.add(comboBox);
@@ -32,15 +32,17 @@ public class testclass {
             // Get selected value from comboBox
             String selectedOption = (String) comboBox.getSelectedItem();
            
-            String bmc="TEST PAYMENT";
-            if (selectedOption.equals(bmc)) {
+            String Payment="TEST PAYMENT";
+            String All="TEST ALL";
+            String cORRECTION="TEST CORRECTIONS";
+            if (selectedOption.equals(Payment)) {
             	 // Set the path to the TestNG XML file
     	        testng.setTestSuites(List.of("TEST-PAYMENT.xml"));
 
     	        // Run the tests
     	        testng.run();
     		
-			}  else  {
+			}  if (selectedOption.equals(All))   {
 				 // Set the path to the TestNG XML file
 		        testng.setTestSuites(List.of("TEST-ALL-SCENARIOS.xml"));
 
@@ -48,7 +50,13 @@ public class testclass {
 		        testng.run();
 			
 			}
-        
+			if (selectedOption.equals(cORRECTION))   {
+				 // Set the path to the TestNG XML file
+		        testng.setTestSuites(List.of("Correction.xml"));
+
+		        // Run the tests
+		        testng.run();
+			}
              
         } else {
             System.out.println("User canceled the input.");

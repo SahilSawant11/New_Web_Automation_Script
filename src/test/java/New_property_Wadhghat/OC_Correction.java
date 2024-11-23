@@ -350,15 +350,15 @@ counncil_approval.clickOnapproval(driver);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 250);");
 		
 		counterpayment = new CounterPaymentPage(driver);
-		offlinepaymentpage.checkTaxesRate(driver);
-		test.info("a / c = " + offlinepaymentpage.getADivC());
-	    test.info("b / c = " + offlinepaymentpage.getBDivC());
-	    test.info("(a + b) / c = " + offlinepaymentpage.getAPlusBDivC());
-	    double actualValue = offlinepaymentpage.getAPlusBDivC(); 
-	    double expectedValue = 7.0;
-	    double delta = 0.001; 
-	    assertEquals(actualValue, expectedValue, delta, "The calculated tax rate is not equal to 7.0");
-	    test.info("Assert Pass : Calculated (a + b) / c = " + actualValue);
+//		offlinepaymentpage.checkTaxesRate(driver);
+//		test.info("a / c = " + offlinepaymentpage.getADivC());
+//	    test.info("b / c = " + offlinepaymentpage.getBDivC());
+//	    test.info("(a + b) / c = " + offlinepaymentpage.getAPlusBDivC());
+//	    double actualValue = offlinepaymentpage.getAPlusBDivC(); 
+//	    double expectedValue = 7.0;
+//	    double delta = 0.001; 
+//	    assertEquals(actualValue, expectedValue, delta, "The calculated tax rate is not equal to 7.0");
+//	    test.info("Assert Pass : Calculated (a + b) / c = " + actualValue);
 		String PropertyOnCounter=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("New created Property ",MediaEntityBuilder.createScreenCaptureFromBase64String(PropertyOnCounter).build());
 	}

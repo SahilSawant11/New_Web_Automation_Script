@@ -102,7 +102,7 @@ public class CollectionReports extends BaseDriver {
 		collectionpage.Click_generate_btn(driver);
 		boolean result = false;
 		try {
-			 result = 		counterpayment.isFileDownloaded("pdffile.pdf", "ClearChequePayment.pdf", 30);
+			 result = 		counterpayment.isFileDownloaded("pdffile.pdf", "ClearChequeReport.pdf", 30);
 		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
 		} catch (Exception e) {	
 			e.printStackTrace();
@@ -142,7 +142,7 @@ public class CollectionReports extends BaseDriver {
 		collectionpage.Click_generate_btn(driver);
 		boolean result = false;
 		try {
-			result = 		counterpayment.isFileDownloaded("pdffile.pdf", "inprocessChequePayment.pdf", 30);
+			result = 		counterpayment.isFileDownloaded("pdffile.pdf", "chequeInProcessCollectionReport.pdf", 30);
 		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
 		} catch (Exception e) {	
 			e.printStackTrace();
