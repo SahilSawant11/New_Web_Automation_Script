@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.filefilter.FalseFileFilter;
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -35,8 +36,9 @@ import utility.Delete_Files;
 import utility.TakeScreenshoot;
 
 public class PCMC_alltypepayments extends BaseDriver{
-	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	StopWatch stopWatch;
+	private WebDriver driver = CMS_browser.getDriver();
+	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	
 	@BeforeTest
 	public void beforetest() throws IOException
@@ -44,41 +46,35 @@ public class PCMC_alltypepayments extends BaseDriver{
 //		Delete_Files Delete_files = new Delete_Files(driver);
 //		System.out.println(System.getProperty("user.dir"));
 //		Delete_files.Delete_files("\\PdfReports\\");
-//		
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-//		WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.openBrowser(url);
+//	
 		stopWatch = new StopWatch();
 		
 	}
 	
-	@Test(priority = 1)
-	public void loginPage() throws InterruptedException
-	{
-		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Enter_user_name(userid, driver);
-		loginpage.Enter_password(password);
-//		loginpage.Click_login_btn(driver);
-		Scanner scanner = new Scanner(System.in);
-        System.out.print("Can We start Automation: ");
-        String name = scanner.nextLine();
-		
-		try
-		{
-			loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
-//			loginpage.Click_login_btn(driver);	
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
+//	@Test(priority = 1)
+//	public void loginPage() throws InterruptedException
+//	{
+//		test = extent.createTest("loginPage");
+//		LoginPage loginpage = new LoginPage(driver);
+//		loginpage.Enter_user_name(userid, driver);
+//		loginpage.Enter_password(password);
+////		loginpage.Click_login_btn(driver);
+//		Scanner scanner = new Scanner(System.in);
+//        System.out.print("Can We start Automation: ");
+//        String name = scanner.nextLine();
+//		
+//		try
+//		{
+//			loginpage.click_logout(driver);
+//			loginpage.Enter_user_name(userid, driver);
+//			loginpage.Enter_password(password);
+////			loginpage.Click_login_btn(driver);	
+//		}
+//		catch(Exception e)
+//		{
+//			
+//		}
+//	}
 	
 	@Test(priority = 2,enabled=false)//,dependsOnMethods = "loginPage"
 	public void CashPayment() throws Exception

@@ -24,21 +24,16 @@
 		<class name="Payments.alltypepayments"/>
 	</classes>
 </test>
-
 <test name="Counter Reports">
 	<classes>
 		<class name="Reports.DownloadReports"/>
 	</classes>
 </test>
-
-
  <test name="MinorChanges">
 	<classes>
     	<class name="New_property_Wadhghat.MinorChanges"/>
     </classes>
 </test>
-
-
 <test name="CollectionReport">
   <classes>
     <class name="Reports.CollectionReports"/>

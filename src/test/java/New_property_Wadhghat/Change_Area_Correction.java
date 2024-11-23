@@ -25,6 +25,7 @@ import pom.CounterPaymentPage;
 import pom.LoginPage;
 import pom.OfflinePaymentPage;
 import pom.OnlineDataEntryPage;
+import utility.Delete_Files;
 import utility.FileHistory;
 import utility.TakeScreenshoot;
 
@@ -37,10 +38,20 @@ public class Change_Area_Correction extends BaseDriver {
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
+		Delete_Files Delete_files = new Delete_Files(driver);
+		System.out.println(System.getProperty("user.dir"));
+		Delete_files.Delete_files("\\PdfReports\\");
+		
+		extent = new ExtentReports();
+		spark = new ExtentSparkReporter("ExtentReport.html");
+		extent.attachReporter(spark);
+		BaseDriver.GetData();
+//		WebDriverManager.chromedriver().setup();
+		driver = CMS_browser.getDriver();
 		stopWatch = new StopWatch();
 	}
 	
-	@Test(priority = 1,enabled=false)
+	@Test(priority = 1)
 	public void loginPage() throws InterruptedException
 	{
 		
@@ -154,6 +165,7 @@ public class Change_Area_Correction extends BaseDriver {
 	@Test(priority = 4)
 	public void searchComplaintWadhghat() throws InterruptedException
 	{
+//		String akshep_no = "PNLWG25551";
 		test = extent.createTest("searchComplaintWadhghat");
 		CMS_Page cmspage = new CMS_Page(driver);
 		cmspage.CMS_link(url, driver);
@@ -224,7 +236,7 @@ public class Change_Area_Correction extends BaseDriver {
 		stopWatch.reset();
 		stopWatch.start();
 		onlinedataentry.Button_save_btn(driver);
-		onlinedataentry.Button_DataSaved(driver);
+		onlinedataentry.Button_yes_btn(driver);
 		onlinedataentry.Button_add_taxes_and_upload_document_btn(driver);
 		test.info("Time duration of Saving Wadhghat Data: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
@@ -243,7 +255,7 @@ public class Change_Area_Correction extends BaseDriver {
 		stopWatch.stop();
 		/////
 		Thread.sleep(2000);
-		addtaxespage.Button_save_btn(driver);
+		addtaxespage.Button_save_btn2(driver);
 		OnlineDataEntryPage onlinedataentry = new OnlineDataEntryPage(driver);
 		onlinedataentry.Button_DataSaved(driver);
 		
@@ -265,6 +277,7 @@ public class Change_Area_Correction extends BaseDriver {
 	@Test(priority = 7)
 	public void WadhghatApproval() throws Exception
 	{
+		//String akshep_no = "PNLWG25551";
 		test = extent.createTest("WadhghatApproval");
 		CMS_Page cmspage = new CMS_Page(driver);
 		cmspage.CMS_link(url, driver);
@@ -321,19 +334,19 @@ public class Change_Area_Correction extends BaseDriver {
 	private void councilapproval() throws Exception 
 	{
 		Thread.sleep(10000);
-		//String akshep_no="PNLWG25473";
+	//	String akshep_no = "PNLWG25551";
 		test = extent.createTest("Council Approval");
 		CMS_Page cmspage = new CMS_Page(driver);
 		
 		cmspage.councilapproval_link(url, driver);
 
 Council_approval counncil_approval = new Council_approval(driver);
-//Thread.sleep(20000);
-//counncil_approval.Search_complaint(driver, akshep_no);
-//Thread.sleep(20000);
-//counncil_approval.clickToOpen(driver);
-//Thread.sleep(20000);
-//counncil_approval.Fetch_grievance_id(driver);
+Thread.sleep(20000);
+counncil_approval.Search_complaint(driver, akshep_no);
+Thread.sleep(20000);
+counncil_approval.clickToOpen(driver);
+Thread.sleep(20000);
+counncil_approval.Fetch_grievance_id(driver);
 		
 String popup1=TakeScreenshoot.GetScreenshotFullBase64(driver);
 test.pass("property details",MediaEntityBuilder.createScreenCaptureFromBase64String(popup1).build());
@@ -381,7 +394,7 @@ counncil_approval.clickOnapproval(driver);
 
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,enabled=false)
 	private void SearchOnCounter2() throws Exception 
 	{
 		test = extent.createTest("Counter after changing Area");
@@ -393,9 +406,9 @@ counncil_approval.clickOnapproval(driver);
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, NODE);
-		offlinepaymentpage.Select_sector_no(driver, SECTOR);
-		offlinepaymentpage.Enter_property_no(driver, PROPERTYNOobliq);
+		offlinepaymentpage.Select_node_no(driver, node);
+		offlinepaymentpage.Select_sector_no(driver, sector);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo);
 		offlinepaymentpage.Click_search_property();
 		Thread.sleep(5000);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");

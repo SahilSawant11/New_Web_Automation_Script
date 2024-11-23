@@ -15,10 +15,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DataEntryPage_TradeLicense {
-	
-	//@FindBy(xpath = "//*[contains(@id, 'span903')]") private WebElement deleteOwner;
-	// Use a dynamic XPath that matches elements whose id contains 'span' followed by numbers
-//
 
 	@FindBy(xpath = "//select[@id=\'ddlNode']") private WebElement node;
 	@FindBy(xpath = "//select[@id=\'ddlSector']") private WebElement sector;
@@ -71,6 +67,7 @@ public class DataEntryPage_TradeLicense {
 	@FindBy (xpath= "//input[@id=\'txtnameOfBusiness']") private WebElement shopname;
 	
 	@FindBy (xpath= "//input[@id=\'file32316']") private WebElement choose_file;
+	@FindBy(xpath = "//*[@id='lblApplicationNo']") private WebElement application_no;
 	
 	
 	public DataEntryPage_TradeLicense (WebDriver driver)
@@ -88,7 +85,7 @@ public class DataEntryPage_TradeLicense {
 		{
 			s2 += s1[j]+"/";
 		}
-		s2 += "shel/dataentry";
+		s2 += "SHEL/DataEntry";
 		System.out.println(s2);
 		
 		driver.get(s2);
@@ -116,7 +113,7 @@ public class DataEntryPage_TradeLicense {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
 		wait.until(ExpectedConditions.visibilityOf(propertyno));
-		propertyno.sendKeys("7-2");
+		propertyno.sendKeys("15-7");
 	}
 	
 	public void scroll_to_bottom(WebDriver driver) throws InterruptedException {
@@ -157,10 +154,10 @@ public class DataEntryPage_TradeLicense {
 				
 	}
 	
-	public void clickDeleteOwner(WebDriver driver, int startId, int endId) {
+	public void clickDeleteOwners(WebDriver driver, int startId, int endId) {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
 	    boolean isClicked = false;
-
+	    
 	    // Loop through the range of IDs
 	    for (int i = startId; i <= endId; i++) {
 	        String partialId = "span" + i;
@@ -179,7 +176,10 @@ public class DataEntryPage_TradeLicense {
 	            deleteOwner.click();
 	            System.out.println("Clicked on the 'delete' span element with ID: " + partialId);
 	            isClicked = true;
-	            break; // Exit the loop once the element is clicked
+
+	            // Optionally add a small delay to avoid overwhelming the system (e.g., wait for page updates)
+	            Thread.sleep(500); // 0.5 second delay, adjust as needed.
+
 	        } catch (NoSuchElementException e) {
 	            System.out.println("No 'delete' span element found with ID: " + partialId);
 	        } catch (ElementClickInterceptedException e) {
@@ -189,12 +189,10 @@ public class DataEntryPage_TradeLicense {
 	        }
 	    }
 
-	    // If no element was clicked after the loop
-	    if (!isClicked) {
-	        System.out.println("No 'delete' span element found in the specified range.");
-	    }
+	    // Log the final message after the loop
+	    System.out.println("Finished attempting to delete owners in the specified range.");
 	}
-	
+
 	public void clickDeleteOwner2(WebDriver driver, int startId, int endId) {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
 	    boolean isClicked = false;
@@ -232,9 +230,6 @@ public class DataEntryPage_TradeLicense {
 	        System.out.println("No 'delete' span element found in the specified range.");
 	    }
 	}
-
-
-
 
 	public void Enter_Englishname(String str)
 	{
@@ -541,6 +536,16 @@ public class DataEntryPage_TradeLicense {
 		Thread.sleep(5000);
 	}
 	
+	public String fetch_application_no(WebDriver driver) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+	    wait.until(ExpectedConditions.visibilityOf(application_no));
+	    String applicationNumber = application_no.getText();
+	    String nonNumericPart = applicationNumber.replaceAll("[^a-zA-Z]", ""); // Extract non-numeric part (SRVY)
+	    String numericPart = applicationNumber.replaceAll("[^0-9]", ""); // Extract numeric part 
+	    String modifiedApplicationNumber = "ASEN" + numericPart;
+	    return modifiedApplicationNumber;
+	}
+
 	
 }
 

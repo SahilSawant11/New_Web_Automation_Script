@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="CreateNewProperty(failed)">
-    <classes>
-      <class name="New_property_Wadhghat.CMS_Test">
-        <methods>
-          <include name="councilapproval"/>
-          <include name="AddTaxes_and_UploadFiles"/>
-          <include name="tearDown"/>
-          <include name="cmsRegisterPageWadhghat"/>
-          <include name="aftermethod"/>
-          <include name="Dataentry_floor_info"/>
-          <include name="beforetest"/>
-          <include name="SearchOnCounter"/>
-          <include name="WadhghatApproval"/>
-          <include name="Dataentry_owner_info"/>
-          <include name="OldTaxex_info"/>
-          <include name="searchComplaintWadhghat"/>
-          <include name="cmsComplaintRegisterWadhghat"/>
-        </methods>
-      </class> <!-- New_property_Wadhghat.CMS_Test -->
-    </classes>
-  </test> <!-- CreateNewProperty(failed) -->
   <test thread-count="5" name="Online Counter Checking(failed)">
     <classes>
       <class name="Reports.OnlineCounterReports">
@@ -33,14 +12,15 @@
       </class> <!-- Reports.OnlineCounterReports -->
     </classes>
   </test> <!-- Online Counter Checking(failed) -->
-  <test thread-count="5" name="MinorChanges(failed)">
+  <test thread-count="5" name="ReportEngine(failed)">
     <classes>
-      <class name="New_property_Wadhghat.MinorChanges">
+      <class name="Reports.ReportEngine">
         <methods>
-          <include name="aftermethod"/>
-          <include name="performMinorChangeAndVerify"/>
+          <include name="tearDown"/>
+          <include name="Notice_report"/>
+          <include name="Karakarni_report"/>
         </methods>
-      </class> <!-- New_property_Wadhghat.MinorChanges -->
+      </class> <!-- Reports.ReportEngine -->
     </classes>
-  </test> <!-- MinorChanges(failed) -->
+  </test> <!-- ReportEngine(failed) -->
 </suite> <!-- Failed suite [Suite] -->

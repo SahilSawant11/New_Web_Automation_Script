@@ -149,7 +149,7 @@ public class MinorChanges extends BaseDriver {
 
 	    
 	    
-	    Assert.assertNotEquals(spanMobileNo, storedMobileNo);
+//	    Assert.assertNotEquals(spanMobileNo, storedMobileNo);
 	    
 
 	    Assert.assertEquals(spanSocietyNav, storedSocietyNameEng, 

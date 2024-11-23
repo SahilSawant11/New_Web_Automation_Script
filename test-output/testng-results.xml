@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="31" passed="25" failed="4" skipped="2">
+<testng-results ignored="0" total="30" passed="27" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-22T12:54:43 IST" name="Suite" finished-at="2024-11-22T13:21:26 IST" duration-ms="1603280">
+  <suite started-at="2024-11-23T16:43:25 IST" name="Suite" finished-at="2024-11-23T17:15:40 IST" duration-ms="1934619">
     <groups>
     </groups>
-    <test started-at="2024-11-22T12:54:43 IST" name="Login" finished-at="2024-11-22T12:55:36 IST" duration-ms="52994">
+    <test started-at="2024-11-23T16:43:25 IST" name="Login" finished-at="2024-11-23T16:43:56 IST" duration-ms="30080">
       <class name="New_property_Wadhghat.Login">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.Login@3c41ed1d]" started-at="2024-11-22T12:54:43 IST" name="beforetest" finished-at="2024-11-22T12:54:50 IST" duration-ms="6947" status="PASS">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.Login@3c41ed1d]" started-at="2024-11-23T16:43:25 IST" name="beforetest" finished-at="2024-11-23T16:43:35 IST" duration-ms="9171" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@3c41ed1d]" started-at="2024-11-22T12:54:50 IST" name="loginPage" finished-at="2024-11-22T12:55:36 IST" duration-ms="46010" status="PASS">
+        <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@3c41ed1d]" started-at="2024-11-23T16:43:35 IST" name="loginPage" finished-at="2024-11-23T16:43:56 IST" duration-ms="20876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPage -->
       </class> <!-- New_property_Wadhghat.Login -->
     </test> <!-- Login -->
-    <test started-at="2024-11-22T12:55:36 IST" name="CreateNewProperty" finished-at="2024-11-22T13:00:52 IST" duration-ms="315795">
+    <test started-at="2024-11-23T16:43:56 IST" name="CreateNewProperty" finished-at="2024-11-23T16:51:05 IST" duration-ms="429160">
       <class name="New_property_Wadhghat.CMS_Test">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:55:36 IST" name="beforetest" finished-at="2024-11-22T12:55:36 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:43:56 IST" name="beforetest" finished-at="2024-11-23T16:43:56 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:55:36 IST" name="cmsPageWadhghat" finished-at="2024-11-22T12:55:50 IST" duration-ms="14274" status="PASS">
+        <test-method signature="cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:43:56 IST" name="cmsPageWadhghat" finished-at="2024-11-23T16:44:08 IST" duration-ms="12245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cmsPageWadhghat -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:55:50 IST" name="aftermethod" finished-at="2024-11-22T12:55:51 IST" duration-ms="488" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:44:08 IST" name="aftermethod" finished-at="2024-11-23T16:44:08 IST" duration-ms="503" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cmsPageWadhghat status=SUCCESS method=CMS_Test.cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=cmsPageWadhghat status=SUCCESS method=CMS_Test.cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -43,15 +43,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:55:51 IST" name="cmsRegisterPageWadhghat" finished-at="2024-11-22T12:56:06 IST" duration-ms="14909" status="PASS">
+        <test-method signature="cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:44:08 IST" name="cmsRegisterPageWadhghat" finished-at="2024-11-23T16:44:23 IST" duration-ms="15022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cmsRegisterPageWadhghat -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:56:06 IST" name="aftermethod" finished-at="2024-11-22T12:56:06 IST" duration-ms="176" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:44:23 IST" name="aftermethod" finished-at="2024-11-23T16:44:24 IST" duration-ms="193" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cmsRegisterPageWadhghat status=SUCCESS method=CMS_Test.cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=cmsRegisterPageWadhghat status=SUCCESS method=CMS_Test.cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -63,15 +63,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:56:06 IST" name="cmsComplaintRegisterWadhghat" finished-at="2024-11-22T12:56:23 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsRegisterPageWadhghat" duration-ms="17074" status="PASS">
+        <test-method signature="cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:44:24 IST" name="cmsComplaintRegisterWadhghat" finished-at="2024-11-23T16:44:41 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsRegisterPageWadhghat" duration-ms="17261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cmsComplaintRegisterWadhghat -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:56:23 IST" name="aftermethod" finished-at="2024-11-22T12:56:23 IST" duration-ms="228" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:44:41 IST" name="aftermethod" finished-at="2024-11-23T16:44:41 IST" duration-ms="264" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cmsComplaintRegisterWadhghat status=SUCCESS method=CMS_Test.cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=cmsComplaintRegisterWadhghat status=SUCCESS method=CMS_Test.cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -83,15 +83,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:56:23 IST" name="searchComplaintWadhghat" finished-at="2024-11-22T12:57:07 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsComplaintRegisterWadhghat" duration-ms="43449" status="PASS">
+        <test-method signature="searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:44:41 IST" name="searchComplaintWadhghat" finished-at="2024-11-23T16:45:19 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsComplaintRegisterWadhghat" duration-ms="37831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchComplaintWadhghat -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:57:07 IST" name="aftermethod" finished-at="2024-11-22T12:57:07 IST" duration-ms="229" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:45:19 IST" name="aftermethod" finished-at="2024-11-23T16:45:19 IST" duration-ms="198" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=searchComplaintWadhghat status=SUCCESS method=CMS_Test.searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=searchComplaintWadhghat status=SUCCESS method=CMS_Test.searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -103,15 +103,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:57:07 IST" name="Dataentry_owner_info" finished-at="2024-11-22T12:57:41 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.searchComplaintWadhghat" duration-ms="34048" status="PASS">
+        <test-method signature="Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:45:19 IST" name="Dataentry_owner_info" finished-at="2024-11-23T16:45:54 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.searchComplaintWadhghat" duration-ms="34757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Dataentry_owner_info -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:57:41 IST" name="aftermethod" finished-at="2024-11-22T12:57:41 IST" duration-ms="231" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:45:54 IST" name="aftermethod" finished-at="2024-11-23T16:45:54 IST" duration-ms="260" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Dataentry_owner_info status=SUCCESS method=CMS_Test.Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=Dataentry_owner_info status=SUCCESS method=CMS_Test.Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -123,15 +123,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:57:41 IST" name="Dataentry_floor_info" finished-at="2024-11-22T12:58:30 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_owner_info" duration-ms="49448" status="PASS">
+        <test-method signature="Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:45:54 IST" name="Dataentry_floor_info" finished-at="2024-11-23T16:46:37 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_owner_info" duration-ms="42923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Dataentry_floor_info -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:58:30 IST" name="aftermethod" finished-at="2024-11-22T12:58:31 IST" duration-ms="201" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:46:37 IST" name="aftermethod" finished-at="2024-11-23T16:46:37 IST" duration-ms="190" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Dataentry_floor_info status=SUCCESS method=CMS_Test.Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=Dataentry_floor_info status=SUCCESS method=CMS_Test.Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -143,15 +143,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:58:31 IST" name="OldTaxex_info" finished-at="2024-11-22T12:59:45 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_floor_info" duration-ms="74462" status="PASS">
+        <test-method signature="OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:46:37 IST" name="OldTaxex_info" finished-at="2024-11-23T16:47:27 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_floor_info" duration-ms="49390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OldTaxex_info -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:59:45 IST" name="aftermethod" finished-at="2024-11-22T12:59:52 IST" duration-ms="7073" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:47:27 IST" name="aftermethod" finished-at="2024-11-23T16:47:27 IST" duration-ms="231" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=OldTaxex_info status=SUCCESS method=CMS_Test.OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=OldTaxex_info status=SUCCESS method=CMS_Test.OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -163,84 +163,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T12:59:52 IST" name="AddTaxes_and_UploadFiles" finished-at="2024-11-22T13:00:20 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.OldTaxex_info" duration-ms="27563" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a id="ContentPlaceHolder1_btnPrintWadhghat" class="aspNetDisabled btn btn-success" style="margin-bottom: 4px;">...</a> is not clickable at point (1214, 810). Other element would receive the click: <div style="background-color: Silver; filter: alpha(opacity=80); opacity: 0.40; width: 100%; top: 0px; left: 0px; position: fixed; height: 100%; z-index: 500;">...</div>
-  (Session info: chrome=131.0.6778.70)
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [de3dc3ff030dd0b8d837916e08b15c38, clickElement {id=f.AF11C15CC069A12B788E80333812FF25.d.561023ABCCD6092BBB25BA6DA11113FA.e.3836}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54658/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (de3dc3ff030dd0b8d837916e08b15c38)] -> xpath: //*[@id='ContentPlaceHolder1_btnPrintWadhghat']]
-Session ID: de3dc3ff030dd0b8d837916e08b15c38]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a id="ContentPlaceHolder1_btnPrintWadhghat" class="aspNetDisabled btn btn-success" style="margin-bottom: 4px;">...</a> is not clickable at point (1214, 810). Other element would receive the click: <div style="background-color: Silver; filter: alpha(opacity=80); opacity: 0.40; width: 100%; top: 0px; left: 0px; position: fixed; height: 100%; z-index: 500;">...</div>
-  (Session info: chrome=131.0.6778.70)
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [de3dc3ff030dd0b8d837916e08b15c38, clickElement {id=f.AF11C15CC069A12B788E80333812FF25.d.561023ABCCD6092BBB25BA6DA11113FA.e.3836}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54658/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (de3dc3ff030dd0b8d837916e08b15c38)] -> xpath: //*[@id='ContentPlaceHolder1_btnPrintWadhghat']]
-Session ID: de3dc3ff030dd0b8d837916e08b15c38
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pom.AddTaxesPage.Button_print_approval_btn(AddTaxesPage.java:143)
-at New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles(CMS_Test.java:375)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method signature="AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:47:27 IST" name="AddTaxes_and_UploadFiles" finished-at="2024-11-23T16:49:18 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.OldTaxex_info" duration-ms="111113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddTaxes_and_UploadFiles -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T13:00:20 IST" name="aftermethod" finished-at="2024-11-22T13:00:20 IST" duration-ms="165" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:49:18 IST" name="aftermethod" finished-at="2024-11-23T16:49:18 IST" duration-ms="226" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AddTaxes_and_UploadFiles status=FAILURE method=CMS_Test.AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=AddTaxes_and_UploadFiles status=SUCCESS method=CMS_Test.AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -252,169 +183,55 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T13:00:20 IST" name="WadhghatApproval" finished-at="2024-11-22T13:00:20 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method CMS_Test.WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@5644dc81] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method CMS_Test.WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@5644dc81] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:49:18 IST" name="WadhghatApproval" finished-at="2024-11-23T16:49:37 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles" duration-ms="19160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- WadhghatApproval -->
-        <test-method signature="councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T13:00:20 IST" name="councilapproval" finished-at="2024-11-22T13:00:20 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.WadhghatApproval" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method CMS_Test.councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@5644dc81] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method CMS_Test.councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@5644dc81] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- councilapproval -->
-        <test-method signature="SearchOnCounter()[pri:12, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T13:00:20 IST" name="SearchOnCounter" finished-at="2024-11-22T13:00:51 IST" duration-ms="31434" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[21]"}
-  (Session info: chrome=131.0.6778.70)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [de3dc3ff030dd0b8d837916e08b15c38, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[21]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54658/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: de3dc3ff030dd0b8d837916e08b15c38]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[21]"}
-  (Session info: chrome=131.0.6778.70)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [de3dc3ff030dd0b8d837916e08b15c38, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[21]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54658/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: de3dc3ff030dd0b8d837916e08b15c38
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.getText(Unknown Source)
-at pom.OfflinePaymentPage.getOfflineScreenDetails(OfflinePaymentPage.java:221)
-at New_property_Wadhghat.CMS_Test.SearchOnCounter(CMS_Test.java:539)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SearchOnCounter -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T13:00:51 IST" name="aftermethod" finished-at="2024-11-22T13:00:52 IST" duration-ms="287" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:49:37 IST" name="aftermethod" finished-at="2024-11-23T16:49:38 IST" duration-ms="210" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SearchOnCounter status=FAILURE method=CMS_Test.SearchOnCounter()[pri:12, instance:New_property_Wadhghat.CMS_Test@5644dc81] output={null}]]]>
+                <![CDATA[[TestResult name=WadhghatApproval status=SUCCESS method=CMS_Test.WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[private void New_property_Wadhghat.CMS_Test.SearchOnCounter() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.WadhghatApproval() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:New_property_Wadhghat.CMS_Test@5644dc81]" started-at="2024-11-22T13:00:52 IST" name="tearDown" finished-at="2024-11-22T13:00:52 IST" duration-ms="21" status="PASS">
+        <test-method signature="councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:49:38 IST" name="councilapproval" finished-at="2024-11-23T16:51:04 IST" depends-on-methods="New_property_Wadhghat.CMS_Test.WadhghatApproval" duration-ms="86850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- councilapproval -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:51:04 IST" name="aftermethod" finished-at="2024-11-23T16:51:05 IST" duration-ms="259" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=councilapproval status=SUCCESS method=CMS_Test.councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@2925bf5b] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[private void New_property_Wadhghat.CMS_Test.councilapproval() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:New_property_Wadhghat.CMS_Test@2925bf5b]" started-at="2024-11-23T16:51:05 IST" name="tearDown" finished-at="2024-11-23T16:51:05 IST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- New_property_Wadhghat.CMS_Test -->
     </test> <!-- CreateNewProperty -->
-    <test started-at="2024-11-22T13:00:52 IST" name="Online Counter Checking" finished-at="2024-11-22T13:01:08 IST" duration-ms="16631">
+    <test started-at="2024-11-23T16:51:05 IST" name="Online Counter Checking" finished-at="2024-11-23T16:51:28 IST" duration-ms="23377">
       <class name="Reports.OnlineCounterReports">
-        <test-method signature="TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@45905bff]" started-at="2024-11-22T13:00:52 IST" name="TaxCompareTest" finished-at="2024-11-22T13:01:08 IST" duration-ms="16348" status="FAIL">
+        <test-method signature="TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@2a2c13a8]" started-at="2024-11-23T16:51:05 IST" name="TaxCompareTest" finished-at="2024-11-23T16:51:28 IST" duration-ms="23148" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
@@ -422,10 +239,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [de3dc3ff030dd0b8d837916e08b15c38, clickElement {id=f.AF11C15CC069A12B788E80333812FF25.d.FE41C97FF0B4695BA3F1D242ED4D3AFD.e.4251}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54658/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (de3dc3ff030dd0b8d837916e08b15c38)] -> xpath: //input[@id='ContentPlaceHolder1_ChkIAgree']]
-Session ID: de3dc3ff030dd0b8d837916e08b15c38]]>
+Command: [fa078fdea3996389bcc0405f1408afc5, clickElement {id=f.10574BD82F3C4AF4F81F8558D7628D81.d.FB7ECE2DFD953706FB3478AC3A6B5EE6.e.6148}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59736/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fa078fdea3996389bcc0405f1408afc5)] -> xpath: //input[@id='ContentPlaceHolder1_ChkIAgree']]
+Session ID: fa078fdea3996389bcc0405f1408afc5]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
@@ -433,10 +250,10 @@ Session ID: de3dc3ff030dd0b8d837916e08b15c38]]>
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [de3dc3ff030dd0b8d837916e08b15c38, clickElement {id=f.AF11C15CC069A12B788E80333812FF25.d.FE41C97FF0B4695BA3F1D242ED4D3AFD.e.4251}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54658/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (de3dc3ff030dd0b8d837916e08b15c38)] -> xpath: //input[@id='ContentPlaceHolder1_ChkIAgree']]
-Session ID: de3dc3ff030dd0b8d837916e08b15c38
+Command: [fa078fdea3996389bcc0405f1408afc5, clickElement {id=f.10574BD82F3C4AF4F81F8558D7628D81.d.FB7ECE2DFD953706FB3478AC3A6B5EE6.e.6148}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59736/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fa078fdea3996389bcc0405f1408afc5)] -> xpath: //input[@id='ContentPlaceHolder1_ChkIAgree']]
+Session ID: fa078fdea3996389bcc0405f1408afc5
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -487,11 +304,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TaxCompareTest -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.OnlineCounterReports@45905bff]" started-at="2024-11-22T13:01:08 IST" name="aftermethod" finished-at="2024-11-22T13:01:08 IST" duration-ms="258" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.OnlineCounterReports@2a2c13a8]" started-at="2024-11-23T16:51:28 IST" name="aftermethod" finished-at="2024-11-23T16:51:28 IST" duration-ms="190" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TaxCompareTest status=FAILURE method=OnlineCounterReports.TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@45905bff] output={null}]]]>
+                <![CDATA[[TestResult name=TaxCompareTest status=FAILURE method=OnlineCounterReports.TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@2a2c13a8] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -503,23 +320,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.OnlineCounterReports@45905bff]" started-at="2024-11-22T13:01:08 IST" name="tearDown" finished-at="2024-11-22T13:01:08 IST" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.OnlineCounterReports@2a2c13a8]" started-at="2024-11-23T16:51:28 IST" name="tearDown" finished-at="2024-11-23T16:51:28 IST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Reports.OnlineCounterReports -->
     </test> <!-- Online Counter Checking -->
-    <test started-at="2024-11-22T13:01:08 IST" name="All Payments" finished-at="2024-11-22T13:09:45 IST" duration-ms="517113">
+    <test started-at="2024-11-23T16:51:28 IST" name="All Payments" finished-at="2024-11-23T17:02:44 IST" duration-ms="675496">
       <class name="Payments.alltypepayments">
-        <test-method signature="CashPayment()[pri:2, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:01:08 IST" name="CashPayment" finished-at="2024-11-22T13:02:52 IST" duration-ms="103844" status="PASS">
+        <test-method signature="CashPayment()[pri:2, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:51:28 IST" name="CashPayment" finished-at="2024-11-23T16:53:35 IST" duration-ms="126442" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CashPayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:02:52 IST" name="aftermethod" finished-at="2024-11-22T13:02:52 IST" duration-ms="254" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:53:35 IST" name="aftermethod" finished-at="2024-11-23T16:53:35 IST" duration-ms="274" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CashPayment status=SUCCESS method=alltypepayments.CashPayment()[pri:2, instance:Payments.alltypepayments@c1bd0be] output={null}]]]>
+                <![CDATA[[TestResult name=CashPayment status=SUCCESS method=alltypepayments.CashPayment()[pri:2, instance:Payments.alltypepayments@476b0ae6] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -531,15 +348,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="AdvancePayment()[pri:3, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:02:52 IST" name="AdvancePayment" finished-at="2024-11-22T13:03:49 IST" depends-on-methods="Payments.alltypepayments.CashPayment" duration-ms="56178" status="PASS">
+        <test-method signature="AdvancePayment()[pri:3, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:53:35 IST" name="AdvancePayment" finished-at="2024-11-23T16:55:01 IST" depends-on-methods="Payments.alltypepayments.CashPayment" duration-ms="85949" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AdvancePayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:03:49 IST" name="aftermethod" finished-at="2024-11-22T13:03:49 IST" duration-ms="198" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:55:01 IST" name="aftermethod" finished-at="2024-11-23T16:55:01 IST" duration-ms="289" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AdvancePayment status=SUCCESS method=alltypepayments.AdvancePayment()[pri:3, instance:Payments.alltypepayments@c1bd0be] output={null}]]]>
+                <![CDATA[[TestResult name=AdvancePayment status=SUCCESS method=alltypepayments.AdvancePayment()[pri:3, instance:Payments.alltypepayments@476b0ae6] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -551,15 +368,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="chequePayment()[pri:4, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:03:49 IST" name="chequePayment" finished-at="2024-11-22T13:05:12 IST" duration-ms="82665" status="PASS">
+        <test-method signature="chequePayment()[pri:4, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:55:01 IST" name="chequePayment" finished-at="2024-11-23T16:56:53 IST" duration-ms="112024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chequePayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:05:12 IST" name="aftermethod" finished-at="2024-11-22T13:05:12 IST" duration-ms="228" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:56:53 IST" name="aftermethod" finished-at="2024-11-23T16:56:53 IST" duration-ms="235" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=chequePayment status=SUCCESS method=alltypepayments.chequePayment()[pri:4, instance:Payments.alltypepayments@c1bd0be] output={null}]]]>
+                <![CDATA[[TestResult name=chequePayment status=SUCCESS method=alltypepayments.chequePayment()[pri:4, instance:Payments.alltypepayments@476b0ae6] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -571,15 +388,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="cheque_fail()[pri:5, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:05:12 IST" name="cheque_fail" finished-at="2024-11-22T13:05:56 IST" depends-on-methods="Payments.alltypepayments.chequePayment" duration-ms="44500" status="PASS">
+        <test-method signature="cheque_fail()[pri:5, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:56:53 IST" name="cheque_fail" finished-at="2024-11-23T16:57:39 IST" depends-on-methods="Payments.alltypepayments.chequePayment" duration-ms="46032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cheque_fail -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:05:56 IST" name="aftermethod" finished-at="2024-11-22T13:05:56 IST" duration-ms="231" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:57:39 IST" name="aftermethod" finished-at="2024-11-23T16:57:40 IST" duration-ms="239" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cheque_fail status=SUCCESS method=alltypepayments.cheque_fail()[pri:5, instance:Payments.alltypepayments@c1bd0be] output={null}]]]>
+                <![CDATA[[TestResult name=cheque_fail status=SUCCESS method=alltypepayments.cheque_fail()[pri:5, instance:Payments.alltypepayments@476b0ae6] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -591,15 +408,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="chequePaymentforClear()[pri:6, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:05:56 IST" name="chequePaymentforClear" finished-at="2024-11-22T13:07:18 IST" duration-ms="81229" status="PASS">
+        <test-method signature="chequePaymentforClear()[pri:6, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:57:40 IST" name="chequePaymentforClear" finished-at="2024-11-23T16:59:40 IST" duration-ms="120100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chequePaymentforClear -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:07:18 IST" name="aftermethod" finished-at="2024-11-22T13:07:18 IST" duration-ms="445" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:59:40 IST" name="aftermethod" finished-at="2024-11-23T16:59:40 IST" duration-ms="258" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=chequePaymentforClear status=SUCCESS method=alltypepayments.chequePaymentforClear()[pri:6, instance:Payments.alltypepayments@c1bd0be] output={null}]]]>
+                <![CDATA[[TestResult name=chequePaymentforClear status=SUCCESS method=alltypepayments.chequePaymentforClear()[pri:6, instance:Payments.alltypepayments@476b0ae6] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -611,15 +428,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="cheque_clear()[pri:7, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:07:18 IST" name="cheque_clear" finished-at="2024-11-22T13:08:08 IST" depends-on-methods="Payments.alltypepayments.chequePaymentforClear" duration-ms="50037" status="PASS">
+        <test-method signature="cheque_clear()[pri:7, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T16:59:40 IST" name="cheque_clear" finished-at="2024-11-23T17:00:32 IST" depends-on-methods="Payments.alltypepayments.chequePaymentforClear" duration-ms="52413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cheque_clear -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:08:08 IST" name="aftermethod" finished-at="2024-11-22T13:08:08 IST" duration-ms="222" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T17:00:32 IST" name="aftermethod" finished-at="2024-11-23T17:00:33 IST" duration-ms="234" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cheque_clear status=SUCCESS method=alltypepayments.cheque_clear()[pri:7, instance:Payments.alltypepayments@c1bd0be] output={null}]]]>
+                <![CDATA[[TestResult name=cheque_clear status=SUCCESS method=alltypepayments.cheque_clear()[pri:7, instance:Payments.alltypepayments@476b0ae6] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -631,15 +448,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="Card()[pri:8, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:08:08 IST" name="Card" finished-at="2024-11-22T13:09:45 IST" duration-ms="96577" status="PASS">
+        <test-method signature="Card()[pri:8, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T17:00:33 IST" name="Card" finished-at="2024-11-23T17:02:43 IST" duration-ms="130757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Card -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:09:45 IST" name="aftermethod" finished-at="2024-11-22T13:09:45 IST" duration-ms="437" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T17:02:43 IST" name="aftermethod" finished-at="2024-11-23T17:02:44 IST" duration-ms="198" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Card status=SUCCESS method=alltypepayments.Card()[pri:8, instance:Payments.alltypepayments@c1bd0be] output={null}]]]>
+                <![CDATA[[TestResult name=Card status=SUCCESS method=alltypepayments.Card()[pri:8, instance:Payments.alltypepayments@476b0ae6] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -651,23 +468,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:Payments.alltypepayments@c1bd0be]" started-at="2024-11-22T13:09:45 IST" name="aftertest" finished-at="2024-11-22T13:09:45 IST" duration-ms="52" status="PASS">
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:Payments.alltypepayments@476b0ae6]" started-at="2024-11-23T17:02:44 IST" name="aftertest" finished-at="2024-11-23T17:02:44 IST" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->
       </class> <!-- Payments.alltypepayments -->
     </test> <!-- All Payments -->
-    <test started-at="2024-11-22T13:09:46 IST" name="Counter Reports" finished-at="2024-11-22T13:12:33 IST" duration-ms="167807">
+    <test started-at="2024-11-23T17:02:44 IST" name="Counter Reports" finished-at="2024-11-23T17:07:32 IST" duration-ms="288342">
       <class name="Reports.DownloadReports">
-        <test-method signature="DownloadCounterReports()[pri:2, instance:Reports.DownloadReports@a202ccb]" started-at="2024-11-22T13:09:46 IST" name="DownloadCounterReports" finished-at="2024-11-22T13:10:47 IST" duration-ms="61841" status="PASS">
+        <test-method signature="DownloadCounterReports()[pri:2, instance:Reports.DownloadReports@20f12539]" started-at="2024-11-23T17:02:44 IST" name="DownloadCounterReports" finished-at="2024-11-23T17:04:49 IST" duration-ms="125261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DownloadCounterReports -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.DownloadReports@a202ccb]" started-at="2024-11-22T13:10:47 IST" name="aftermethod" finished-at="2024-11-22T13:10:48 IST" duration-ms="263" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.DownloadReports@20f12539]" started-at="2024-11-23T17:04:49 IST" name="aftermethod" finished-at="2024-11-23T17:04:49 IST" duration-ms="249" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=DownloadCounterReports status=SUCCESS method=DownloadReports.DownloadCounterReports()[pri:2, instance:Reports.DownloadReports@a202ccb] output={null}]]]>
+                <![CDATA[[TestResult name=DownloadCounterReports status=SUCCESS method=DownloadReports.DownloadCounterReports()[pri:2, instance:Reports.DownloadReports@20f12539] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -679,15 +496,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="AssismentNakkal()[pri:3, instance:Reports.DownloadReports@a202ccb]" started-at="2024-11-22T13:10:48 IST" name="AssismentNakkal" finished-at="2024-11-22T13:11:37 IST" duration-ms="48972" status="PASS">
+        <test-method signature="AssismentNakkal()[pri:3, instance:Reports.DownloadReports@20f12539]" started-at="2024-11-23T17:04:49 IST" name="AssismentNakkal" finished-at="2024-11-23T17:06:09 IST" duration-ms="79499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssismentNakkal -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.DownloadReports@a202ccb]" started-at="2024-11-22T13:11:37 IST" name="aftermethod" finished-at="2024-11-22T13:11:38 IST" duration-ms="1267" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.DownloadReports@20f12539]" started-at="2024-11-23T17:06:09 IST" name="aftermethod" finished-at="2024-11-23T17:06:09 IST" duration-ms="265" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AssismentNakkal status=SUCCESS method=DownloadReports.AssismentNakkal()[pri:3, instance:Reports.DownloadReports@a202ccb] output={null}]]]>
+                <![CDATA[[TestResult name=AssismentNakkal status=SUCCESS method=DownloadReports.AssismentNakkal()[pri:3, instance:Reports.DownloadReports@20f12539] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -699,15 +516,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="NoDueCertificate()[pri:4, instance:Reports.DownloadReports@a202ccb]" started-at="2024-11-22T13:11:38 IST" name="NoDueCertificate" finished-at="2024-11-22T13:12:32 IST" duration-ms="53727" status="PASS">
+        <test-method signature="NoDueCertificate()[pri:4, instance:Reports.DownloadReports@20f12539]" started-at="2024-11-23T17:06:09 IST" name="NoDueCertificate" finished-at="2024-11-23T17:07:32 IST" duration-ms="82782" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NoDueCertificate -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.DownloadReports@a202ccb]" started-at="2024-11-22T13:12:32 IST" name="aftermethod" finished-at="2024-11-22T13:12:33 IST" duration-ms="1697" status="PASS">
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.DownloadReports@20f12539]" started-at="2024-11-23T17:07:32 IST" name="aftermethod" finished-at="2024-11-23T17:07:32 IST" duration-ms="244" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=NoDueCertificate status=SUCCESS method=DownloadReports.NoDueCertificate()[pri:4, instance:Reports.DownloadReports@a202ccb] output={null}]]]>
+                <![CDATA[[TestResult name=NoDueCertificate status=SUCCESS method=DownloadReports.NoDueCertificate()[pri:4, instance:Reports.DownloadReports@20f12539] output={null}]]]>
               </value>
             </param>
             <param index="1">
@@ -719,56 +536,162 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:Reports.DownloadReports@a202ccb]" started-at="2024-11-22T13:12:33 IST" name="aftertest" finished-at="2024-11-22T13:12:33 IST" duration-ms="29" status="PASS">
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:Reports.DownloadReports@20f12539]" started-at="2024-11-23T17:07:32 IST" name="aftertest" finished-at="2024-11-23T17:07:32 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->
       </class> <!-- Reports.DownloadReports -->
     </test> <!-- Counter Reports -->
-    <test started-at="2024-11-22T13:12:33 IST" name="MinorChanges" finished-at="2024-11-22T13:12:48 IST" duration-ms="14539">
+    <test started-at="2024-11-23T17:07:32 IST" name="MinorChanges" finished-at="2024-11-23T17:08:45 IST" duration-ms="72722">
       <class name="New_property_Wadhghat.MinorChanges">
-        <test-method signature="performMinorChangeAndVerify()[pri:2, instance:New_property_Wadhghat.MinorChanges@57459491]" started-at="2024-11-22T13:12:33 IST" name="performMinorChangeAndVerify" finished-at="2024-11-22T13:12:48 IST" duration-ms="14294" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="performMinorChangeAndVerify()[pri:2, instance:New_property_Wadhghat.MinorChanges@3f0846c6]" started-at="2024-11-23T17:07:32 IST" name="performMinorChangeAndVerify" finished-at="2024-11-23T17:08:44 IST" duration-ms="72500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performMinorChangeAndVerify -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.MinorChanges@3f0846c6]" started-at="2024-11-23T17:08:44 IST" name="aftermethod" finished-at="2024-11-23T17:08:45 IST" duration-ms="220" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=performMinorChangeAndVerify status=SUCCESS method=MinorChanges.performMinorChangeAndVerify()[pri:2, instance:New_property_Wadhghat.MinorChanges@3f0846c6] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.MinorChanges.performMinorChangeAndVerify() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+      </class> <!-- New_property_Wadhghat.MinorChanges -->
+    </test> <!-- MinorChanges -->
+    <test started-at="2024-11-23T17:08:45 IST" name="CollectionReport" finished-at="2024-11-23T17:15:07 IST" duration-ms="382068">
+      <class name="Reports.CollectionReports">
+        <test-method signature="chequeBounceCollectionReport()[pri:2, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:08:45 IST" name="chequeBounceCollectionReport" finished-at="2024-11-23T17:10:02 IST" duration-ms="77445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chequeBounceCollectionReport -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:10:02 IST" name="aftermethod" finished-at="2024-11-23T17:10:02 IST" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chequeBounceCollectionReport status=SUCCESS method=CollectionReports.chequeBounceCollectionReport()[pri:2, instance:Reports.CollectionReports@7516e4e5] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Reports.CollectionReports.chequeBounceCollectionReport() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="chequeClearedCollectionReport()[pri:3, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:10:02 IST" name="chequeClearedCollectionReport" finished-at="2024-11-23T17:11:23 IST" duration-ms="80630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chequeClearedCollectionReport -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:11:23 IST" name="aftermethod" finished-at="2024-11-23T17:11:23 IST" duration-ms="207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chequeClearedCollectionReport status=SUCCESS method=CollectionReports.chequeClearedCollectionReport()[pri:3, instance:Reports.CollectionReports@7516e4e5] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Reports.CollectionReports.chequeClearedCollectionReport() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="chequeInProcessCollectionReport()[pri:4, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:11:23 IST" name="chequeInProcessCollectionReport" finished-at="2024-11-23T17:12:40 IST" duration-ms="76987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chequeInProcessCollectionReport -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:12:40 IST" name="aftermethod" finished-at="2024-11-23T17:12:40 IST" duration-ms="239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chequeInProcessCollectionReport status=SUCCESS method=CollectionReports.chequeInProcessCollectionReport()[pri:4, instance:Reports.CollectionReports@7516e4e5] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Reports.CollectionReports.chequeInProcessCollectionReport() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="DailyCollectionReport()[pri:5, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:12:40 IST" name="DailyCollectionReport" finished-at="2024-11-23T17:13:54 IST" duration-ms="73449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DailyCollectionReport -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:13:54 IST" name="aftermethod" finished-at="2024-11-23T17:13:54 IST" duration-ms="251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DailyCollectionReport status=SUCCESS method=CollectionReports.DailyCollectionReport()[pri:5, instance:Reports.CollectionReports@7516e4e5] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Reports.CollectionReports.DailyCollectionReport() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="MonthlyCollectionReport()[pri:5, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:13:54 IST" name="MonthlyCollectionReport" finished-at="2024-11-23T17:15:06 IST" duration-ms="72281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MonthlyCollectionReport -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:15:06 IST" name="aftermethod" finished-at="2024-11-23T17:15:07 IST" duration-ms="267" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MonthlyCollectionReport status=SUCCESS method=CollectionReports.MonthlyCollectionReport()[pri:5, instance:Reports.CollectionReports@7516e4e5] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Reports.CollectionReports.MonthlyCollectionReport() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.CollectionReports@7516e4e5]" started-at="2024-11-23T17:15:07 IST" name="tearDown" finished-at="2024-11-23T17:15:07 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Reports.CollectionReports -->
+    </test> <!-- CollectionReport -->
+    <test started-at="2024-11-23T17:15:07 IST" name="ReportEngine" finished-at="2024-11-23T17:15:40 IST" duration-ms="33290">
+      <class name="Reports.ReportEngine">
+        <test-method signature="Notice_report()[pri:2, instance:Reports.ReportEngine@320de594]" started-at="2024-11-23T17:15:07 IST" name="Notice_report" finished-at="2024-11-23T17:15:38 IST" duration-ms="31538" status="FAIL">
+          <exception class="org.openqa.selenium.support.ui.UnexpectedTagNameException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='ContentPlaceHolder1_txtOldPropN']"}
-  (Session info: chrome=131.0.6778.70)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[Element should have been "select" but was "null"
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [de3dc3ff030dd0b8d837916e08b15c38, findElement {using=xpath, value=//input[@id='ContentPlaceHolder1_txtOldPropN']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54658/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: de3dc3ff030dd0b8d837916e08b15c38]]>
+Driver info: driver.version: unknown]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='ContentPlaceHolder1_txtOldPropN']"}
-  (Session info: chrome=131.0.6778.70)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+              <![CDATA[org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been "select" but was "null"
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [de3dc3ff030dd0b8d837916e08b15c38, findElement {using=xpath, value=//input[@id='ContentPlaceHolder1_txtOldPropN']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54658/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: de3dc3ff030dd0b8d837916e08b15c38
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.clear(Unknown Source)
-at pom.MinorChangesPage.Enter_oldPropertyNo(MinorChangesPage.java:89)
-at New_property_Wadhghat.MinorChanges.performMinorChangeAndVerify(MinorChanges.java:92)
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:46)
+at pom.ReportEnginePage.Select_report_type_notice(ReportEnginePage.java:76)
+at Reports.ReportEngine.Notice_report(ReportEngine.java:86)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -797,147 +720,79 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- performMinorChangeAndVerify -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.MinorChanges@57459491]" started-at="2024-11-22T13:12:48 IST" name="aftermethod" finished-at="2024-11-22T13:12:48 IST" duration-ms="241" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=performMinorChangeAndVerify status=FAILURE method=MinorChanges.performMinorChangeAndVerify()[pri:2, instance:New_property_Wadhghat.MinorChanges@57459491] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void New_property_Wadhghat.MinorChanges.performMinorChangeAndVerify() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-      </class> <!-- New_property_Wadhghat.MinorChanges -->
-    </test> <!-- MinorChanges -->
-    <test started-at="2024-11-22T13:12:48 IST" name="CollectionReport" finished-at="2024-11-22T13:18:36 IST" duration-ms="348453">
-      <class name="Reports.CollectionReports">
-        <test-method signature="chequeBounceCollectionReport()[pri:2, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:12:48 IST" name="chequeBounceCollectionReport" finished-at="2024-11-22T13:14:04 IST" duration-ms="76207" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chequeBounceCollectionReport -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:14:04 IST" name="aftermethod" finished-at="2024-11-22T13:14:04 IST" duration-ms="183" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=chequeBounceCollectionReport status=SUCCESS method=CollectionReports.chequeBounceCollectionReport()[pri:2, instance:Reports.CollectionReports@1021f6c9] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void Reports.CollectionReports.chequeBounceCollectionReport() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method signature="chequeClearedCollectionReport()[pri:3, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:14:04 IST" name="chequeClearedCollectionReport" finished-at="2024-11-22T13:14:54 IST" duration-ms="49730" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chequeClearedCollectionReport -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:14:54 IST" name="aftermethod" finished-at="2024-11-22T13:14:54 IST" duration-ms="240" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=chequeClearedCollectionReport status=SUCCESS method=CollectionReports.chequeClearedCollectionReport()[pri:3, instance:Reports.CollectionReports@1021f6c9] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void Reports.CollectionReports.chequeClearedCollectionReport() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method signature="chequeInProcessCollectionReport()[pri:4, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:14:54 IST" name="chequeInProcessCollectionReport" finished-at="2024-11-22T13:16:11 IST" duration-ms="76970" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- chequeInProcessCollectionReport -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:16:11 IST" name="aftermethod" finished-at="2024-11-22T13:16:11 IST" duration-ms="231" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=chequeInProcessCollectionReport status=SUCCESS method=CollectionReports.chequeInProcessCollectionReport()[pri:4, instance:Reports.CollectionReports@1021f6c9] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void Reports.CollectionReports.chequeInProcessCollectionReport() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method signature="DailyCollectionReport()[pri:5, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:16:11 IST" name="DailyCollectionReport" finished-at="2024-11-22T13:17:24 IST" duration-ms="72583" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DailyCollectionReport -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:17:24 IST" name="aftermethod" finished-at="2024-11-22T13:17:24 IST" duration-ms="256" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DailyCollectionReport status=SUCCESS method=CollectionReports.DailyCollectionReport()[pri:5, instance:Reports.CollectionReports@1021f6c9] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void Reports.CollectionReports.DailyCollectionReport() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method signature="MonthlyCollectionReport()[pri:5, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:17:24 IST" name="MonthlyCollectionReport" finished-at="2024-11-22T13:18:36 IST" duration-ms="71769" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MonthlyCollectionReport -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:18:36 IST" name="aftermethod" finished-at="2024-11-22T13:18:36 IST" duration-ms="248" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=MonthlyCollectionReport status=SUCCESS method=CollectionReports.MonthlyCollectionReport()[pri:5, instance:Reports.CollectionReports@1021f6c9] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void Reports.CollectionReports.MonthlyCollectionReport() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.CollectionReports@1021f6c9]" started-at="2024-11-22T13:18:36 IST" name="tearDown" finished-at="2024-11-22T13:18:36 IST" duration-ms="25" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Reports.CollectionReports -->
-    </test> <!-- CollectionReport -->
-    <test started-at="2024-11-22T13:18:36 IST" name="ReportEngine" finished-at="2024-11-22T13:21:26 IST" duration-ms="169831">
-      <class name="Reports.ReportEngine">
-        <test-method signature="Notice_report()[pri:2, instance:Reports.ReportEngine@6035b93b]" started-at="2024-11-22T13:18:36 IST" name="Notice_report" finished-at="2024-11-22T13:20:02 IST" duration-ms="85671" status="PASS">
+          </exception> <!-- org.openqa.selenium.support.ui.UnexpectedTagNameException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Notice_report -->
-        <test-method signature="Karakarni_report()[pri:3, instance:Reports.ReportEngine@6035b93b]" started-at="2024-11-22T13:20:02 IST" name="Karakarni_report" finished-at="2024-11-22T13:21:26 IST" duration-ms="84118" status="PASS">
+        <test-method signature="Karakarni_report()[pri:3, instance:Reports.ReportEngine@320de594]" started-at="2024-11-23T17:15:38 IST" name="Karakarni_report" finished-at="2024-11-23T17:15:40 IST" duration-ms="1368" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fa078fdea3996389bcc0405f1408afc5, get {url=http://testbaramatimc.ptaxcollection.com:8080/pages/ReportEngine.aspx}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59736/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fa078fdea3996389bcc0405f1408afc5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.70)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fa078fdea3996389bcc0405f1408afc5, get {url=http://testbaramatimc.ptaxcollection.com:8080/pages/ReportEngine.aspx}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.70, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\STHAPA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59736}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59736/devtoo..., se:cdpVersion: 131.0.6778.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fa078fdea3996389bcc0405f1408afc5
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
+at pom.ReportEnginePage.Report_Engine_Page_link(ReportEnginePage.java:108)
+at Reports.ReportEngine.Karakarni_report(ReportEngine.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Karakarni_report -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.ReportEngine@6035b93b]" started-at="2024-11-22T13:21:26 IST" name="tearDown" finished-at="2024-11-22T13:21:26 IST" duration-ms="36" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.ReportEngine@320de594]" started-at="2024-11-23T17:15:40 IST" name="tearDown" finished-at="2024-11-23T17:15:40 IST" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

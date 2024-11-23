@@ -25,6 +25,7 @@ public class Testdb {
     private String LGNusername;
     private String LGNpassword;
     private String URL;
+    private String query;
     
     // Method to fetch data from the database
     public void fetchData() {
@@ -102,11 +103,34 @@ public class Testdb {
             // Get selected value from comboBox
             String selectedOption = (String) comboBox.getSelectedItem();
             String bmc="Bramati Municipal";
+            String PMC="Panvel Municipal";
+            String pcmc="Pimpri Chinchwad Municipal";
+            
+//            if (selectedOption.equals(bmc)) {
+//            	Ward="BMC";
+//			} else {
+//				Ward="KH";
+//			}
+            
             if (selectedOption.equals(bmc)) {
             	Ward="BMC";
-			} else {
-				Ward="KH";
-			}
+            	query = "select top 4 NewWardNo, concat(NewPropertyNo,'-',NewPartitionNo) as propertyno from PropertyMast pm join ViewfunAMCGetPendingBalance vm on pm.ownerid=vm.ownerid left join BillTransactionDetails bt  on pm.ownerid=bt.ownerid  where vm.taxtotal>0 and vm.FinanceYear=2024 and bt.ownerid is null and NewWardNo not like '%D_%' and NewWardNo  like '%BMC%' and NewPartitionNo!=''";
+            } else if (selectedOption.equals(PMC)) {
+            	Ward="KH";
+            	query = "select top 4 NewWardNo, concat(NewPropertyNo,'-',NewPartitionNo) as propertyno from PropertyMast pm join ViewfunAMCGetPendingBalance vm on pm.ownerid=vm.ownerid left join BillTransactionDetails bt  on pm.ownerid=bt.ownerid  where vm.taxtotal>0 and vm.FinanceYear=2024 and bt.ownerid is null and NewWardNo not like '%D_%' and NewWardNo  like '%KH%' and NewPartitionNo!=''";
+            } else if (selectedOption.equals(pcmc)) {
+            	Ward="KH"; 
+            	query = "select top 4 PM.NewWardNo,concat(PM.NewPropertyNo,'-',PM.NewPartitionNo) as propertyno\r\n"
+            			+ "from Assessment.AssessmentTracker as AT With (NoLock) inner join PropertyMast as PM With(NoLock) on AT.PartOwnerID = PM.OwnerID\r\n"
+            			+ "\r\n"
+            			+ "inner join dbo.ViewfunAMCGetCurrentNPendingBalance as VD With (NoLock) on  PM.OwnerID = VD.OwnerID\r\n"
+            			+ "\r\n"
+            			+ "where ISNULL(Result,0) = 1 and VD.TaxTotal > 0 and NewPartitionNo!='' and pm.NewWardNo like '%BSR%'\r\n"
+            			+ "\r\n"
+            			+ "order by dbo.AlphaNum(PM.NewWardNo),dbo.AlphaNum(PM.NewPropertyNo)";
+            }
+
+            
             
             // Get input values from text fields
             
@@ -124,7 +148,7 @@ public class Testdb {
         String url = "jdbc:sqlserver://192.168.1.8:1433;databaseName="+Database+";encrypt=true;trustServerCertificate=true";
         String username = "uatuser";
         String password = "UserUat@890";
-        String query = "select top 4 NewWardNo, concat(NewPropertyNo,'-',NewPartitionNo) as propertyno from PropertyMast pm join ViewfunAMCGetPendingBalance vm on pm.ownerid=vm.ownerid left join BillTransactionDetails bt  on pm.ownerid=bt.ownerid  where vm.taxtotal>0 and vm.FinanceYear=2024 and bt.ownerid is null and NewWardNo not like '%D_%' and NewWardNo  like '%"+Ward+"%' and NewPartitionNo!=''";
+        
 
         try (Connection connection = DriverManager.getConnection(url, username, password);
              Statement statement = connection.createStatement();

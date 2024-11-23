@@ -255,7 +255,7 @@ public class Change_Old_Information_Correction extends BaseDriver{
 		stopWatch.stop();
 		/////
 		Thread.sleep(2000);
-		addtaxespage.Button_save_btn(driver);
+		addtaxespage.Button_save_btn2(driver);
 		OnlineDataEntryPage onlinedataentry = new OnlineDataEntryPage(driver);
 		onlinedataentry.Button_DataSaved(driver);
 		
@@ -340,12 +340,12 @@ public class Change_Old_Information_Correction extends BaseDriver{
 		cmspage.councilapproval_link(url, driver);
 
 Council_approval counncil_approval = new Council_approval(driver);
-//Thread.sleep(20000);
-//counncil_approval.Search_complaint(driver, akshep_no);
-//Thread.sleep(20000);
-//counncil_approval.clickToOpen(driver);
-//Thread.sleep(20000);
-//counncil_approval.Fetch_grievance_id(driver);
+Thread.sleep(20000);
+counncil_approval.Search_complaint(driver, akshep_no);
+Thread.sleep(20000);
+counncil_approval.clickToOpen(driver);
+Thread.sleep(20000);
+counncil_approval.Fetch_grievance_id(driver);
 		
 String popup1=TakeScreenshoot.GetScreenshotFullBase64(driver);
 test.pass("property details",MediaEntityBuilder.createScreenCaptureFromBase64String(popup1).build());

@@ -31,7 +31,9 @@ public class BaseDriver {
 	static public String sector;
 	static public String PropertyNo;
 	
-	
+	static public String nodex ="KH";
+	static public String sectorx = "1";
+	static public String PropertyNox = "500022";
 	 
 	
 	static public String node1;
@@ -53,7 +55,7 @@ public class BaseDriver {
 	static public String akshep_no;
 	public TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	static public int financeYear;
-	
+	static public String application_no;
 	
 	static public String NODE ="KH";
 	static public String SECTOR ="5";
@@ -209,10 +211,14 @@ public class BaseDriver {
 	 	userid = testdb.Getusername();
 	 	password = testdb.Getpassword();
 	     url=testdb.Geturl();
-	     String abc="BMC";
+	     String bmc="BMC";
+	     String pmc="KH";
+	     String pcmc="BSR";
 	     String check=testdb.getId1();
+	     
 	     String abc2=check.substring(0, 2);
-		 if (!abc.contains(abc2)) {
+	     
+		 if (pmc.contains(abc2)) {
 			
 			 String test1=testdb.getId1();
 		     node1 = test1.substring(0, 2);  // Get "KH"

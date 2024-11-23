@@ -12,9 +12,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ApplicationApprovalPage {
 	
-//	@FindBy(xpath = "//select[@id=\'ddlNode']") private WebElement node;
-//	@FindBy(xpath = "//select[@id=\'ddlSector']") private WebElement sector;
-//	@FindBy (xpath= "//input[@id=\'txtPropertyPartitionNo']") private WebElement propertyno;
+	@FindBy(xpath = "//*[@id=\'tblGrievances_filter\']/label/input") private WebElement searchbox;
+	@FindBy(xpath = "//*[@id='btnshow']") private WebElement btnshow;
+	@FindBy(xpath = "//input[@id='txtRemark']") private WebElement remarkbox;
+	@FindBy(xpath = "//*[@id='lblshowNewFee']") private WebElement tax;
+	@FindBy(xpath = "//*[@id='lblShowApplicantAddress']") private WebElement address;
+	@FindBy(xpath = "//*[@id='lblShowEmailID']") private WebElement email;
+	@FindBy(xpath = "//*[@id='lblShowMobileNo']") private WebElement mobile;
+	@FindBy(xpath = "//*[@id='btnPrintApplication']") private WebElement arjavhalbtn;
+	@FindBy(xpath = "//*[@id='btnApproved1']") private WebElement approved1;
+	
+
 	
 	public ApplicationApprovalPage (WebDriver driver)
 	{
@@ -37,30 +45,76 @@ public class ApplicationApprovalPage {
 		driver.get(s2);
 	}
 	
-//	public void select_node_no( WebDriver driver)
-//	{
-//		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-//		wait3.until(ExpectedConditions.visibilityOf(node));
-//		
-//		Select s = new Select(node);
-//		s.selectByValue("2");
-//	}
-//	
-//	public void select_sector_no( WebDriver driver)
-//	{
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-//		wait.until(ExpectedConditions.visibilityOf(sector));
-//		
-//		Select s = new Select(sector);
-//		s.selectByValue("KH10");
-//	}
-//	
-//	public void enter_property_no( WebDriver driver)
-//	{
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-//		wait.until(ExpectedConditions.visibilityOf(propertyno));
-//		propertyno.sendKeys("7-2");
-//	}
-//	
+	public void Search_application (WebDriver driver,String str) throws InterruptedException
+	{
+		Thread.sleep(10000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(searchbox));
+		Thread.sleep(500);
+		searchbox.sendKeys(str);
+	}
 	
+	public void Button_show_btn(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(btnshow));
+		Thread.sleep(1000);
+		btnshow.click();
+	}
+	
+	public void Enter_remark (WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(remarkbox));
+		remarkbox.clear();
+		remarkbox.sendKeys("Automated Remark");
+	}
+	
+	public String get_tax (WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(tax));
+		String Tax = tax.getText();
+		return Tax;
+	}
+	
+	public String get_email (WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(email));
+		String Email = email.getText();
+		return Email;
+	}
+	
+	public String get_address (WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(address));
+		String Address= address.getText();
+		return Address;
+	}
+	
+	public String get_mobile (WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(mobile));
+		String Mobile = mobile.getText();
+		return Mobile;
+	}
+	
+	public void Button_arjavhal_btn(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(arjavhalbtn));
+		Thread.sleep(1000);
+		arjavhalbtn.click();
+	}
+	
+	public void Button_approved1_btn(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(approved1));
+		Thread.sleep(1000);
+		approved1.click();
+	}
 }
