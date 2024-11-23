@@ -15,10 +15,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DataEntryPage_TradeLicense {
-	
-	//@FindBy(xpath = "//*[contains(@id, 'span903')]") private WebElement deleteOwner;
-	// Use a dynamic XPath that matches elements whose id contains 'span' followed by numbers
-//
 
 	@FindBy(xpath = "//select[@id=\'ddlNode']") private WebElement node;
 	@FindBy(xpath = "//select[@id=\'ddlSector']") private WebElement sector;
@@ -117,7 +113,7 @@ public class DataEntryPage_TradeLicense {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
 		wait.until(ExpectedConditions.visibilityOf(propertyno));
-		propertyno.sendKeys("9-4");
+		propertyno.sendKeys("15-7");
 	}
 	
 	public void scroll_to_bottom(WebDriver driver) throws InterruptedException {

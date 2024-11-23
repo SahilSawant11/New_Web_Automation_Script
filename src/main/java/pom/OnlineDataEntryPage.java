@@ -235,6 +235,7 @@ public class OnlineDataEntryPage {
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtconstructionyear']") private WebElement counstruction_year;
 	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_BtnBuildingInfoSave']") private WebElement save_building_info_btn;
 	@FindBy(xpath = "//button[text()='OK']") private WebElement building_info_ok_btn;
+	@FindBy(xpath = "/html/body/div[3]/div[7]/div/button") private WebElement yes_btn;
 
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_BtnBuildinginfoADDtAXES']") private WebElement add_taxes_and_upload_files;
 	
@@ -1380,23 +1381,31 @@ public class OnlineDataEntryPage {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		
-	try {
-		wait.until(ExpectedConditions.visibilityOf(DataSaved));
-		DataSaved.getText();
-		wait.until(ExpectedConditions.visibilityOf(DataSaved_okbtn));
-		Thread.sleep(2000);
-		DataSaved_okbtn.click();
-		System.out.println(DataSaved.getText());
-	} catch (Exception e) {
-		wait.until(ExpectedConditions.visibilityOf(DataSaved2));
-		DataSaved2.getText();
-		wait.until(ExpectedConditions.visibilityOf(DataSaved_okbtn2));
-		DataSaved_okbtn2.click();
-		System.out.println(DataSaved2.getText());
+//	try {
+//		wait.until(ExpectedConditions.visibilityOf(DataSaved));
+//		DataSaved.getText();
+//		wait.until(ExpectedConditions.visibilityOf(DataSaved_okbtn));
+//		Thread.sleep(2000);
+//		DataSaved_okbtn.click();
+//		System.out.println(DataSaved.getText());
+//	} catch (Exception e) {
+//		wait.until(ExpectedConditions.visibilityOf(DataSaved2));
+//		DataSaved2.getText();
+//		wait.until(ExpectedConditions.visibilityOf(DataSaved_okbtn2));
+//		DataSaved_okbtn2.click();
+//		System.out.println(DataSaved2.getText());
+//	}
+		wait.until(ExpectedConditions.visibilityOf(building_info_ok_btn));
+		building_info_ok_btn.click();
+	
+	
 	}
 	
-	
-	
+	public void Button_yes_btn (WebDriver driver) 
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOf(yes_btn));
+		yes_btn.click();
 	}
 	
 	//////////////////////////////////////////////////////////////////////////////////////////////

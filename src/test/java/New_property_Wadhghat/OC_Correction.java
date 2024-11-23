@@ -86,7 +86,7 @@ public class OC_Correction extends BaseDriver{
 		stopWatch.stop();
 		/////
 		
-		cmspage.select_sector_no(PropertyNo, driver);
+		cmspage.select_sector_no(sector, driver);
 		
 		/////
 		stopWatch.reset();
@@ -191,7 +191,7 @@ public class OC_Correction extends BaseDriver{
 		stopWatch.stop();
 		/////
 		Thread.sleep(2000);
-		addtaxespage.Button_save_btn(driver);
+		addtaxespage.Button_save_btn2(driver);
 		OnlineDataEntryPage onlinedataentry = new OnlineDataEntryPage(driver);
 		onlinedataentry.Button_DataSaved(driver);
 		
@@ -277,12 +277,12 @@ public class OC_Correction extends BaseDriver{
 		cmspage.councilapproval_link(url, driver);
 
 Council_approval counncil_approval = new Council_approval(driver);
-//Thread.sleep(30000);
-//counncil_approval.Search_complaint(driver, akshep_no);
-//Thread.sleep(30000);
-//counncil_approval.clickToOpen(driver);
-//Thread.sleep(30000);
-//counncil_approval.Fetch_grievance_id(driver);
+Thread.sleep(30000);
+counncil_approval.Search_complaint(driver, akshep_no);
+Thread.sleep(30000);
+counncil_approval.clickToOpen(driver);
+Thread.sleep(30000);
+counncil_approval.Fetch_grievance_id(driver);
 		
 String popup1=TakeScreenshoot.GetScreenshotFullBase64(driver);
 test.pass("property details",MediaEntityBuilder.createScreenCaptureFromBase64String(popup1).build());
@@ -356,7 +356,7 @@ counncil_approval.clickOnapproval(driver);
 	    test.info("(a + b) / c = " + offlinepaymentpage.getAPlusBDivC());
 	    double actualValue = offlinepaymentpage.getAPlusBDivC(); 
 	    double expectedValue = 7.0;
-	    double delta = 0.001; 
+	    double delta = 0.001; //(this is for small difference kami jasta )
 	    assertEquals(actualValue, expectedValue, delta, "The calculated tax rate is not equal to 7.0");
 	    test.info("Assert Pass : Calculated (a + b) / c = " + actualValue);
 		String PropertyOnCounter=TakeScreenshoot.GetScreenshotFullBase64(driver);

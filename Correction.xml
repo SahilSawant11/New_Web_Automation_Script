@@ -6,7 +6,7 @@
     	<class name="New_property_Wadhghat.Login"/>
     </classes>   
 </test> 
-    
+     
 <test name="CMS">
     <classes>
     	<class name="New_property_Wadhghat.CMS_Test"/>

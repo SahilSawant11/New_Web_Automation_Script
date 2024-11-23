@@ -29,7 +29,7 @@ public class AddTaxesPage {
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnPrintWadhghat']") private WebElement print_approval_btn;
 	
 	@FindBy(xpath = "//div[text()='Data saved successfully.']") private WebElement data_save;
-	@FindBy(xpath = "/html/body/div[3]/div[7]/button") private WebElement no_OCdate_popup;
+	@FindBy(xpath = "//button[text()='No']") private WebElement no_OCdate_popup;
 	@FindBy(xpath = "/html/body/div[3]/p") private WebElement sendToApproval;
 	
 	@FindBy(xpath = "//a[@id='ContentPlaceHolder1_btnSendToApproval']") private WebElement send_to_approval_btn;
@@ -82,36 +82,69 @@ public class AddTaxesPage {
 	
 	public void Button_save_btn(WebDriver driver) throws InterruptedException
 	{
-//		Thread.sleep(1000);
-//		while(loading_page.getAttribute("aria-hidden").equals("false"))
-//		{
-//			Thread.sleep(500);
-//			System.out.println("waiting");
-//		}
-//		Thread.sleep(500);
-//		
-//		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofMillis(20000));
-//		wait1.until(ExpectedConditions.visibilityOf(Refresh_Taxes_btn));
-//		
+		Thread.sleep(1000);
+		while(loading_page.getAttribute("aria-hidden").equals("false"))
+		{
+			Thread.sleep(500);
+			System.out.println("waiting");
+		}
+		Thread.sleep(500);
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait1.until(ExpectedConditions.visibilityOf(Refresh_Taxes_btn));
+		
 		Thread.sleep(5000);
-//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", save_btn);
-//		Thread.sleep(500);
-//		
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", save_btn);
+		Thread.sleep(500);
+		
 		save_btn.click();
-//		
-//		Thread.sleep(1000);
-//		while(loading_page.getAttribute("aria-hidden").equals("false"))
-//		{
-//			Thread.sleep(500);
-//			System.out.println("waiting");
-//		}
-//		Thread.sleep(500);
-//		
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-//		wait.until(ExpectedConditions.visibilityOf(no_OCdate_popup));
-//		Thread.sleep(2000);
-//		no_OCdate_popup.click();
-//		
+		
+		Thread.sleep(1000);
+		while(loading_page.getAttribute("aria-hidden").equals("false"))
+		{
+			Thread.sleep(500);
+			System.out.println("waiting");
+		}
+		Thread.sleep(500);
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(no_OCdate_popup));
+		Thread.sleep(2000);
+		no_OCdate_popup.click();
+		
+		
+		
+	}
+	
+	public void Button_save_btn2(WebDriver driver) throws InterruptedException
+	{
+		Thread.sleep(1000);
+		while(loading_page.getAttribute("aria-hidden").equals("false"))
+		{
+			Thread.sleep(500);
+			System.out.println("waiting");
+		}
+		Thread.sleep(500);
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait1.until(ExpectedConditions.visibilityOf(Refresh_Taxes_btn));
+		
+		Thread.sleep(5000);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", save_btn);
+		Thread.sleep(500);
+		
+		save_btn.click();
+		
+		Thread.sleep(1000);
+		while(loading_page.getAttribute("aria-hidden").equals("false"))
+		{
+			Thread.sleep(500);
+			System.out.println("waiting");
+		}
+		Thread.sleep(500);
+		
+		
+		
 		
 		
 	}
@@ -133,7 +166,7 @@ public class AddTaxesPage {
 	////////need to review///////////////////////////////////////////////////////////////////////////
 	public void Button_print_approval_btn(WebDriver driver) throws InterruptedException
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
 		wait.until(ExpectedConditions.visibilityOf(print_approval_btn));
 		wait.until(ExpectedConditions.elementToBeClickable(print_approval_btn));
 		Thread.sleep(500);

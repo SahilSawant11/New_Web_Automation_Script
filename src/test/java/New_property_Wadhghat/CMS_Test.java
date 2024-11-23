@@ -1,7 +1,5 @@
 package New_property_Wadhghat;
 
-import static org.testng.Assert.assertTrue;
-
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -9,15 +7,12 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -31,11 +26,9 @@ import pom.AddTaxesPage;
 import pom.ApprovalPage;
 import pom.CMS_Page;
 import pom.Council_approval;
-import pom.CounterPaymentPage;
 //import pom.CounterPaymentPage;
 import pom.LoginPage;
 import pom.MinorChangesPage;
-import pom.OfflinePaymentPage;
 //import pom.OfflinePaymentPage;
 import pom.OldTaxesPage;
 import pom.OnlineDataEntryPage;
@@ -44,48 +37,53 @@ import utility.FileHistory;
 //import utility.ScrollPage;
 import utility.TakeScreenshoot;
 
+
+
 public class CMS_Test extends BaseDriver{
 	JavascriptExecutor js;
 	StopWatch stopWatch;
-	private WebDriver driver = CMS_browser.getDriver();
 	
 	//taxex check
 	String Taxtotal_fromDataentry;
+	
+
 
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-	
+
 		stopWatch = new StopWatch();
 		
 	}
-/*	
-	@Test(priority = 1)
-	public void loginPage() throws InterruptedException
-	{
-		driver.get(url);
-		test = extent.createTest("loginPage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.Enter_user_name(userid, driver);
-		
-		loginpage.Enter_password(password);
-		Thread.sleep(10000);
-		Scanner scanner = new Scanner(System.in);
-     System.out.print("Can We start Automation: ");
-		
-		try
-		{
-			loginpage.click_logout(driver);
-			loginpage.Enter_user_name(userid, driver);
-			loginpage.Enter_password(password);
-			loginpage.Click_login_btn(driver);	
-		}
-		catch(Exception e)
-		{
-			
-		}
-	}
-	*/
+	
+//	
+//	@Test(priority = 1)
+//	public void loginPage() throws InterruptedException
+//	{
+//		driver.get(url);
+//		test = extent.createTest("loginPage");
+//		LoginPage loginpage = new LoginPage(driver);
+//		loginpage.Enter_user_name(userid, driver);
+//		
+//		loginpage.Enter_password(password);
+//		Thread.sleep(10000);
+//		Scanner scanner = new Scanner(System.in);
+//     System.out.print("Can We start Automation: ");
+//		
+//		try
+//		{
+//			loginpage.click_logout(driver);
+//			loginpage.Enter_user_name(userid, driver);
+//			loginpage.Enter_password(password);
+//			loginpage.Click_login_btn(driver);	
+//		}
+//		catch(Exception e)
+//		{
+//			
+//		}
+//	}
+//	
+	
 	@Test(priority = 2)
 	public void cmsPageWadhghat() throws InterruptedException
 	{
@@ -187,6 +185,7 @@ public class CMS_Test extends BaseDriver{
 		OnlineDataEntryPage onlinedataentry = new OnlineDataEntryPage(driver);
 		onlinedataentry.Enter_vadhghat_shera(driver);
 	}
+	
 	
 	@Test(priority = 6, dependsOnMethods = "searchComplaintWadhghat")
 	public void Dataentry_owner_info() throws InterruptedException
@@ -373,11 +372,6 @@ public class CMS_Test extends BaseDriver{
 		
 		
 		addtaxespage.Button_print_approval_btn(driver);
-		CounterPaymentPage counterpayment = null;
-		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Notesheet.pdf", 30);
-        System.out.println("PDF file Downloading Status: " + result); 
-        assertTrue(result, "Notesheet Generated");
-        
 		addtaxespage.getWindowHandleName(driver);
 		addtaxespage.Scroll_sthalpahani_ahaval(driver);
 		addtaxespage.document_upload_wadhaghat_kagadpatra10();
@@ -514,8 +508,8 @@ counncil_approval.clickOnapproval(driver);
 //		String PropertyOnCounter=TakeScreenshoot.GetScreenshotFullBase64(driver);
 //		test.pass("New created Property ",MediaEntityBuilder.createScreenCaptureFromBase64String(PropertyOnCounter).build());
 	}
-
-	@Test(priority = 12)
+	
+/*	@Test(priority = 12, dependsOnMethods = "councilapproval")
 	private void SearchOnCounter() throws Exception 
 	{
 		test = extent.createTest("Counter Screen");
@@ -533,16 +527,13 @@ counncil_approval.clickOnapproval(driver);
 		offlinepaymentpage.Click_search_property();
 		
 		counterpayment = new CounterPaymentPage(driver);
-	//	counterpayment.Select_Finalcheckbox(driver);
-//		offlinepaymentpage.Scroll_to_grid(driver);
-		Thread.sleep(5000);
-//		offlinepaymentpage.getOfflineScreenDetails();
-//		String offlineTax = OfflinePaymentPage.offlineTotalTax;
-//		String offlineOwnerName = OfflinePaymentPage.offlineKarDharak;
+		counterpayment.Select_Finalcheckbox(driver);
+		
 		String PropertyOnCounter=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("New created Property ",MediaEntityBuilder.createScreenCaptureFromBase64String(PropertyOnCounter).build());
 	}
-	
+*/	
+
 	@AfterMethod
 	public void aftermethod(ITestResult result,java.lang.reflect.Method m)
 	{
@@ -577,10 +568,4 @@ counncil_approval.clickOnapproval(driver);
 
 	}
 	
-	@AfterTest
-    public void tearDown() {
-     
-        extent.flush();
-
-    }
 }

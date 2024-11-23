@@ -1,5 +1,7 @@
 package Trade_Panvel;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 import org.apache.commons.lang3.time.StopWatch;
 import org.testng.annotations.BeforeTest;
@@ -13,6 +15,7 @@ import pojo.CMS_browser;
 import pom_TradeLicense.ApplicationApprovalPage;
 import pom_TradeLicense.DataEntryPage_TradeLicense;
 import pom_TradeLicense.LoginPage_TradeLicense;
+import pom_TradeLicense.PaymentPage_TradeLicense;
 import utility.TakeScreenshoot;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -136,20 +139,72 @@ public class Trade_Application_Approval extends BaseDriver {
 		Thread.sleep(5000);
 		driver.switchTo().window(firstWindowHandle);
 		Thread.sleep(5000);
-	//	dataentrypage.Click_print_btn(driver);
+		dataentrypage.Click_print_btn(driver);
 		driver.switchTo().window(firstWindowHandle);
 	}
 
 	@Test(priority = 3)
-	public void applicationapproval() throws Exception
+	public void applicationapproval1() throws Exception
 	{
-		test = extent.createTest("Application Approval");
+
+		test = extent.createTest("First Application Approval");
 		ApplicationApprovalPage approvalpage = new ApplicationApprovalPage(driver);
 
 		approvalpage.Application_Approval_Page_link(url, driver);
 		approvalpage.Search_application(driver, application_no);
-
+		approvalpage.Button_show_btn(driver);
+		String actualTax = approvalpage.get_tax(driver);
+		String actualEmail = approvalpage.get_email(driver);
+		String actualAddress = approvalpage.get_address(driver);
+		String actualMobile = approvalpage.get_mobile(driver);
+		String expectedTax = "1400";
+		String expectedEmail = "abc@gmail.com";
+		String expectedAddress = "Address";
+		String expectedMobile = "1111111111";
+		assertEquals(actualTax, expectedTax,"values dont match");
+		test.info("Tax match the expected tax of Rs. 1400");
+		assertEquals(actualEmail, expectedEmail,"values dont match");
+		test.info("Email ID match");
+		assertEquals(actualAddress, expectedAddress,"values dont match");
+		test.info("Address match");
+		assertEquals(actualMobile, expectedMobile,"values dont match");
+		test.info("Mobile no. match");
+		approvalpage.Enter_remark(driver);
+		approvalpage.Button_arjavhal_btn(driver);
+		approvalpage.Button_approved1_btn(driver);
+	}
 	
+	@Test(priority = 4)
+	public void applicationapproval2() throws Exception
+	{
+		test = extent.createTest("Second Application Approval");
+		ApplicationApprovalPage approvalpage = new ApplicationApprovalPage(driver);
+
+		approvalpage.Application_Approval_Page_link(url, driver);
+		approvalpage.Search_application(driver, application_no);
+		approvalpage.Button_show_btn(driver);
+		approvalpage.Enter_remark(driver);
+		approvalpage.Button_arjavhal_btn(driver);
+		approvalpage.Button_approved1_btn(driver);
+		
+	}
+	
+	@Test(priority = 5)
+	public void licensepayment() throws Exception
+	{
+
+		test = extent.createTest("License Payment");
+		PaymentPage_TradeLicense paypage = new PaymentPage_TradeLicense(driver);
+		paypage.Payment_Page_link(url, driver);
+		paypage.Search_application(driver, application_no);
+		paypage.Button_search_btn(driver);
+		paypage.Button_pay_btn(driver);
+		paypage.Enter_email(driver, change_email);
+		paypage.Enter_billbook(driver);
+		paypage.Enter_billbookbox(driver);
+		paypage.Button_paynow_btn(driver);
+		paypage.Download_reciept(driver);
+		
 	}
 	
 	@AfterMethod

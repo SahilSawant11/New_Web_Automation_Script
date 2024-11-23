@@ -3,14 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Trade_Panvel.Trade_Application_Approval">
+      <class name="New_property_Wadhghat.OC_Correction">
         <methods>
-          <include name="beforetest"/>
-          <include name="aftertest"/>
-          <include name="applicationapproval"/>
+          <include name="checkTaxesOnCounter"/>
           <include name="aftermethod"/>
+          <include name="WadhghatApproval"/>
+          <include name="OC_date_entry"/>
+          <include name="beforetest"/>
+          <include name="councilapproval"/>
+          <include name="ocComplaintRegister"/>
+          <include name="AddTaxes_and_UploadFiles"/>
+          <include name="searchComplaintWadhghat"/>
         </methods>
-      </class> <!-- Trade_Panvel.Trade_Application_Approval -->
+      </class> <!-- New_property_Wadhghat.OC_Correction -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

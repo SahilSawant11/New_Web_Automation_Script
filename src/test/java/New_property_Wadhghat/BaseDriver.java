@@ -31,7 +31,9 @@ public class BaseDriver {
 	static public String sector;
 	static public String PropertyNo;
 	
-	
+	static public String nodex ="KH";
+	static public String sectorx = "1";
+	static public String PropertyNox = "500022";
 	 
 	
 	static public String node1;
