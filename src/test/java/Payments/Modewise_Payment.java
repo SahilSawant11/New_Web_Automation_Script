@@ -34,7 +34,7 @@ import pom.OfflinePaymentPage;
 import utility.Delete_Files;
 import utility.TakeScreenshoot;
 
-public class alltypepayments extends BaseDriver{
+public class Modewise_Payment extends BaseDriver{
 	
 	StopWatch stopWatch;
 	private WebDriver driver = CMS_browser.getDriver();
@@ -43,7 +43,7 @@ public class alltypepayments extends BaseDriver{
 @Test(priority = 2 )
 	public void CashPayment() throws Exception
 	{	
-		test = extent.createTest("cash Payment");
+		test = extent.createTest("Cash Payment");
 		CounterPaymentPage counterpayment = null;
 		stopWatch = new StopWatch();
 	
@@ -159,7 +159,7 @@ public class alltypepayments extends BaseDriver{
 		}	
 
 	}
-//	enabled = false
+
 	@Test(priority = 3,dependsOnMethods = "CashPayment")
 	public void AdvancePayment() throws Exception
 	{
@@ -217,7 +217,6 @@ System.out.println("PDF file Downloading Status: " + result);
         
 	}
 	
-
 	@Test(priority = 4 )  //,dependsOnMethods = "loginPage"
 	public void chequePayment() throws Exception
 	{
@@ -236,7 +235,7 @@ System.out.println("PDF file Downloading Status: " + result);
 		offlinepaymentpage.Select_sector_no(driver, sector2);
 		offlinepaymentpage.Enter_property_no(driver, PropertyNo2);
 		/////
-		test.log(Status.INFO, "Property for cheque Payment : "+node2+"-"+sector2+"-"+PropertyNo2);
+		test.log(Status.INFO, "Property for cheque Payment(Fail Scenario) : "+node2+"-"+sector2+"-"+PropertyNo2);
 		stopWatch.start();
 		offlinepaymentpage.Click_search_property();
 			
@@ -342,7 +341,7 @@ System.out.println("PDF file Downloading Status: " + result);
 		DDchequeapproval.SelectCheque(driver);
 		
 		String chequeforclearence=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.pass("selected Cheque for Not Clearence",MediaEntityBuilder.createScreenCaptureFromBase64String(chequeforclearence).build());
+		test.pass("Selected Cheque for Not Clearence",MediaEntityBuilder.createScreenCaptureFromBase64String(chequeforclearence).build());
 		
 		stopWatch.start();
 		DDchequeapproval.ChequefailBtn(driver);
@@ -386,12 +385,11 @@ System.out.println("PDF file Downloading Status: " + result);
 
 	}
 	
-
 	@Test(priority = 6)  //,dependsOnMethods = "loginPage"
 
 	public void chequePaymentforClear() throws Exception
 	{
-		test = extent.createTest("Cheque Payment");
+		test = extent.createTest("Cheque Payment for Clear");
 		CounterPaymentPage counterpayment = null;
 		stopWatch = new StopWatch();
 	
@@ -406,7 +404,7 @@ System.out.println("PDF file Downloading Status: " + result);
 		offlinepaymentpage.Select_sector_no(driver, sector3);
 		offlinepaymentpage.Enter_property_no(driver, PropertyNo3);
 		/////
-		test.log(Status.INFO, "Property for cheque Payment : "+node3+"-"+sector3+"-"+PropertyNo3);
+		test.log(Status.INFO, "Property for cheque Payment(Clear scenario) : "+node3+"-"+sector3+"-"+PropertyNo3);
 		stopWatch.start();
 		offlinepaymentpage.Click_search_property();
 			
@@ -507,12 +505,12 @@ System.out.println("PDF file Downloading Status: " + result);
 		DDchequeapproval.SelectCheque(driver);
 		
 		String chequeforclearence=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.pass("selected Cheque for Clearence",MediaEntityBuilder.createScreenCaptureFromBase64String(chequeforclearence).build());
+		test.pass("Selected Cheque for Clearence",MediaEntityBuilder.createScreenCaptureFromBase64String(chequeforclearence).build());
 		
 		stopWatch.start();
 		DDchequeapproval.ChequeclearBtn(driver);
 		DDchequeapproval.Yes_popUp(driver);
-		DDchequeapproval.WaitTillGetClear(driver);
+	//	DDchequeapproval.WaitTillGetClear(driver);
 		test.info("Time duration of Clearing Cheque was: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();
 		
@@ -551,7 +549,7 @@ System.out.println("PDF file Downloading Status: " + result);
 		
 
 	}
-
+	
 	@Test(priority = 8)
 	public void Card() throws Exception
 	{
@@ -674,6 +672,106 @@ System.out.println("PDF file Downloading Status: " + result);
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Counter is not cleared ");
 		}
+	}
+	
+	@Test(priority = 9)  //,dependsOnMethods = "loginPage"
+
+	public void ddPayment() throws Exception
+	{
+		test = extent.createTest("DD Payment");
+		CounterPaymentPage counterpayment = null;
+		stopWatch = new StopWatch();
+	
+		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.offlinePaymentPage(url, driver);
+		
+		offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+			
+		offlinepaymentpage.Select_node_no(driver, node11);
+		offlinepaymentpage.Select_sector_no(driver, sector11);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo11);
+		/////
+		test.log(Status.INFO, "Property for DD Payment : "+node11+"-"+sector11+"-"+PropertyNo11);
+		stopWatch.start();
+		offlinepaymentpage.Click_search_property();
+			
+		counterpayment = new CounterPaymentPage(driver);
+		counterpayment.Select_Finalcheckbox(driver);
+		Thread.sleep(5000);
+		
+		String abc="BMC";;
+		 if (!abc.equals(node11)) {
+			 try {
+			        counterpayment.Select_APartcheckbox(driver);
+			        
+			        try {
+			            counterpayment.confirm_payment(driver);
+			        } catch (Exception e) {
+			           
+			        }
+			        
+			    } catch (Exception e1) {
+			       
+			    }
+				
+	        } else {
+	          
+	        }
+	
+		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
+		counterpayment.Enter_mobile_no(driver, "1111111111");
+		counterpayment.Select_bill_book_no("TEST2425");
+		counterpayment.Select_payment_mode("DD");
+		counterpayment.Select_bankname(driver, "Bank OF India(BOI)");
+//		counterpayment.Enter_behalf_payer_name(driver, "abc");
+			counterpayment.Enter_cheque_dd_transation_no(driver, "11223344");
+			LocalDate today = LocalDate.now();
+			
+			 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		        String formattedDate = today.format(formatter);
+			
+			counterpayment.Enter_cheque_dd_transation_date(driver, formattedDate);
+		
+		
+		String EnteredChequeDetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(EnteredChequeDetails).build());
+		
+//		counterpayment.Click_ProceedAdvancePay(driver);
+		/////
+		stopWatch.reset();
+		stopWatch.start();
+		Thread.sleep(3000);
+		counterpayment.Click_pay_now(driver);
+		
+		try {
+			counterpayment.Click_pay_now(driver);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		counterpayment.confirm_payment(driver);
+		counterpayment.Check_transaction_id(driver);
+		
+		counterpayment.Click_receipts_btn(driver);
+		counterpayment.label_downloadReceipt(driver);
+		counterpayment.downloadReceipt(driver);
+		
+		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		counterpayment.compareUpicIds(test);
+		stopWatch.stop();
+		/////
+		
+		
+		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
+		
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Chequepay2.pdf", 30);
+	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+
+		System.out.println("PDF file Downloading Status: " + result); 
+		
+
 	}
 		
 	@AfterMethod

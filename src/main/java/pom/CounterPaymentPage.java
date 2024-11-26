@@ -48,6 +48,11 @@ public class CounterPaymentPage {
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVPropTax_chkGrid_1']") private WebElement row2;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_GVPropTax_chkGrid_2']") private WebElement row3;
 	
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[3]/td[2]/input") private WebElement row2_Partial_btn;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtPayableTotalPartialTax']") private WebElement tax_Partial_box;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_btnPayableTotalPartialTax']") private WebElement tax_Partial_btn;
+	
+	
 	@FindBy(xpath = "(//input[@class='edttxbtn edit-button'])[1]") private WebElement pay_optionPendingFull;
 	@FindBy(xpath = "(//input[@class='edttxbtn edit-button'])[3]") private WebElement pay_optionFull;
 	
@@ -407,6 +412,23 @@ public class CounterPaymentPage {
 			wait.until(ExpectedConditions.visibilityOf(row2));
 			row2.click();				
 	}
+	
+	public void row2_partialpay_btn(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		wait.until(ExpectedConditions.visibilityOf(row2_Partial_btn));
+		row2_Partial_btn.click();
+	}
+	
+	public void tax_partial_btn(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		wait.until(ExpectedConditions.visibilityOf(tax_Partial_btn));
+		tax_Partial_btn.click();
+	}
+	
 	
 	public void row3(WebDriver driver)
 	{
@@ -1045,6 +1067,19 @@ public class CounterPaymentPage {
 		}
 		
 	}
+
+	public void error_pop_up(WebDriver driver ,ExtentTest test) {
+	    try {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	        WebElement popupElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/p")));
+	        String popupMessage = popupElement.getText();
+	        test.info("Pop Displayed: " + popupMessage);
+	    } catch (Exception e) {
+	        test.warning("No error messages popped up " + e.getMessage());
+	    }
+	}
+
+
 	
 	
 }
