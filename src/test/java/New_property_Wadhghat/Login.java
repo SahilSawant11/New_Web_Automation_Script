@@ -38,7 +38,7 @@ public class Login extends BaseDriver {
 	{
 		Delete_Files Delete_files = new Delete_Files(driver);
 		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");
+		Delete_files.Delete_files("\\temp\\");
 		
 		extent = new ExtentReports();
 		spark = new ExtentSparkReporter("ExtentReport.html");

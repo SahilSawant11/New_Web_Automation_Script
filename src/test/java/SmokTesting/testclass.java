@@ -61,11 +61,7 @@ public class testclass {
         } else {
             System.out.println("User canceled the input.");
         }
-		
-		 
-
-	       
-		
+		    
 	}
 
 }
