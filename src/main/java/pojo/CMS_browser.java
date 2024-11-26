@@ -14,6 +14,9 @@ public class CMS_browser {
 		HashMap<String,Object> chromePrefs = new HashMap<String, Object>();
 		chromePrefs.put("plugins.always_open_pdf_externally", true);
 		
+		chromePrefs.put("download.prompt_for_download", false); 
+		chromePrefs.put("safebrowsing.enabled", "false"); 
+		
 		 chromePrefs.put("download.default_directory",
 				 System.getProperty("user.dir") + File.separator + "PdfReports");
 		 
@@ -51,7 +54,7 @@ public class CMS_browser {
 	    		 ChromeOptions options = new ChromeOptions();
 	    			options.setExperimentalOption("prefs", chromePrefs);
 	    			options.addArguments("--remote-allow-origins=*");
-	    			
+
 	    			options.addArguments("--disable-web-security");
 	    			options.addArguments("--disable-site-isolation-trials");
 	    			options.addArguments("--allow-running-insecure-content")  ;

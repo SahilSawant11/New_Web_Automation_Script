@@ -76,7 +76,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 //		}
 //	}
 	
-	@Test(priority = 2,enabled=false)//,dependsOnMethods = "loginPage"
+	@Test(priority = 2)//,dependsOnMethods = "loginPage"
 	public void CashPayment() throws Exception
 	{
 		test = extent.createTest("cash Payment");
@@ -172,7 +172,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 8,enabled=false)
+	@Test(priority = 3)
 	public void AdvancePayment() throws Exception
 	{
 		
@@ -231,7 +231,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 4,enabled=false)//,dependsOnMethods = "loginPage"
+	@Test(priority = 4)//,dependsOnMethods = "loginPage"
 	public void chequePayment() throws Exception
 	{
 		test = extent.createTest("Cheque Payment");
@@ -310,7 +310,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 5,enabled=false)//,dependsOnMethods = "chequePayment"
+	@Test(priority = 5)//,dependsOnMethods = "chequePayment"
 	public void cheque_fail() throws Exception
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -377,7 +377,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 6, enabled = false)
+	@Test(priority = 6,enabled=false)
 	public void cheque_clear() throws Exception
 	{
 		

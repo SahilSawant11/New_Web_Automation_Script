@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Payments.Typewise_Payment">
+      <class name="PCMC_All_Tests.PCMC_alltypepayments">
         <methods>
-          <include name="aftertest"/>
-          <include name="A_Part_CashPayment"/>
-          <include name="BC_Part_CashPayment"/>
-          <include name="C_Part_CashPayment"/>
           <include name="aftermethod"/>
-          <include name="AB_Part_CashPayment"/>
-          <include name="AC_Part_CashPayment"/>
+          <include name="chequePayment"/>
+          <include name="cheque_fail"/>
+          <include name="CashPayment"/>
+          <include name="Card"/>
           <include name="beforetest"/>
-          <include name="B_Part_CashPayment"/>
+          <include name="cheque_clear"/>
+          <include name="aftertest"/>
+          <include name="AdvancePayment"/>
         </methods>
-      </class> <!-- Payments.Typewise_Payment -->
+      </class> <!-- PCMC_All_Tests.PCMC_alltypepayments -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

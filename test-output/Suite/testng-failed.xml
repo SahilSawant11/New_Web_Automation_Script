@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="MODE WISE WISE(failed)">
+  <test name="All Type Payments(failed)">
     <classes>
-      <class name="Payments.Modewise_Payment">
+      <class name="PCMC_All_Tests.PCMC_alltypepayments">
         <methods>
           <include name="aftermethod"/>
-          <include name="AdvancePayment"/>
-          <include name="CashPayment"/>
+          <include name="chequePayment"/>
+          <include name="cheque_fail"/>
+          <include name="Card"/>
+          <include name="beforetest"/>
+          <include name="cheque_clear"/>
           <include name="aftertest"/>
         </methods>
-      </class> <!-- Payments.Modewise_Payment -->
+      </class> <!-- PCMC_All_Tests.PCMC_alltypepayments -->
     </classes>
-  </test> <!-- MODE WISE WISE(failed) -->
+  </test> <!-- All Type Payments(failed) -->
+  <test name="Pcmc Reports(failed)">
+    <classes>
+      <class name="PCMC_All_Tests.PCMC_ReportTest">
+        <methods>
+          <include name="headwise_report_for_cash"/>
+          <include name="aftertest"/>
+          <include name="bharna_report_for_all_modes"/>
+          <include name="challan_report_for_cheque"/>
+          <include name="challan_report_for_cash"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- PCMC_All_Tests.PCMC_ReportTest -->
+    </classes>
+  </test> <!-- Pcmc Reports(failed) -->
 </suite> <!-- Failed suite [Suite] -->

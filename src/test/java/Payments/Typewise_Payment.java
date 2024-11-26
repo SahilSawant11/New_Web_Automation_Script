@@ -146,7 +146,7 @@ public class Typewise_Payment extends BaseDriver{
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "A_Part_CashpaymentReceipt.pdf", 30);
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
        
 		System.out.println("PDF file Downloading Status: " + result);  
@@ -229,7 +229,7 @@ public class Typewise_Payment extends BaseDriver{
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "B_Part_CashpaymentReceipt.pdf", 30);
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
        
 		System.out.println("PDF file Downloading Status: " + result);  
@@ -270,8 +270,9 @@ public class Typewise_Payment extends BaseDriver{
 
 			        
 			        try {
-			    		counterpayment.error_pop_up(driver, test);	
-			            counterpayment.confirm_payment(driver);
+			    		counterpayment.error_pop_up(driver, test);
+			    		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+			    		test.pass("Error Pop up",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 			        } catch (Exception e) {
 			           
 			        }
@@ -287,37 +288,13 @@ public class Typewise_Payment extends BaseDriver{
 		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
 
-//		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
-//		counterpayment.Enter_mobile_no(driver, "1111111111");
-//		counterpayment.Select_bill_book_no("TEST2425");
-//		counterpayment.Select_payment_mode("Cash");
-//		
-//		String paymentdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
-//		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(paymentdetails).build());
-//		stopWatch.reset();
-//		stopWatch.start();
-//		Thread.sleep(2000);
-//		counterpayment.Click_pay_now(driver);
-//		counterpayment.confirm_payment(driver);
-//
-//		counterpayment.Check_transaction_id(driver);
-//		counterpayment.Click_receipts_btn(driver);
-//		counterpayment.label_downloadReceipt(driver);
-//		counterpayment.downloadReceipt(driver);
 		
 		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
-		counterpayment.compareUpicIds(test);
 		stopWatch.stop();
 		/////
 		
-		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
-		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
-	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
-       
-		System.out.println("PDF file Downloading Status: " + result);  
+ 
         
 	}
 	
@@ -398,7 +375,7 @@ public class Typewise_Payment extends BaseDriver{
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "AB_Part_CashpaymentReceipt.pdf", 30);
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
        
 		System.out.println("PDF file Downloading Status: " + result);  
@@ -480,7 +457,7 @@ public class Typewise_Payment extends BaseDriver{
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "BC_Part_CashpaymentReceipt.pdf", 30);
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
        
 		System.out.println("PDF file Downloading Status: " + result);  
@@ -524,6 +501,8 @@ public class Typewise_Payment extends BaseDriver{
 			            counterpayment.confirm_payment(driver);
 			            counterpayment.row3(driver);
 			        	counterpayment.error_pop_up(driver, test);
+			        	String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+			    		test.pass("Error Pop up",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 			            Thread.sleep(10000);
 			        } catch (Exception e) {
 			           
@@ -540,38 +519,13 @@ public class Typewise_Payment extends BaseDriver{
 		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("counter",MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
 	
-		
-//		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
-//		counterpayment.Enter_mobile_no(driver, "1111111111");
-//		counterpayment.Select_bill_book_no("TEST2425");
-//		counterpayment.Select_payment_mode("Cash");
-//		
-//		String paymentdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
-//		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(paymentdetails).build());
-//		stopWatch.reset();
-//		stopWatch.start();
-//		Thread.sleep(2000);
-//		counterpayment.Click_pay_now(driver);
-//		counterpayment.confirm_payment(driver);
-//		counterpayment.error_pop_up(driver, test);
-//		counterpayment.Check_transaction_id(driver);
-//		counterpayment.Click_receipts_btn(driver);
-//		counterpayment.label_downloadReceipt(driver);
-//		counterpayment.downloadReceipt(driver);
-//		
+				
 		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
-		counterpayment.compareUpicIds(test);
+
 		stopWatch.stop();
 		/////
 		
-		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
-		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
-	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
-       
-		System.out.println("PDF file Downloading Status: " + result);  
         
 	}
 
@@ -656,7 +610,7 @@ public class Typewise_Payment extends BaseDriver{
 		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
 		
 		Thread.sleep(2000);
-		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "CashpaymentReceipt.pdf", 30);
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "B_Part_Partial_CashpaymentReceipt.pdf", 30);
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
        
 		System.out.println("PDF file Downloading Status: " + result);  

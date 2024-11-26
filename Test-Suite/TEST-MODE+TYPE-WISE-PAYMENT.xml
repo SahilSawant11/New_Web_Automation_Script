@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-
+    
 <test name="Login">
     <classes>
     	<class name="New_property_Wadhghat.Login"/>
     </classes>   
 </test> 
-  
+
 <test name="MODE WISE WISE">
     <classes>
     	<class name="Payments.Modewise_Payment"/>
@@ -21,4 +21,3 @@
 </test> 
 
 </suite> 
- <!-- <class name="Payments.alltypepayments"/>-->
