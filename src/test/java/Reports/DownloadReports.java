@@ -19,7 +19,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import New_property_Wadhghat.BaseDriver;
-import Payments.alltypepayments;
+import Payments.Modewise_Payment;
 import pojo.CMS_browser;
 import pom.CMS_Page;
 import pom.CounterPaymentPage;
