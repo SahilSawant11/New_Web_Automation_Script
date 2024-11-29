@@ -10,7 +10,7 @@
 
  <test name="All Payments">
 	<classes>
-		<class name="Payments.alltypepayments"/>
+		<class name="Payments.Modewise_Payment"/>
 	</classes>
 </test>
 

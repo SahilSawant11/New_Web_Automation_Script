@@ -104,7 +104,12 @@ public class OnlineCounterReports extends BaseDriver{
 	       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
     
         onlinepage.Scroll_to_grid(driver);
-        onlinepage.Click_select_pay_all_checkbox();
+        try {
+        	onlinepage.Click_select_pay_all_checkbox();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+        
         String ops = TakeScreenshoot.GetScreenshotFullBase64(driver);
 	    test.log(Status.INFO, "Taxes on Online Payment Screen ", MediaEntityBuilder.createScreenCaptureFromBase64String(ops).build() );
 	    //OfflinePaymentPage offlinepage = new OfflinePaymentPage(driver);

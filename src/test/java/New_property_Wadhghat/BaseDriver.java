@@ -314,55 +314,56 @@ public class BaseDriver {
 		     PropertyNo12 = testdb.getName12();
 				
 	        } else {
+	        	// To get properties for BRM and PCMC
 	        	 String test1=testdb.getId1();
-	    	     node1 = test1.substring(0, 3);  // Get "BMC"
-	    	     sector1 = test1.substring(3); // Get "12"   
+	    	     node1 = test1.substring(0, 3);  
+	    	     sector1 = test1.substring(3);    
 	    	     PropertyNo1=testdb.getName1();
 	    	     
 	    	     String test2=testdb.getId1();
-	    	     node2 = test2.substring(0, 3);  // Get "KH"
-	    	     sector2 = test2.substring(3); // Get "12"   
+	    	     node2 = test2.substring(0, 3);  
+	    	     sector2 = test2.substring(3);    
 	    	     PropertyNo2=testdb.getName2();
 	    	     
 	    	     String test3=testdb.getId3();
-	    	     node3 = test3.substring(0, 3);  // Get "KH"
-	    	     sector3 = test3.substring(3); // Get "12"   
+	    	     node3 = test3.substring(0, 3);  
+	    	     sector3 = test3.substring(3);   
 	    	     PropertyNo3=testdb.getName3();
 	    	     
 	    	     
 	    	     String test4=testdb.getId4();
-	    	     node4 = test4.substring(0, 3);  // Get "KH"
-	    	     sector4 = test4.substring(3); // Get "12"   
+	    	     node4 = test4.substring(0, 3);  
+	    	     sector4 = test4.substring(3);   
 	    	     PropertyNo4=testdb.getName4();
 	    	     
 	    	     String test5=testdb.getId5();
-	    	     node5 = test5.substring(0, 3);  // Get "KH"
-	    	     sector5 = test5.substring(3); // Get "12"   
+	    	     node5 = test5.substring(0, 3);  
+	    	     sector5 = test5.substring(3);   
 	    	     PropertyNo5=testdb.getName5();
 	    	     
 	    	     String test6=testdb.getId6();
-	    	     node6 = test6.substring(0, 3);  // Get "KH"
-	    	     sector6 = test6.substring(3); // Get "12"   
+	    	     node6 = test6.substring(0, 3);  
+	    	     sector6 = test6.substring(3);  
 	    	     PropertyNo6=testdb.getName6();
 	    	     
 	    	     String test7=testdb.getId7();
-	    	     node7 = test7.substring(0, 3);  // Get "KH"
-	    	     sector7 = test7.substring(3); // Get "12"   
+	    	     node7 = test7.substring(0, 3);  
+	    	     sector7 = test7.substring(3);   
 	    	     PropertyNo7=testdb.getName7();
 	    	     
 	    	     String test8=testdb.getId8();
-	    	     node8 = test8.substring(0, 3);  // Get "KH"
-	    	     sector8 = test8.substring(3); // Get "12"   
+	    	     node8 = test8.substring(0, 3);  
+	    	     sector8 = test8.substring(3);   
 	    	     PropertyNo8=testdb.getName8();
 	    	     
 	    	     String test9=testdb.getId9();
-	    	     node9 = test9.substring(0, 3);  // Get "KH"
-	    	     sector9 = test9.substring(3); // Get "12"   
+	    	     node9 = test9.substring(0, 3);  
+	    	     sector9 = test9.substring(3);   
 	    	     PropertyNo9=testdb.getName9();
 	    	     
 	    	     String test10=testdb.getId10();
-	    	     node10 = test10.substring(0, 3);  // Get "KH"
-	    	     sector10 = test10.substring(3); // Get "12"   
+	    	     node10 = test10.substring(0, 3);  
+	    	     sector10 = test10.substring(3);  
 	    	     PropertyNo10=testdb.getName10();
 	    	     
 	    	     String test11=testdb.getId11();

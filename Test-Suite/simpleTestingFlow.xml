@@ -7,11 +7,12 @@
 		<class name="New_property_Wadhghat.Login"/>
 	</classes>
 </test>
- <test name="CreateNewProperty">
+<test name="CollectionReport">
   <classes>
-    <class name="New_property_Wadhghat.CMS_Test"/>
-    </classes>
-  </test>
+    <class name="Reports.CollectionReports"/>
+  </classes>
+</test>
+
  
 </suite> <!-- Suite -->
  
