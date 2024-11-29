@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="12" passed="8" failed="2" skipped="2">
   <reporter-output>
   </reporter-output>
@@ -12,11 +13,27 @@
           </reporter-output>
         </test-method> <!-- beforetest -->
         <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@7f2cfe3f]" started-at="2024-11-29T15:49:20Z" name="loginPage" finished-at="2024-11-29T15:49:31Z" duration-ms="10488" status="PASS">
+=======
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-26T18:45:21 IST" name="Suite" finished-at="2024-11-26T18:55:21 IST" duration-ms="600218">
+    <groups>
+    </groups>
+    <test started-at="2024-11-26T18:45:21 IST" name="Login" finished-at="2024-11-26T18:45:44 IST" duration-ms="22858">
+      <class name="New_property_Wadhghat.Login">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.Login@3c41ed1d]" started-at="2024-11-26T18:45:21 IST" name="beforetest" finished-at="2024-11-26T18:45:27 IST" duration-ms="6461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforetest -->
+        <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@3c41ed1d]" started-at="2024-11-26T18:45:27 IST" name="loginPage" finished-at="2024-11-26T18:45:44 IST" duration-ms="16359" status="PASS">
+>>>>>>> test
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPage -->
       </class> <!-- New_property_Wadhghat.Login -->
     </test> <!-- Login -->
+<<<<<<< HEAD
     <test started-at="2024-11-29T10:19:31Z" name="CreateNewProperty" finished-at="2024-11-29T10:25:08Z" duration-ms="337472">
       <class name="New_property_Wadhghat.CMS_Test">
         <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:49:31Z" name="beforetest" finished-at="2024-11-29T15:49:31Z" duration-ms="0" status="PASS">
@@ -32,6 +49,19 @@
             <param index="0">
               <value>
                 <![CDATA[[TestResult name=cmsPageWadhghat status=SUCCESS method=CMS_Test.cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
+=======
+    <test started-at="2024-11-26T18:45:44 IST" name="All Payments" finished-at="2024-11-26T18:55:21 IST" duration-ms="577334">
+      <class name="Payments.Modewise_Payment">
+        <test-method signature="CashPayment()[pri:2, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:45:44 IST" name="CashPayment" finished-at="2024-11-26T18:47:20 IST" duration-ms="95772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CashPayment -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:47:20 IST" name="aftermethod" finished-at="2024-11-26T18:47:20 IST" duration-ms="598" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CashPayment status=SUCCESS method=Modewise_Payment.CashPayment()[pri:2, instance:Payments.Modewise_Payment@5644dc81] output={null}]]]>
+>>>>>>> test
               </value>
             </param>
             <param index="1">
@@ -43,6 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
+<<<<<<< HEAD
         <test-method signature="cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:49:48Z" name="cmsRegisterPageWadhghat" finished-at="2024-11-29T15:50:04Z" duration-ms="16464" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -396,6 +427,17 @@ Session ID: da5c4fbf757c871be95c25a9b27c8fc1
             <param index="0">
               <value>
                 <![CDATA[[TestResult name=TaxCompareTest status=FAILURE method=OnlineCounterReports.TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@64beebb7] output={null}]]]>
+=======
+        <test-method signature="AdvancePayment()[pri:3, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:47:20 IST" name="AdvancePayment" finished-at="2024-11-26T18:48:14 IST" depends-on-methods="Payments.Modewise_Payment.CashPayment" duration-ms="54193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdvancePayment -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:48:14 IST" name="aftermethod" finished-at="2024-11-26T18:48:15 IST" duration-ms="205" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AdvancePayment status=SUCCESS method=Modewise_Payment.AdvancePayment()[pri:3, instance:Payments.Modewise_Payment@5644dc81] output={null}]]]>
+>>>>>>> test
               </value>
             </param>
             <param index="1">
@@ -407,11 +449,140 @@ Session ID: da5c4fbf757c871be95c25a9b27c8fc1
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.OnlineCounterReports@64beebb7]" started-at="2024-11-29T15:55:36Z" name="tearDown" finished-at="2024-11-29T15:55:36Z" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Reports.OnlineCounterReports -->
     </test> <!-- Online Counter Checking -->
+=======
+        <test-method signature="chequePayment()[pri:4, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:48:15 IST" name="chequePayment" finished-at="2024-11-26T18:49:30 IST" duration-ms="75147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chequePayment -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:49:30 IST" name="aftermethod" finished-at="2024-11-26T18:49:30 IST" duration-ms="221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chequePayment status=SUCCESS method=Modewise_Payment.chequePayment()[pri:4, instance:Payments.Modewise_Payment@5644dc81] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Payments.Modewise_Payment.chequePayment() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="cheque_fail()[pri:5, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:49:30 IST" name="cheque_fail" finished-at="2024-11-26T18:50:14 IST" depends-on-methods="Payments.Modewise_Payment.chequePayment" duration-ms="44366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cheque_fail -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:50:14 IST" name="aftermethod" finished-at="2024-11-26T18:50:15 IST" duration-ms="239" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cheque_fail status=SUCCESS method=Modewise_Payment.cheque_fail()[pri:5, instance:Payments.Modewise_Payment@5644dc81] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Payments.Modewise_Payment.cheque_fail() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="chequePaymentforClear()[pri:6, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:50:15 IST" name="chequePaymentforClear" finished-at="2024-11-26T18:51:34 IST" duration-ms="79902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chequePaymentforClear -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:51:34 IST" name="aftermethod" finished-at="2024-11-26T18:51:35 IST" duration-ms="257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=chequePaymentforClear status=SUCCESS method=Modewise_Payment.chequePaymentforClear()[pri:6, instance:Payments.Modewise_Payment@5644dc81] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Payments.Modewise_Payment.chequePaymentforClear() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="cheque_clear()[pri:7, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:51:35 IST" name="cheque_clear" finished-at="2024-11-26T18:52:23 IST" depends-on-methods="Payments.Modewise_Payment.chequePaymentforClear" duration-ms="48492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cheque_clear -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:52:23 IST" name="aftermethod" finished-at="2024-11-26T18:52:23 IST" duration-ms="225" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cheque_clear status=SUCCESS method=Modewise_Payment.cheque_clear()[pri:7, instance:Payments.Modewise_Payment@5644dc81] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Payments.Modewise_Payment.cheque_clear() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="Card()[pri:8, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:52:23 IST" name="Card" finished-at="2024-11-26T18:54:00 IST" duration-ms="96230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Card -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:54:00 IST" name="aftermethod" finished-at="2024-11-26T18:54:00 IST" duration-ms="301" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Card status=SUCCESS method=Modewise_Payment.Card()[pri:8, instance:Payments.Modewise_Payment@5644dc81] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Payments.Modewise_Payment.Card() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="ddPayment()[pri:9, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:54:00 IST" name="ddPayment" finished-at="2024-11-26T18:55:21 IST" duration-ms="80925" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ddPayment -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult,java.lang.reflect.Method)[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:55:21 IST" name="aftermethod" finished-at="2024-11-26T18:55:21 IST" duration-ms="201" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ddPayment status=SUCCESS method=Modewise_Payment.ddPayment()[pri:9, instance:Payments.Modewise_Payment@5644dc81] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void Payments.Modewise_Payment.ddPayment() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:Payments.Modewise_Payment@5644dc81]" started-at="2024-11-26T18:55:21 IST" name="aftertest" finished-at="2024-11-26T18:55:21 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
+      </class> <!-- Payments.Modewise_Payment -->
+    </test> <!-- All Payments -->
+>>>>>>> test
   </suite> <!-- Suite -->
 </testng-results>

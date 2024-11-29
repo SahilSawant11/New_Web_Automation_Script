@@ -99,8 +99,11 @@ public class OnlinePaymentPage {
 		search_property.click();
 	}
 	
-	public void Agree_and_proceed() throws InterruptedException
+	public void Agree_and_proceed(WebDriver driver) throws InterruptedException
 	{
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
+		wait.until(ExpectedConditions.visibilityOf(agree_and_proceed_radio_btn));
 		Thread.sleep(1000);
 		agree_and_proceed_radio_btn.click();
 		register.click();

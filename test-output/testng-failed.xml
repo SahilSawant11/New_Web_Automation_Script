@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<<<<<<< HEAD
   <test name="CreateNewProperty(failed)">
     <classes>
       <class name="New_property_Wadhghat.CMS_Test">
@@ -33,4 +34,17 @@
       </class> <!-- Reports.OnlineCounterReports -->
     </classes>
   </test> <!-- Online Counter Checking(failed) -->
+=======
+  <test thread-count="5" name="CollectionReport(failed)">
+    <classes>
+      <class name="Reports.CollectionReports">
+        <methods>
+          <include name="MonthlyCollectionReport"/>
+          <include name="tearDown"/>
+          <include name="aftermethod"/>
+        </methods>
+      </class> <!-- Reports.CollectionReports -->
+    </classes>
+  </test> <!-- CollectionReport(failed) -->
+>>>>>>> test
 </suite> <!-- Failed suite [Suite] -->
