@@ -34,23 +34,23 @@ public class OnlineCounterReports extends BaseDriver{
 	StopWatch stopWatch;
 	private WebDriver driver = CMS_browser.getDriver();
 	
-	/*
+	
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");
-		
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-//		WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.getDriver();
+//		Delete_Files Delete_files = new Delete_Files(driver);
+//		System.out.println(System.getProperty("user.dir"));
+//		Delete_files.Delete_files("\\PdfReports\\");
+//		
+//		extent = new ExtentReports();
+//		spark = new ExtentSparkReporter("ExtentReport.html");
+//		extent.attachReporter(spark);
+//		BaseDriver.GetData();
+//
+//		driver = CMS_browser.getDriver();
 		stopWatch = new StopWatch();
 	}
-	
+	/*
 	@Test(priority = 1)
 	public void loginPage() throws InterruptedException
 	{
@@ -85,6 +85,7 @@ public class OnlineCounterReports extends BaseDriver{
 		onlinepage.onlinePaymentUrl(driver, url);
 		onlinepage.Select_node_no(driver, node);
 		onlinepage.Select_sector_no(driver, sector);
+		Thread.sleep(5000);		
 		onlinepage.Enter_property_no(driver, PropertyNo);
 		onlinepage.Click_search_property();
 		Thread.sleep(5000);
@@ -100,8 +101,7 @@ public class OnlineCounterReports extends BaseDriver{
         onlinepage.Click_select_pay_all_checkbox();
         String ops = TakeScreenshoot.GetScreenshotFullBase64(driver);
 	    test.log(Status.INFO, "Taxes on Online Payment Screen ", MediaEntityBuilder.createScreenCaptureFromBase64String(ops).build() );
-	    //OfflinePaymentPage offlinepage = new OfflinePaymentPage(driver);
-		//offlinepage.getOfflineTotalTax(driver);
+	    OfflinePaymentPage offlinepage = new OfflinePaymentPage(driver);
 	    onlinepage.getOnlineScreenDetails();
 	    
 	    String offlineTax = OfflinePaymentPage.offlineTotalTax;
@@ -109,15 +109,15 @@ public class OnlineCounterReports extends BaseDriver{
 	    String offlineOwnerName = OfflinePaymentPage.offlineKarDharak;
 	    String onlineOwnerName = OnlinePaymentPage.onlineKarDharak;
 	    
-//	    try {
-//	    	Assert.assertEquals(onlineTax, offlineTax,"The online and offline tax values do not match!");
-//	    	Assert.assertEquals(onlineOwnerName, offlineOwnerName,"The online and offline owner name values do not match!");
-//	    	test.pass("online and offline taxes and names  match");
-//			
-//		} catch (AssertionError e) {
-//			test.fail("Taxes or Names on Online Screen and Offline Screen did not match");
-//			throw e;
-//		}
+	    try {
+	    	Assert.assertEquals(onlineTax, offlineTax,"The online and offline tax values do not match!");
+	    	Assert.assertEquals(onlineOwnerName, offlineOwnerName,"The online and offline owner name values do not match!");
+	    	test.pass("online and offline taxes and names  match");
+			
+		} catch (AssertionError e) {
+			test.fail("Taxes or Names on Online Screen and Offline Screen did not match");
+			throw e;
+		}
 	    
 	    onlinepage.Click_pay_now();
 	    onlinepage.Enter_email_id(driver, change_email );

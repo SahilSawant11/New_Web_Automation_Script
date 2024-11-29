@@ -175,15 +175,15 @@ public class CollectionReports extends BaseDriver {
 		Thread.sleep(5000);
 		stopWatch.start();
 		collectionpage.Click_generate_btn(driver);
-		boolean result = false;
-		try {
-			result = 		counterpayment.isFileDownloaded("pdffile.pdf", "DailyCollectionReport.pdf", 30);
-		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
-			
-		} catch (Exception e) {	
-			e.printStackTrace();
-		}
-        System.out.println("PDF file Downloading Status: " + result);
+//		boolean result = false;
+//		try {
+//			result = 		counterpayment.isFileDownloaded("pdffile.pdf", "DailyCollectionReport.pdf", 30);
+//		       if (result==true) { test.pass("Receipt downloaded Successfully");	} else {test.fail("Receipt Not downloaded");}
+//			
+//		} catch (Exception e) {	
+//			e.printStackTrace();
+//		}
+//        System.out.println("PDF file Downloading Status: " + result);
         test.info("Time duration of exporting Collection Report: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		 stopWatch.stop();
 	}

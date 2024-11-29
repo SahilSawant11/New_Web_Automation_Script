@@ -113,7 +113,7 @@ public class DataEntryPage_TradeLicense {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
 		wait.until(ExpectedConditions.visibilityOf(propertyno));
-		propertyno.sendKeys("15-7");
+		propertyno.sendKeys("15-9");
 	}
 	
 	public void scroll_to_bottom(WebDriver driver) throws InterruptedException {

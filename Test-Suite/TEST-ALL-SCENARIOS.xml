@@ -13,17 +13,18 @@
     </classes>
   </test>
  
- <test name="Online Counter Checking">
-  <classes>
-    <class name="Reports.OnlineCounterReports"/>
-    </classes>
-  </test>
- 
+
 <test name="All Payments">
 	<classes>
-		<class name="Payments.alltypepayments"/>
+		<class name="Payments.Modewise_Payment"/>
 	</classes>
 </test>
+<test name="Typewise Payments">
+	<classes>
+		<class name="Payments.Typewise_Payment"/>
+	</classes>
+</test>
+
 <test name="Counter Reports">
 	<classes>
 		<class name="Reports.DownloadReports"/>
@@ -43,8 +44,38 @@
 <test name="ReportEngine">
 	<classes>
     	<class name="Reports.ReportEngine"/>
-    </classes>
+    </classes>	
 </test> 
+
+<test name="OC">
+	<classes>
+    	<class name="New_property_Wadhghat.OC_Correction"/>  
+	</classes>
+</test>
+
+<test name="Area Correction">
+	<classes>
+    	<class name="New_property_Wadhghat.Change_Area_Correction"/>  
+	</classes>
+</test>
+
+<test name="Type of use Correction">
+	<classes> 
+    	<class name="New_property_Wadhghat.Change_Type_Of_Use_Correction"/> 
+	</classes>
+</test>
+
+<test name="Old Information Correction">
+	<classes>
+   		 <class name="New_property_Wadhghat.Change_Old_Information_Correction"/> 
+	</classes>
+</test>
+
+<test name="Online Counter Checking">
+  <classes>
+    <class name="Reports.OnlineCounterReports"/>
+    </classes>
+  </test>
 
 </suite> <!-- Suite -->
  

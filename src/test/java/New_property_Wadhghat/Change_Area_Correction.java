@@ -38,20 +38,11 @@ public class Change_Area_Correction extends BaseDriver {
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-		Delete_Files Delete_files = new Delete_Files(driver);
-		System.out.println(System.getProperty("user.dir"));
-		Delete_files.Delete_files("\\PdfReports\\");
-		
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-//		WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.getDriver();
+
 		stopWatch = new StopWatch();
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 1,enabled=false)
 	public void loginPage() throws InterruptedException
 	{
 		

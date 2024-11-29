@@ -1,241 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="12" passed="3" failed="8" skipped="0">
+<testng-results ignored="0" total="12" passed="8" failed="2" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-26T13:44:23Z" name="Suite" finished-at="2024-11-26T13:54:32Z" duration-ms="609897">
+  <suite started-at="2024-11-29T10:19:13Z" name="Suite" finished-at="2024-11-29T10:25:36Z" duration-ms="382862">
     <groups>
     </groups>
-    <test started-at="2024-11-26T13:44:23Z" name="Login" finished-at="2024-11-26T13:44:49Z" duration-ms="26144">
+    <test started-at="2024-11-29T10:19:13Z" name="Login" finished-at="2024-11-29T10:19:31Z" duration-ms="17410">
       <class name="New_property_Wadhghat.Login">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.Login@4a07d605]" started-at="2024-11-26T19:14:23Z" name="beforetest" finished-at="2024-11-26T19:14:28Z" duration-ms="5873" status="PASS">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.Login@7f2cfe3f]" started-at="2024-11-29T15:49:13Z" name="beforetest" finished-at="2024-11-29T15:49:20Z" duration-ms="6883" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@4a07d605]" started-at="2024-11-26T19:14:28Z" name="loginPage" finished-at="2024-11-26T19:14:49Z" duration-ms="20243" status="PASS">
+        <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@7f2cfe3f]" started-at="2024-11-29T15:49:20Z" name="loginPage" finished-at="2024-11-29T15:49:31Z" duration-ms="10488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPage -->
       </class> <!-- New_property_Wadhghat.Login -->
     </test> <!-- Login -->
-    <test started-at="2024-11-26T13:44:49Z" name="All Type Payments" finished-at="2024-11-26T13:53:18Z" duration-ms="509020">
-      <class name="PCMC_All_Tests.PCMC_alltypepayments">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:14:49Z" name="beforetest" finished-at="2024-11-26T19:14:49Z" duration-ms="2" status="PASS">
+    <test started-at="2024-11-29T10:19:31Z" name="CreateNewProperty" finished-at="2024-11-29T10:25:08Z" duration-ms="337472">
+      <class name="New_property_Wadhghat.CMS_Test">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:49:31Z" name="beforetest" finished-at="2024-11-29T15:49:31Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="CashPayment()[pri:2, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:14:49Z" name="CashPayment" finished-at="2024-11-26T19:17:19Z" duration-ms="149964" status="PASS">
+        <test-method signature="cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:49:31Z" name="cmsPageWadhghat" finished-at="2024-11-29T15:49:47Z" duration-ms="15777" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CashPayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:17:19Z" name="aftermethod" finished-at="2024-11-26T19:17:20Z" duration-ms="972" status="PASS">
+        </test-method> <!-- cmsPageWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:49:47Z" name="aftermethod" finished-at="2024-11-29T15:49:48Z" duration-ms="873" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CashPayment status=SUCCESS method=PCMC_alltypepayments.CashPayment()[pri:2, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e] output={null}]]]>
+                <![CDATA[[TestResult name=cmsPageWadhghat status=SUCCESS method=CMS_Test.cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_alltypepayments.CashPayment() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsPageWadhghat() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="chequePayment()[pri:4, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:17:20Z" name="chequePayment" finished-at="2024-11-26T19:18:22Z" duration-ms="61881" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.CounterPaymentPage.PCMC_confirm_payment(CounterPaymentPage.java:903)
-	at PCMC_All_Tests.PCMC_alltypepayments.chequePayment(PCMC_alltypepayments.java:258)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8553eab544c2a69d936ad94843ec101, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8553eab544c2a69d936ad94843ec101
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:49:48Z" name="cmsRegisterPageWadhghat" finished-at="2024-11-29T15:50:04Z" duration-ms="16464" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- chequePayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:18:22Z" name="aftermethod" finished-at="2024-11-26T19:18:22Z" duration-ms="260" status="PASS">
+        </test-method> <!-- cmsRegisterPageWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:50:04Z" name="aftermethod" finished-at="2024-11-29T15:50:04Z" duration-ms="204" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=chequePayment status=FAILURE method=PCMC_alltypepayments.chequePayment()[pri:4, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e] output={null}]]]>
+                <![CDATA[[TestResult name=cmsRegisterPageWadhghat status=SUCCESS method=CMS_Test.cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_alltypepayments.chequePayment() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsRegisterPageWadhghat() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="cheque_fail()[pri:5, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:18:22Z" name="cheque_fail" finished-at="2024-11-26T19:20:40Z" duration-ms="138142" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVData_chkRow_0']' (tried for 120 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVData_chkRow_0']' (tried for 120 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.DDChequeclearPage.SelectCheque(DDChequeclearPage.java:121)
-	at PCMC_All_Tests.PCMC_alltypepayments.cheque_fail(PCMC_alltypepayments.java:336)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVData_chkRow_0']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8553eab544c2a69d936ad94843ec101, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVData_chkRow_0']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8553eab544c2a69d936ad94843ec101
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:50:04Z" name="cmsComplaintRegisterWadhghat" finished-at="2024-11-29T15:50:22Z" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsRegisterPageWadhghat" duration-ms="18257" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cheque_fail -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:20:40Z" name="aftermethod" finished-at="2024-11-26T19:20:40Z" duration-ms="193" status="PASS">
+        </test-method> <!-- cmsComplaintRegisterWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:50:22Z" name="aftermethod" finished-at="2024-11-29T15:50:23Z" duration-ms="250" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cheque_fail status=FAILURE method=PCMC_alltypepayments.cheque_fail()[pri:5, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e] output={null}]]]>
+                <![CDATA[[TestResult name=cmsComplaintRegisterWadhghat status=SUCCESS method=CMS_Test.cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_alltypepayments.cheque_fail() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsComplaintRegisterWadhghat() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="cheque_clear()[pri:6, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:20:40Z" name="cheque_clear" finished-at="2024-11-26T19:20:48Z" duration-ms="7361" status="FAIL">
+        <test-method signature="searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:50:23Z" name="searchComplaintWadhghat" finished-at="2024-11-29T15:51:06Z" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsComplaintRegisterWadhghat" duration-ms="42929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchComplaintWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:51:06Z" name="aftermethod" finished-at="2024-11-29T15:51:06Z" duration-ms="187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchComplaintWadhghat status=SUCCESS method=CMS_Test.searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.searchComplaintWadhghat() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:51:06Z" name="Dataentry_owner_info" finished-at="2024-11-29T15:51:40Z" depends-on-methods="New_property_Wadhghat.CMS_Test.searchComplaintWadhghat" duration-ms="34432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dataentry_owner_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:51:40Z" name="aftermethod" finished-at="2024-11-29T15:51:40Z" duration-ms="213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Dataentry_owner_info status=SUCCESS method=CMS_Test.Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.Dataentry_owner_info() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:51:40Z" name="Dataentry_floor_info" finished-at="2024-11-29T15:52:34Z" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_owner_info" duration-ms="53990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dataentry_floor_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:52:34Z" name="aftermethod" finished-at="2024-11-29T15:52:35Z" duration-ms="219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Dataentry_floor_info status=SUCCESS method=CMS_Test.Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.Dataentry_floor_info() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:52:35Z" name="OldTaxex_info" finished-at="2024-11-29T15:53:32Z" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_floor_info" duration-ms="57147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OldTaxex_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:53:32Z" name="aftermethod" finished-at="2024-11-29T15:53:38Z" duration-ms="6382" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=OldTaxex_info status=SUCCESS method=CMS_Test.OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.OldTaxex_info() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:53:38Z" name="AddTaxes_and_UploadFiles" finished-at="2024-11-29T15:55:08Z" depends-on-methods="New_property_Wadhghat.CMS_Test.OldTaxex_info" duration-ms="89905" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot locate option with value: 3
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='ContentPlaceHolder1_GVWadhGhatDocument_lnkUpload_9']"}
+  (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da5c4fbf757c871be95c25a9b27c8fc1, findElement {using=xpath, value=//a[@id='ContentPlaceHolder1_GVWadhGhatDocument_lnkUpload_9']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58408}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58408/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da5c4fbf757c871be95c25a9b27c8fc1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 3
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='ContentPlaceHolder1_GVWadhGhatDocument_lnkUpload_9']"}
+  (Session info: chrome=131.0.6778.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:289)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
-	at pom.DDChequeclearPage.SelectSec_filter(DDChequeclearPage.java:100)
-	at PCMC_All_Tests.PCMC_alltypepayments.cheque_clear(PCMC_alltypepayments.java:395)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da5c4fbf757c871be95c25a9b27c8fc1, findElement {using=xpath, value=//a[@id='ContentPlaceHolder1_GVWadhGhatDocument_lnkUpload_9']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58408}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58408/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da5c4fbf757c871be95c25a9b27c8fc1
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at pom.AddTaxesPage.document_upload_wadhaghat_kagadpatra10(AddTaxesPage.java:209)
+	at New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles(CMS_Test.java:378)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
@@ -264,34 +233,135 @@ Driver info: driver.version: unknown
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cheque_clear -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:20:48Z" name="aftermethod" finished-at="2024-11-26T19:20:48Z" duration-ms="217" status="PASS">
+        </test-method> <!-- AddTaxes_and_UploadFiles -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:55:08Z" name="aftermethod" finished-at="2024-11-29T15:55:08Z" duration-ms="187" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cheque_clear status=FAILURE method=PCMC_alltypepayments.cheque_clear()[pri:6, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e] output={null}]]]>
+                <![CDATA[[TestResult name=AddTaxes_and_UploadFiles status=FAILURE method=CMS_Test.AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@536dbea0] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_alltypepayments.cheque_clear() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="Card()[pri:7, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:20:48Z" name="Card" finished-at="2024-11-26T19:21:53Z" duration-ms="65096" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:55:08Z" name="WadhghatApproval" finished-at="2024-11-29T15:55:08Z" depends-on-methods="New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Method CMS_Test.WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@536dbea0] depends on not successfully finished methods]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.CounterPaymentPage.PCMC_confirm_payment(CounterPaymentPage.java:903)
-	at PCMC_All_Tests.PCMC_alltypepayments.Card(PCMC_alltypepayments.java:476)
+              <![CDATA[java.lang.Throwable: Method CMS_Test.WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@536dbea0] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1084)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WadhghatApproval -->
+        <test-method signature="councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:55:08Z" name="councilapproval" finished-at="2024-11-29T15:55:08Z" depends-on-methods="New_property_Wadhghat.CMS_Test.WadhghatApproval" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CMS_Test.councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@536dbea0] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CMS_Test.councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@536dbea0] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1084)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- councilapproval -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:New_property_Wadhghat.CMS_Test@536dbea0]" started-at="2024-11-29T15:55:08Z" name="tearDown" finished-at="2024-11-29T15:55:08Z" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- New_property_Wadhghat.CMS_Test -->
+    </test> <!-- CreateNewProperty -->
+    <test started-at="2024-11-29T10:25:08Z" name="Online Counter Checking" finished-at="2024-11-29T10:25:36Z" duration-ms="27864">
+      <class name="Reports.OnlineCounterReports">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:Reports.OnlineCounterReports@64beebb7]" started-at="2024-11-29T15:55:08Z" name="beforetest" finished-at="2024-11-29T15:55:08Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforetest -->
+        <test-method signature="TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@64beebb7]" started-at="2024-11-29T15:55:08Z" name="TaxCompareTest" finished-at="2024-11-29T15:55:36Z" duration-ms="27742" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da5c4fbf757c871be95c25a9b27c8fc1, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58408}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58408/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da5c4fbf757c871be95c25a9b27c8fc1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.86)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da5c4fbf757c871be95c25a9b27c8fc1, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58408}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58408/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da5c4fbf757c871be95c25a9b27c8fc1
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:321)
+	at utility.TakeScreenshoot.GetScreenshotFullBase64(TakeScreenshoot.java:100)
+	at Reports.OnlineCounterReports.TaxCompareTest(OnlineCounterReports.java:92)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
@@ -315,442 +385,33 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8553eab544c2a69d936ad94843ec101, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8553eab544c2a69d936ad94843ec101
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Card -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:21:53Z" name="aftermethod" finished-at="2024-11-26T19:21:53Z" duration-ms="221" status="PASS">
+        </test-method> <!-- TaxCompareTest -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:Reports.OnlineCounterReports@64beebb7]" started-at="2024-11-29T15:55:36Z" name="aftermethod" finished-at="2024-11-29T15:55:36Z" duration-ms="89" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Card status=FAILURE method=PCMC_alltypepayments.Card()[pri:7, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e] output={null}]]]>
+                <![CDATA[[TestResult name=TaxCompareTest status=FAILURE method=OnlineCounterReports.TaxCompareTest()[pri:3, instance:Reports.OnlineCounterReports@64beebb7] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_alltypepayments.Card() throws java.lang.Exception]]>
+                <![CDATA[public void Reports.OnlineCounterReports.TaxCompareTest() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="AdvancePayment()[pri:8, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:21:53Z" name="AdvancePayment" finished-at="2024-11-26T19:23:18Z" duration-ms="84442" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Reports.OnlineCounterReports@64beebb7]" started-at="2024-11-29T15:55:36Z" name="tearDown" finished-at="2024-11-29T15:55:36Z" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AdvancePayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:23:18Z" name="aftermethod" finished-at="2024-11-26T19:23:18Z" duration-ms="199" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AdvancePayment status=SUCCESS method=PCMC_alltypepayments.AdvancePayment()[pri:8, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_alltypepayments.AdvancePayment() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:PCMC_All_Tests.PCMC_alltypepayments@7651218e]" started-at="2024-11-26T19:23:18Z" name="aftertest" finished-at="2024-11-26T19:23:18Z" duration-ms="30" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftertest -->
-      </class> <!-- PCMC_All_Tests.PCMC_alltypepayments -->
-    </test> <!-- All Type Payments -->
-    <test started-at="2024-11-26T13:53:18Z" name="Pcmc Reports" finished-at="2024-11-26T13:54:32Z" duration-ms="74624">
-      <class name="PCMC_All_Tests.PCMC_ReportTest">
-        <test-method signature="bharna_report_for_all_modes()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:23:18Z" name="bharna_report_for_all_modes" finished-at="2024-11-26T19:23:29Z" duration-ms="10952" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='ContentPlaceHolder1_BtnOtherTransaction']' (tried for 10 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='ContentPlaceHolder1_BtnOtherTransaction']' (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.PCMC_ReportPage.Click_other_txn(PCMC_ReportPage.java:56)
-	at PCMC_All_Tests.PCMC_ReportTest.bharna_report_for_all_modes(PCMC_ReportTest.java:142)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='ContentPlaceHolder1_BtnOtherTransaction']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8553eab544c2a69d936ad94843ec101, findElement {using=xpath, value=//a[@id='ContentPlaceHolder1_BtnOtherTransaction']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8553eab544c2a69d936ad94843ec101
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bharna_report_for_all_modes -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:23:29Z" name="aftermethod" finished-at="2024-11-26T19:23:29Z" duration-ms="164" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=bharna_report_for_all_modes status=FAILURE method=PCMC_ReportTest.bharna_report_for_all_modes()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ReportTest.bharna_report_for_all_modes() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method signature="challan_report_for_cash()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:23:29Z" name="challan_report_for_cash" finished-at="2024-11-26T19:23:50Z" duration-ms="20975" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //select[@id='ContentPlaceHolder1_ddlZone']' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //select[@id='ContentPlaceHolder1_ddlZone']' (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.PCMC_ReportPage.select_zone_wakad(PCMC_ReportPage.java:63)
-	at PCMC_All_Tests.PCMC_ReportTest.challan_report_for_cash(PCMC_ReportTest.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='ContentPlaceHolder1_ddlZone']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8553eab544c2a69d936ad94843ec101, findElement {using=xpath, value=//select[@id='ContentPlaceHolder1_ddlZone']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8553eab544c2a69d936ad94843ec101
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- challan_report_for_cash -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:23:50Z" name="aftermethod" finished-at="2024-11-26T19:23:50Z" duration-ms="178" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=challan_report_for_cash status=FAILURE method=PCMC_ReportTest.challan_report_for_cash()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ReportTest.challan_report_for_cash() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method signature="challan_report_for_cheque()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:23:50Z" name="challan_report_for_cheque" finished-at="2024-11-26T19:24:11Z" duration-ms="21087" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //select[@id='ContentPlaceHolder1_ddlZone']' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //select[@id='ContentPlaceHolder1_ddlZone']' (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.PCMC_ReportPage.select_zone_wakad(PCMC_ReportPage.java:63)
-	at PCMC_All_Tests.PCMC_ReportTest.challan_report_for_cheque(PCMC_ReportTest.java:101)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='ContentPlaceHolder1_ddlZone']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8553eab544c2a69d936ad94843ec101, findElement {using=xpath, value=//select[@id='ContentPlaceHolder1_ddlZone']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8553eab544c2a69d936ad94843ec101
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- challan_report_for_cheque -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:24:11Z" name="aftermethod" finished-at="2024-11-26T19:24:11Z" duration-ms="144" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=challan_report_for_cheque status=FAILURE method=PCMC_ReportTest.challan_report_for_cheque()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ReportTest.challan_report_for_cheque() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method signature="headwise_report_for_cash()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:24:11Z" name="headwise_report_for_cash" finished-at="2024-11-26T19:24:32Z" duration-ms="20884" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //select[@id='ContentPlaceHolder1_ddlZone']' (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //select[@id='ContentPlaceHolder1_ddlZone']' (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.PCMC_ReportPage.select_zone_wakad(PCMC_ReportPage.java:63)
-	at PCMC_All_Tests.PCMC_ReportTest.headwise_report_for_cash(PCMC_ReportTest.java:125)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='ContentPlaceHolder1_ddlZone']"}
-  (Session info: chrome=131.0.6778.86)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8553eab544c2a69d936ad94843ec101, findElement {using=xpath, value=//select[@id='ContentPlaceHolder1_ddlZone']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58979}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58979/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8553eab544c2a69d936ad94843ec101
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- headwise_report_for_cash -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:24:32Z" name="aftermethod" finished-at="2024-11-26T19:24:32Z" duration-ms="175" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=headwise_report_for_cash status=FAILURE method=PCMC_ReportTest.headwise_report_for_cash()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ReportTest.headwise_report_for_cash() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@29ef6856]" started-at="2024-11-26T19:24:32Z" name="aftertest" finished-at="2024-11-26T19:24:32Z" duration-ms="40" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftertest -->
-      </class> <!-- PCMC_All_Tests.PCMC_ReportTest -->
-    </test> <!-- Pcmc Reports -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- Reports.OnlineCounterReports -->
+    </test> <!-- Online Counter Checking -->
   </suite> <!-- Suite -->
 </testng-results>
