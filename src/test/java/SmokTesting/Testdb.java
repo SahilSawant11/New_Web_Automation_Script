@@ -21,10 +21,13 @@ public class Testdb {
     private String name1, name2, name3, name4, name5, name6, name7, name8, name9, name10 , name11, name12;
     private String Partition1, Partition2, Partition3, Partition4, partition5, partition6, partition7, partition8, partition9, partition10;
     private String Ward;
+    private String server;
     private String Database;
     private String LGNusername;
     private String LGNpassword;
     private String URL;
+    private String username;
+    private String password;
     private String query;
     
     // Method to fetch data from the database
@@ -81,7 +84,7 @@ public class Testdb {
                         break;
                     case "Pimpri Chinchwad Municipal":
                     	textField.setText("http://testpcmc.ptaxcollection.com:8080/Pages/Login.aspx");
-                        textField1.setText("NTIS_4050_12092024");
+                        textField1.setText("NTIS_4050_22102024");
                         textField2.setText("sagar.m");
                         textField3.setText("Sagar@123");
                         break;
@@ -112,25 +115,27 @@ public class Testdb {
 //				Ward="KH";
 //			}
             
+            
             if (selectedOption.equals(bmc)) {
             	Ward="BMC";
+            	username="uatuser";
+            	password="UserUat@890";
+            	server="192.168.1.8:1433";
             	query = "select top 12 NewWardNo, concat(NewPropertyNo,'-',NewPartitionNo) as propertyno from PropertyMast pm join ViewfunAMCGetPendingBalance vm on pm.ownerid=vm.ownerid left join BillTransactionDetails bt  on pm.ownerid=bt.ownerid  where vm.taxtotal>0 and vm.FinanceYear=2024 and bt.ownerid is null and NewWardNo not like '%D_%' and NewWardNo  like '%BMC%' and NewPartitionNo!=''";
             } else if (selectedOption.equals(PMC)) {
             	Ward="KH";
+            	username="uatuser";
+            	password="UserUat@890";
+            	server="192.168.1.8:1433";
             	query = "select top 12 NewWardNo, concat(NewPropertyNo,'-',NewPartitionNo) as propertyno from PropertyMast pm join ViewfunAMCGetPendingBalance vm on pm.ownerid=vm.ownerid left join BillTransactionDetails bt  on pm.ownerid=bt.ownerid  where vm.taxtotal>0 and vm.FinanceYear=2024 and bt.ownerid is null and NewWardNo not like '%D_%' and NewWardNo  like '%KH%' and NewPartitionNo!=''";
             } else if (selectedOption.equals(pcmc)) {
-            	Ward="KH"; 
-            	query = "select top 12 PM.NewWardNo,concat(PM.NewPropertyNo,'-',PM.NewPartitionNo) as propertyno\r\n"
-            			+ "from Assessment.AssessmentTracker as AT With (NoLock) inner join PropertyMast as PM With(NoLock) on AT.PartOwnerID = PM.OwnerID\r\n"
-            			+ "\r\n"
-            			+ "inner join dbo.ViewfunAMCGetCurrentNPendingBalance as VD With (NoLock) on  PM.OwnerID = VD.OwnerID\r\n"
-            			+ "\r\n"
-            			+ "where ISNULL(Result,0) = 1 and VD.TaxTotal > 0 and NewPartitionNo!='' and pm.NewWardNo like '%BSR%'\r\n"
-            			+ "\r\n"
-            			+ "order by dbo.AlphaNum(PM.NewWardNo),dbo.AlphaNum(PM.NewPropertyNo)";
+            	Ward="KH";
+            	username="rutuja.k";
+            	password="Rutu@5555";
+            	server="192.168.1.21:1433";
+            	query = "select top 12  pm.NewWardNo,concat(pm.NewPropertyNo,'-',pm.NewPartitionNo) as propertyno from ViewfunAMCGetCurrentNPendingBalance VCP  INNER JOIN Assessment.AssessmentTracker AT on VCP.OwnerID=AT.PartOwnerID INNER JOIN PropertyMast PM on PM.OwnerID=AT.PartOwnerID INNER JOIN Survey.NoticeDistributionDetails NDD on PM.OwnerID=NDD.OwnerID  where TaxTotal > 0 and Result=1 and PropertyVisitStatusID=6 and  PM.NewPartitionNo!=''";
             }
 
-            
             
             // Get input values from text fields
             
@@ -145,9 +150,8 @@ public class Testdb {
         }
 	       
         
-        String url = "jdbc:sqlserver://192.168.1.8:1433;databaseName="+Database+";encrypt=true;trustServerCertificate=true";
-        String username = "uatuser";
-        String password = "UserUat@890";
+        String url = "jdbc:sqlserver://"+server+";databaseName="+Database+";encrypt=true;trustServerCertificate=true"; 
+      
         
 
         try (Connection connection = DriverManager.getConnection(url, username, password);

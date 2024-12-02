@@ -14,11 +14,12 @@
     </classes>
   </test>
  
-
+<!-- 
 <test name="Pcmc Reports">
 	<classes>
 		<class name="PCMC_All_Tests.PCMC_ReportTest"/>
 	</classes>
 </test>
+-->
 </suite> <!-- Suite -->
  

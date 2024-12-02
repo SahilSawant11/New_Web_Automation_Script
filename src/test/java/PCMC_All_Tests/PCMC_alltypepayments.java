@@ -40,41 +40,40 @@ public class PCMC_alltypepayments extends BaseDriver{
 	private WebDriver driver = CMS_browser.getDriver();
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	
+
+	
+	
+	
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-//		Delete_Files Delete_files = new Delete_Files(driver);
-//		System.out.println(System.getProperty("user.dir"));
-//		Delete_files.Delete_files("\\PdfReports\\");
-//	
-		stopWatch = new StopWatch();
-		
+		stopWatch = new StopWatch();	
 	}
 	
-//	@Test(priority = 1)
-//	public void loginPage() throws InterruptedException
-//	{
-//		test = extent.createTest("loginPage");
-//		LoginPage loginpage = new LoginPage(driver);
-//		loginpage.Enter_user_name(userid, driver);
-//		loginpage.Enter_password(password);
-////		loginpage.Click_login_btn(driver);
-//		Scanner scanner = new Scanner(System.in);
-//        System.out.print("Can We start Automation: ");
-//        String name = scanner.nextLine();
-//		
-//		try
-//		{
-//			loginpage.click_logout(driver);
-//			loginpage.Enter_user_name(userid, driver);
-//			loginpage.Enter_password(password);
-////			loginpage.Click_login_btn(driver);	
-//		}
-//		catch(Exception e)
-//		{
-//			
-//		}
-//	}
+	@Test(priority = 1,enabled=false)
+	public void loginPage() throws InterruptedException
+	{
+		test = extent.createTest("loginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Enter_user_name(userid, driver);
+		loginpage.Enter_password(password);
+		loginpage.Click_login_btn(driver);
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Can We start Automation: ");
+        String name = scanner.nextLine();
+		
+		try
+		{
+			loginpage.click_logout(driver);
+			loginpage.Enter_user_name(userid, driver);
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);	
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
 	
 	@Test(priority = 2)//,dependsOnMethods = "loginPage"
 	public void CashPayment() throws Exception
@@ -90,12 +89,12 @@ public class PCMC_alltypepayments extends BaseDriver{
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, node1);
-		offlinepaymentpage.Select_sector_no(driver, sector1);
-		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+		offlinepaymentpage.Select_node_no(driver, node5);
+		offlinepaymentpage.Select_sector_no(driver, sector5);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo5);
 		/////
 		
-		test.log(Status.INFO, "Property for Cash Payment : "+node1+"-"+sector1+"-"+PropertyNo1);
+		test.log(Status.INFO, "Property for Cash Payment : "+node5+"-"+sector5+"-"+PropertyNo5);
 		stopWatch.start();
 		offlinepaymentpage.Click_search_property();
 			
@@ -148,9 +147,9 @@ public class PCMC_alltypepayments extends BaseDriver{
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, node1);
-		offlinepaymentpage.Select_sector_no(driver, sector1);
-		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+		offlinepaymentpage.Select_node_no(driver, node5);
+		offlinepaymentpage.Select_sector_no(driver, sector5);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo5);
 		/////
 		
 		offlinepaymentpage.Click_search_property();
@@ -188,12 +187,12 @@ public class PCMC_alltypepayments extends BaseDriver{
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, node1);
-		offlinepaymentpage.Select_sector_no(driver, sector1);
-		offlinepaymentpage.Enter_property_no(driver, PropertyNo1);
+		offlinepaymentpage.Select_node_no(driver, node5);
+		offlinepaymentpage.Select_sector_no(driver, sector5);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo5);
 		/////
 		
-		test.log(Status.INFO, "Property for Advance Payment : "+node1+"-"+sector1+"-"+PropertyNo1);
+		test.log(Status.INFO, "Property for Advance Payment : "+node5+"-"+sector5+"-"+PropertyNo5);
 		stopWatch.start();
 		offlinepaymentpage.Click_search_property();
 			
@@ -203,7 +202,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 		counterpayment.Enter_AdvanceAmount(driver);
 		counterpayment.Click_ProceedAdvancePay(driver);
 		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
-		counterpayment.Enter_mobile_no(driver, "9825456987");
+		counterpayment.Enter_mobile_no(driver, "8104155804");
 		//counterpayment.Select_payment_mode("Cash");
 		counterpayment.Enter_behalf_payer_name(driver, "abc");
 			
@@ -310,7 +309,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 5)//,dependsOnMethods = "chequePayment"
+	@Test(priority = 5,dependsOnMethods = "chequePayment")//,dependsOnMethods = "chequePayment"
 	public void cheque_fail() throws Exception
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -377,7 +376,86 @@ public class PCMC_alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 6,enabled=false)
+	@Test(priority = 6)//,dependsOnMethods = "loginPage"
+	public void chequePayment_for_clear() throws Exception
+	{
+		test = extent.createTest("Cheque Payment for clear");
+		CounterPaymentPage counterpayment = null;
+		stopWatch = new StopWatch();
+	
+		OfflinePaymentPage offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.offlinePaymentPage(url, driver);
+		
+		offlinepaymentpage = new OfflinePaymentPage(driver);
+		offlinepaymentpage.counterPayment(driver, url);
+		offlinepaymentpage.Click_property_no_radio_btn(driver);
+			
+		offlinepaymentpage.Select_node_no(driver, node3);
+		offlinepaymentpage.Select_sector_no(driver, sector3);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo3);
+		/////
+		test.log(Status.INFO, "Property for cheque Payment : "+node3+"-"+sector3+"-"+PropertyNo3);
+		stopWatch.start();
+		offlinepaymentpage.Click_search_property();
+			
+		counterpayment = new CounterPaymentPage(driver);
+	
+			counterpayment.PCMC_confirm_payment(driver);
+		
+		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
+		counterpayment.Enter_mobile_no(driver, "8104678065");
+		counterpayment.Select_payment_mode("Cheque");
+		counterpayment.Select_bankname(driver, "Bank OF India(BOI)");
+//		counterpayment.Enter_behalf_payer_name(driver, "abc");
+			counterpayment.Enter_cheque_dd_transation_no(driver, "1122335");
+			LocalDate today = LocalDate.now();
+			
+			 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		        String formattedDate = today.format(formatter);
+			
+			counterpayment.Enter_cheque_dd_transation_date(driver, formattedDate);
+		
+		
+		String EnteredChequeDetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(EnteredChequeDetails).build());
+		
+//		counterpayment.Click_ProceedAdvancePay(driver);
+		/////
+		stopWatch.reset();
+		stopWatch.start();
+		Thread.sleep(3000);
+		
+		counterpayment.PCMC_Click_pay_now(driver);
+		try {
+			counterpayment.PCMC_Click_pay_now(driver);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		counterpayment.confirm_payment(driver);
+		Thread.sleep(2000);
+		counterpayment.confirm_payment(driver);
+		counterpayment.Check_transaction_id(driver);
+		String TRANSACTIONIDdetails=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("payment details ",MediaEntityBuilder.createScreenCaptureFromBase64String(TRANSACTIONIDdetails).build());
+		counterpayment.pcmc_DownloadReceipt(driver);
+		
+		
+		test.info("Time duration of Searching property on counter payment page: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
+		stopWatch.stop();
+		/////
+		
+		
+		String counterbeforePayment=TakeScreenshoot.GetScreenshotFullBase64(driver);
+		test.pass("Receipt for download",MediaEntityBuilder.createScreenCaptureFromBase64String(counterbeforePayment).build());
+		
+		boolean result = 		counterpayment.isFileDownloaded("pdffile.pdf", "Cheque.pdf", 30);
+        System.out.println("PDF file Downloading Status: " + result); 
+		
+
+	}
+	
+	@Test(priority = 7,dependsOnMethods = "chequePayment_for_clear")
 	public void cheque_clear() throws Exception
 	{
 		
@@ -388,11 +466,11 @@ public class PCMC_alltypepayments extends BaseDriver{
 		DDChequeclearPage DDchequeapproval = new DDChequeclearPage(driver);
 		DDchequeapproval.DDchequeApprovalpage(url, driver);
 		DDchequeapproval.pageloading(driver);
-		DDchequeapproval.Enter_ChequeNo("1122334", driver);
-		DDchequeapproval.SelectNode_filter(node2, driver);
+		DDchequeapproval.Enter_ChequeNo("1122335", driver);
+		DDchequeapproval.SelectNode_filter(node3, driver);
 		
-		
-		DDchequeapproval.SelectSec_filter(sector2, driver);
+		Thread.sleep(10000);
+		DDchequeapproval.SelectSec_filter(sector3, driver);
 		
 		DDchequeapproval.Click_serachBTN (driver);
 		DDchequeapproval.SelectCheque(driver);
@@ -423,9 +501,9 @@ public class PCMC_alltypepayments extends BaseDriver{
 		offlinepaymentpage.counterPayment(driver, url);
 		offlinepaymentpage.Click_property_no_radio_btn(driver);
 			
-		offlinepaymentpage.Select_node_no(driver, node2);
-		offlinepaymentpage.Select_sector_no(driver, sector2);
-		offlinepaymentpage.Enter_property_no(driver, PropertyNo2);
+		offlinepaymentpage.Select_node_no(driver, node3);
+		offlinepaymentpage.Select_sector_no(driver, sector3);
+		offlinepaymentpage.Enter_property_no(driver, PropertyNo3);
 		/////
 		
 		offlinepaymentpage.Click_search_property();
@@ -450,7 +528,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 
 	}
 		
-	@Test(priority = 7)//,dependsOnMethods = "loginPage"
+	@Test(priority = 8)//,dependsOnMethods = "loginPage"
 	public void Card() throws Exception
 	{
 		test = extent.createTest("Card Payment");
@@ -479,7 +557,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 		
 		counterpayment.scrollToBottom(driver);
 		counterpayment.Enter_email_id(driver, "abc@123.gmail.com");
-		counterpayment.Enter_mobile_no(driver, "9819578052");
+		counterpayment.Enter_mobile_no(driver, "8104155804");
 		counterpayment.Select_payment_mode("Card Payment");
 		Thread.sleep(5000);
 		counterpayment.scrollToBottom(driver);

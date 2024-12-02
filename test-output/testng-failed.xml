@@ -1,36 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="CreateNewProperty(failed)">
+  <test name="All Type Payments(failed)">
     <classes>
-      <class name="New_property_Wadhghat.CMS_Test">
+      <class name="PCMC_All_Tests.PCMC_alltypepayments">
         <methods>
-          <include name="WadhghatApproval"/>
-          <include name="AddTaxes_and_UploadFiles"/>
           <include name="aftermethod"/>
-          <include name="tearDown"/>
-          <include name="cmsRegisterPageWadhghat"/>
-          <include name="Dataentry_owner_info"/>
-          <include name="OldTaxex_info"/>
-          <include name="Dataentry_floor_info"/>
+          <include name="Card"/>
           <include name="beforetest"/>
-          <include name="councilapproval"/>
-          <include name="cmsComplaintRegisterWadhghat"/>
-          <include name="searchComplaintWadhghat"/>
+          <include name="aftertest"/>
+          <include name="AdvancePayment"/>
         </methods>
-      </class> <!-- New_property_Wadhghat.CMS_Test -->
+      </class> <!-- PCMC_All_Tests.PCMC_alltypepayments -->
     </classes>
-  </test> <!-- CreateNewProperty(failed) -->
-  <test name="Online Counter Checking(failed)">
-    <classes>
-      <class name="Reports.OnlineCounterReports">
-        <methods>
-          <include name="beforetest"/>
-          <include name="aftermethod"/>
-          <include name="tearDown"/>
-          <include name="TaxCompareTest"/>
-        </methods>
-      </class> <!-- Reports.OnlineCounterReports -->
-    </classes>
-  </test> <!-- Online Counter Checking(failed) -->
+  </test> <!-- All Type Payments(failed) -->
 </suite> <!-- Failed suite [Suite] -->
