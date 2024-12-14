@@ -20,30 +20,19 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import New_property_Wadhghat.BaseDriver;
 import pojo.CMS_browser;
 import pom.LoginPage;
-import pom.PCMC_ReportPage;
+import pom_PCMC.PCMC_ReportPage;
 import utility.TakeScreenshoot;
 
 public class PCMC_ReportTest extends BaseDriver{
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	StopWatch stopWatch;
 	
-/*	@BeforeTest
+	@BeforeTest
 	public void beforetest() throws IOException
 	{
-//		Delete_Files Delete_files = new Delete_Files(driver);
-//		System.out.println(System.getProperty("user.dir"));
-//		Delete_files.Delete_files("\\PdfReports\\");
-//		
-		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
-		extent.attachReporter(spark);
-		BaseDriver.GetData();
-//		WebDriverManager.chromedriver().setup();
-		driver = CMS_browser.openBrowser(url);
-		stopWatch = new StopWatch();
-		
+		stopWatch = new StopWatch();	
 	}
-*/	
+	
 	@Test(priority = 1, enabled=false)
 	public void loginPage() throws InterruptedException
 	{
@@ -51,7 +40,6 @@ public class PCMC_ReportTest extends BaseDriver{
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.Enter_user_name(userid, driver);
 		loginpage.Enter_password(password);
-//		loginpage.Click_login_btn(driver);
 		Scanner scanner = new Scanner(System.in);
         System.out.print("Can We start Automation: ");
         String name = scanner.nextLine();
@@ -61,7 +49,6 @@ public class PCMC_ReportTest extends BaseDriver{
 			loginpage.click_logout(driver);
 			loginpage.Enter_user_name(userid, driver);
 			loginpage.Enter_password(password);
-//			loginpage.Click_login_btn(driver);	
 		}
 		catch(Exception e)
 		{
@@ -69,72 +56,37 @@ public class PCMC_ReportTest extends BaseDriver{
 		}
 	}
 	
-	@Test//(priority =2)
-	public void challan_report_for_cash() throws Exception {
+	@Test(priority =2)
+	public void challan_report() throws Exception {
 		test= extent.createTest("Challan report for cash");
 		PCMC_ReportPage reportpage = new PCMC_ReportPage(driver);
 		reportpage.Pcmc_Report_Page_link(url, driver);
 		reportpage.select_zone_wakad(driver);
-		reportpage.select_challan_option(driver);
-		
-//		date is already present
-//		LocalDate today = LocalDate.now();
-//		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-//		String formattedDate = today.format(formatter);
-//	    reportpage.enter_todays_date(driver, formattedDate);
-	    
-		reportpage.select_cash_option(driver);
+		reportpage.select_challan_option(driver);   
 		Thread.sleep(10000);
 		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.log(null, "Taking Challan Reports", MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
+		test.info( "Taking Challan Reports", MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
 		reportpage.Click_generate_btn(driver);
 		Thread.sleep(10000);
-		
-	
 	}
 	
-	@Test//(priority =3)
-	public void challan_report_for_cheque() throws Exception {
-		test= extent.createTest("Challan report for cheque");
-		PCMC_ReportPage reportpage = new PCMC_ReportPage(driver);
-		reportpage.Pcmc_Report_Page_link(url, driver);
-		reportpage.select_zone_wakad(driver);
-		reportpage.select_challan_option(driver);
-		
-//		date is already present
-//		LocalDate today = LocalDate.now();
-//		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-//		String formattedDate = today.format(formatter);
-//	    reportpage.enter_todays_date(driver, formattedDate);
-	    
-		reportpage.select_cheque_option(driver);
-		Thread.sleep(10000);
-		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.log(null, "Taking Challan Reports", MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
-		reportpage.Click_generate_btn(driver);
-		Thread.sleep(10000);
-		
-	
-	}
-	
-	@Test//(priority =4 )
-	public void headwise_report_for_cash() throws Exception {
-		test= extent.createTest("Headwise report for cash");
+	@Test(priority =3 )
+	public void headwise_report() throws Exception {
+		test= extent.createTest("Headwise report");
 		PCMC_ReportPage reportpage = new PCMC_ReportPage(driver);
 		reportpage.Pcmc_Report_Page_link(url, driver);
 		reportpage.select_zone_wakad(driver);
 		reportpage.select_headwise_option(driver);
-		reportpage.select_cash_option(driver);
 		Thread.sleep(10000);
 		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.log(null, "Taking Headwise Reports", MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
+		test.info( "Taking Headwise Reports", MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());
 		reportpage.Click_generate_btn(driver);
 		Thread.sleep(10000);
 		
 	
 	}
 	
-	@Test//(priority=5)
+	@Test(priority=4)
 	public void bharna_report_for_all_modes() throws Exception {
 		test= extent.createTest("Bharna report for all nodes");
 		PCMC_ReportPage reportpage = new PCMC_ReportPage(driver);
@@ -146,7 +98,7 @@ public class PCMC_ReportTest extends BaseDriver{
 		reportpage.Select_all_payment_modes(driver);
 		Thread.sleep(10000);
 		String counterpaymentscreen=TakeScreenshoot.GetScreenshotFullBase64(driver);
-		test.log(null, "Taking Bharna Reports", MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());	
+		test.info("Taking Bharna Reports", MediaEntityBuilder.createScreenCaptureFromBase64String(counterpaymentscreen).build());	
 		reportpage.Click_generate_btn(driver);
 		Thread.sleep(10000);
 		

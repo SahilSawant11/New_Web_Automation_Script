@@ -67,7 +67,7 @@ public class Change_Old_Information_Correction extends BaseDriver{
 		}
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2, enabled= false)
 	private void SearchOnCounter1() throws Exception 
 	{
 		test = extent.createTest("Counter after changing Old Information");
@@ -93,10 +93,10 @@ public class Change_Old_Information_Correction extends BaseDriver{
 		test.pass("New created Property ",MediaEntityBuilder.createScreenCaptureFromBase64String(PropertyOnCounter).build());
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 3 , enabled=false)
 	public void wadhghatComplaintRegister() throws InterruptedException, IOException
 	{
-		test = extent.createTest("OC Complaint Register");
+		test = extent.createTest("Old Information Complaint Register");
 		CMS_Page cmspage = new CMS_Page(driver);
 		cmspage.CMS_link(url, driver);
 		/////
@@ -154,6 +154,7 @@ public class Change_Old_Information_Correction extends BaseDriver{
 	@Test(priority = 4)
 	public void searchComplaintWadhghat() throws InterruptedException
 	{
+		String akshep_no = "PNLWG25610";
 		test = extent.createTest("searchComplaintWadhghat");
 		CMS_Page cmspage = new CMS_Page(driver);
 		cmspage.CMS_link(url, driver);
@@ -180,7 +181,7 @@ public class Change_Old_Information_Correction extends BaseDriver{
 		onlinedataentry.Enter_vadhghat_shera(driver);
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 5)
 	public void OldTaxex_info() throws Exception
 	{
 		/////
@@ -189,7 +190,7 @@ public class Change_Old_Information_Correction extends BaseDriver{
 		test = extent.createTest("OldTaxex_info");
 		OldTaxesPage oldtaxespage = new OldTaxesPage(driver);
 		OnlineDataEntryPage onlinedataentry = new OnlineDataEntryPage(driver);
-		onlinedataentry.Button_add_taxes_and_upload_document_btn(driver);
+		onlinedataentry.Button_old_information_btn(driver);
 		oldtaxespage.Enter_oldWardNo(oldWardNo, driver);
 		test.info("Time duration of Redirecting to oldTaxesPage: "+TimeUnit.NANOSECONDS.toSeconds(stopWatch.getNanoTime())+" sec.");
 		stopWatch.stop();

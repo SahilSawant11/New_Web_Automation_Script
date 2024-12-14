@@ -93,6 +93,10 @@ public class CounterPaymentPage {
 	
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_btnPayProceed']") private WebElement pay_now;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_PayProceedbtn']") private WebElement PCMC_pay_now;
+	
+	
+	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVPropTax_chkGrid_1']") private WebElement current_checkbox;
+	
 	@FindBy(xpath = "/html/body/div[3]/div[7]/div/button") private WebElement confirm_yes;
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input") private WebElement PCMC_confirm_yes;
 	@FindBy(xpath = "/html/body/div[2]/div/div[3]/button[1]") private WebElement NoticePopup;
@@ -910,6 +914,23 @@ public class CounterPaymentPage {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			 js.executeScript("arguments[0].scrollIntoView(true);", PCMC_confirm_yes);
 			 PCMC_confirm_yes.click();
+		}
+		
+	}
+	
+	public void PCMC_uncheck_current(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(30000));
+		wait.until(ExpectedConditions.visibilityOf(current_checkbox));
+		Thread.sleep(2000);
+			 
+		 try {
+			 current_checkbox.click();
+		} catch (Exception e) {
+			
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			 js.executeScript("arguments[0].scrollIntoView(true);", current_checkbox);
+			 current_checkbox.click();
 		}
 		
 	}

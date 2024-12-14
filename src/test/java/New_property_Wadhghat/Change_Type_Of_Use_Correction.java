@@ -95,7 +95,7 @@ public class Change_Type_Of_Use_Correction extends BaseDriver{
 	@Test(priority = 3)
 	public void wadhghatComplaintRegister() throws InterruptedException, IOException
 	{
-		test = extent.createTest("OC Complaint Register");
+		test = extent.createTest("Type of Use Complaint Register");
 		CMS_Page cmspage = new CMS_Page(driver);
 		cmspage.CMS_link(url, driver);
 		/////

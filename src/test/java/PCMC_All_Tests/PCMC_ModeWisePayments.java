@@ -35,7 +35,7 @@ import pom.OfflinePaymentPage;
 import utility.Delete_Files;
 import utility.TakeScreenshoot;
 
-public class PCMC_alltypepayments extends BaseDriver{
+public class PCMC_ModeWisePayments extends BaseDriver{
 	StopWatch stopWatch;
 	private WebDriver driver = CMS_browser.getDriver();
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
@@ -43,40 +43,35 @@ public class PCMC_alltypepayments extends BaseDriver{
 	@BeforeTest
 	public void beforetest() throws IOException
 	{
-//		Delete_Files Delete_files = new Delete_Files(driver);
-//		System.out.println(System.getProperty("user.dir"));
-//		Delete_files.Delete_files("\\PdfReports\\");
-//	
 		stopWatch = new StopWatch();
-		
 	}
 	
-//	@Test(priority = 1)
-//	public void loginPage() throws InterruptedException
-//	{
-//		test = extent.createTest("loginPage");
-//		LoginPage loginpage = new LoginPage(driver);
-//		loginpage.Enter_user_name(userid, driver);
-//		loginpage.Enter_password(password);
-////		loginpage.Click_login_btn(driver);
-//		Scanner scanner = new Scanner(System.in);
-//        System.out.print("Can We start Automation: ");
-//        String name = scanner.nextLine();
-//		
-//		try
-//		{
-//			loginpage.click_logout(driver);
-//			loginpage.Enter_user_name(userid, driver);
-//			loginpage.Enter_password(password);
-////			loginpage.Click_login_btn(driver);	
-//		}
-//		catch(Exception e)
-//		{
-//			
-//		}
-//	}
+	@Test(priority = 1, enabled = false)
+	public void loginPage() throws InterruptedException
+	{
+		test = extent.createTest("loginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.Enter_user_name(userid, driver);
+		loginpage.Enter_password(password);
+		loginpage.Click_login_btn(driver);
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Can We start Automation: ");
+        String name = scanner.nextLine();
+		
+		try
+		{
+			loginpage.click_logout(driver);
+			loginpage.Enter_user_name(userid, driver);
+			loginpage.Enter_password(password);
+			loginpage.Click_login_btn(driver);	
+		}
+		catch(Exception e)
+		{
+			
+		}
+	}
 	
-	@Test(priority = 2)//,dependsOnMethods = "loginPage"
+	@Test(priority = 2)
 	public void CashPayment() throws Exception
 	{
 		test = extent.createTest("cash Payment");
@@ -310,7 +305,7 @@ public class PCMC_alltypepayments extends BaseDriver{
 
 	}
 	
-	@Test(priority = 5)//,dependsOnMethods = "chequePayment"
+	@Test(priority = 5)
 	public void cheque_fail() throws Exception
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;

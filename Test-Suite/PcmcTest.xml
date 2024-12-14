@@ -10,15 +10,28 @@
 
  <test name="All Type Payments">
   <classes>
-    <class name="PCMC_All_Tests.PCMC_alltypepayments"/>
+    <class name="PCMC_All_Tests.PCMC_TypeWisePayments"/>
     </classes>
   </test>
  
+ 
+ <test name="All Mode Payments">
+  <classes>
+    <class name="PCMC_All_Tests.PCMC_ModeWisePayments"/>
+    </classes>
+  </test>
+
 
 <test name="Pcmc Reports">
 	<classes>
 		<class name="PCMC_All_Tests.PCMC_ReportTest"/>
 	</classes>
 </test>
+
+<test name= "Admin Dashboard Reports">
+	<classes>
+		<class name="PCMC_All_Tests.PCMC_AdminDashboardReports"/>
+	</classes>
+</test>	
 </suite> <!-- Suite -->
  

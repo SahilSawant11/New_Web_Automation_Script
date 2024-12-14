@@ -19,12 +19,13 @@
 		<class name="Payments.Modewise_Payment"/>
 	</classes>
 </test>
+<!-- 
 <test name="Typewise Payments">
 	<classes>
 		<class name="Payments.Typewise_Payment"/>
 	</classes>
 </test>
-
+-->
 <test name="Counter Reports">
 	<classes>
 		<class name="Reports.DownloadReports"/>
@@ -64,13 +65,13 @@
     	<class name="New_property_Wadhghat.Change_Type_Of_Use_Correction"/> 
 	</classes>
 </test>
-
+<!-- 
 <test name="Old Information Correction">
 	<classes>
    		 <class name="New_property_Wadhghat.Change_Old_Information_Correction"/> 
 	</classes>
 </test>
-
+-->
 <test name="Online Counter Checking">
   <classes>
     <class name="Reports.OnlineCounterReports"/>

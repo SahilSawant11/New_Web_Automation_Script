@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Reports.OnlineCounterReports">
+      <class name="Water_Panvel.ReportEngine_Water">
         <methods>
-          <include name="beforetest"/>
-          <include name="aftermethod"/>
           <include name="tearDown"/>
-          <include name="TaxCompareTest"/>
+          <include name="TopDefaulter_report"/>
+          <include name="beforetest"/>
         </methods>
-      </class> <!-- Reports.OnlineCounterReports -->
+      </class> <!-- Water_Panvel.ReportEngine_Water -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

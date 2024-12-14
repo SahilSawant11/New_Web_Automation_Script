@@ -98,7 +98,7 @@ public class Change_Area_Correction extends BaseDriver {
 	@Test(priority = 3)
 	public void wadhghatComplaintRegister() throws InterruptedException, IOException
 	{
-		test = extent.createTest("OC Complaint Register");
+		test = extent.createTest("Area Correction Complaint Register");
 		CMS_Page cmspage = new CMS_Page(driver);
 		cmspage.CMS_link(url, driver);
 		/////

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<test name="Login">
+	<classes>
+		<class name="Water_Panvel.Login_Water"/>
+	</classes>
+</test>
+
+<test name = "Niyamit Connection">
+	<classes>
+		<class name = "Water_Panvel.CMS_Water_Niyamit"/>
+	</classes>
+</test>	
+
+<test name = "Water Reports">
+	<classes>
+		<class name = "Water_Panvel.CollectionReports_Water"/>
+	</classes>
+</test>		
+
+<test name = "Report Engine">
+	<classes>
+		<class name = "Water_Panvel.ReportEngine_Water"/>
+	</classes>
+</test>		
+</suite> <!-- Suite -->
