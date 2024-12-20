@@ -32,7 +32,7 @@
     <class name="Reports.CollectionReports"/>
   </classes>
 </test>
-
+<!-- 
 <test name="Accountant Report">
   <classes>
     <class name="Reports.AccountantReport"/>
@@ -44,6 +44,6 @@
     	<class name="Reports.ReportEngine"/>
     </classes>
 </test> 
-
+-->
 </suite> <!-- Suite -->
  

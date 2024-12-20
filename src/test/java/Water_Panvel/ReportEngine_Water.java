@@ -9,13 +9,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
 import New_property_Wadhghat.BaseDriver;
-import pojo.CMS_browser;
 import pom_WaterTax.LoginPage_Water;
 import pom_WaterTax.ReportEnginePage_Water;
 import utility.TakeScreenshoot;

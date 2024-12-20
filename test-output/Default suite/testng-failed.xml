@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Water_Panvel.ReportEngine_Water">
+      <class name="Water_Panvel.CMS_Water_Niyamit">
         <methods>
-          <include name="tearDown"/>
-          <include name="TopDefaulter_report"/>
           <include name="beforetest"/>
+          <include name="open_dataEntryPage"/>
+          <include name="aftermethod"/>
+          <include name="tearDown"/>
+          <include name="open_counter"/>
         </methods>
-      </class> <!-- Water_Panvel.ReportEngine_Water -->
+      </class> <!-- Water_Panvel.CMS_Water_Niyamit -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

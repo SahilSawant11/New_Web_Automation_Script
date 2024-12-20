@@ -167,8 +167,10 @@ public class DashboardPage_Water {
 		paynow_btn.click();
 	}
 	
-	public void Click_download_btn() // make-payment page
+	public void Click_download_btn(WebDriver driver) // make-payment page
 	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(download_btn));
 		download_btn.click();
 	}
 	

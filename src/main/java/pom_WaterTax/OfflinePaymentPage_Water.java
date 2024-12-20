@@ -19,6 +19,9 @@ public class OfflinePaymentPage_Water {
 	@FindBy(xpath = "//*[@id='btnDownload']") private WebElement downloadreciept_btn;
 	@FindBy(xpath = "//*[@id='ticketView']/div/div/div[3]/button") private WebElement close_btn;
 	
+	////////////////////////////////////labels//////////////////////////////////////////////
+	@FindBy(xpath = "//*[@id='lblShowMeterStatus']") private WebElement meter_status;
+	@FindBy(xpath = "//*[@id='lblShowConnectionStatus']") private WebElement connection_status;
 	
 	////////////////////////////////////page-objects//////////////////////////////////////////////
 	public OfflinePaymentPage_Water(WebDriver driver)
@@ -87,5 +90,22 @@ public class OfflinePaymentPage_Water {
         WebElement dropdownOption = driver.findElement(By.xpath("//*[@id='section-bill']/div[2]/div/div[1]/div/div/ul/li[3]/a"));
         dropdownOption.click();									
     }
+	
+	public void printLabelTexts_counter() {
+	    System.out.println("Meter Status Counter: " + meter_status.getText());
+	    System.out.println("Connection Status Counter: " + connection_status.getText());
+	}
+	
+	public String meterStatus()
+	{
+		String meterStatus = meter_status.getText();
+		return meterStatus;
+		
+	}
+	
+	public String connectionStatus() {
+		String connectionStatus = connection_status.getText();
+		return connectionStatus;
+	}
 	
 }

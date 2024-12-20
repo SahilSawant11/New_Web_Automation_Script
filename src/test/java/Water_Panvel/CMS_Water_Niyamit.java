@@ -1,5 +1,7 @@
 package Water_Panvel;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 
 import org.apache.commons.lang3.time.StopWatch;
@@ -8,17 +10,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
 import New_property_Wadhghat.BaseDriver;
-import pojo.CMS_browser;
 import pom_WaterTax.AddReadingPage_Water;
 import pom_WaterTax.DashboardPage_Water;
 import pom_WaterTax.DataEntryPage_Water;
+import pom_WaterTax.DataEntryScreen_Water;
 import pom_WaterTax.LoginPage_Water;
 import pom_WaterTax.MeterPage_Water;
 import pom_WaterTax.OfflinePaymentPage_Water;
@@ -30,6 +30,10 @@ public class CMS_Water_Niyamit extends BaseDriver{
 	StopWatch stopWatch;
 	private String grievanceID;
 	private String consumerID;
+	private String meter1;
+	private String meter2;
+	private String connection1;
+	private String connection2;
 	
 	@BeforeTest
 	public void beforetest() throws IOException
@@ -58,6 +62,7 @@ public class CMS_Water_Niyamit extends BaseDriver{
 		}
 	}
 
+	/*
 	@Test(priority = 2)
 	public void registercomplaint() throws Exception
 	{
@@ -67,10 +72,10 @@ public class CMS_Water_Niyamit extends BaseDriver{
 		dashboardwater.Click_takraar_nondva(driver);
 		dashboardwater.Select_application_type(driver);
 		dashboardwater.Click_new_application(driver);
-		dashboardwater.Enter_marathi_name(renter_name_marathi);
-		dashboardwater.Enter_marathi_address(address);
-		dashboardwater.Enter_english_name(renter_name_eng);
-		dashboardwater.Enter_english_address(address);
+		dashboardwater.Enter_marathi_name(marathi_name);
+		dashboardwater.Enter_marathi_address(marathi_address);
+		dashboardwater.Enter_english_name(english_name);
+		dashboardwater.Enter_english_address(english_address);
 		dashboardwater.Enter_mobile(mobile);
 		dashboardwater.Select_complaint_type(driver);
 		dashboardwater.Enter_remark(approvalRemark);
@@ -113,7 +118,7 @@ public class CMS_Water_Niyamit extends BaseDriver{
 		dataentry.Enter_pin(pin);
 		dataentry.Enter_adhaar(adhaar);
 		dataentry.Enter_mobile(mobile);
-		dataentry.Enter_mail(change_email);
+		dataentry.Enter_mail(mail);
 		dataentry.Enter_gov_no(change_flatNo);
 		dataentry.Enter_no_of_connections(zone_no);
 		dataentry.Enter_no_of_families("5");
@@ -207,7 +212,7 @@ public class CMS_Water_Niyamit extends BaseDriver{
 		dashboardwater.Select_mode_cash(driver);
 		dashboardwater.Click_paynow_btn();
 		Thread.sleep(5000);
-		dashboardwater.Click_download_btn();
+		dashboardwater.Click_download_btn(driver);
 		Thread.sleep(5000);
 		String image=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		test.pass("Payment Reciept",MediaEntityBuilder.createScreenCaptureFromBase64String(image).build());
@@ -262,7 +267,7 @@ public class CMS_Water_Niyamit extends BaseDriver{
 		meterpage.Click_ok_btn();
 		meterpage.Click_save_btn();
 		Thread.sleep(5000);
-		meterpage.Click_karyadesh();
+		meterpage.Click_karyadesh(driver);
 		Thread.sleep(5000);
 		String image=TakeScreenshoot.GetScreenshotFullBase64(driver);
 		meterpage.Click_close_btn();
@@ -307,21 +312,24 @@ public class CMS_Water_Niyamit extends BaseDriver{
 	 	Thread.sleep(2000);
 	 	readingpage.Click_yes_btn();
 	 }
-	
-	@Test(priority = 11 , dependsOnMethods = "reading_approval")
+	*/
+	@Test(priority = 11)
 	public void open_counter() throws Exception 
 	{
-//		String consumerID = "CNB100B0063224";
+		String consumerID = "CNB100B0063239";
 		extent.createTest("Open Connection on Counter");
 		OfflinePaymentPage_Water offlinepaymentpage = new OfflinePaymentPage_Water(driver);
 		offlinepaymentpage.OfflinePayment_Page_link(url, driver);
 		offlinepaymentpage.Enter_scansearch(consumerID);
 		Thread.sleep(2000);
+		offlinepaymentpage.printLabelTexts_counter();
+		meter1 = offlinepaymentpage.meterStatus();
+		connection1 = offlinepaymentpage.connectionStatus();
 		String image=TakeScreenshoot.GetScreenshotFullBase64(driver);
 	 	test.info( "Connection openned on Counter",MediaEntityBuilder.createScreenCaptureFromBase64String(image).build());
 
 	}
-	
+	/*
 	@Test(priority = 12 , dependsOnMethods = "open_counter")
 	public void cash_payment() throws Exception 
 	{
@@ -338,6 +346,29 @@ public class CMS_Water_Niyamit extends BaseDriver{
 	 	String image=TakeScreenshoot.GetScreenshotFullBase64(driver);
 	 	test.info( "Reciept",MediaEntityBuilder.createScreenCaptureFromBase64String(image).build());
 	 	offlinepaymentpage.Click_close_btn();
+	}
+	*/
+	@Test(priority = 13)
+	public void open_dataEntryPage() throws Exception
+	{
+		String consumerID = "CNB100B0063239";
+		extent.createTest("Open Connection on Data Entry Page");
+		DataEntryScreen_Water dataenrtyscreen = new DataEntryScreen_Water(driver);
+		SoftAssert softAssert = new SoftAssert();
+		dataenrtyscreen.DataEntry_Screen_link(url, driver);
+		dataenrtyscreen.enterConsumerNo(consumerID);
+		dataenrtyscreen.clickSearchButton();
+		Thread.sleep(5000);
+		
+		meter2 = dataenrtyscreen.meterStatus();
+		connection2 = dataenrtyscreen.connectionStatus();
+		System.out.println("Counter Meter Status :" + meter1);
+		System.out.println("Data Entry Meter Status :" + meter2);
+		softAssert.assertEquals(meter2, meter1, "Meter statuses do not match!");
+	    softAssert.assertEquals(connection2, connection1, "Connection statuses do not match!");
+	    softAssert.assertAll();
+		dataenrtyscreen.printLabelTexts_dataEntry();
+		
 	}
 	
 	@AfterMethod

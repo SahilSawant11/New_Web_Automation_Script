@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +27,7 @@ public class CMS_Page {
 	
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtProp']") private WebElement get_building_no;
 	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_createNewProp']") private WebElement building_btn;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_createPartitionProp']") private WebElement property_btn;
 	
 	@FindBy(xpath = "//button[text()='OK']") private WebElement ok_btn;
 	
@@ -56,8 +56,8 @@ public class CMS_Page {
 	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_gridAppealTaxInfo_lblTotal_0']") private WebElement ekunKar;
 	@FindBy(xpath = "//span[@id='ContentPlaceHolder1_gridAppealTaxInfo_lblTotal_0']") private WebElement samanyaKar;
 	
-	
-	
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtFromParti']") private WebElement from_prop;
+	@FindBy(xpath = "//input[@id='ContentPlaceHolder1_txtToParti']") private WebElement to_prop;
 	
 	public CMS_Page(WebDriver driver)
 	{
@@ -348,6 +348,28 @@ public class CMS_Page {
 		storedTaxValues.put("Samanya Kar", SamanyaKar);
 	}
 	
+	public void Click_Property_btn ()
+	{
+		property_btn.click();
+	}
 	
+	public void Enter_from_prop(String str) {
+		from_prop.clear();
+		from_prop.sendKeys(str);
+	}
+	
+	public void Enter_to_prop(String str) throws InterruptedException
+	{
+		to_prop.click();
+		Thread.sleep(5000);
+		to_prop.sendKeys(str);
+	}
+	
+	public void Enter_building_no(String str) throws InterruptedException
+	{
+		get_building_no.clear();
+		Thread.sleep(2000);
+		get_building_no.sendKeys(str);
+	}
 	
 }

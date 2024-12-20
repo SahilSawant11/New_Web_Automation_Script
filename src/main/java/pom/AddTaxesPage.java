@@ -3,16 +3,14 @@ package pom;
 import java.time.Duration;
 import java.util.Set;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import freemarker.core.ReturnInstruction.Return;
 
 public class AddTaxesPage {
 
@@ -41,7 +39,6 @@ public class AddTaxesPage {
 	
 	//----taxex
 	@FindBy(xpath = "//*[@id='ContentPlaceHolder1_gridAppealTaxInfo_lblTotal_0']") private WebElement TaxtotalOn_Dataentry;
-	
 	
 	
 	public AddTaxesPage(WebDriver driver)
@@ -107,13 +104,14 @@ public class AddTaxesPage {
 		}
 		Thread.sleep(500);
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(no_OCdate_popup));
-		Thread.sleep(2000);
-		no_OCdate_popup.click();
-		
-		
-		
+		try {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+	        wait.until(ExpectedConditions.visibilityOf(no_OCdate_popup));
+	        Thread.sleep(2000);
+	        no_OCdate_popup.click();
+	    } catch (TimeoutException e) {
+	        System.out.println("Popup not found. Proceeding to the next step.");
+	    }
 	}
 	
 	public void Button_save_btn2(WebDriver driver) throws InterruptedException

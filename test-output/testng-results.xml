@@ -1,766 +1,445 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="19" passed="7" failed="7" skipped="0">
+<testng-results ignored="0" total="21" passed="21" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-12T10:12:19Z" name="Suite" finished-at="2024-12-12T10:26:28Z" duration-ms="848776">
+  <suite started-at="2024-12-19T13:18:27Z" name="Suite" finished-at="2024-12-19T13:36:35Z" duration-ms="1087555">
     <groups>
     </groups>
-    <test started-at="2024-12-12T10:12:19Z" name="Login" finished-at="2024-12-12T10:12:45Z" duration-ms="25723">
+    <test started-at="2024-12-19T13:18:27Z" name="Login" finished-at="2024-12-19T13:18:54Z" duration-ms="26281">
       <class name="New_property_Wadhghat.Login">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.Login@4a07d605]" started-at="2024-12-12T15:42:19Z" name="beforetest" finished-at="2024-12-12T15:42:28Z" duration-ms="8072" status="PASS">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.Login@4a07d605]" started-at="2024-12-19T18:48:27Z" name="beforetest" finished-at="2024-12-19T18:48:35Z" duration-ms="7591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@4a07d605]" started-at="2024-12-12T15:42:28Z" name="loginPage" finished-at="2024-12-12T15:42:45Z" duration-ms="17622" status="PASS">
+        <test-method signature="loginPage()[pri:1, instance:New_property_Wadhghat.Login@4a07d605]" started-at="2024-12-19T18:48:35Z" name="loginPage" finished-at="2024-12-19T18:48:54Z" duration-ms="18653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPage -->
       </class> <!-- New_property_Wadhghat.Login -->
     </test> <!-- Login -->
-    <test started-at="2024-12-12T10:12:45Z" name="All Type Payments" finished-at="2024-12-12T10:16:04Z" duration-ms="198723">
-      <class name="PCMC_All_Tests.PCMC_TypeWisePayments">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:PCMC_All_Tests.PCMC_TypeWisePayments@675d8c96]" started-at="2024-12-12T15:42:45Z" name="beforetest" finished-at="2024-12-12T15:42:45Z" duration-ms="1" status="PASS">
+    <test started-at="2024-12-19T13:18:54Z" name="CreateNewProperty" finished-at="2024-12-19T13:26:42Z" duration-ms="468411">
+      <class name="New_property_Wadhghat.CMS_Test">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:48:54Z" name="beforetest" finished-at="2024-12-19T18:48:54Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="Full_CashPayment()[pri:2, instance:PCMC_All_Tests.PCMC_TypeWisePayments@675d8c96]" started-at="2024-12-12T15:42:45Z" name="Full_CashPayment" finished-at="2024-12-12T15:44:45Z" duration-ms="119998" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //span[@id='ContentPlaceHolder1_lblPaymentStatus']' (tried for 60 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //span[@id='ContentPlaceHolder1_lblPaymentStatus']' (tried for 60 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.CounterPaymentPage.Check_transaction_id(CounterPaymentPage.java:560)
-	at PCMC_All_Tests.PCMC_TypeWisePayments.Full_CashPayment(PCMC_TypeWisePayments.java:110)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@id='ContentPlaceHolder1_lblPaymentStatus']"}
-  (Session info: chrome=131.0.6778.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48bb003ffa8f9e8d849a6cd4400c06d8, findElement {using=xpath, value=//span[@id='ContentPlaceHolder1_lblPaymentStatus']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61932/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48bb003ffa8f9e8d849a6cd4400c06d8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:48:54Z" name="cmsPageWadhghat" finished-at="2024-12-19T18:49:09Z" duration-ms="15449" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Full_CashPayment -->
-        <test-method signature="Pending_CashPayment()[pri:3, instance:PCMC_All_Tests.PCMC_TypeWisePayments@675d8c96]" started-at="2024-12-12T15:44:45Z" name="Pending_CashPayment" finished-at="2024-12-12T15:46:03Z" duration-ms="78152" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.CounterPaymentPage.PCMC_confirm_payment(CounterPaymentPage.java:907)
-	at PCMC_All_Tests.PCMC_TypeWisePayments.Pending_CashPayment(PCMC_TypeWisePayments.java:187)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input"}
-  (Session info: chrome=131.0.6778.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48bb003ffa8f9e8d849a6cd4400c06d8, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61932/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48bb003ffa8f9e8d849a6cd4400c06d8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- cmsPageWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:49:09Z" name="aftermethod" finished-at="2024-12-19T18:49:10Z" duration-ms="916" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cmsPageWadhghat status=SUCCESS method=CMS_Test.cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsPageWadhghat() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Pending_CashPayment -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:PCMC_All_Tests.PCMC_TypeWisePayments@675d8c96]" started-at="2024-12-12T15:46:03Z" name="aftertest" finished-at="2024-12-12T15:46:04Z" duration-ms="553" status="PASS">
+        </test-method> <!-- aftermethod -->
+        <test-method signature="cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:49:10Z" name="cmsRegisterPageWadhghat" finished-at="2024-12-19T18:49:26Z" duration-ms="15888" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- aftertest -->
-      </class> <!-- PCMC_All_Tests.PCMC_TypeWisePayments -->
-    </test> <!-- All Type Payments -->
-    <test started-at="2024-12-12T10:16:04Z" name="All Mode Payments" finished-at="2024-12-12T10:23:13Z" duration-ms="428834">
-      <class name="PCMC_All_Tests.PCMC_ModeWisePayments">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:46:04Z" name="beforetest" finished-at="2024-12-12T15:46:04Z" duration-ms="0" status="PASS">
+        </test-method> <!-- cmsRegisterPageWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:49:26Z" name="aftermethod" finished-at="2024-12-19T18:49:26Z" duration-ms="231" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cmsRegisterPageWadhghat status=SUCCESS method=CMS_Test.cmsRegisterPageWadhghat()[pri:3, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsRegisterPageWadhghat() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:49:26Z" name="cmsComplaintRegisterWadhghat" finished-at="2024-12-19T18:49:44Z" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsRegisterPageWadhghat" duration-ms="17516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cmsComplaintRegisterWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:49:44Z" name="aftermethod" finished-at="2024-12-19T18:49:44Z" duration-ms="233" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=cmsComplaintRegisterWadhghat status=SUCCESS method=CMS_Test.cmsComplaintRegisterWadhghat()[pri:4, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.cmsComplaintRegisterWadhghat() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:49:44Z" name="searchComplaintWadhghat" finished-at="2024-12-19T18:50:25Z" depends-on-methods="New_property_Wadhghat.CMS_Test.cmsComplaintRegisterWadhghat" duration-ms="41251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchComplaintWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:50:25Z" name="aftermethod" finished-at="2024-12-19T18:50:25Z" duration-ms="190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=searchComplaintWadhghat status=SUCCESS method=CMS_Test.searchComplaintWadhghat()[pri:5, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.searchComplaintWadhghat() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:50:25Z" name="Dataentry_owner_info" finished-at="2024-12-19T18:50:59Z" depends-on-methods="New_property_Wadhghat.CMS_Test.searchComplaintWadhghat" duration-ms="33337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dataentry_owner_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:50:59Z" name="aftermethod" finished-at="2024-12-19T18:50:59Z" duration-ms="174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Dataentry_owner_info status=SUCCESS method=CMS_Test.Dataentry_owner_info()[pri:6, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.Dataentry_owner_info() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:50:59Z" name="Dataentry_floor_info" finished-at="2024-12-19T18:51:51Z" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_owner_info" duration-ms="51609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dataentry_floor_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:51:51Z" name="aftermethod" finished-at="2024-12-19T18:51:51Z" duration-ms="203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Dataentry_floor_info status=SUCCESS method=CMS_Test.Dataentry_floor_info()[pri:7, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.Dataentry_floor_info() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:51:51Z" name="OldTaxex_info" finished-at="2024-12-19T18:52:47Z" depends-on-methods="New_property_Wadhghat.CMS_Test.Dataentry_floor_info" duration-ms="56190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OldTaxex_info -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:52:47Z" name="aftermethod" finished-at="2024-12-19T18:52:53Z" duration-ms="6013" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=OldTaxex_info status=SUCCESS method=CMS_Test.OldTaxex_info()[pri:8, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.OldTaxex_info() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:52:53Z" name="AddTaxes_and_UploadFiles" finished-at="2024-12-19T18:55:02Z" depends-on-methods="New_property_Wadhghat.CMS_Test.OldTaxex_info" duration-ms="128658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddTaxes_and_UploadFiles -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:55:02Z" name="aftermethod" finished-at="2024-12-19T18:55:02Z" duration-ms="183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddTaxes_and_UploadFiles status=SUCCESS method=CMS_Test.AddTaxes_and_UploadFiles()[pri:9, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:55:02Z" name="WadhghatApproval" finished-at="2024-12-19T18:55:16Z" depends-on-methods="New_property_Wadhghat.CMS_Test.AddTaxes_and_UploadFiles" duration-ms="14139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WadhghatApproval -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:55:16Z" name="aftermethod" finished-at="2024-12-19T18:55:16Z" duration-ms="206" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=WadhghatApproval status=SUCCESS method=CMS_Test.WadhghatApproval()[pri:10, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test.WadhghatApproval() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method signature="councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:55:16Z" name="councilapproval" finished-at="2024-12-19T18:56:42Z" depends-on-methods="New_property_Wadhghat.CMS_Test.WadhghatApproval" duration-ms="85632" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- councilapproval -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:56:42Z" name="aftermethod" finished-at="2024-12-19T18:56:42Z" duration-ms="220" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=councilapproval status=SUCCESS method=CMS_Test.councilapproval()[pri:11, instance:New_property_Wadhghat.CMS_Test@35b74c5c] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[private void New_property_Wadhghat.CMS_Test.councilapproval() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:New_property_Wadhghat.CMS_Test@35b74c5c]" started-at="2024-12-19T18:56:42Z" name="tearDown" finished-at="2024-12-19T18:56:42Z" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- New_property_Wadhghat.CMS_Test -->
+    </test> <!-- CreateNewProperty -->
+    <test started-at="2024-12-19T13:26:42Z" name="CreatePartitionProperty" finished-at="2024-12-19T13:36:35Z" duration-ms="592791">
+      <class name="New_property_Wadhghat.CMS_Test_Partition">
+        <test-method is-config="true" signature="beforetest()[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:56:42Z" name="beforetest" finished-at="2024-12-19T18:56:42Z" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforetest -->
-        <test-method signature="CashPayment()[pri:2, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:46:04Z" name="CashPayment" finished-at="2024-12-12T15:47:13Z" duration-ms="69082" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.CounterPaymentPage.PCMC_confirm_payment(CounterPaymentPage.java:907)
-	at PCMC_All_Tests.PCMC_ModeWisePayments.CashPayment(PCMC_ModeWisePayments.java:101)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input"}
-  (Session info: chrome=131.0.6778.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48bb003ffa8f9e8d849a6cd4400c06d8, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61932/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48bb003ffa8f9e8d849a6cd4400c06d8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:56:42Z" name="cmsPageWadhghat" finished-at="2024-12-19T18:56:58Z" duration-ms="15540" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CashPayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:47:13Z" name="aftermethod" finished-at="2024-12-12T15:47:14Z" duration-ms="437" status="PASS">
+        </test-method> <!-- cmsPageWadhghat -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:56:58Z" name="aftermethod" finished-at="2024-12-19T18:56:58Z" duration-ms="275" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=CashPayment status=FAILURE method=PCMC_ModeWisePayments.CashPayment()[pri:2, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8] output={null}]]]>
+                <![CDATA[[TestResult name=cmsPageWadhghat status=SUCCESS method=CMS_Test_Partition.cmsPageWadhghat()[pri:2, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ModeWisePayments.CashPayment() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.cmsPageWadhghat() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="AdvancePayment()[pri:3, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:47:14Z" name="AdvancePayment" finished-at="2024-12-12T15:48:47Z" duration-ms="93892" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='ContentPlaceHolder1_lnkAdvcPay']' (tried for 60 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='ContentPlaceHolder1_lnkAdvcPay']' (tried for 60 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.CounterPaymentPage.Click_advance_pay_btn(CounterPaymentPage.java:193)
-	at PCMC_All_Tests.PCMC_ModeWisePayments.AdvancePayment(PCMC_ModeWisePayments.java:197)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='ContentPlaceHolder1_lnkAdvcPay']"}
-  (Session info: chrome=131.0.6778.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48bb003ffa8f9e8d849a6cd4400c06d8, findElement {using=xpath, value=//a[@id='ContentPlaceHolder1_lnkAdvcPay']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61932/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48bb003ffa8f9e8d849a6cd4400c06d8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="cmsRegisterPageWadhghat_Partition()[pri:3, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:56:58Z" name="cmsRegisterPageWadhghat_Partition" finished-at="2024-12-19T18:57:28Z" duration-ms="29888" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AdvancePayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:48:47Z" name="aftermethod" finished-at="2024-12-12T15:48:48Z" duration-ms="265" status="PASS">
+        </test-method> <!-- cmsRegisterPageWadhghat_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:57:28Z" name="aftermethod" finished-at="2024-12-19T18:57:28Z" duration-ms="248" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AdvancePayment status=FAILURE method=PCMC_ModeWisePayments.AdvancePayment()[pri:3, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8] output={null}]]]>
+                <![CDATA[[TestResult name=cmsRegisterPageWadhghat_Partition status=SUCCESS method=CMS_Test_Partition.cmsRegisterPageWadhghat_Partition()[pri:3, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ModeWisePayments.AdvancePayment() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.cmsRegisterPageWadhghat_Partition() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="chequePayment()[pri:4, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:48:48Z" name="chequePayment" finished-at="2024-12-12T15:49:50Z" duration-ms="62711" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.CounterPaymentPage.PCMC_confirm_payment(CounterPaymentPage.java:907)
-	at PCMC_All_Tests.PCMC_ModeWisePayments.chequePayment(PCMC_ModeWisePayments.java:253)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input"}
-  (Session info: chrome=131.0.6778.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48bb003ffa8f9e8d849a6cd4400c06d8, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61932/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48bb003ffa8f9e8d849a6cd4400c06d8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="cmsComplaintRegisterWadhghat_Partition()[pri:4, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:57:28Z" name="cmsComplaintRegisterWadhghat_Partition" finished-at="2024-12-19T18:57:46Z" depends-on-methods="New_property_Wadhghat.CMS_Test_Partition.cmsRegisterPageWadhghat_Partition" duration-ms="18363" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- chequePayment -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:49:50Z" name="aftermethod" finished-at="2024-12-12T15:49:51Z" duration-ms="260" status="PASS">
+        </test-method> <!-- cmsComplaintRegisterWadhghat_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:57:46Z" name="aftermethod" finished-at="2024-12-19T18:57:47Z" duration-ms="244" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=chequePayment status=FAILURE method=PCMC_ModeWisePayments.chequePayment()[pri:4, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8] output={null}]]]>
+                <![CDATA[[TestResult name=cmsComplaintRegisterWadhghat_Partition status=SUCCESS method=CMS_Test_Partition.cmsComplaintRegisterWadhghat_Partition()[pri:4, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ModeWisePayments.chequePayment() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.cmsComplaintRegisterWadhghat_Partition() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="cheque_fail()[pri:5, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:49:51Z" name="cheque_fail" finished-at="2024-12-12T15:52:09Z" duration-ms="138016" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVData_chkRow_0']' (tried for 120 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVData_chkRow_0']' (tried for 120 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.DDChequeclearPage.SelectCheque(DDChequeclearPage.java:121)
-	at PCMC_All_Tests.PCMC_ModeWisePayments.cheque_fail(PCMC_ModeWisePayments.java:331)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVData_chkRow_0']"}
-  (Session info: chrome=131.0.6778.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48bb003ffa8f9e8d849a6cd4400c06d8, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVData_chkRow_0']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61932/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48bb003ffa8f9e8d849a6cd4400c06d8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="searchComplaintWadhghat_Partition()[pri:5, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:57:47Z" name="searchComplaintWadhghat_Partition" finished-at="2024-12-19T18:58:27Z" depends-on-methods="New_property_Wadhghat.CMS_Test_Partition.cmsComplaintRegisterWadhghat_Partition" duration-ms="40226" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cheque_fail -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:52:09Z" name="aftermethod" finished-at="2024-12-12T15:52:09Z" duration-ms="278" status="PASS">
+        </test-method> <!-- searchComplaintWadhghat_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:58:27Z" name="aftermethod" finished-at="2024-12-19T18:58:27Z" duration-ms="255" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cheque_fail status=FAILURE method=PCMC_ModeWisePayments.cheque_fail()[pri:5, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8] output={null}]]]>
+                <![CDATA[[TestResult name=searchComplaintWadhghat_Partition status=SUCCESS method=CMS_Test_Partition.searchComplaintWadhghat_Partition()[pri:5, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ModeWisePayments.cheque_fail() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.searchComplaintWadhghat_Partition() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="Card()[pri:7, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:52:09Z" name="Card" finished-at="2024-12-12T15:53:13Z" duration-ms="63537" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input' (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pom.CounterPaymentPage.PCMC_confirm_payment(CounterPaymentPage.java:907)
-	at PCMC_All_Tests.PCMC_ModeWisePayments.Card(PCMC_ModeWisePayments.java:471)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input"}
-  (Session info: chrome=131.0.6778.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48bb003ffa8f9e8d849a6cd4400c06d8, findElement {using=xpath, value=//*[@id='ContentPlaceHolder1_GVPropTax']/tbody/tr[4]/td[2]/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61932}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61932/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48bb003ffa8f9e8d849a6cd4400c06d8
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="Dataentry_owner_info_Partition()[pri:6, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:58:27Z" name="Dataentry_owner_info_Partition" finished-at="2024-12-19T18:58:48Z" depends-on-methods="New_property_Wadhghat.CMS_Test_Partition.searchComplaintWadhghat_Partition" duration-ms="20524" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Card -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:53:13Z" name="aftermethod" finished-at="2024-12-12T15:53:13Z" duration-ms="303" status="PASS">
+        </test-method> <!-- Dataentry_owner_info_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:58:48Z" name="aftermethod" finished-at="2024-12-19T18:58:48Z" duration-ms="176" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Card status=FAILURE method=PCMC_ModeWisePayments.Card()[pri:7, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8] output={null}]]]>
+                <![CDATA[[TestResult name=Dataentry_owner_info_Partition status=SUCCESS method=CMS_Test_Partition.Dataentry_owner_info_Partition()[pri:6, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ModeWisePayments.Card() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.Dataentry_owner_info_Partition() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:PCMC_All_Tests.PCMC_ModeWisePayments@32f0fba8]" started-at="2024-12-12T15:53:13Z" name="aftertest" finished-at="2024-12-12T15:53:13Z" duration-ms="29" status="PASS">
+        <test-method signature="Dataentry_floor_info_Partition()[pri:7, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:58:48Z" name="Dataentry_floor_info_Partition" finished-at="2024-12-19T18:59:33Z" depends-on-methods="New_property_Wadhghat.CMS_Test_Partition.Dataentry_owner_info_Partition" duration-ms="45001" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- aftertest -->
-      </class> <!-- PCMC_All_Tests.PCMC_ModeWisePayments -->
-    </test> <!-- All Mode Payments -->
-    <test started-at="2024-12-12T10:23:13Z" name="Pcmc Reports" finished-at="2024-12-12T10:25:25Z" duration-ms="131999">
-      <class name="PCMC_All_Tests.PCMC_ReportTest">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808]" started-at="2024-12-12T15:53:13Z" name="beforetest" finished-at="2024-12-12T15:53:13Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforetest -->
-        <test-method signature="challan_report()[pri:2, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808]" started-at="2024-12-12T15:53:13Z" name="challan_report" finished-at="2024-12-12T15:53:49Z" duration-ms="36579" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- challan_report -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808]" started-at="2024-12-12T15:53:49Z" name="aftermethod" finished-at="2024-12-12T15:53:50Z" duration-ms="219" status="PASS">
+        </test-method> <!-- Dataentry_floor_info_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:59:33Z" name="aftermethod" finished-at="2024-12-19T18:59:33Z" duration-ms="176" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=challan_report status=SUCCESS method=PCMC_ReportTest.challan_report()[pri:2, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808] output={null}]]]>
+                <![CDATA[[TestResult name=Dataentry_floor_info_Partition status=SUCCESS method=CMS_Test_Partition.Dataentry_floor_info_Partition()[pri:7, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ReportTest.challan_report() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.Dataentry_floor_info_Partition() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="headwise_report()[pri:3, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808]" started-at="2024-12-12T15:53:50Z" name="headwise_report" finished-at="2024-12-12T15:54:28Z" duration-ms="38488" status="PASS">
+        <test-method signature="OldTaxex_info_Partition()[pri:8, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T18:59:33Z" name="OldTaxex_info_Partition" finished-at="2024-12-19T19:00:18Z" depends-on-methods="New_property_Wadhghat.CMS_Test_Partition.Dataentry_floor_info_Partition" duration-ms="44982" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- headwise_report -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808]" started-at="2024-12-12T15:54:28Z" name="aftermethod" finished-at="2024-12-12T15:54:28Z" duration-ms="215" status="PASS">
+        </test-method> <!-- OldTaxex_info_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T19:00:18Z" name="aftermethod" finished-at="2024-12-19T19:00:24Z" duration-ms="5840" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=headwise_report status=SUCCESS method=PCMC_ReportTest.headwise_report()[pri:3, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808] output={null}]]]>
+                <![CDATA[[TestResult name=OldTaxex_info_Partition status=SUCCESS method=CMS_Test_Partition.OldTaxex_info_Partition()[pri:8, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ReportTest.headwise_report() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.OldTaxex_info_Partition() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="bharna_report_for_all_modes()[pri:4, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808]" started-at="2024-12-12T15:54:28Z" name="bharna_report_for_all_modes" finished-at="2024-12-12T15:55:25Z" duration-ms="56256" status="PASS">
+        <test-method signature="AddTaxes_and_UploadFiles_Partition()[pri:9, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T19:00:24Z" name="AddTaxes_and_UploadFiles_Partition" finished-at="2024-12-19T19:04:35Z" depends-on-methods="New_property_Wadhghat.CMS_Test_Partition.OldTaxex_info_Partition" duration-ms="250951" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- bharna_report_for_all_modes -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808]" started-at="2024-12-12T15:55:25Z" name="aftermethod" finished-at="2024-12-12T15:55:25Z" duration-ms="204" status="PASS">
+        </test-method> <!-- AddTaxes_and_UploadFiles_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T19:04:35Z" name="aftermethod" finished-at="2024-12-19T19:04:35Z" duration-ms="212" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=bharna_report_for_all_modes status=SUCCESS method=PCMC_ReportTest.bharna_report_for_all_modes()[pri:4, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808] output={null}]]]>
+                <![CDATA[[TestResult name=AddTaxes_and_UploadFiles_Partition status=SUCCESS method=CMS_Test_Partition.AddTaxes_and_UploadFiles_Partition()[pri:9, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_ReportTest.bharna_report_for_all_modes() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.AddTaxes_and_UploadFiles_Partition() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:PCMC_All_Tests.PCMC_ReportTest@7c351808]" started-at="2024-12-12T15:55:25Z" name="aftertest" finished-at="2024-12-12T15:55:25Z" duration-ms="28" status="PASS">
+        <test-method signature="WadhghatApproval_Partition()[pri:10, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T19:04:35Z" name="WadhghatApproval_Partition" finished-at="2024-12-19T19:04:49Z" depends-on-methods="New_property_Wadhghat.CMS_Test_Partition.AddTaxes_and_UploadFiles_Partition" duration-ms="13556" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- aftertest -->
-      </class> <!-- PCMC_All_Tests.PCMC_ReportTest -->
-    </test> <!-- Pcmc Reports -->
-    <test started-at="2024-12-12T10:25:25Z" name="Admin Dashboard Reports" finished-at="2024-12-12T10:26:28Z" duration-ms="63339">
-      <class name="PCMC_All_Tests.PCMC_AdminDashboardReports">
-        <test-method is-config="true" signature="beforetest()[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a]" started-at="2024-12-12T15:55:25Z" name="beforetest" finished-at="2024-12-12T15:55:25Z" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforetest -->
-        <test-method signature="Paymentmodewise_Report()[pri:2, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a]" started-at="2024-12-12T15:55:25Z" name="Paymentmodewise_Report" finished-at="2024-12-12T15:55:46Z" duration-ms="21085" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Paymentmodewise_Report -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a]" started-at="2024-12-12T15:55:46Z" name="aftermethod" finished-at="2024-12-12T15:55:46Z" duration-ms="153" status="PASS">
+        </test-method> <!-- WadhghatApproval_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T19:04:49Z" name="aftermethod" finished-at="2024-12-19T19:04:49Z" duration-ms="193" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Paymentmodewise_Report status=SUCCESS method=PCMC_AdminDashboardReports.Paymentmodewise_Report()[pri:2, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a] output={null}]]]>
+                <![CDATA[[TestResult name=WadhghatApproval_Partition status=SUCCESS method=CMS_Test_Partition.WadhghatApproval_Partition()[pri:10, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_AdminDashboardReports.Paymentmodewise_Report() throws java.lang.Exception]]>
+                <![CDATA[public void New_property_Wadhghat.CMS_Test_Partition.WadhghatApproval_Partition() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="Usewise_Report()[pri:3, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a]" started-at="2024-12-12T15:55:46Z" name="Usewise_Report" finished-at="2024-12-12T15:56:07Z" duration-ms="20949" status="PASS">
+        <test-method signature="councilapproval_Partition()[pri:11, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T19:04:49Z" name="councilapproval_Partition" finished-at="2024-12-19T19:06:35Z" depends-on-methods="New_property_Wadhghat.CMS_Test_Partition.WadhghatApproval_Partition" duration-ms="105788" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Usewise_Report -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a]" started-at="2024-12-12T15:56:07Z" name="aftermethod" finished-at="2024-12-12T15:56:07Z" duration-ms="175" status="PASS">
+        </test-method> <!-- councilapproval_Partition -->
+        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T19:06:35Z" name="aftermethod" finished-at="2024-12-19T19:06:35Z" duration-ms="223" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Usewise_Report status=SUCCESS method=PCMC_AdminDashboardReports.Usewise_Report()[pri:3, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a] output={null}]]]>
+                <![CDATA[[TestResult name=councilapproval_Partition status=SUCCESS method=CMS_Test_Partition.councilapproval_Partition()[pri:11, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_AdminDashboardReports.Usewise_Report() throws java.lang.Exception]]>
+                <![CDATA[private void New_property_Wadhghat.CMS_Test_Partition.councilapproval_Partition() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method signature="Zonewise_Report()[pri:4, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a]" started-at="2024-12-12T15:56:07Z" name="Zonewise_Report" finished-at="2024-12-12T15:56:28Z" duration-ms="20744" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:New_property_Wadhghat.CMS_Test_Partition@13d9cbf5]" started-at="2024-12-19T19:06:35Z" name="tearDown" finished-at="2024-12-19T19:06:35Z" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Zonewise_Report -->
-        <test-method is-config="true" signature="aftermethod(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a]" started-at="2024-12-12T15:56:28Z" name="aftermethod" finished-at="2024-12-12T15:56:28Z" duration-ms="184" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Zonewise_Report status=SUCCESS method=PCMC_AdminDashboardReports.Zonewise_Report()[pri:4, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void PCMC_All_Tests.PCMC_AdminDashboardReports.Zonewise_Report() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method is-config="true" signature="aftertest()[pri:0, instance:PCMC_All_Tests.PCMC_AdminDashboardReports@592e843a]" started-at="2024-12-12T15:56:28Z" name="aftertest" finished-at="2024-12-12T15:56:28Z" duration-ms="38" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftertest -->
-      </class> <!-- PCMC_All_Tests.PCMC_AdminDashboardReports -->
-    </test> <!-- Admin Dashboard Reports -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- New_property_Wadhghat.CMS_Test_Partition -->
+    </test> <!-- CreatePartitionProperty -->
   </suite> <!-- Suite -->
 </testng-results>

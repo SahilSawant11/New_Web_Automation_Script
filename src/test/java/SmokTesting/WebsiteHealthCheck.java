@@ -36,15 +36,12 @@ public class WebsiteHealthCheck {
     @BeforeTest
     public void setup() {
         String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-        screenshotDir = "screenshots_" + timestamp;
-        new File(screenshotDir).mkdirs();
+        screenshotDir = "target/screenshots/" + timestamp;  // Specify the folder path
+        new File(screenshotDir).mkdirs();  // Create the folder structure if it doesn't exist
 
-       
         extent = new ExtentReports();
-        spark = new ExtentSparkReporter("ExtentReport.html");
+        spark = new ExtentSparkReporter("target/ExtentReport.html");
         extent.attachReporter(spark);
-        
-
         
         // Configure Chrome options
         ChromeOptions options = new ChromeOptions();
@@ -52,9 +49,8 @@ public class WebsiteHealthCheck {
         driver = new ChromeDriver(options);
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         stopWatch = new StopWatch();
-        
-
     }
+
 
     private String takeScreenshot(String websiteName) {
         try {
@@ -202,10 +198,12 @@ public class WebsiteHealthCheck {
             Map<String, Object> results = performHealthCheck(website);
             logResults(website, results);
             System.out.println("Checked website: " + website);
-            if (results.get("screenshotPath") != null) {
-                System.out.println("Screenshot saved: " + results.get("screenshotPath"));
+            System.out.println("Health Check Results:");
+            for (Map.Entry<String, Object> entry : results.entrySet()) {
+                System.out.println(entry.getKey() + ": " + entry.getValue());
             }
         }
+
     }
 
     @AfterTest

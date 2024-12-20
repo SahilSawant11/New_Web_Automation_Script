@@ -125,8 +125,10 @@ public class MeterPage_Water {
 		save_btn.click();
 	}
 	
-	public void Click_karyadesh()
+	public void Click_karyadesh(WebDriver driver)
 	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(karyadesh_btn));
 		karyadesh_btn.click();
 	}
 	

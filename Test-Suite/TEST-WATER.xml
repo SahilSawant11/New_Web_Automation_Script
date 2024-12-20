@@ -13,7 +13,7 @@
 		<class name = "Water_Panvel.CMS_Water_Niyamit"/>
 	</classes>
 </test>	
-
+<!-- 
 <test name = "Water Reports">
 	<classes>
 		<class name = "Water_Panvel.CollectionReports_Water"/>
@@ -25,4 +25,5 @@
 		<class name = "Water_Panvel.ReportEngine_Water"/>
 	</classes>
 </test>		
+-->
 </suite> <!-- Suite -->

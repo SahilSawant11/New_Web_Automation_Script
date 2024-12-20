@@ -99,7 +99,7 @@ public class BaseDriver {
 	static public String cms_aakshep_prakar_wadhghat ="वाढघट";
 	static public String date = "20/04/2023";
 	static public String mobile = "1111111111";
-	static public String cms_remark = "test";
+	static public String cms_remark = "automated-test";
 	static public String zone_no = "1";
 	static public String khula_bhukhand = "No";
 	static public String property_type = "निवासी";
@@ -175,8 +175,8 @@ public class BaseDriver {
 	static public String Tax2 = "94";
 	static public String Tax3 = "53";
 	static public String interest = "10";
-	static public String oldRemark = "test";
-	static public String approvalRemark = "test";
+	static public String oldRemark = "automated-old-test";
+	static public String approvalRemark = "automated-test";
 	
 	
 	static public String ferfar_aakshep_prakar = "फेरफार";
@@ -230,7 +230,12 @@ public class BaseDriver {
 	static public String change_email2 = "xyz@gmail.com";
 	static public String change_remark2 = "automation_test";
 	static public String specificDate = "01-10-2024";
-
+	
+	static public String marathi_name = "करधारक";
+	static public String marathi_address = "पत्ता";
+	static public String english_name = "Tester Automation";
+	static public String english_address = "Address in English";
+	static public String mail = "abc123@gmail.com";
 	
 	@SuppressWarnings("resource")
 	public static void GetData() throws IOException

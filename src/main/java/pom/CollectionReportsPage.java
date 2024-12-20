@@ -77,12 +77,20 @@ public class CollectionReportsPage {
 		node.selectByValue("0");
 	}
 	
-	public void Select_payment_source(WebDriver driver)
+	public void Select_payment_source_all(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 		wait.until(ExpectedConditions.visibilityOf(payment_source));
 		Select node = new Select(payment_source);
 		node.selectByValue("0");
+	}
+	
+	public void Select_payment_source_tab(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		wait.until(ExpectedConditions.visibilityOf(payment_source));
+		Select node = new Select(payment_source);
+		node.selectByValue("3");
 	}
 	
 	public void Select_payment_option_cheque(WebDriver driver)
