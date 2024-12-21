@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test name="Niyamit Connection(failed)">
+  <test name="Login(failed)">
     <classes>
-      <class name="Water_Panvel.CMS_Water_Niyamit">
+      <class name="New_property_Wadhghat.Login">
+        <methods>
+          <include name="loginPage"/>
+          <include name="beforetest"/>
+        </methods>
+      </class> <!-- New_property_Wadhghat.Login -->
+    </classes>
+  </test> <!-- Login(failed) -->
+  <test name="MODE WISE WISE(failed)">
+    <classes>
+      <class name="Trade_Panvel.Trade_Application_Approval">
         <methods>
           <include name="beforetest"/>
-          <include name="open_dataEntryPage"/>
+          <include name="aftertest"/>
+          <include name="applicationapproval1"/>
+          <include name="applicationapproval2"/>
+          <include name="licensepayment"/>
           <include name="aftermethod"/>
-          <include name="tearDown"/>
+          <include name="dataEntry"/>
         </methods>
-      </class> <!-- Water_Panvel.CMS_Water_Niyamit -->
+      </class> <!-- Trade_Panvel.Trade_Application_Approval -->
     </classes>
-  </test> <!-- Niyamit Connection(failed) -->
+  </test> <!-- MODE WISE WISE(failed) -->
 </suite> <!-- Failed suite [Suite] -->

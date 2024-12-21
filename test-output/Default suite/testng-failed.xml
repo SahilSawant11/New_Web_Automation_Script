@@ -3,15 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Water_Panvel.CMS_Water_Niyamit">
+      <class name="Trade_Panvel.Trade_Application_Approval">
         <methods>
           <include name="beforetest"/>
-          <include name="open_dataEntryPage"/>
+          <include name="aftertest"/>
+          <include name="applicationapproval1"/>
+          <include name="finalApproval"/>
+          <include name="applicationapproval2"/>
+          <include name="licensepayment"/>
           <include name="aftermethod"/>
-          <include name="tearDown"/>
-          <include name="open_counter"/>
+          <include name="dataEntry"/>
         </methods>
-      </class> <!-- Water_Panvel.CMS_Water_Niyamit -->
+      </class> <!-- Trade_Panvel.Trade_Application_Approval -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

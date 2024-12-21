@@ -13,6 +13,11 @@
     </classes>
   </test>
  
+ <test name="CreatePartitionProperty">
+	<classes>
+		<class name="New_property_Wadhghat.CMS_Test_Partition"/>
+	</classes>
+</test>		
 
 <test name="All Payments">
 	<classes>

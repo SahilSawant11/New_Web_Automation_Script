@@ -1,7 +1,5 @@
 package Water_Panvel;
 
-import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
 
 import org.apache.commons.lang3.time.StopWatch;
@@ -62,7 +60,7 @@ public class CMS_Water_Niyamit extends BaseDriver{
 		}
 	}
 
-	/*
+	
 	@Test(priority = 2)
 	public void registercomplaint() throws Exception
 	{
@@ -312,7 +310,7 @@ public class CMS_Water_Niyamit extends BaseDriver{
 	 	Thread.sleep(2000);
 	 	readingpage.Click_yes_btn();
 	 }
-	*/
+	
 	@Test(priority = 11)
 	public void open_counter() throws Exception 
 	{
@@ -329,7 +327,7 @@ public class CMS_Water_Niyamit extends BaseDriver{
 	 	test.info( "Connection openned on Counter",MediaEntityBuilder.createScreenCaptureFromBase64String(image).build());
 
 	}
-	/*
+	
 	@Test(priority = 12 , dependsOnMethods = "open_counter")
 	public void cash_payment() throws Exception 
 	{
@@ -347,7 +345,7 @@ public class CMS_Water_Niyamit extends BaseDriver{
 	 	test.info( "Reciept",MediaEntityBuilder.createScreenCaptureFromBase64String(image).build());
 	 	offlinepaymentpage.Click_close_btn();
 	}
-	*/
+	
 	@Test(priority = 13)
 	public void open_dataEntryPage() throws Exception
 	{

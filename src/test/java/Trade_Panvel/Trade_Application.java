@@ -23,7 +23,7 @@ import org.testng.annotations.AfterTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
-public class Trade_Application_Approval extends BaseDriver {
+public class Trade_Application extends BaseDriver {
 	
 	TakeScreenshoot takescreenshot=new TakeScreenshoot(driver, null);
 	StopWatch stopWatch;
@@ -67,11 +67,10 @@ public class Trade_Application_Approval extends BaseDriver {
 	{
 		test = extent.createTest("Data Entry");
 		DataEntryPage_TradeLicense dataentrypage = new DataEntryPage_TradeLicense(driver);
-
 		dataentrypage.DataEntry_Page_link(url, driver);
-		dataentrypage.select_node_no(driver);
-		dataentrypage.select_sector_no( driver);
-		dataentrypage.enter_property_no(driver);
+		dataentrypage.select_node_no_kh(driver);
+		dataentrypage.select_sector_no_kh10( driver);
+		dataentrypage.enter_property_no("7-4",driver);
 		Thread.sleep(5000);
 		dataentrypage.scroll_to_bottom(driver);
 		dataentrypage.search_property(driver);
@@ -79,10 +78,9 @@ public class Trade_Application_Approval extends BaseDriver {
 		dataentrypage.scroll_to_top(driver);
 		application_no = dataentrypage.fetch_application_no(driver);
 		System.out.println("Fetched Application Number: " + application_no);
+		test.info("Application Number is : "+ application_no);
 		dataentrypage.scrollbypixdown(driver);
-		dataentrypage.clickDeleteOwners(driver, 90400, 90500);
-	//	dataentrypage.clickDeleteOwner2(driver, 90400, 90500);
-		
+		dataentrypage.clickDeleteOwners(driver, 91400, 92500);
 		dataentrypage.scrollbypixup(driver);
 		dataentrypage.Enter_Englishname(occupier_name);
 		dataentrypage.Enter_Marathiname(ferfar_kardharak);
@@ -97,13 +95,9 @@ public class Trade_Application_Approval extends BaseDriver {
 		dataentrypage.Enter_Plot(plot_no);
 		dataentrypage.Enter_Flat(flatno);
 		dataentrypage.Enter_SocietyName(societyname);
-		
-		
 		dataentrypage.Enter_address(address);
 		dataentrypage.Click_add_more(driver);
-		
 		dataentrypage.scrollbypixdown(driver);
-		
 		dataentrypage.Enter_socName(societyname);
 		dataentrypage.select_business_type(driver);		
 		dataentrypage.select_license_type(driver);
@@ -128,10 +122,7 @@ public class Trade_Application_Approval extends BaseDriver {
 		dataentrypage.Enter_socName(societyname);
 		dataentrypage.Enter_address_bussiness(address);
 		dataentrypage.Enter_plot(plot_no);
-		
-
 		dataentrypage.scroll_to_bottom(driver);
-
 		dataentrypage.Button_choose_file(System.getProperty("user.dir") + "\\AddTaxes file\\PDFFILE.pdf",driver);
 		dataentrypage.Click_agree_btn(driver);
 		String firstWindowHandle = driver.getWindowHandle();
@@ -192,7 +183,6 @@ public class Trade_Application_Approval extends BaseDriver {
 	@Test(priority = 5)
 	public void licensepayment() throws Exception
 	{
-
 		test = extent.createTest("License Payment");
 		PaymentPage_TradeLicense paypage = new PaymentPage_TradeLicense(driver);
 		paypage.Payment_Page_link(url, driver);
@@ -205,6 +195,21 @@ public class Trade_Application_Approval extends BaseDriver {
 		paypage.Button_paynow_btn(driver);
 		paypage.Download_reciept(driver);
 		
+	}
+	
+	@Test(priority = 6)
+	public void finalApproval() throws Exception
+	{
+		test = extent.createTest("Final Approval");
+		ApplicationApprovalPage approvalpage = new ApplicationApprovalPage(driver);
+		DataEntryPage_TradeLicense dataentry = new DataEntryPage_TradeLicense(driver);
+		approvalpage.Application_Approval_Page_link(url, driver);
+		approvalpage.Search_application(driver, application_no);
+		approvalpage.Button_show_btn(driver);
+		dataentry.scroll_to_bottom(driver);
+		approvalpage.Enter_remark(driver);
+		approvalpage.Button_arjavhal_btn(driver);
+		approvalpage.Button_approved1_btn(driver);
 	}
 	
 	@AfterMethod

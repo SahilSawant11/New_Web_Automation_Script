@@ -16,8 +16,30 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DataEntryPage_TradeLicense {
 
-	@FindBy(xpath = "//select[@id=\'ddlNode']") private WebElement node;
-	@FindBy(xpath = "//select[@id=\'ddlSector']") private WebElement sector;
+	
+	/////////////////////////////////////////buttons///////////////////////////////////////
+	@FindBy (xpath= "//button[@id=\'addfieldbtn']") private WebElement addmore;
+	@FindBy (xpath= "//*[@id=\'agreebtn']") private WebElement agreebtn;
+	@FindBy (xpath= "//*[@id=\'btnsubmit']") private WebElement submitbtn;
+	@FindBy (xpath= "//*[@id=\'btnPrintApplication\']") private WebElement printbtn;
+	@FindBy (xpath= "//*[@id='linkNewRegistration']") private WebElement newregister;
+	
+	/////////////////////////////////////////Select///////////////////////////////////////
+	@FindBy (xpath= "//select[@id=\'ddlLicenceMainTypeID']") private WebElement businessType;
+	@FindBy (xpath= "//select[@id=\'ddlLicenceType']") private WebElement licenseType;
+	@FindBy (xpath= "//select[@id=\'ddlPropertyType']") private WebElement propertyType;
+	@FindBy (xpath= "//select[@id=\'ddlLicensePeriod']") private WebElement licensePeriod;
+	@FindBy (xpath= "//select[@id=\'ddlPremiseType']") private WebElement premiseType;
+	@FindBy (xpath= "//select[@id=\'ddlNatureoftrade']") private WebElement natureofTrade;
+	@FindBy (xpath= "//select[@id=\'ddlBusinessStyle']") private WebElement bStyle;
+	@FindBy (xpath= "//select[@id=\'ddlBusinessStatus']") private WebElement statusofBusiness;
+	@FindBy (xpath= "//select[@id=\'ddlOccupancyCerti']") private WebElement OC;
+	@FindBy (xpath= "//select[@id=\'ddlDistrict']") private WebElement district;
+	@FindBy (xpath= "//select[@id=\'ddlNode']") private WebElement node;
+	@FindBy (xpath= "//select[@id=\'ddlSector']") private WebElement sector;
+	@FindBy (xpath= "//*[@id='ddlSelectLicType']") private WebElement license_type;
+	
+	/////////////////////////////////////////Input-Feilds///////////////////////////////////////
 	@FindBy (xpath= "//input[@id=\'txtPropertyPartitionNo']") private WebElement propertyno;
 	@FindBy (xpath= "//input[@id=\'btnSearchProperty']") private WebElement searchproperty;
 	@FindBy (xpath= "//input[@id=\'txtApplicantEngName']") private WebElement nameEng;
@@ -33,23 +55,6 @@ public class DataEntryPage_TradeLicense {
 	@FindBy (xpath= "//input[@id=\'txtFlatNo']") private WebElement flat;
 	@FindBy (xpath= "//input[@id=\'txtSocietyName']") private WebElement society_name;
 	@FindBy (xpath= "//input[@id=\'txtAddress']") private WebElement address;
-	@FindBy (xpath= "//button[@id=\'addfieldbtn']") private WebElement addmore;
-	@FindBy (xpath= "//select[@id=\'ddlDistrict']") private WebElement district;
-	@FindBy (xpath= "//*[@id=\'agreebtn']") private WebElement agreebtn;
-	@FindBy (xpath= "//*[@id=\'btnsubmit']") private WebElement submitbtn;
-	@FindBy (xpath= "//*[@id=\'btnPrintApplication\']") private WebElement printbtn;
-	
-	
-	@FindBy (xpath= "//select[@id=\'ddlLicenceMainTypeID']") private WebElement businessType;
-	@FindBy (xpath= "//select[@id=\'ddlLicenceType']") private WebElement licenseType;
-	@FindBy (xpath= "//select[@id=\'ddlPropertyType']") private WebElement propertyType;
-	@FindBy (xpath= "//select[@id=\'ddlLicensePeriod']") private WebElement licensePeriod;
-	@FindBy (xpath= "//select[@id=\'ddlPremiseType']") private WebElement premiseType;
-	@FindBy (xpath= "//select[@id=\'ddlNatureoftrade']") private WebElement natureofTrade;
-	@FindBy (xpath= "//select[@id=\'ddlBusinessStyle']") private WebElement bStyle;
-	@FindBy (xpath= "//select[@id=\'ddlBusinessStatus']") private WebElement statusofBusiness;
-	@FindBy (xpath= "//select[@id=\'ddlOccupancyCerti']") private WebElement OC;
-	
 	@FindBy (xpath= "//input[@id=\'txtTotalAreaSqMtr']") private WebElement totalArea;
 	@FindBy (xpath= "//input[@id=\'txtCommeceDate']") private WebElement commDate;
 	@FindBy (xpath= "//input[@id=\'txtOccupancyDate']") private WebElement ocDate;
@@ -65,9 +70,11 @@ public class DataEntryPage_TradeLicense {
 	@FindBy (xpath= "//input[@id=\'txtBSocietyName']") private WebElement societyName;
 	@FindBy (xpath= "//input[@id=\'txtBAddress']") private WebElement addressBusiness;
 	@FindBy (xpath= "//input[@id=\'txtnameOfBusiness']") private WebElement shopname;
-	
 	@FindBy (xpath= "//input[@id=\'file32316']") private WebElement choose_file;
-	@FindBy(xpath = "//*[@id='lblApplicationNo']") private WebElement application_no;
+	@FindBy (xpath= "//*[@id='lblApplicationNo']") private WebElement application_no;
+	
+	
+	/////////////////////////////////////////Page-Objects///////////////////////////////////////
 	
 	
 	public DataEntryPage_TradeLicense (WebDriver driver)
@@ -91,146 +98,8 @@ public class DataEntryPage_TradeLicense {
 		driver.get(s2);
 	}
 	
-	public void select_node_no( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(node));
-		
-		Select s = new Select(node);
-		s.selectByValue("2");
-	}
+	/////////////////////////////////////////Enter-Objects///////////////////////////////////////
 	
-	public void select_sector_no( WebDriver driver)
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.visibilityOf(sector));
-		
-		Select s = new Select(sector);
-		s.selectByValue("KH10");
-	}
-	
-	public void enter_property_no( WebDriver driver)
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(propertyno));
-		propertyno.sendKeys("15-9");
-	}
-	
-	public void scroll_to_bottom(WebDriver driver) throws InterruptedException {
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
-	    Thread.sleep(2000);
-	}
-	
-	public void scroll_to_top(WebDriver driver) throws InterruptedException {
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollTo(0, 0);");
-	    Thread.sleep(2000);
-	}
-
-
-	
-	public void scrollbypixdown(WebDriver driver) throws InterruptedException
-	{
-		
-		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
-		Thread.sleep(2000);
-
-	}
-	
-	public void scrollbypixup(WebDriver driver)
-	{
-		
-		((JavascriptExecutor) driver).executeScript("window.scrollBy(500, 0);");
-
-	}
-	 
-	public void search_property(WebDriver driver)
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(searchproperty));
-		//((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
-		searchproperty.click();
-				
-	}
-	
-	public void clickDeleteOwners(WebDriver driver, int startId, int endId) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
-	    boolean isClicked = false;
-	    
-	    // Loop through the range of IDs
-	    for (int i = startId; i <= endId; i++) {
-	        String partialId = "span" + i;
-
-	        try {
-	            // Use dynamic XPath that finds the element with partial ID
-	            WebElement deleteOwner = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@id, '" + partialId + "')]")));
-
-	            // Scroll the element into view (optional)
-	            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", deleteOwner);
-
-	            // Wait until the element is clickable
-	            wait.until(ExpectedConditions.elementToBeClickable(deleteOwner));
-
-	            // Click on the deleteOwner element
-	            deleteOwner.click();
-	            System.out.println("Clicked on the 'delete' span element with ID: " + partialId);
-	            isClicked = true;
-
-	            // Optionally add a small delay to avoid overwhelming the system (e.g., wait for page updates)
-	            Thread.sleep(500); // 0.5 second delay, adjust as needed.
-
-	        } catch (NoSuchElementException e) {
-	            System.out.println("No 'delete' span element found with ID: " + partialId);
-	        } catch (ElementClickInterceptedException e) {
-	            System.out.println("Element click was intercepted for ID: " + partialId);
-	        } catch (Exception e) {
-	            System.out.println("Error while clicking the 'delete' span with ID: " + partialId + " - " + e.getMessage());
-	        }
-	    }
-
-	    // Log the final message after the loop
-	    System.out.println("Finished attempting to delete owners in the specified range.");
-	}
-
-	public void clickDeleteOwner2(WebDriver driver, int startId, int endId) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
-	    boolean isClicked = false;
-
-	    // Loop through the range of IDs
-	    for (int i = startId; i <= endId; i++) {
-	        String partialId2 = "span" + i;
-
-	        try {
-	            // Use dynamic XPath that finds the element with partial ID
-	            WebElement deleteOwner2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@id, '" + partialId2 + "')]")));
-
-	            // Scroll the element into view (optional)
-	            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", deleteOwner2);
-
-	            // Wait until the element is clickable
-	            wait.until(ExpectedConditions.elementToBeClickable(deleteOwner2));
-
-	            // Click on the deleteOwner element
-	            deleteOwner2.click();
-	            System.out.println("Clicked on the 'delete' span element with ID: " + partialId2);
-	            isClicked = true;
-	            break; // Exit the loop once the element is clicked
-	        } catch (NoSuchElementException e) {
-	            System.out.println("No 'delete' span element found with ID: " + partialId2);
-	        } catch (ElementClickInterceptedException e) {
-	            System.out.println("Element click was intercepted for ID: " + partialId2);
-	        } catch (Exception e) {
-	            System.out.println("Error while clicking the 'delete' span with ID: " + partialId2 + " - " + e.getMessage());
-	        }
-	    }
-
-	    // If no element was clicked after the loop
-	    if (!isClicked) {
-	        System.out.println("No 'delete' span element found in the specified range.");
-	    }
-	}
-
 	public void Enter_Englishname(String str)
 	{
 		nameEng.clear();
@@ -307,103 +176,6 @@ public class DataEntryPage_TradeLicense {
 	{
 		address.clear();
 		address.sendKeys(str);
-	}
-
-	public void select_district( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(district));
-		
-		Select s = new Select(district);
-		s.selectByValue("Mumbai City");
-	}
-	
-	public void Click_add_more( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(addmore));
-		addmore.click();
-	}
-
-	public void select_business_type( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(businessType));
-		
-		Select s = new Select(businessType);
-		s.selectByValue("44");
-	}
-	
-	public void select_license_type( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(licenseType));
-		
-		Select s = new Select(licenseType);
-		s.selectByValue("4105");
-	}
-	
-	public void select_property_type( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(propertyType));
-		
-		Select s = new Select(propertyType);
-		s.selectByValue("4");
-	}
-	
-	public void select_license_period( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(licensePeriod));
-		
-		Select s = new Select(licensePeriod);
-		s.selectByValue("8");
-	}
-	
-	public void select_premise_type( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(premiseType));
-		
-		Select s = new Select(premiseType);
-		s.selectByValue("1");
-	}
-	
-	public void select_nature_of_trade( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(natureofTrade));
-		
-		Select s = new Select(natureofTrade);
-		s.selectByValue("1");
-	}
-	
-	public void select_business_of_style( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(bStyle));
-		
-		Select s = new Select(bStyle);
-		s.selectByValue("3");
-	}
-	
-	public void select_status( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(statusofBusiness));
-		
-		Select s = new Select(statusofBusiness);
-		s.selectByValue("1");
-	}
-	
-	public void select_oc( WebDriver driver)
-	{
-		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait3.until(ExpectedConditions.visibilityOf(OC));
-		
-		Select s = new Select(OC);
-		s.selectByValue("1");
 	}
 	
 	public void Enter_Shopname(String str)
@@ -496,6 +268,93 @@ public class DataEntryPage_TradeLicense {
 		addressBusiness.sendKeys(str);
 	}
 	
+	public void enter_property_no(String str, WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(propertyno));
+		propertyno.sendKeys(str);
+	}
+
+	/////////////////////////////////////////Click-Objects///////////////////////////////////////
+	
+	@SuppressWarnings("unused")
+	public void clickDeleteOwners(WebDriver driver, int startId, int endId) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofNanos(1));	
+	    boolean isClicked = false;
+	    
+	    // Loop through the range of IDs
+	    for (int i = startId; i <= endId; i++) {
+	        String partialId = "span" + i;
+
+	        try {
+	            // Use dynamic XPath that finds the element with partial ID
+	            WebElement deleteOwner = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@id, '" + partialId + "')]")));
+
+	            // Scroll the element into view (optional)
+	            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", deleteOwner);
+
+	            // Wait until the element is clickable
+	            wait.until(ExpectedConditions.elementToBeClickable(deleteOwner));
+
+	            // Click on the deleteOwner element
+	            deleteOwner.click();
+	            System.out.println("Clicked on the 'delete' span element with ID: " + partialId);
+	            isClicked = true;
+
+	            // Optionally add a small delay to avoid overwhelming the system (e.g., wait for page updates)
+	            Thread.sleep(500); // 0.5 second delay, adjust as needed.
+
+	        } catch (NoSuchElementException e) {
+	            System.out.println("No 'delete' span element found with ID: " + partialId);
+	        } catch (ElementClickInterceptedException e) {
+	            System.out.println("Element click was intercepted for ID: " + partialId);
+	        } catch (Exception e) {
+	            System.out.println("Error while clicking the 'delete' span with ID: " + partialId + " - " + e.getMessage());
+	        }
+	    }
+
+	    // Log the final message after the loop
+	    System.out.println("Finished attempting to delete owners in the specified range.");
+	}
+
+	public void clickDeleteOwner2(WebDriver driver, int startId, int endId) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+	    boolean isClicked = false;
+
+	    // Loop through the range of IDs
+	    for (int i = startId; i <= endId; i++) {
+	        String partialId2 = "span" + i;
+
+	        try {
+	            // Use dynamic XPath that finds the element with partial ID
+	            WebElement deleteOwner2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(@id, '" + partialId2 + "')]")));
+
+	            // Scroll the element into view (optional)
+	            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", deleteOwner2);
+
+	            // Wait until the element is clickable
+	            wait.until(ExpectedConditions.elementToBeClickable(deleteOwner2));
+
+	            // Click on the deleteOwner element
+	            deleteOwner2.click();
+	            System.out.println("Clicked on the 'delete' span element with ID: " + partialId2);
+	            isClicked = true;
+	            break; // Exit the loop once the element is clicked
+	        } catch (NoSuchElementException e) {
+	            System.out.println("No 'delete' span element found with ID: " + partialId2);
+	        } catch (ElementClickInterceptedException e) {
+	            System.out.println("Element click was intercepted for ID: " + partialId2);
+	        } catch (Exception e) {
+	            System.out.println("Error while clicking the 'delete' span with ID: " + partialId2 + " - " + e.getMessage());
+	        }
+	    }
+
+	    // If no element was clicked after the loop
+	    if (!isClicked) {
+	        System.out.println("No 'delete' span element found in the specified range.");
+	    }
+	}
+	
 	public void Click_agree_btn( WebDriver driver)
 	{
 		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -516,6 +375,168 @@ public class DataEntryPage_TradeLicense {
 		wait3.until(ExpectedConditions.visibilityOf(printbtn));
 		printbtn.click();
 	}
+
+	public void Click_add_more( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(addmore));
+		addmore.click();
+	}
+	
+	public void Click_new_register( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(newregister));
+		newregister.click();
+	}
+	
+	/////////////////////////////////////////Select-Objects///////////////////////////////////////
+	
+	
+	public void select_node_no_kh( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(node));
+		
+		Select s = new Select(node);
+		s.selectByValue("2");
+	}
+	
+	
+	public void select_sector_no_kh10( WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(sector));
+		
+		Select s = new Select(sector);
+		s.selectByValue("KH10");
+	}
+	
+	public void select_type_glan( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(license_type));
+		
+		Select s = new Select(license_type);
+		s.selectByValue("Ad");
+	}
+
+	 
+	public void search_property(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(searchproperty));
+		//((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+		searchproperty.click();
+				
+	}
+	
+
+
+
+	public void select_district( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(district));
+		
+		Select s = new Select(district);
+		s.selectByValue("Mumbai City");
+	}
+	
+
+
+	public void select_business_type( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(businessType));
+		
+		Select s = new Select(businessType);
+		s.selectByValue("44");
+	}
+	
+	
+	public void select_license_type( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(licenseType));
+		
+		Select s = new Select(licenseType);
+		s.selectByValue("4105");
+	}
+	
+	
+	public void select_property_type( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(propertyType));
+		
+		Select s = new Select(propertyType);
+		s.selectByValue("4");
+	}
+	
+	
+	public void select_license_period( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(licensePeriod));
+		
+		Select s = new Select(licensePeriod);
+		s.selectByValue("8");
+	}
+	
+	
+	public void select_premise_type( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(premiseType));
+		
+		Select s = new Select(premiseType);
+		s.selectByValue("1");
+	}
+	
+	
+	public void select_nature_of_trade( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(natureofTrade));
+		
+		Select s = new Select(natureofTrade);
+		s.selectByValue("1");
+	}
+	
+	
+	public void select_business_of_style( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(bStyle));
+		
+		Select s = new Select(bStyle);
+		s.selectByValue("3");
+	}
+	
+	
+	public void select_status( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(statusofBusiness));
+		
+		Select s = new Select(statusofBusiness);
+		s.selectByValue("1");
+	}
+	
+	
+	public void select_oc( WebDriver driver)
+	{
+		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait3.until(ExpectedConditions.visibilityOf(OC));
+		
+		Select s = new Select(OC);
+		s.selectByValue("1");
+	}
+
+	/////////////////////////////////////////Function-Objects///////////////////////////////////////
+	
+
 		
 	public void Button_choose_file(String str, WebDriver driver) throws InterruptedException
 	{
@@ -536,6 +557,7 @@ public class DataEntryPage_TradeLicense {
 		Thread.sleep(5000);
 	}
 	
+	@SuppressWarnings("unused")
 	public String fetch_application_no(WebDriver driver) {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
 	    wait.until(ExpectedConditions.visibilityOf(application_no));
@@ -545,9 +567,31 @@ public class DataEntryPage_TradeLicense {
 	    String modifiedApplicationNumber = "ASEN" + numericPart;
 	    return modifiedApplicationNumber;
 	}
-
 	
+	public void scroll_to_bottom(WebDriver driver) throws InterruptedException {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+	    Thread.sleep(2000);
+	}
+	
+	public void scroll_to_top(WebDriver driver) throws InterruptedException {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollTo(0, 0);");
+	    Thread.sleep(2000);
+	}
+
+	public void scrollbypixdown(WebDriver driver) throws InterruptedException
+	{
+		
+		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
+		Thread.sleep(2000);
+
+	}
+	
+	public void scrollbypixup(WebDriver driver)
+	{
+		
+		((JavascriptExecutor) driver).executeScript("window.scrollBy(500, 0);");
+
+	}
 }
-
-
-

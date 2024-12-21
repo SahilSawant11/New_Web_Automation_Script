@@ -36,7 +36,7 @@ public class Testdb {
         panel.setLayout(new GridLayout(10, 5)); // 3 rows, 2 columns
         
         // Add JComboBox for selection list
-        String[] options = {"Bramati Municipal", "Panvel Municipal", "Pimpri Chinchwad Municipal"};
+        String[] options = {"Bramati Municipal", "Panvel Municipal", "Pimpri Chinchwad Municipal","Panvel Trade"};
         JComboBox<String> comboBox = new JComboBox<>(options);
         panel.add(new JLabel("Select :"));
         panel.add(comboBox);
@@ -74,10 +74,10 @@ public class Testdb {
                         textField3.setText("User@12345");
                         break;
                     case "Panvel Municipal":
-                    	textField.setText("http://testpanvelmc.ptaxcollection.com:8080/Pages/Login.aspx");
+                    	textField.setText("https://test.tradepanvelmc.org/Login"); //http://testpanvelmc.ptaxcollection.com:8080/Pages/Login.aspx
                         textField1.setText("NTIS_4030_18062024");
-                        textField2.setText("jagdish.d");
-                        textField3.setText("123");
+                        textField2.setText("abhilash.m");
+                        textField3.setText("shritejm@123");
                         break;
                     case "Pimpri Chinchwad Municipal":
                     	textField.setText("http://testpcmc.ptaxcollection.com:8080/Pages/Login.aspx");
@@ -85,6 +85,12 @@ public class Testdb {
                         textField2.setText("sagar.m");
                         textField3.setText("Sagar@123");
                         break;
+                    case "Panvel Trade":
+                    	textField.setText("https://test.tradepanvelmc.org/Login");
+                    	textField1.setText("NTIS_4030_18062024");
+                    	textField2.setText("abhilash.m");
+                    	textField3.setText("shritejm@123");
+                    	break;
                 }
             }
         });

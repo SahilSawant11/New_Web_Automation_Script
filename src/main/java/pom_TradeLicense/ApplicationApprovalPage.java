@@ -7,22 +7,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ApplicationApprovalPage {
 	
+	/////////////////////////////////////////Input-feilds///////////////////////////////////////
 	@FindBy(xpath = "//*[@id=\'tblGrievances_filter\']/label/input") private WebElement searchbox;
-	@FindBy(xpath = "//*[@id='btnshow']") private WebElement btnshow;
 	@FindBy(xpath = "//input[@id='txtRemark']") private WebElement remarkbox;
 	@FindBy(xpath = "//*[@id='lblshowNewFee']") private WebElement tax;
 	@FindBy(xpath = "//*[@id='lblShowApplicantAddress']") private WebElement address;
 	@FindBy(xpath = "//*[@id='lblShowEmailID']") private WebElement email;
 	@FindBy(xpath = "//*[@id='lblShowMobileNo']") private WebElement mobile;
+	
+	/////////////////////////////////////////Buttons///////////////////////////////////////
+	@FindBy(xpath = "//*[@id='btnshow']") private WebElement showbtn;
 	@FindBy(xpath = "//*[@id='btnPrintApplication']") private WebElement arjavhalbtn;
 	@FindBy(xpath = "//*[@id='btnApproved1']") private WebElement approved1;
+	@FindBy(xpath = "//span[@id='BtnFilter']/i)[1]") private WebElement filterBtn;
 	
 
+	/////////////////////////////////////////Page-Objects///////////////////////////////////////
 	
 	public ApplicationApprovalPage (WebDriver driver)
 	{
@@ -44,6 +48,8 @@ public class ApplicationApprovalPage {
 		
 		driver.get(s2);
 	}
+
+	/////////////////////////////////////////Enter-Objects///////////////////////////////////////
 	
 	public void Search_application (WebDriver driver,String str) throws InterruptedException
 	{
@@ -54,14 +60,6 @@ public class ApplicationApprovalPage {
 		searchbox.sendKeys(str);
 	}
 	
-	public void Button_show_btn(WebDriver driver) throws InterruptedException
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(btnshow));
-		Thread.sleep(1000);
-		btnshow.click();
-	}
-	
 	public void Enter_remark (WebDriver driver) throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -69,6 +67,38 @@ public class ApplicationApprovalPage {
 		remarkbox.clear();
 		remarkbox.sendKeys("Automated Remark");
 	}
+	
+	/////////////////////////////////////////Click-Objects///////////////////////////////////////
+	
+	public void Button_show_btn(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(showbtn));
+		Thread.sleep(1000);
+		showbtn.click();
+	}
+	
+	public void Button_arjavhal_btn(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(arjavhalbtn));
+		Thread.sleep(1000);
+		arjavhalbtn.click();
+	}
+	
+	public void Button_approved1_btn(WebDriver driver) throws InterruptedException
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+		wait.until(ExpectedConditions.visibilityOf(approved1));
+		Thread.sleep(1000);
+		approved1.click();
+	}
+
+	public void Click_filter_btn()
+	{
+		filterBtn.click();
+	}
+	/////////////////////////////////////////Function-Objects///////////////////////////////////////
 	
 	public String get_tax (WebDriver driver)
 	{
@@ -102,19 +132,4 @@ public class ApplicationApprovalPage {
 		return Mobile;
 	}
 	
-	public void Button_arjavhal_btn(WebDriver driver) throws InterruptedException
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(arjavhalbtn));
-		Thread.sleep(1000);
-		arjavhalbtn.click();
-	}
-	
-	public void Button_approved1_btn(WebDriver driver) throws InterruptedException
-	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
-		wait.until(ExpectedConditions.visibilityOf(approved1));
-		Thread.sleep(1000);
-		approved1.click();
-	}
 }

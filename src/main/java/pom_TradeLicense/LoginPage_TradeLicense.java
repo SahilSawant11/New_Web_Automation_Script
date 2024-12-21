@@ -11,16 +11,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage_TradeLicense {
 
+		/////////////////////////////////////////input-feilds//////////////////////////////////////
 		@FindBy(xpath = "//input[@id='txtUserName']") private WebElement user_name;
 		@FindBy(xpath = "//input[@id='txtPassword']") private WebElement password;
-		@FindBy(xpath = "//button[@id='btnLogin']") private WebElement login_btn;
-//		@FindBy(xpath = "//input[@id='btnLogoutFromothersystem']") private WebElement logout;
 		
+		/////////////////////////////////////////buttons///////////////////////////////////////
+		@FindBy(xpath = "//button[@id='btnLogin']") private WebElement login_btn;
+	
+		/////////////////////////////////////////Page-Objects///////////////////////////////////////
 		public LoginPage_TradeLicense(WebDriver driver)
 		{
 			PageFactory.initElements(driver, this);
 		}
 		
+		/////////////////////////////////////////Enter-Objects///////////////////////////////////////
 		public void Enter_user_name(String user, WebDriver driver)
 		{
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
@@ -35,7 +39,8 @@ public class LoginPage_TradeLicense {
 			password.clear();
 			password.sendKeys(pass);
 		}
-		
+
+		/////////////////////////////////////////Click-Objects///////////////////////////////////////
 		public void Click_login_btn(WebDriver driver) throws InterruptedException
 		{
 			Thread.sleep(1000);
@@ -49,13 +54,4 @@ public class LoginPage_TradeLicense {
 		    Thread.sleep(500);
 		}
 		
-//		public void click_logout(WebDriver driver) throws InterruptedException
-//		{
-//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
-//			wait.until(ExpectedConditions.visibilityOf(logout));
-//			Thread.sleep(1000);
-//			logout.click();
-//			Thread.sleep(5000);
-//		}
-
 }
